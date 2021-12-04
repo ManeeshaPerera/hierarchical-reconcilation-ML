@@ -11,4 +11,5 @@ Current folder structure
     |- reconcilation : python code for reconcilation (yet to be added)
     |- arima.R - R code to run ARIMA
     |- run_arima.py - ARIMA code execution point for all datasets
+    |- run_preprocessing.py - run R preprocessing files for all datasets
 ```
