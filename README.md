@@ -1,4 +1,4 @@
-### Heirarchical Reconcilation with ML
+### Hierarchical Reconciliation with ML
 
 Current folder structure
 ```
