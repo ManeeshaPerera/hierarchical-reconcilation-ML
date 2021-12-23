@@ -6,10 +6,11 @@ Current Directory structure
 |-src
     |- data : original datasets
     |- input_data : data files after pre-processing the datasets includes actual and test files
-    |- forecasts : fitted and forecasts by base models (naming convention <dataset_name>_<model_name>_<fitted/forecasts>)
-    |- results : reconciled forecasts, best hyper-parameters, model traiing history and errors (naming convention <dataset_name>_<model_name>_<adjusted_forecasts/best_params/model_history/errors>)
+    |- forecasts : fitted and forecasts by base models 
+    (naming convention <dataset_name>_<model_name>_<fitted/forecasts>)
+    |- results : reconciled forecasts, best hyper-parameters, model traiing history and errors 
+    (naming convention <dataset_name>_<model_name>_<adjusted_forecasts/best_params/model_history/errors>)
     |- <dataset_name> : R pre-processing files for each dataset (e.g. prison, tourism)
-    |- reconcilation : python code for reconcilation (yet to be added)
     |- arima.R - R code to run ARIMA
     |- run_arima.py - ARIMA code execution point for all datasets
     |- run_preprocessing.py - run R preprocessing files for all datasets
@@ -19,9 +20,9 @@ Current Directory structure
 ```
 
 How to run the code:
-```
+
 1. First run_preprocessing.py - you may need to provide the path for the preprocessing R file relevant to the dataset (e.g. for the prison dataset '../src/prison/prison_preprocessing.R')
 2. Run the base model python file (e.g. for arima run run_arima.py)
 3. Run the ML reconcilation run_ml_reconciliation.py (provide the dataset name, base model name and the number of levels in the dataset heirarchy)
 4. Calculate errors - run calculate_error.py (this will create a file with the calculated errors under the results directory) 
-```
+
