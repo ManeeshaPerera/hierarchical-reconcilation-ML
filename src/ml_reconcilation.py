@@ -17,6 +17,26 @@ from src.construct_heirarchy import ConstructHierarchy
 class MLReconcile:
     def __init__(self, seed_value, actual_data, fitted_data, forecasts, number_of_levels, hyper_params, random_state=42,
                  split_size=0.2):
+        """
+        Class initialization
+        :param seed_value: seed value for tensorflow to achieve reproducibility
+        :type seed_value: integer
+        :param actual_data: pre processed actual data
+        :type actual_data: pandas dataframe
+        :param fitted_data: fitted values from the base model of interest
+        :type fitted_data: pandas dataframe
+        :param forecasts: forecasts from the base model
+        :type forecasts: pandas dataframe
+        :param number_of_levels: number of levels in the hierarchy
+        :type number_of_levels: integer
+        :param hyper_params: hyper parameters to tune
+        :type hyper_params: dictionary with keys 'number_of_layers': integer, 'epochs': list, 'dropout_rate': list,
+        'max_norm_value': list, 'lambda': list, 'learning_rate': list
+        :param random_state: seed value for the model
+        :type random_state: integer
+        :param split_size: data split size for validation
+        :type split_size: float
+        """
         self.hierarchy = None
         self.actual_data = actual_data
         self.fitted_data = fitted_data
@@ -35,6 +55,13 @@ class MLReconcile:
         self._run_initialization(seed_value)
 
     def _transpose_data(self, dataframe):
+        """
+        Transpose dataframe - column names are time series names and rows are values
+        :param dataframe: dataframe to transpose
+        :type dataframe: pandas dataframe
+        :return: transposed dataframe
+        :rtype: pandas dataframe
+        """
         dataframe_transpose = dataframe.iloc[:, 1:]
         dataframe_transpose.columns = [col_idx if col_idx != 0 else "" for col_idx in
                                        range(len(dataframe_transpose.columns))]
@@ -43,6 +70,13 @@ class MLReconcile:
         return dataframe_transpose
 
     def _run_initialization(self, seed_value):
+        """
+        Function to run when __init__ is called
+        :param seed_value: seed value for tensorflow
+        :type seed_value: integer
+        :return: None
+        :rtype: None
+        """
         tf.random.set_seed(seed_value)  # set seed for tensorflow
         self.actual_transpose = self._transpose_data(self.actual_data)
         self.fitted_transpose = self._transpose_data(self.fitted_data)
@@ -51,6 +85,13 @@ class MLReconcile:
                                             self.number_of_levels)  # construct time series hierarchy
 
     def _custom_loss(self, reconciliation_loss_lambda):
+        """
+        Custom loss function with bottom level forecast error + reconciliation loss
+        :param reconciliation_loss_lambda: lambda value for reconciliation
+        :type reconciliation_loss_lambda: float
+        :return: calculated loss
+        :rtype: float
+        """
         bottom_level_ts, start_index_bottom_ts = self.hierarchy.get_bottom_level_ts_info()
         hierarchy = self.hierarchy.get_hierarchy_indexes()
 

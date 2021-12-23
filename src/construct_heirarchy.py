@@ -1,5 +1,15 @@
 class ConstructHierarchy:
     def __init__(self, actual_data, number_of_levels):
+        """
+        Initialise the class parameters
+        :param actual_data: pandas dataframe with columns for each time series in the hierarchy.
+        Rows reflect the values and column names are time series names. The level 1 time series name is "Aggregated",
+        from level 2 each column name will have dashes "-" to indicate the path of the hierarchy
+        (e.g. A-B-C means time series C is connected to top level time series B and B is connected to top level timeseries A)
+        :type actual_data: pandas dataframe
+        :param number_of_levels: Number of levels in the hierarchy
+        :type number_of_levels: integer
+        """
         self.actual_data = actual_data
         self.ts_names = actual_data.columns
         self.number_of_levels = number_of_levels
@@ -11,6 +21,15 @@ class ConstructHierarchy:
         self.construct_hierarchy_indexes()
 
     def construct_hierarchy_indexes(self):
+        """
+        This function is used to identify the connection between the leaf time series and other levels.
+        E.g. consider a timeseries hierarchy with 3 levels and a structure A->B, C, B-> D, E, C-> F, G
+        index values for these time series in the actual_data dataframe will be as follow A = 0, B=1, C=2, D=3, E=4, F=5, G=6
+        hierarchy_indexes will be computed as follows: hierarchy_indexes = {0:[3, 4, 5, 6], 1: [3, 4], 2: [5, 6]}
+        bottom_level_start_index = 3
+        number_of_bottom_level_ts = 4
+        hierarchy_levels = {1: ['Aggregated], 2: [B, C], 3: [B-D, B-E, C-F, C-G]
+        """
         bottom_level_started = False
         for ts_index in range(0, len(self.ts_names)):
             ts_name = self.ts_names[ts_index]
