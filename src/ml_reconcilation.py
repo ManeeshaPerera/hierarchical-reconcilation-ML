@@ -15,8 +15,8 @@ from src.construct_heirarchy import ConstructHierarchy
 
 
 class MLReconcile:
-    def __init__(self, seed_value, actual_data, fitted_data, forecasts, number_of_levels, hyper_params, random_state=42,
-                 split_size=0.2):
+    def __init__(self, seed_value, actual_data, fitted_data, forecasts, number_of_levels, hyper_params, seed_runs,
+                 random_state=42, split_size=0.2):
         """
         Class initialization
         :param seed_value: seed value for tensorflow to achieve reproducibility
@@ -42,7 +42,6 @@ class MLReconcile:
         self.fitted_data = fitted_data
         self.forecasts = forecasts
         self.number_of_levels = number_of_levels
-        self._run_initialization(seed_value)
         self.actual_transpose = None
         self.fitted_transpose = None
         self.forecast_transpose = None
@@ -52,6 +51,7 @@ class MLReconcile:
         self.best_hyper_params = None
         self.scaler = MinMaxScaler()
         self.model_history = None
+        self.seed_runs = seed_runs
         self._run_initialization(seed_value)
 
     def _transpose_data(self, dataframe):
@@ -185,7 +185,7 @@ class MLReconcile:
                 'no_layers': i,
                 'no_units_layer': [scope.int(hp.quniform('no_units_layer_' + str(i) + "_" + str(j), 1, 256, 1))
                                    for j in range(1, (i + 1))]
-            }  # check this TODO
+            }
             layers_list.append(layer_dict)
 
         param_space = {
@@ -255,6 +255,20 @@ class MLReconcile:
 
         return pd.concat(bottom_up_data).append(adjusted_forecasts)
 
+    def _train_model_with_seeds(self, data_dic):
+        predictions = {}
+        for run in range(len(self.seed_runs)):
+            tf.random.set_seed(self.seed_runs[run])  # set seed for tensorflow for a run
+            ml_rec_model = self.train_model(self.best_hyper_params, data_dic)
+            # forward propagate the forecasts to get the adjusted forecasts
+            adjusted_forecasts = pd.DataFrame(ml_rec_model.predict(x=data_dic['X_test']))
+            adjusted_forecasts.columns = self.hierarchy.hierarchy_levels[self.number_of_levels]
+            adjusted_forecasts = adjusted_forecasts.transpose()
+            forecast_for_hierarchy = self._get_bottom_up_forecasts(adjusted_forecasts)
+            predictions[run] = {'forecasts': forecast_for_hierarchy, 'model_history': pd.DataFrame(
+                self.model_history.history)}
+        return predictions
+
     def run_ml_reconciliation(self):
         # split the dataset
         print("====> splitting data")
@@ -276,14 +290,7 @@ class MLReconcile:
         print("====> best model parameters")
         print(self.best_hyper_params)
 
-        # train model with all data
-        ml_rec_model = self.train_model(self.best_hyper_params, data_dic)
-        # forward propagate the forecasts to get the adjusted forecasts
-        adjusted_forecasts = pd.DataFrame(ml_rec_model.predict(x=data_dic['X_test']))
-        adjusted_forecasts.columns = self.hierarchy.hierarchy_levels[self.number_of_levels]
-        adjusted_forecasts = adjusted_forecasts.transpose()
-        # adjusted_forecasts = adjusted_forecasts.set_index(adjusted_forecasts.columns[0])
-        print(adjusted_forecasts)
+        # train model with multiple seed values and retrieve the adjusted forecasts
+        predictions_runs = self._train_model_with_seeds(data_dic)
 
-        return self._get_bottom_up_forecasts(adjusted_forecasts), pd.DataFrame(self.best_hyper_params), pd.DataFrame(
-            self.model_history.history)
+        return predictions_runs, pd.DataFrame(self.best_hyper_params)
