@@ -40,3 +40,7 @@ prison <- c("filename" = "input_data/prison_actual.csv", "freq" = 4, "horizon"= 
 all_level_ts_train <-read_csv(prison['filename'])
 model_results_write(all_level_ts_train, prison['name'], as.integer(prison['freq']), as.integer(prison['horizon']))
 
+tourism <- c("filename" = "input_data/tourism_actual.csv", "freq" = 12, "horizon"= 12, 'name' = 'forecasts/tourism')
+all_level_ts_train <-read_csv(tourism['filename'])
+model_results_write(all_level_ts_train, tourism['name'], as.integer(tourism['freq']), as.integer(tourism['horizon']))
+
