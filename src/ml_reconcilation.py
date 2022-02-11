@@ -15,8 +15,9 @@ from src.construct_heirarchy import ConstructHierarchy
 
 
 class MLReconcile:
-    def __init__(self, seed_value, actual_data, fitted_data, forecasts, number_of_levels, hyper_params, seed_runs,
-                 random_state=42, split_size=0.2):
+    def __init__(self, seed_value, actual_data, fitted_data, forecasts, number_of_levels, seed_runs, hyper_params_tune,
+                 best_hyper_params=None, tune_hyper_params=True, random_state=42, split_size=0.2,
+                 validate_hf_loss=False):
         """
         Class initialization
         :param seed_value: seed value for tensorflow to achieve reproducibility
@@ -29,13 +30,21 @@ class MLReconcile:
         :type forecasts: pandas dataframe
         :param number_of_levels: number of levels in the hierarchy
         :type number_of_levels: integer
-        :param hyper_params: hyper parameters to tune
-        :type hyper_params: dictionary with keys 'number_of_layers': integer, 'epochs': list, 'dropout_rate': list,
-        'max_norm_value': list, 'lambda': list, 'learning_rate': list
+        :param seed_runs: different seeds for the model to run
+        :type: list of integers
+        :param hyper_params_tune: hyper parameters to tune
+        :type hyper_params_tune: dictionary with keys 'number_of_layers': integer, 'epochs': list, 'dropout_rate': list,
+        'max_norm_value': list, 'reconciliation_loss_lambda': list, 'learning_rate': list
+        :param best_hyper_params: best hyper parameters configuration of the model.
+        :type best_hyper_params: dictionary with keys 'layers': integer, 'no_units_layer': list, 'epochs': int,
+        'dropout_rate': float, 'max_norm_value': int, 'reconciliation_loss_lambda': float, 'learning_rate': float
+        :param tune_hyper_params: whether to tune hyper parameters or not: default is True.
+        If true hyper_params_tune should be provided. If False best_hyper_params should be provided
         :param random_state: seed value for the model
         :type random_state: integer
         :param split_size: data split size for validation
         :type split_size: float
+        :param validate_hf_loss: True if the validation loss calculates the entire hierarchy error. Default is False
         """
         self.hierarchy = None
         self.actual_data = actual_data
@@ -45,14 +54,15 @@ class MLReconcile:
         self.actual_transpose = None
         self.fitted_transpose = None
         self.forecast_transpose = None
-        self.hyper_params = hyper_params
         self.random_state = random_state
         self.validation_split_size = split_size
-        self.best_hyper_params = None
         self.scaler = MinMaxScaler()
         self.model_history = None
         self.seed_runs = seed_runs
-        self._run_initialization(seed_value)
+        self.hyper_params = None
+        self.best_hyper_params = None
+        self.validate_hf_loss = validate_hf_loss
+        self._run_initialization(seed_value, tune_hyper_params, hyper_params_tune, best_hyper_params)
 
     def _transpose_data(self, dataframe):
         """
@@ -69,7 +79,7 @@ class MLReconcile:
         dataframe_transpose = dataframe_transpose.astype("float32")
         return dataframe_transpose
 
-    def _run_initialization(self, seed_value):
+    def _run_initialization(self, seed_value, tune_hyper_params, hyper_params_tune, best_hyper_params):
         """
         Function to run when __init__ is called
         :param seed_value: seed value for tensorflow
@@ -78,6 +88,17 @@ class MLReconcile:
         :rtype: None
         """
         tf.random.set_seed(seed_value)  # set seed for tensorflow
+        if tune_hyper_params:
+            if hyper_params_tune:
+                self.hyper_params = hyper_params_tune
+            else:
+                raise Exception("Please provide hyper_params_tune parameter if tune_hyper_params is True")
+        else:
+            if best_hyper_params:
+                self.best_hyper_params = best_hyper_params
+            else:
+                raise Exception("Please provide best_hyper_params parameter if tune_hyper_params is False")
+
         self.actual_transpose = self._transpose_data(self.actual_data)
         self.fitted_transpose = self._transpose_data(self.fitted_data)
         self.forecast_transpose = self._transpose_data(self.forecasts)
@@ -177,7 +198,7 @@ class MLReconcile:
         epochs = self.hyper_params['epochs']
         dropout_rate = self.hyper_params['dropout_rate']
         max_norm_value = self.hyper_params['max_norm_value']
-        rec_lambda = self.hyper_params['lambda']
+        rec_lambda = self.hyper_params['reconciliation_loss_lambda']
 
         layers_list = []
         for i in range(1, (layers_upper + 1)):
@@ -202,7 +223,33 @@ class MLReconcile:
     def validate_model(self, hyperparams, data_dic):
         def val_loss_fn(y_actual, y_pred):
             bottom_level_index = self.hierarchy.get_bottom_level_index()
-            validation_loss = np.mean(np.sqrt(tf.losses.MSE(y_actual.values[:, bottom_level_index:], y_pred)))
+            if self.validate_hf_loss: # if the validation loss is calculated to the whole hierarchy
+                bottom_up_predictions = None
+                hierarchy = self.hierarchy.get_hierarchy_indexes()
+                hf_ts_indexes = sorted(list(hierarchy.keys()))
+                bottom_level_ts, start_index_bottom_ts = self.hierarchy.get_bottom_level_ts_info()
+
+                # Reconciliation error across the hierarchy
+                for higher_node_index in hf_ts_indexes:
+                    lower_node_indexes = hierarchy[higher_node_index]  # bottom level nodes connected to higher node
+                    lower_index = lower_node_indexes[
+                                      0] - start_index_bottom_ts  # finding the index value starting from 0
+                    high_index = lower_node_indexes[-1] - start_index_bottom_ts
+
+                    lower_node_ts_pred = y_pred[:,
+                                         lower_index: (high_index + 1)]  # get predictions for all bottom level nodes
+                    lower_node_ts_agg_pred = tf.reduce_sum(lower_node_ts_pred, axis=1,
+                                                           keepdims=True)  # calculate the bottom up predictions
+                    if higher_node_index == 0:
+                        bottom_up_predictions = lower_node_ts_agg_pred
+                    else:
+                        # concat all bottom up forecasts for top time series
+                        bottom_up_predictions = tf.concat([bottom_up_predictions, lower_node_ts_agg_pred], 1)
+                # combine with the bottom level predictions
+                bottom_up_predictions = tf.concat([bottom_up_predictions, y_pred], 1)
+                validation_loss = np.mean(np.sqrt(tf.losses.MSE(y_actual.values, bottom_up_predictions)))
+            else:
+                validation_loss = np.mean(np.sqrt(tf.losses.MSE(y_actual.values[:, bottom_level_index:], y_pred)))
             return validation_loss
 
         hyperparams['no_layers'] = hyperparams['layers']['no_layers']
@@ -256,7 +303,8 @@ class MLReconcile:
         return pd.concat(bottom_up_data).append(adjusted_forecasts)
 
     def _train_model_with_seeds(self, data_dic):
-        predictions = {}
+        predictions = []
+        model_history = []
         for run in range(len(self.seed_runs)):
             tf.random.set_seed(self.seed_runs[run])  # set seed for tensorflow for a run
             ml_rec_model = self.train_model(self.best_hyper_params, data_dic)
@@ -264,10 +312,14 @@ class MLReconcile:
             adjusted_forecasts = pd.DataFrame(ml_rec_model.predict(x=data_dic['X_test']))
             adjusted_forecasts.columns = self.hierarchy.hierarchy_levels[self.number_of_levels]
             adjusted_forecasts = adjusted_forecasts.transpose()
-            forecast_for_hierarchy = self._get_bottom_up_forecasts(adjusted_forecasts)
-            predictions[run] = {'forecasts': forecast_for_hierarchy, 'model_history': pd.DataFrame(
-                self.model_history.history)}
-        return predictions
+            predictions.append(adjusted_forecasts)
+            model_history_per_run = pd.DataFrame(self.model_history.history)
+            model_history_per_run.columns = [f'loss_run_{run + 1}']
+            model_history.append(model_history_per_run)
+        median_forecast = pd.concat(predictions)
+        median_forecast = median_forecast.groupby(median_forecast.index).median()
+        forecast_for_hierarchy = self._get_bottom_up_forecasts(median_forecast)
+        return forecast_for_hierarchy, pd.concat(model_history, axis=1)
 
     def run_ml_reconciliation(self):
         # split the dataset
@@ -275,22 +327,23 @@ class MLReconcile:
         data_dic = self.split_data()
 
         # find optimal hyper parameters
-        print("====> running hyper parameter optimization")
-        trials = Trials()
-        max_evals = 50
-        self.best_hyper_params = fmin(
-            fn=partial(self.validate_model, data_dic=data_dic),
-            space=self.create_hyper_param_range(data_dic),
-            algo=tpe.suggest,
-            trials=trials,
-            max_evals=max_evals
-        )
+        if self.hyper_params:
+            print("====> running hyper parameter optimization")
+            trials = Trials()
+            max_evals = 50
+            self.best_hyper_params = fmin(
+                fn=partial(self.validate_model, data_dic=data_dic),
+                space=self.create_hyper_param_range(data_dic),
+                algo=tpe.suggest,
+                trials=trials,
+                max_evals=max_evals
+            )
 
-        # run the model with best parameters
-        print("====> best model parameters")
-        print(self.best_hyper_params)
+            # run the model with best parameters
+            print("====> best model parameters")
+            print(self.best_hyper_params)
 
+        print("====> Training ML reconciliation model")
         # train model with multiple seed values and retrieve the adjusted forecasts
-        predictions_runs = self._train_model_with_seeds(data_dic)
-
-        return predictions_runs, pd.DataFrame(self.best_hyper_params)
+        forecasts, model_history = self._train_model_with_seeds(data_dic)
+        return forecasts, model_history, pd.DataFrame.from_dict(self.best_hyper_params, 'index')
