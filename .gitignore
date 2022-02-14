@@ -1,4 +1,5 @@
 .idea
+example_code/test-code.R
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
