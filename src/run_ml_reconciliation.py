@@ -20,23 +20,49 @@ if __name__ == '__main__':
     # if hyper parameter tuning is not required tune_hyper_params = False and
     # best_hyper_params parameter should be passed
 
-    # ml_model = MLReconcile(seed_value, df_actual, df_fitted, df_forecasts, number_of_levels, seed_runs,
-    #                        hyper_params_tune=hyper_params,
-    #                        tune_hyper_params=True)
-    # ml_model.run_ml_reconciliation()
-    # forecasts_adjusted, model_history, best_hyper_params = ml_model.run_ml_reconciliation()
-    #
-    # forecasts_adjusted.to_csv(f'results/{file_name}_adjusted_forecasts.csv')
-    # model_history.to_csv(f'results/{file_name}_model_history.csv')
-    # best_hyper_params.to_csv(f'results/{file_name}_best_params.csv')
+    # CASE 1 - validation loss for bottom level
+    ml_model_case1 = MLReconcile(seed_value, df_actual, df_fitted, df_forecasts, number_of_levels, seed_runs,
+                                 hyper_params_tune=hyper_params,
+                                 tune_hyper_params=True)
+    ml_model_case1.run_ml_reconciliation()
+    forecasts_adjusted_case1, model_history_case1, best_hyper_params_case1 = ml_model_case1.run_ml_reconciliation()
 
-    ml_model_validation_loss_hf = MLReconcile(seed_value, df_actual, df_fitted, df_forecasts, number_of_levels,
+    forecasts_adjusted_case1.to_csv(f'results/{file_name}_adjusted_forecasts_case1.csv')
+    model_history_case1.to_csv(f'results/{file_name}_model_history_case1.csv')
+    best_hyper_params_case1.to_csv(f'results/{file_name}_best_params_case1.csv')
+
+    # CASE 2 - validation loss for complete hierarchy
+
+    ml_model_case2 = MLReconcile(seed_value, df_actual, df_fitted, df_forecasts, number_of_levels,
                                               seed_runs,
                                               hyper_params_tune=hyper_params,
                                               tune_hyper_params=True, validate_hf_loss=True)
-    ml_model_validation_loss_hf.run_ml_reconciliation()
-    forecasts_adjusted_case1, model_history_case1, best_hyper_params_case1 = ml_model_validation_loss_hf.run_ml_reconciliation()
+    ml_model_case2.run_ml_reconciliation()
+    forecasts_adjusted_case2, model_history_case2, best_hyper_params_case2 = ml_model_case2.run_ml_reconciliation()
 
-    forecasts_adjusted_case1.to_csv(f'results/{file_name}_adjusted_forecasts_hf_val_loss.csv')
-    model_history_case1.to_csv(f'results/{file_name}_model_history_hf_val_loss.csv')
-    best_hyper_params_case1.to_csv(f'results/{file_name}_best_params_hf_val_loss.csv')
+    forecasts_adjusted_case2.to_csv(f'results/{file_name}_adjusted_forecasts_case2.csv')
+    model_history_case2.to_csv(f'results/{file_name}_model_history_case2.csv')
+    best_hyper_params_case2.to_csv(f'results/{file_name}_best_params_case2.csv')
+
+    # CASE 3 - regularizer + validation loss for bottom level
+
+    ml_model_case3 = MLReconcile(seed_value, df_actual, df_fitted, df_forecasts, number_of_levels, seed_runs,
+                           hyper_params_tune=hyper_params,
+                           tune_hyper_params=True, l1_regularizer=True)
+    ml_model_case3.run_ml_reconciliation()
+    forecasts_adjusted_case3, model_history_case3, best_hyper_params_case3 = ml_model_case3.run_ml_reconciliation()
+
+    forecasts_adjusted_case3.to_csv(f'results/{file_name}_adjusted_forecasts_case3.csv')
+    model_history_case3.to_csv(f'results/{file_name}_model_history_case3.csv')
+    best_hyper_params_case3.to_csv(f'results/{file_name}_best_params_case3.csv')
+
+    # CASE 4 - regularizer + validation loss for whole hierarchy
+    ml_model_case4 = MLReconcile(seed_value, df_actual, df_fitted, df_forecasts, number_of_levels, seed_runs,
+                                 hyper_params_tune=hyper_params,
+                                 tune_hyper_params=True, l1_regularizer=True, validate_hf_loss=True)
+    ml_model_case4.run_ml_reconciliation()
+    forecasts_adjusted_case4, model_history_case4, best_hyper_params_case4 = ml_model_case4.run_ml_reconciliation()
+
+    forecasts_adjusted_case4.to_csv(f'results/{file_name}_adjusted_forecasts_case4.csv')
+    model_history_case4.to_csv(f'results/{file_name}_model_history_case4.csv')
+    best_hyper_params_case4.to_csv(f'results/{file_name}_best_params_case4.csv')

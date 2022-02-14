@@ -17,7 +17,7 @@ from src.construct_heirarchy import ConstructHierarchy
 class MLReconcile:
     def __init__(self, seed_value, actual_data, fitted_data, forecasts, number_of_levels, seed_runs, hyper_params_tune,
                  best_hyper_params=None, tune_hyper_params=True, random_state=42, split_size=0.2,
-                 validate_hf_loss=False):
+                 validate_hf_loss=False, l1_regularizer=False):
         """
         Class initialization
         :param seed_value: seed value for tensorflow to achieve reproducibility
@@ -45,6 +45,7 @@ class MLReconcile:
         :param split_size: data split size for validation
         :type split_size: float
         :param validate_hf_loss: True if the validation loss calculates the entire hierarchy error. Default is False
+        :param l1_regularizer: True if the L1 regularizer needs to added to the loss function. Default is False
         """
         self.hierarchy = None
         self.actual_data = actual_data
@@ -62,6 +63,7 @@ class MLReconcile:
         self.hyper_params = None
         self.best_hyper_params = None
         self.validate_hf_loss = validate_hf_loss
+        self.l1_regularizer = l1_regularizer
         self._run_initialization(seed_value, tune_hyper_params, hyper_params_tune, best_hyper_params)
 
     def _transpose_data(self, dataframe):
@@ -143,7 +145,11 @@ class MLReconcile:
 
             recon_loss_agg = tf.reduce_sum(rec_loss_list)  # sum all the losses
             final_loss = prediction_error + reconciliation_loss_lambda * recon_loss_agg
-            return final_loss
+            if self.l1_regularizer:
+                regularizer = tf.keras.regularizers.L1()
+                return regularizer(final_loss)
+            else:
+                return final_loss
 
         return loss
 
@@ -223,7 +229,7 @@ class MLReconcile:
     def validate_model(self, hyperparams, data_dic):
         def val_loss_fn(y_actual, y_pred):
             bottom_level_index = self.hierarchy.get_bottom_level_index()
-            if self.validate_hf_loss: # if the validation loss is calculated to the whole hierarchy
+            if self.validate_hf_loss:  # if the validation loss is calculated to the whole hierarchy
                 bottom_up_predictions = None
                 hierarchy = self.hierarchy.get_hierarchy_indexes()
                 hf_ts_indexes = sorted(list(hierarchy.keys()))

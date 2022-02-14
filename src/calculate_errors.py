@@ -14,20 +14,18 @@ def calculate_error(err_func, y_true, y_pred, error_list, ts_list, ts_idx, error
 
 if __name__ == '__main__':
     data = 'prison'
-    model = 'ets'
-    FC_TYPE = ['base', 'adjusted', 'hf_val_loss', 'bottomup', 'ols', 'wls', 'mintsample', 'mintshrink', 'erm']
+    model = 'arima'
+    FC_TYPE = ['base', 'case1', 'case2', 'case3', 'case4', 'bottomup', 'ols', 'wls', 'mintsample', 'mintshrink', 'erm']
     file_name = f'{data}_{model}'
     actual_test = pd.read_csv(f"input_data/{data}_test.csv", index_col=1)
     for fc_type in FC_TYPE:
         errors = []
         if fc_type == 'base':
             df_forecasts = pd.read_csv(f"forecasts/{file_name}_forecasts.csv", index_col=1).iloc[:, 1:]
-        elif fc_type == 'adjusted':
-            df_forecasts = pd.read_csv(f"results/{file_name}_adjusted_forecasts.csv", index_col=0)
-        elif fc_type == 'hf_val_loss':
+        elif fc_type == 'case1' or fc_type == 'case2' or fc_type == 'case3' or fc_type == 'case4':
             df_forecasts = pd.read_csv(f"results/{file_name}_adjusted_forecasts_{fc_type}.csv", index_col=0)
         else:
-            if fc_type == 'mintsample' and data =='prison':
+            if fc_type == 'mintsample' and data == 'prison':
                 continue
             else:
                 df_forecasts = pd.read_csv(f"results/benchmarks/{file_name}_{fc_type}.csv", index_col=0)
