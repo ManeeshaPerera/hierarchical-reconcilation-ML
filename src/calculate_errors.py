@@ -22,7 +22,7 @@ if __name__ == '__main__':
         errors = []
         if fc_type == 'base':
             df_forecasts = pd.read_csv(f"forecasts/{file_name}_forecasts.csv", index_col=1).iloc[:, 1:]
-        elif fc_type == 'case1' or fc_type == 'case2' or fc_type == 'case3' or fc_type == 'case4':
+        elif fc_type == 'case1' or fc_type == 'case2' or fc_type == 'case3' or fc_type == 'case4' or fc_type == 'prev_params':
             df_forecasts = pd.read_csv(f"results/{file_name}_adjusted_forecasts_{fc_type}.csv", index_col=0)
         else:
             if fc_type == 'mintsample' and data == 'prison':

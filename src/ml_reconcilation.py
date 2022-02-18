@@ -17,7 +17,7 @@ from src.construct_heirarchy import ConstructHierarchy
 class MLReconcile:
     def __init__(self, seed_value, actual_data, fitted_data, forecasts, number_of_levels, seed_runs, hyper_params_tune,
                  best_hyper_params=None, tune_hyper_params=True, random_state=42, split_size=0.2,
-                 validate_hf_loss=False, l1_regularizer=False):
+                 validate_hf_loss=False, l1_regularizer=False, return_seed_forecast = False):
         """
         Class initialization
         :param seed_value: seed value for tensorflow to achieve reproducibility
@@ -64,6 +64,7 @@ class MLReconcile:
         self.best_hyper_params = None
         self.validate_hf_loss = validate_hf_loss
         self.l1_regularizer = l1_regularizer
+        self.return_seed_forecast = return_seed_forecast
         self._run_initialization(seed_value, tune_hyper_params, hyper_params_tune, best_hyper_params)
 
     def _transpose_data(self, dataframe):
@@ -322,10 +323,10 @@ class MLReconcile:
             model_history_per_run = pd.DataFrame(self.model_history.history)
             model_history_per_run.columns = [f'loss_run_{run + 1}']
             model_history.append(model_history_per_run)
-        median_forecast = pd.concat(predictions)
-        median_forecast = median_forecast.groupby(median_forecast.index).median()
+        seed_forecasts = pd.concat(predictions)
+        median_forecast = seed_forecasts.groupby(seed_forecasts.index).median()
         forecast_for_hierarchy = self._get_bottom_up_forecasts(median_forecast)
-        return forecast_for_hierarchy, pd.concat(model_history, axis=1)
+        return forecast_for_hierarchy, pd.concat(model_history, axis=1), seed_forecasts
 
     def run_ml_reconciliation(self):
         # split the dataset
@@ -351,5 +352,8 @@ class MLReconcile:
 
         print("====> Training ML reconciliation model")
         # train model with multiple seed values and retrieve the adjusted forecasts
-        forecasts, model_history = self._train_model_with_seeds(data_dic)
-        return forecasts, model_history, pd.DataFrame.from_dict(self.best_hyper_params, 'index')
+        forecasts, model_history, seed_forecast = self._train_model_with_seeds(data_dic)
+        if self.return_seed_forecast:
+            return forecasts, model_history, pd.DataFrame.from_dict(self.best_hyper_params, 'index'), seed_forecast
+        else:
+            return forecasts, model_history, pd.DataFrame.from_dict(self.best_hyper_params, 'index')
