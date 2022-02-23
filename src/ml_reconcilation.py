@@ -17,7 +17,7 @@ from src.construct_heirarchy import ConstructHierarchy
 class MLReconcile:
     def __init__(self, seed_value, actual_data, fitted_data, forecasts, number_of_levels, seed_runs, hyper_params_tune,
                  best_hyper_params=None, tune_hyper_params=True, random_state=42, split_size=0.2,
-                 validate_hf_loss=False, l1_regularizer=False, return_seed_forecast = False):
+                 validate_hf_loss=False, l1_regularizer=False, return_seed_forecast=False):
         """
         Class initialization
         :param seed_value: seed value for tensorflow to achieve reproducibility
@@ -325,8 +325,10 @@ class MLReconcile:
             model_history.append(model_history_per_run)
         seed_forecasts = pd.concat(predictions)
         median_forecast = seed_forecasts.groupby(seed_forecasts.index).median()
-        forecast_for_hierarchy = self._get_bottom_up_forecasts(median_forecast)
-        return forecast_for_hierarchy, pd.concat(model_history, axis=1), seed_forecasts
+        mean_forecast = seed_forecasts.groupby(seed_forecasts.index).mean()
+        forecast_for_hierarchy_median = self._get_bottom_up_forecasts(median_forecast)
+        forecast_for_hierarchy_mean = self._get_bottom_up_forecasts(mean_forecast)
+        return forecast_for_hierarchy_median, forecast_for_hierarchy_mean, pd.concat(model_history, axis=1), seed_forecasts
 
     def run_ml_reconciliation(self):
         # split the dataset
@@ -335,6 +337,7 @@ class MLReconcile:
 
         # find optimal hyper parameters
         if self.hyper_params:
+            random_state = np.random.default_rng(42)
             print("====> running hyper parameter optimization")
             trials = Trials()
             max_evals = 50
@@ -343,7 +346,8 @@ class MLReconcile:
                 space=self.create_hyper_param_range(data_dic),
                 algo=tpe.suggest,
                 trials=trials,
-                max_evals=max_evals
+                max_evals=max_evals,
+                rstate=random_state
             )
 
             # run the model with best parameters
@@ -352,8 +356,8 @@ class MLReconcile:
 
         print("====> Training ML reconciliation model")
         # train model with multiple seed values and retrieve the adjusted forecasts
-        forecasts, model_history, seed_forecast = self._train_model_with_seeds(data_dic)
+        forecasts_median, forecast_mean, model_history, seed_forecast = self._train_model_with_seeds(data_dic)
         if self.return_seed_forecast:
-            return forecasts, model_history, pd.DataFrame.from_dict(self.best_hyper_params, 'index'), seed_forecast
+            return forecasts_median, forecast_mean, model_history, pd.DataFrame.from_dict(self.best_hyper_params, 'index'), seed_forecast
         else:
-            return forecasts, model_history, pd.DataFrame.from_dict(self.best_hyper_params, 'index')
+            return forecasts_median, forecast_mean, model_history, pd.DataFrame.from_dict(self.best_hyper_params, 'index')

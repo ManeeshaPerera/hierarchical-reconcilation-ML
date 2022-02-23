@@ -7,7 +7,8 @@ if __name__ == '__main__':
     number_of_levels = levels_in_hierarchy[data]
     model = 'arima'
     seed_value = 1234
-    seed_runs = [1234, 3456, 2311, 8311, 5677]
+    seed_runs = [1234]
+    # seed_runs = [1234, 3456, 2311, 8311, 5677]
     file_name = f'{data}_{model}'
 
     df_actual = pd.read_csv(f"input_data/{data}_actual.csv")
@@ -34,16 +35,13 @@ if __name__ == '__main__':
         else:
             best_hyper_params[param] = float(value)
     best_hyper_params['no_units_layer'] = no_units_layer
-    print(best_hyper_params)
-
-    # # if hyper parameter tuning is not required tune_hyper_params = False and
-    # # best_hyper_params parameter should be passed
 
     # CASE 1 - validation loss for bottom level
     ml_model_case1 = MLReconcile(seed_value, df_actual, df_fitted, df_forecasts, number_of_levels, seed_runs,
-                                 best_hyper_params=best_hyper_params,
-                                 tune_hyper_params=False, hyper_params_tune=None, return_seed_forecast=True)
-    ml_model_case1.run_ml_reconciliation()
-    forecasts_adjusted_case1, model_history_case1, best_hyper_params_case1, seed_forecast = ml_model_case1.run_ml_reconciliation()
-    seed_forecast.to_csv(f'results/validation_results_experiments/{file_name}_seed_runs_prev_params.csv')
-    forecasts_adjusted_case1.to_csv(f'results/{file_name}_adjusted_forecasts_prev_params.csv')
+                                 hyper_params_tune=None,
+                                 tune_hyper_params=False, best_hyper_params=best_hyper_params)
+    forecasts_adjusted_case1, forecasts_adjusted_case1_mean, model_history_case1, best_hyper_params_case1 = ml_model_case1.run_ml_reconciliation()
+
+    forecasts_adjusted_case1.to_csv(f'results/{file_name}_adjusted_forecasts_one_seed_prev_params.csv')
+    # forecasts_adjusted_case1_mean.to_csv(f'results/{file_name}_adjusted_forecasts_seeds_prev_params_mean.csv') # mean is not needed if it's one seed
+    # model_history_case1.to_csv(f'results/{file_name}_model_history_one_seed_prev_params.csv')
