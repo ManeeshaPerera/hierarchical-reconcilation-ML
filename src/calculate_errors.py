@@ -13,8 +13,8 @@ def calculate_error(err_func, y_true, y_pred, error_list, ts_list, ts_idx, error
 
 
 if __name__ == '__main__':
-    data = 'tourism'
-    model = 'arima'
+    data = 'prison'
+    model = 'ets'
     # FC_TYPE = ['base', 'case1', 'case2', 'case3', 'case4', 'bottomup', 'ols', 'wls', 'mintsample', 'mintshrink', 'erm']
     FC_TYPE = ['case1', 'case1_mean', 'case1_one_seed', 'one_seed_prev_params', 'seeds_prev_params',
                'seeds_prev_params_mean']

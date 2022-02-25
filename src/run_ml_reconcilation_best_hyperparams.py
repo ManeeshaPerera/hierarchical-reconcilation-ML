@@ -3,12 +3,12 @@ from src.ml_reconcilation import MLReconcile
 
 if __name__ == '__main__':
     levels_in_hierarchy = {'prison': 5, 'tourism': 3}
-    data = 'tourism'
+    data = 'prison'
     number_of_levels = levels_in_hierarchy[data]
-    model = 'arima'
+    model = 'ets'
     seed_value = 1234
-    seed_runs = [1234]
-    # seed_runs = [1234, 3456, 2311, 8311, 5677]
+    # seed_runs = [1234]
+    seed_runs = [1234, 3456, 2311, 8311, 5677]
     file_name = f'{data}_{model}'
 
     df_actual = pd.read_csv(f"input_data/{data}_actual.csv")
@@ -42,6 +42,6 @@ if __name__ == '__main__':
                                  tune_hyper_params=False, best_hyper_params=best_hyper_params)
     forecasts_adjusted_case1, forecasts_adjusted_case1_mean, model_history_case1, best_hyper_params_case1 = ml_model_case1.run_ml_reconciliation()
 
-    forecasts_adjusted_case1.to_csv(f'results/{file_name}_adjusted_forecasts_one_seed_prev_params.csv')
-    # forecasts_adjusted_case1_mean.to_csv(f'results/{file_name}_adjusted_forecasts_seeds_prev_params_mean.csv') # mean is not needed if it's one seed
+    forecasts_adjusted_case1.to_csv(f'results/{file_name}_adjusted_forecasts_seeds_prev_params.csv')
+    forecasts_adjusted_case1_mean.to_csv(f'results/{file_name}_adjusted_forecasts_seeds_prev_params_mean.csv') # mean is not needed if it's one seed
     # model_history_case1.to_csv(f'results/{file_name}_model_history_one_seed_prev_params.csv')
