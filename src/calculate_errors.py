@@ -13,13 +13,11 @@ def calculate_error(err_func, y_true, y_pred, error_list, ts_list, ts_idx, error
 
 
 if __name__ == '__main__':
-    data = 'prison'
+    data = 'wikipedia'
     model = 'ets'
-    # FC_TYPE = ['base', 'case1', 'case2', 'case3', 'case4', 'bottomup', 'ols', 'wls', 'mintsample', 'mintshrink', 'erm']
-    FC_TYPE = ['case1', 'case1_mean', 'case1_one_seed', 'one_seed_prev_params', 'seeds_prev_params',
-               'seeds_prev_params_mean']
-    adjusted_fc = ['case1', 'case2', 'case3', 'case4', 'case1_mean', 'case1_one_seed', 'one_seed_prev_params',
-                   'seeds_prev_params', 'seeds_prev_params_mean']
+    FC_TYPE = ['base','bottomup', 'ols', 'wls', 'mintsample', 'mintshrink', 'erm', 'case1', 'case1_mean', 'case1_one_seed']
+    # FC_TYPE = ['case1', 'case1_mean', 'case1_one_seed']
+    adjusted_fc = ['case1', 'case2', 'case1_one_seed', 'case1_mean']
     file_name = f'{data}_{model}'
     actual_test = pd.read_csv(f"input_data/{data}_test.csv", index_col=1)
     for fc_type in FC_TYPE:
@@ -29,7 +27,7 @@ if __name__ == '__main__':
         elif fc_type in adjusted_fc:
             df_forecasts = pd.read_csv(f"results/{file_name}_adjusted_forecasts_{fc_type}.csv", index_col=0)
         else:
-            if fc_type == 'mintsample' and data == 'prison':
+            if fc_type == 'mintsample' and (data == 'prison' or data == 'wikipedia'):
                 continue
             else:
                 df_forecasts = pd.read_csv(f"results/benchmarks/{file_name}_{fc_type}.csv", index_col=0)

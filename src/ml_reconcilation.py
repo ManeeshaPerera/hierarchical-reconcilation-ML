@@ -17,7 +17,7 @@ from src.construct_heirarchy import ConstructHierarchy
 class MLReconcile:
     def __init__(self, seed_value, actual_data, fitted_data, forecasts, number_of_levels, seed_runs, hyper_params_tune,
                  best_hyper_params=None, tune_hyper_params=True, random_state=42, split_size=0.2,
-                 validate_hf_loss=False, l1_regularizer=False, return_seed_forecast=False):
+                 validate_hf_loss=False, l1_regularizer=False, return_seed_forecast=False, tune_lambda=True):
         """
         Class initialization
         :param seed_value: seed value for tensorflow to achieve reproducibility
@@ -65,6 +65,7 @@ class MLReconcile:
         self.validate_hf_loss = validate_hf_loss
         self.l1_regularizer = l1_regularizer
         self.return_seed_forecast = return_seed_forecast
+        self.tune_lambda = tune_lambda
         self._run_initialization(seed_value, tune_hyper_params, hyper_params_tune, best_hyper_params)
 
     def _transpose_data(self, dataframe):
@@ -163,7 +164,11 @@ class MLReconcile:
         learning_rate = hyperparams['learning_rate']
         dropout_rate = hyperparams['dropout_rate']
         max_norm_value = hyperparams['max_norm_value']
-        reconciliation_loss_lambda = hyperparams['reconciliation_loss_lambda']
+
+        if self.tune_lambda:
+            reconciliation_loss_lambda = hyperparams['reconciliation_loss_lambda']
+        else:
+            reconciliation_loss_lambda = 1
 
         inputs = keras.Input(shape=self.fitted_transpose.shape[1])
         last_output = inputs
@@ -205,7 +210,9 @@ class MLReconcile:
         epochs = self.hyper_params['epochs']
         dropout_rate = self.hyper_params['dropout_rate']
         max_norm_value = self.hyper_params['max_norm_value']
-        rec_lambda = self.hyper_params['reconciliation_loss_lambda']
+
+        if self.tune_lambda:
+            rec_lambda = self.hyper_params['reconciliation_loss_lambda']
 
         layers_list = []
         for i in range(1, (layers_upper + 1)):
@@ -223,8 +230,11 @@ class MLReconcile:
             'epochs': scope.int(hp.quniform('epochs', epochs[0], epochs[1], 1)),
             'dropout_rate': hp.uniform('dropout_rate', dropout_rate[0], dropout_rate[1]),
             'max_norm_value': hp.uniform('max_norm_value', max_norm_value[0], max_norm_value[1]),
-            'reconciliation_loss_lambda': hp.uniform('reconciliation_loss_lambda', rec_lambda[0], rec_lambda[1])
         }
+
+        if self.tune_lambda:
+            param_space['reconciliation_loss_lambda'] = hp.uniform('reconciliation_loss_lambda', rec_lambda[0],
+                                                                   rec_lambda[1])
         return param_space
 
     def validate_model(self, hyperparams, data_dic):
@@ -328,7 +338,8 @@ class MLReconcile:
         mean_forecast = seed_forecasts.groupby(seed_forecasts.index).mean()
         forecast_for_hierarchy_median = self._get_bottom_up_forecasts(median_forecast)
         forecast_for_hierarchy_mean = self._get_bottom_up_forecasts(mean_forecast)
-        return forecast_for_hierarchy_median, forecast_for_hierarchy_mean, pd.concat(model_history, axis=1), seed_forecasts
+        return forecast_for_hierarchy_median, forecast_for_hierarchy_mean, pd.concat(model_history,
+                                                                                     axis=1), seed_forecasts
 
     def run_ml_reconciliation(self):
         # split the dataset
@@ -358,6 +369,8 @@ class MLReconcile:
         # train model with multiple seed values and retrieve the adjusted forecasts
         forecasts_median, forecast_mean, model_history, seed_forecast = self._train_model_with_seeds(data_dic)
         if self.return_seed_forecast:
-            return forecasts_median, forecast_mean, model_history, pd.DataFrame.from_dict(self.best_hyper_params, 'index'), seed_forecast
+            return forecasts_median, forecast_mean, model_history, pd.DataFrame.from_dict(self.best_hyper_params,
+                                                                                          'index'), seed_forecast
         else:
-            return forecasts_median, forecast_mean, model_history, pd.DataFrame.from_dict(self.best_hyper_params, 'index')
+            return forecasts_median, forecast_mean, model_history, pd.DataFrame.from_dict(self.best_hyper_params,
+                                                                                          'index')

@@ -44,3 +44,7 @@ tourism <- c("filename" = "input_data/tourism_actual.csv", "freq" = 12, "horizon
 all_level_ts_train <-read_csv(tourism['filename'])
 model_results_write(all_level_ts_train, tourism['name'], as.integer(tourism['freq']), as.integer(tourism['horizon']))
 
+
+wikipedia <- c("filename" = "input_data/wikipedia_actual.csv", "freq" = 1, "horizon"= 7, 'name' = 'forecasts/wikipedia')
+all_level_ts_train <-read_csv(wikipedia['filename'])
+model_results_write(all_level_ts_train, wikipedia['name'], as.integer(wikipedia['freq']), as.integer(wikipedia['horizon']))

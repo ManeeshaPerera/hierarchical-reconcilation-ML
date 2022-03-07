@@ -2,17 +2,19 @@ import pandas as pd
 from src.ml_reconcilation import MLReconcile
 
 if __name__ == '__main__':
-    levels_in_hierarchy = {'prison': 5, 'tourism': 3}
-    data = 'prison'
+    levels_in_hierarchy = {'prison': 5, 'tourism': 3, 'wikipedia': 5}
+    data = 'wikipedia'
     number_of_levels = levels_in_hierarchy[data]
-    model = 'ets'
+    model = 'arima'
     seed_value = 1234
-    seed_runs = [1234]
-    # seed_runs = [1234, 3456, 2311, 8311, 5677]
+    # seed_runs = [1234]
+    seed_runs = [1234, 3456, 2311, 8311, 5677]
     file_name = f'{data}_{model}'
     tune_hyper_params = True
-    validate_hf_loss = False
+    validate_hf_loss = True
     l1_regularizer = False
+    lambda_case = [0.0001, 0.1]
+    tune_lambda = True
 
     # CASE 1 - validation loss for bottom level
     # CASE 2 - validation loss for complete hierarchy
@@ -35,23 +37,26 @@ if __name__ == '__main__':
     else:
         name_file = case
 
+    if tune_lambda == False:
+        name_file = f'{name_file}_lambda1'
+
     df_actual = pd.read_csv(f"input_data/{data}_actual.csv")
     df_fitted = pd.read_csv(f"forecasts/{file_name}_fitted.csv")
     df_forecasts = pd.read_csv(f"forecasts/{file_name}_forecasts.csv")
 
     hyper_params = {'number_of_layers': 5, 'epochs': [10, 200], 'dropout_rate': [0, 0.5], 'max_norm_value': [0, 10],
-                    'reconciliation_loss_lambda': [0.1, 0.9], 'learning_rate': [0.0001, 0.1]}
+                    'reconciliation_loss_lambda': [0.1, 0.9], 'learning_rate': lambda_case}
 
     # if hyper parameter tuning is not required tune_hyper_params = False and
     # best_hyper_params parameter should be passed
 
-    # CASE 1 - validation loss for bottom level
     ml_model_case1 = MLReconcile(seed_value, df_actual, df_fitted, df_forecasts, number_of_levels, seed_runs,
                                  hyper_params_tune=hyper_params,
-                                 tune_hyper_params=True)
+                                 tune_hyper_params=True, tune_lambda=tune_lambda)
     forecasts_adjusted_case1, forecasts_adjusted_case1_mean, model_history_case1, best_hyper_params_case1 = ml_model_case1.run_ml_reconciliation()
 
     forecasts_adjusted_case1.to_csv(f'results/{file_name}_adjusted_forecasts_{name_file}.csv')
-    # forecasts_adjusted_case1_mean.to_csv(f'results/{file_name}_adjusted_forecasts_{name_file}_mean.csv')
-    # model_history_case1.to_csv(f'results/{file_name}_model_history_{name_file}.csv')
-    # best_hyper_params_case1.to_csv(f'results/{file_name}_best_params_{name_file}.csv')
+    if len(seed_runs) > 1:
+        forecasts_adjusted_case1_mean.to_csv(f'results/{file_name}_adjusted_forecasts_{name_file}_mean.csv')
+        model_history_case1.to_csv(f'results/model_history/{file_name}_model_history_{name_file}.csv')
+        best_hyper_params_case1.to_csv(f'results/model_history/{file_name}_best_params_{name_file}.csv')
