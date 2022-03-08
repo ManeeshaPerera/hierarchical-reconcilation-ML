@@ -14,13 +14,19 @@ def calculate_error(err_func, y_true, y_pred, error_list, ts_list, ts_idx, error
 
 if __name__ == '__main__':
     data = 'wikipedia'
-    model = 'ets'
-    FC_TYPE = ['base','bottomup', 'ols', 'wls', 'mintsample', 'mintshrink', 'erm', 'case1', 'case1_mean', 'case1_one_seed']
-    # FC_TYPE = ['case1', 'case1_mean', 'case1_one_seed']
-    adjusted_fc = ['case1', 'case2', 'case1_one_seed', 'case1_mean']
-    file_name = f'{data}_{model}'
+    model = 'arima'
+    half_horizon = {'prison': 4, 'tourism': 6, 'wikipedia': 3}
+    half_horizon_case = True
+    # FC_TYPE = ['base','bottomup', 'ols', 'wls', 'mintsample', 'mintshrink', 'erm', 'case1', 'case1_mean', 'case1_one_seed']
+    FC_TYPE = ['base', 'bottomup', 'ols', 'wls', 'mintsample', 'mintshrink', 'erm',
+               'case1', 'case1_mean', 'case1_lambda1', 'case1_lambda1_mean', 'case1_lambda2', 'case1_lambda2_mean',
+               'case2', 'case2_mean', 'case2_lambda1', 'case2_lambda1_mean', 'case2_lambda2', 'case2_lambda2_mean']
+    adjusted_fc = ['case1', 'case1_mean', 'case1_lambda1', 'case1_lambda1_mean', 'case1_lambda2', 'case1_lambda2_mean',
+                   'case2', 'case2_mean', 'case2_lambda1', 'case2_lambda1_mean', 'case2_lambda2', 'case2_lambda2_mean']
     actual_test = pd.read_csv(f"input_data/{data}_test.csv", index_col=1)
     for fc_type in FC_TYPE:
+        file_name = f'{data}_{model}'
+        print(fc_type)
         errors = []
         if fc_type == 'base':
             df_forecasts = pd.read_csv(f"forecasts/{file_name}_forecasts.csv", index_col=1).iloc[:, 1:]
@@ -36,10 +42,15 @@ if __name__ == '__main__':
         ts_names = actual_test.index.values
         levels = actual_test['Level'].values
         for ts in range(len(actual_test)):
-            actual_test_ts = actual_test.iloc[ts: ts + 1, 1:].values[0]
-            # fc
-            ts_fc = df_forecasts.iloc[ts: ts + 1, :].values[0]
-
+            if half_horizon_case:
+                idx = half_horizon[data]
+                actual_test_ts = actual_test.iloc[ts: ts + 1, 1:idx + 1].values[0]
+                # fc
+                ts_fc = df_forecasts.iloc[ts: ts + 1, 0:idx].values[0]
+            else:
+                actual_test_ts = actual_test.iloc[ts: ts + 1, 1:].values[0]
+                # fc
+                ts_fc = df_forecasts.iloc[ts: ts + 1, :].values[0]
             calculate_error(mean_squared_error, actual_test_ts, ts_fc, errors, ts_names, ts, 'MSE',
                             levels)
             calculate_error(mean_absolute_error, actual_test_ts, ts_fc, errors, ts_names, ts,
@@ -49,4 +60,6 @@ if __name__ == '__main__':
 
         errors = pd.DataFrame(errors)
         errors.columns = ['ts_name', 'error_metric', 'error', 'level']
+        if half_horizon_case:
+            file_name = f'{file_name}_short_horizon'
         errors.to_csv(f'results/errors/{file_name}_{fc_type}_errors.csv')
