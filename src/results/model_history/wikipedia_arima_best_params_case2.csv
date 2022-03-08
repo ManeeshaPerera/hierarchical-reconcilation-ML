@@ -6,6 +6,6 @@ layers,0
 learning_rate,0.010463614109879525
 max_norm_value,8.572848536963047
 no_units_layer_1_1,70.0
-reconciliation_loss_lambda,0.897074665296838
+reconciliation_loss_lambda,0.09963469882894263
 no_layers,1
 no_units_layer,[70]
