@@ -1,20 +1,22 @@
 import pandas as pd
-from src.ml_reconcilation import MLReconcile
+from ml_reconcilation import MLReconcile
+import sys
 
 if __name__ == '__main__':
+    DATASET = ['prison', 'tourism', 'wikipedia']
     levels_in_hierarchy = {'prison': 5, 'tourism': 3, 'wikipedia': 5}
-    data = 'wikipedia'
+    data = DATASET[int(sys.argv[1])]
+    model = sys.argv[2]
     number_of_levels = levels_in_hierarchy[data]
-    model = 'arima'
     seed_value = 1234
     # seed_runs = [1234]
     seed_runs = [1234, 3456, 2311, 8311, 5677]
     file_name = f'{data}_{model}'
-    tune_hyper_params = True
-    validate_hf_loss = True
+    tune_lambda = bool(sys.argv[3])
+    validate_hf_loss = bool(sys.argv[4])
+    lambda_range_idx = int(sys.argv[5])
+    lambda_range = [[0.0001, 0.1], [1.1, 5]]
     l1_regularizer = False
-    lambda_case = [0.0001, 0.1]
-    tune_lambda = True
 
     # CASE 1 - validation loss for bottom level
     # CASE 2 - validation loss for complete hierarchy
@@ -39,13 +41,20 @@ if __name__ == '__main__':
 
     if tune_lambda == False:
         name_file = f'{name_file}_lambda1'
+        lambda_case = 1
+    else:
+        lambda_case = lambda_range[lambda_range_idx]
+        if lambda_range_idx >0:
+            name_file = f'{name_file}_lambda2'
+    print(lambda_case)
+    print(name_file)
 
     df_actual = pd.read_csv(f"input_data/{data}_actual.csv")
     df_fitted = pd.read_csv(f"forecasts/{file_name}_fitted.csv")
     df_forecasts = pd.read_csv(f"forecasts/{file_name}_forecasts.csv")
 
     hyper_params = {'number_of_layers': 5, 'epochs': [10, 200], 'dropout_rate': [0, 0.5], 'max_norm_value': [0, 10],
-                    'reconciliation_loss_lambda': [0.1, 0.9], 'learning_rate': lambda_case}
+                    'reconciliation_loss_lambda': lambda_case, 'learning_rate': [0.0001, 0.1]}
 
     # if hyper parameter tuning is not required tune_hyper_params = False and
     # best_hyper_params parameter should be passed

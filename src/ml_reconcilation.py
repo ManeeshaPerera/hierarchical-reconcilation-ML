@@ -11,7 +11,7 @@ from tensorflow.keras.constraints import max_norm
 from hyperopt import fmin, tpe, hp, Trials
 from functools import partial
 from hyperopt.pyll.base import scope
-from src.construct_heirarchy import ConstructHierarchy
+from construct_heirarchy import ConstructHierarchy
 
 
 class MLReconcile:
