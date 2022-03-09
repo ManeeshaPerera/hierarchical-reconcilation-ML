@@ -13,9 +13,9 @@ def calculate_error(err_func, y_true, y_pred, error_list, ts_list, ts_idx, error
 
 
 if __name__ == '__main__':
-    data = 'wikipedia'
-    model = 'arima'
-    half_horizon = {'prison': 4, 'tourism': 6, 'wikipedia': 3}
+    data = 'labour'
+    model = 'ets'
+    half_horizon = {'prison': 4, 'tourism': 6, 'wikipedia': 3, 'labour': 4}
     half_horizon_case = True
     # FC_TYPE = ['base','bottomup', 'ols', 'wls', 'mintsample', 'mintshrink', 'erm', 'case1', 'case1_mean', 'case1_one_seed']
     FC_TYPE = ['base', 'bottomup', 'ols', 'wls', 'mintsample', 'mintshrink', 'erm',
