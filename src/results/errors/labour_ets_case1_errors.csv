@@ -1,0 +1,172 @@
+,ts_name,error_metric,error,level
+0,Aggregated,MSE,44857.49281397163,1
+1,Aggregated,MAE,169.85163944750016,1
+2,Aggregated,SMAPE,1.3765918763304346,1
+3,Clerical and Administrative Workers,MSE,1846.934082363231,2
+4,Clerical and Administrative Workers,MAE,34.329020438333295,2
+5,Clerical and Administrative Workers,SMAPE,2.5436233370127033,2
+6,Community and Personal Service Workers,MSE,1779.2459805235173,2
+7,Community and Personal Service Workers,MAE,34.58539140166666,2
+8,Community and Personal Service Workers,SMAPE,2.6696243766720986,2
+9,Labourers,MSE,6151.038370073685,2
+10,Labourers,MAE,72.82770246416668,2
+11,Labourers,SMAPE,6.209518368394212,2
+12,Machinery Operators and Drivers,MSE,3322.642861208473,2
+13,Machinery Operators and Drivers,MAE,49.56399383250002,2
+14,Machinery Operators and Drivers,SMAPE,6.4151140696126605,2
+15,Managers,MSE,1241.6135033908201,2
+16,Managers,MAE,27.981411947500003,2
+17,Managers,SMAPE,1.7950713832094214,2
+18,Professionals,MSE,7278.285190841969,2
+19,Professionals,MAE,72.3152295241667,2
+20,Professionals,SMAPE,2.488251297220188,2
+21,Sales Workers,MSE,1908.254061736412,2
+22,Sales Workers,MAE,40.27065416666672,2
+23,Sales Workers,SMAPE,2.755660142156446,2
+24,Technicians and Trades Workers,MSE,2882.979779201152,2
+25,Technicians and Trades Workers,MAE,48.35679727749997,2
+26,Technicians and Trades Workers,SMAPE,2.7854342110027157,2
+27,Clerical and Administrative Workers-Full time,MSE,1315.1400585208567,3
+28,Clerical and Administrative Workers-Full time,MAE,28.804463699999996,3
+29,Clerical and Administrative Workers-Full time,SMAPE,3.472931109696436,3
+30,Clerical and Administrative Workers-Part time,MSE,303.6039685731144,3
+31,Clerical and Administrative Workers-Part time,MAE,15.596689820000009,3
+32,Clerical and Administrative Workers-Part time,SMAPE,2.9891044929702937,3
+33,Community and Personal Service Workers-Full time,MSE,748.7417059173791,3
+34,Community and Personal Service Workers-Full time,MAE,20.641698480000013,3
+35,Community and Personal Service Workers-Full time,SMAPE,3.5315881276610956,3
+36,Community and Personal Service Workers-Part time,MSE,499.8933360769707,3
+37,Community and Personal Service Workers-Part time,MAE,18.545319425000002,3
+38,Community and Personal Service Workers-Part time,SMAPE,2.599023040027486,3
+39,Labourers-Full time,MSE,1280.1280994629503,3
+40,Labourers-Full time,MAE,32.47842082166668,3
+41,Labourers-Full time,SMAPE,5.165882240069909,3
+42,Labourers-Part time,MSE,2128.997786609608,3
+43,Labourers-Part time,MAE,41.86569022083332,3
+44,Labourers-Part time,SMAPE,7.670191090561989,3
+45,Machinery Operators and Drivers-Full time,MSE,1598.3805758145372,3
+46,Machinery Operators and Drivers-Full time,MAE,31.628384639166637,3
+47,Machinery Operators and Drivers-Full time,SMAPE,4.89834402261521,3
+48,Machinery Operators and Drivers-Part time,MSE,405.4646756677568,3
+49,Machinery Operators and Drivers-Part time,MAE,17.93560711,3
+50,Machinery Operators and Drivers-Part time,SMAPE,13.872210048661026,3
+51,Managers-Full time,MSE,1473.944344340506,3
+52,Managers-Full time,MAE,32.47568364583335,3
+53,Managers-Full time,SMAPE,2.3981703541761084,3
+54,Managers-Part time,MSE,91.60340662670268,3
+55,Managers-Part time,MAE,7.373900126666672,3
+56,Managers-Part time,SMAPE,3.4803196835971923,3
+57,Professionals-Full time,MSE,8527.948834991737,3
+58,Professionals-Full time,MAE,78.77549228249997,3
+59,Professionals-Full time,SMAPE,3.676739280175708,3
+60,Professionals-Part time,MSE,371.54390697801654,3
+61,Professionals-Part time,MAE,16.788796446666662,3
+62,Professionals-Part time,SMAPE,2.260137786693611,3
+63,Sales Workers-Full time,MSE,552.7182864966618,3
+64,Sales Workers-Full time,MAE,20.417436825833335,3
+65,Sales Workers-Full time,SMAPE,2.7674913171936657,3
+66,Sales Workers-Part time,MSE,948.0332487736817,3
+67,Sales Workers-Part time,MAE,28.598595125833345,3
+68,Sales Workers-Part time,SMAPE,3.9132572933318293,3
+69,Technicians and Trades Workers-Full time,MSE,2671.7862615445906,3
+70,Technicians and Trades Workers-Full time,MAE,40.72091089333335,3
+71,Technicians and Trades Workers-Full time,SMAPE,2.77466317066689,3
+72,Technicians and Trades Workers-Part time,MSE,309.5365923044513,3
+73,Technicians and Trades Workers-Part time,MAE,14.86977508416667,3
+74,Technicians and Trades Workers-Part time,SMAPE,5.633042588730686,3
+75,Clerical and Administrative Workers-Full time-Females,MSE,395.0464268870387,4
+76,Clerical and Administrative Workers-Full time-Females,MAE,16.748261555833324,4
+77,Clerical and Administrative Workers-Full time-Females,SMAPE,2.7291744024341797,4
+78,Clerical and Administrative Workers-Full time-Males,MSE,418.9245732892019,4
+79,Clerical and Administrative Workers-Full time-Males,MAE,15.729276854166669,4
+80,Clerical and Administrative Workers-Full time-Males,SMAPE,7.347926189565364,4
+81,Clerical and Administrative Workers-Part time-Females,MSE,272.47743587815006,4
+82,Clerical and Administrative Workers-Part time-Females,MAE,14.748037170833342,4
+83,Clerical and Administrative Workers-Part time-Females,SMAPE,3.072910664631769,4
+84,Clerical and Administrative Workers-Part time-Males,MSE,25.711888294564222,4
+85,Clerical and Administrative Workers-Part time-Males,MAE,4.046833267499999,4
+86,Clerical and Administrative Workers-Part time-Males,SMAPE,9.858955230441087,4
+87,Community and Personal Service Workers-Full time-Females,MSE,458.877632426581,4
+88,Community and Personal Service Workers-Full time-Females,MAE,16.331809198333342,4
+89,Community and Personal Service Workers-Full time-Females,SMAPE,4.747409733344904,4
+90,Community and Personal Service Workers-Full time-Males,MSE,122.73858328335092,4
+91,Community and Personal Service Workers-Full time-Males,MAE,9.283938930000003,4
+92,Community and Personal Service Workers-Full time-Males,SMAPE,3.8673148177675016,4
+93,Community and Personal Service Workers-Part time-Females,MSE,534.0395306271441,4
+94,Community and Personal Service Workers-Part time-Females,MAE,21.467687031666657,4
+95,Community and Personal Service Workers-Part time-Females,SMAPE,3.8529301187657685,4
+96,Community and Personal Service Workers-Part time-Males,MSE,87.67573459718228,4
+97,Community and Personal Service Workers-Part time-Males,MAE,7.0671451116666715,4
+98,Community and Personal Service Workers-Part time-Males,SMAPE,4.624915028344292,4
+99,Labourers-Full time-Females,MSE,335.08902664356367,4
+100,Labourers-Full time-Females,MAE,15.538280439166664,4
+101,Labourers-Full time-Females,SMAPE,11.417841642355752,4
+102,Labourers-Full time-Males,MSE,357.4811028468965,4
+103,Labourers-Full time-Males,MAE,17.463466477499995,4
+104,Labourers-Full time-Males,SMAPE,3.542705043148848,4
+105,Labourers-Part time-Females,MSE,1204.7803697993613,4
+106,Labourers-Part time-Females,MAE,29.950820785833333,4
+107,Labourers-Part time-Females,SMAPE,11.549833724315683,4
+108,Labourers-Part time-Males,MSE,249.9590639021584,4
+109,Labourers-Part time-Males,MAE,13.222139800000008,4
+110,Labourers-Part time-Males,SMAPE,4.5971002269401104,4
+111,Machinery Operators and Drivers-Full time-Females,MSE,67.04681765372672,4
+112,Machinery Operators and Drivers-Full time-Females,MAE,7.014563419999999,4
+113,Machinery Operators and Drivers-Full time-Females,SMAPE,14.355533320123937,4
+114,Machinery Operators and Drivers-Full time-Males,MSE,1941.335725431634,4
+115,Machinery Operators and Drivers-Full time-Males,MAE,37.02760895916665,4
+116,Machinery Operators and Drivers-Full time-Males,SMAPE,6.238843524751284,4
+117,Machinery Operators and Drivers-Part time-Females,MSE,40.19250414382616,4
+118,Machinery Operators and Drivers-Part time-Females,MAE,5.781121073333334,4
+119,Machinery Operators and Drivers-Part time-Females,SMAPE,23.10537450403393,4
+120,Machinery Operators and Drivers-Part time-Males,MSE,205.03121455590158,4
+121,Machinery Operators and Drivers-Part time-Males,MAE,12.673168425,4
+122,Machinery Operators and Drivers-Part time-Males,SMAPE,12.129040358202685,4
+123,Managers-Full time-Females,MSE,194.05110905554145,4
+124,Managers-Full time-Females,MAE,11.857856529166668,4
+125,Managers-Full time-Females,SMAPE,2.6910234802434925,4
+126,Managers-Full time-Males,MSE,925.5697340442052,4
+127,Managers-Full time-Males,MAE,24.537869259999997,4
+128,Managers-Full time-Males,SMAPE,2.702184420163495,4
+129,Managers-Part time-Females,MSE,28.320670376689165,4
+130,Managers-Part time-Females,MAE,4.652769705833332,4
+131,Managers-Part time-Females,SMAPE,3.521656507108255,4
+132,Managers-Part time-Males,MSE,54.67892059158535,4
+133,Managers-Part time-Males,MAE,5.330667100833334,4
+134,Managers-Part time-Males,SMAPE,6.661617477662266,4
+135,Professionals-Full time-Females,MSE,4321.097824270556,4
+136,Professionals-Full time-Females,MAE,58.382069088333346,4
+137,Professionals-Full time-Females,SMAPE,5.824897330441095,4
+138,Professionals-Full time-Males,MSE,885.68711960555,4
+139,Professionals-Full time-Males,MAE,24.157477447499975,4
+140,Professionals-Full time-Males,SMAPE,2.122193828239695,4
+141,Professionals-Part time-Females,MSE,365.1894935728653,4
+142,Professionals-Part time-Females,MAE,16.030838609999986,4
+143,Professionals-Part time-Females,SMAPE,2.8094236552741445,4
+144,Professionals-Part time-Males,MSE,56.41981726506659,4
+145,Professionals-Part time-Males,MAE,6.527316760000001,4
+146,Professionals-Part time-Males,SMAPE,3.645526840053774,4
+147,Sales Workers-Full time-Females,MSE,163.56241090517983,4
+148,Sales Workers-Full time-Females,MAE,10.656168171666664,4
+149,Sales Workers-Full time-Females,SMAPE,3.2560171156228854,4
+150,Sales Workers-Full time-Males,MSE,214.45940767430568,4
+151,Sales Workers-Full time-Males,MAE,12.106127667500004,4
+152,Sales Workers-Full time-Males,SMAPE,2.966746902370037,4
+153,Sales Workers-Part time-Females,MSE,690.0173918867868,4
+154,Sales Workers-Part time-Females,MAE,22.588859995000007,4
+155,Sales Workers-Part time-Females,SMAPE,4.3015114051186165,4
+156,Sales Workers-Part time-Males,MSE,64.8342072855303,4
+157,Sales Workers-Part time-Males,MAE,6.490926115833335,4
+158,Sales Workers-Part time-Males,SMAPE,3.1761100735084837,4
+159,Technicians and Trades Workers-Full time-Females,MSE,103.39040365217097,4
+160,Technicians and Trades Workers-Full time-Females,MAE,7.962405728333333,4
+161,Technicians and Trades Workers-Full time-Females,SMAPE,5.500381781908645,4
+162,Technicians and Trades Workers-Full time-Males,MSE,2030.1070037497875,4
+163,Technicians and Trades Workers-Full time-Males,MAE,36.006097694999994,4
+164,Technicians and Trades Workers-Full time-Males,SMAPE,2.721527327796328,4
+165,Technicians and Trades Workers-Part time-Females,MSE,77.62903220204382,4
+166,Technicians and Trades Workers-Part time-Females,MAE,7.1564966466666675,4
+167,Technicians and Trades Workers-Part time-Females,SMAPE,6.402827216780966,4
+168,Technicians and Trades Workers-Part time-Males,MSE,199.36550970502844,4
+169,Technicians and Trades Workers-Part time-Males,MAE,12.799586537500005,4
+170,Technicians and Trades Workers-Part time-Males,SMAPE,8.479444416635742,4
