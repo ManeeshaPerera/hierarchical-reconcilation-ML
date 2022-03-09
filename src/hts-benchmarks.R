@@ -32,6 +32,9 @@ hts_benchmarks <- function (dataset_name, base_model_name){
   else if (dataset_name == 'wikipedia'){
     hierarchy_nodes <- list(4, rep(3, 4), rep(c(2,1,2), 4), c(rep(38, 2), 30, 24, 38, rep(93, 2), 74, 92, 93, rep(38, 2), 25, 31, 38, rep(29,2), 14, rep(29,2)))
   }
+  else if (dataset_name == 'labour'){
+    hierarchy_nodes <- list(8, rep(2, 8), rep(2, 16))
+  }
   gmat <- hts:::GmatrixH(hierarchy_nodes) # creating grouping structure
   summing_matrix <- hts:::SmatrixM(gmat) # create the summing matrix for the hierarchy - M X B
 

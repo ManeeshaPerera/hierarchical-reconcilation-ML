@@ -1,7 +1,7 @@
 import rpy2.robjects as robjects
 
-data = 'wikipedia'
-base_model = 'ets'
+data = 'labour'
+base_model = 'arima'
 
 r_source = robjects.r['source']
 r_source('../src/hts-benchmarks.R')

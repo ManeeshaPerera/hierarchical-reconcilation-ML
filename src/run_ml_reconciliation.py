@@ -3,8 +3,8 @@ from ml_reconcilation import MLReconcile
 import sys
 
 if __name__ == '__main__':
-    DATASET = ['prison', 'tourism', 'wikipedia']
-    levels_in_hierarchy = {'prison': 5, 'tourism': 3, 'wikipedia': 5}
+    DATASET = ['prison', 'tourism', 'wikipedia', 'labour']
+    levels_in_hierarchy = {'prison': 5, 'tourism': 3, 'wikipedia': 5, 'labour': 4}
     data = DATASET[int(sys.argv[1])]
     model = sys.argv[2]
     number_of_levels = levels_in_hierarchy[data]

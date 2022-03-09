@@ -49,3 +49,7 @@ wikipedia <- c("filename" = "input_data/wikipedia_actual.csv", "freq" = 1, "hori
 all_level_ts_train <-read_csv(wikipedia['filename'])
 model_results_write(all_level_ts_train, wikipedia['name'], as.integer(wikipedia['freq']), as.integer(wikipedia['horizon']))
 
+
+labour <- c("filename" = "input_data/labour_actual.csv", "freq" = 4, "horizon"= 12, 'name' = 'forecasts/labour')
+all_level_ts_train <-read_csv(labour['filename'])
+model_results_write(all_level_ts_train, labour['name'], as.integer(labour['freq']), as.integer(labour['horizon']))

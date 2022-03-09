@@ -7,9 +7,8 @@
 # source: ABS website
 # Level 0: Total employed individuals
 # Level 1: Main occupation category
-# Level 2: Main occupation x Sub occupation category
-# Level 3: Main occupation x Sub occupation category x Employment status (Full time, Part-time)
-# Level 4: Main occupation x Sub occupation category x Employment status x Gender (Female, Male) (bottom level)
+# Level 2: Main occupation x Employment status (Full time, Part-time)
+# Level 3: Main occupation x Employment status x Gender (Female, Male) (bottom level)
 
 library(readr)
 library(lubridate)
@@ -25,9 +24,6 @@ labour <- labour %>%
          Sub_occupation = `Occupation sub-major group of main job: ANZSCO (2013) v1.2`) %>%
   pivot_longer(`Employed full-time ('000)`:`Employed part-time ('000)`,
                names_to = "Employment_status", values_to = "Count") %>%
-  group_by(Sex, Month,
-           Sub_occupation, Employment_status) %>%
-  summarise(Count = sum(Count)) %>%
   mutate(Employment_status = recode(Employment_status,
                                     `Employed full-time ('000)` = "Full time",
                                     `Employed part-time ('000)` = "Part time")) %>%
@@ -85,64 +81,56 @@ labour <- labour %>%
                                     "Other Labourers" = "Labourers"
   ))
 
+labour <- select(labour, -Sub_occupation)
+labour <-  labour %>% group_by(Sex, Month, Employment_status, Main_occupation) %>% summarise(Count = sum(Count))
+
 aggts <- labour %>%
-  as_tsibble(key = c(Sex, Main_occupation, Sub_occupation, Employment_status)) %>%
-  aggregate_key(Main_occupation/Sub_occupation/Employment_status/Sex, Count = sum(Count))
+  as_tsibble(key = c(Sex, Main_occupation, Employment_status)) %>%
+  aggregate_key(Main_occupation/Employment_status/Sex, Count = sum(Count))
 
 
-# bottom level
 bts <- labour %>%
-  arrange(Main_occupation, Sub_occupation, Employment_status, Sex) %>% as_tibble() %>%
-  unite(col = "Description", c(Main_occupation, Sub_occupation, Employment_status, Sex), sep = "-") %>%
-  mutate(Level = 5) %>% pivot_wider(names_from = Month, values_from = Count)
-
-
-# aggregated by sex
-level3 <- aggts %>%
-  filter(!is_aggregated(Main_occupation), !is_aggregated(Sub_occupation),
-         !is_aggregated(Employment_status), is_aggregated(Sex)) %>%
-  select(-Sex) %>%
-  mutate(Main_occupation = as.character(Main_occupation), Sub_occupation = as.character(Sub_occupation),
-         Employment_status = as.character(Employment_status)) %>%
-  arrange(Main_occupation, Sub_occupation, Employment_status) %>% as_tibble() %>%
-  unite(col = "Description", c(Main_occupation, Sub_occupation, Employment_status), sep = "-") %>%
+  arrange(Main_occupation, Employment_status, Sex) %>% as_tibble() %>%
+  unite(col = "Description", c(Main_occupation, Employment_status, Sex), sep = "-") %>%
   mutate(Level = 4) %>% pivot_wider(names_from = Month, values_from = Count)
 
 
-# aggregated by sex and employment status
+# aggregated by sex
 level2 <- aggts %>%
-  filter(!is_aggregated(Main_occupation), !is_aggregated(Sub_occupation),
-         is_aggregated(Employment_status), is_aggregated(Sex)) %>%
-  select(-Employment_status, -Sex) %>%
-  mutate(Main_occupation = as.character(Main_occupation), Sub_occupation = as.character(Sub_occupation)) %>%
-  arrange(Main_occupation, Sub_occupation)%>% as_tibble() %>%
-  unite(col = "Description", c(Main_occupation, Sub_occupation), sep = "-") %>%
+  filter(!is_aggregated(Main_occupation),
+         !is_aggregated(Employment_status), is_aggregated(Sex)) %>%
+  select(-Sex) %>%
+  mutate(Main_occupation = as.character(Main_occupation),
+         Employment_status = as.character(Employment_status)) %>%
+  arrange(Main_occupation, Employment_status) %>% as_tibble() %>%
+  unite(col = "Description", c(Main_occupation, Employment_status), sep = "-") %>%
   mutate(Level = 3) %>% pivot_wider(names_from = Month, values_from = Count)
 
 
-# aggregated by sex, employment status and sub occupation
+# aggregated by sex and employment status
 level1 <- aggts %>%
-  filter(!is_aggregated(Main_occupation), is_aggregated(Sub_occupation),
+  filter(!is_aggregated(Main_occupation),
          is_aggregated(Employment_status), is_aggregated(Sex)) %>%
-  select(-Sub_occupation, -Employment_status, -Sex) %>%
-  as_tibble() %>%
+  select(-Employment_status, -Sex) %>%
   mutate(Main_occupation = as.character(Main_occupation)) %>%
-  arrange(Main_occupation) %>% mutate(Level = 2) %>%
+  arrange(Main_occupation)%>% as_tibble() %>%
   rename(Description = Main_occupation) %>%
-  pivot_wider(names_from = Month, values_from = Count)
+  mutate(Level = 2) %>% pivot_wider(names_from = Month, values_from = Count)
 
 # top level
-# aggregated by sex, employment status and sub occupation
 top <- aggts %>%
-  filter(is_aggregated(Main_occupation), is_aggregated(Sub_occupation),
+  filter(is_aggregated(Main_occupation),
          is_aggregated(Employment_status), is_aggregated(Sex)) %>%
-  select(-Main_occupation, -Sub_occupation, -Employment_status, -Sex) %>% as_tibble() %>%
+  select(-Main_occupation, -Employment_status, -Sex) %>% as_tibble() %>%
   mutate(Level = 1, Description = "Aggregated") %>%
   pivot_wider(names_from = Month, values_from = Count)
 
-all_level_ts <- rbind(top, level1, level2, level3, bts)
-all_level_ts_test <- all_level_ts[, (ncol(all_level_ts) - 11):ncol(all_level_ts)]
-all_level_ts_train <- all_level_ts[, 1: (ncol(all_level_ts) - 12)]
+all_level_ts <- rbind(top, level1, level2, bts)
+
+all_level_ts <- all_level_ts[, c(1, 2, 5:(ncol(all_level_ts)-10))] # remove 2019
+
+all_level_ts_test <- all_level_ts[, (ncol(all_level_ts) - 11):ncol(all_level_ts)] #2016 Feb to 2018 Nov
+all_level_ts_train <- all_level_ts[, 1: (ncol(all_level_ts) - 12)] #1987 Feb to 2015 Nov
 
 
 meta_info <- all_level_ts_train[, c(1,2)] # get level and description

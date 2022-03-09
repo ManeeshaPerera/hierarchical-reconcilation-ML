@@ -20,9 +20,6 @@
 # The maximum running time of the job in days-hours:mins:sec
 #SBATCH --time=01-00:00:0
 
-#Job array
-#SBATCH --array=0-2
-
 # Send yourself an email when the job:
 #SBATCH --mail-user=pereramg@student.unimelb.edu.au
 #SBATCH --mail-type=FAIL,END
@@ -35,16 +32,16 @@ module load tensorflow/2.3.1-python-3.7.4
 
 # The job command(s):
 # case 1 lambda 1 -- last param doesn't add value
-python run_ml_reconciliation.py ${SLURM_ARRAY_TASK_ID} arima '' '' 0
+python run_ml_reconciliation.py 3 arima '' '' 0
 # case 1 lambda < 1
-python run_ml_reconciliation.py ${SLURM_ARRAY_TASK_ID} arima True '' 0
+python run_ml_reconciliation.py 3 arima True '' 0
 # case 1 lambda > 1
-python run_ml_reconciliation.py ${SLURM_ARRAY_TASK_ID} arima True '' 1
+python run_ml_reconciliation.py 3 arima True '' 1
 
 
 # case 2 lambda 1 -- last param doesn't add value
-python run_ml_reconciliation.py ${SLURM_ARRAY_TASK_ID} arima '' True 0
+python run_ml_reconciliation.py 3 arima '' True 0
 # case 2 lambda < 1
-python run_ml_reconciliation.py ${SLURM_ARRAY_TASK_ID} arima True True 0
+python run_ml_reconciliation.py 3 arima True True 0
 # case 2 lambda > 1
-python run_ml_reconciliation.py ${SLURM_ARRAY_TASK_ID} arima True True 1
+python run_ml_reconciliation.py 3 arima True True 1
