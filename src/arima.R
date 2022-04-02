@@ -35,21 +35,8 @@ model_results_write <- function(df, data, frequency, horizon){
               col.names = TRUE, row.names = FALSE, sep = ",")
 }
 
-
-prison <- c("filename" = "input_data/prison_actual.csv", "freq" = 4, "horizon"= 8, 'name' = 'forecasts/prison')
-all_level_ts_train <-read_csv(prison['filename'])
-model_results_write(all_level_ts_train, prison['name'], as.integer(prison['freq']), as.integer(prison['horizon']))
-
-
-tourism <- c("filename" = "input_data/tourism_actual.csv", "freq" = 12, "horizon"= 12, 'name' = 'forecasts/tourism')
-all_level_ts_train <-read_csv(tourism['filename'])
-model_results_write(all_level_ts_train, tourism['name'], as.integer(tourism['freq']), as.integer(tourism['horizon']))
-
-wikipedia <- c("filename" = "input_data/wikipedia_actual.csv", "freq" = 1, "horizon"= 7, 'name' = 'forecasts/wikipedia')
-all_level_ts_train <-read_csv(wikipedia['filename'])
-model_results_write(all_level_ts_train, wikipedia['name'], as.integer(wikipedia['freq']), as.integer(wikipedia['horizon']))
-
-
-labour <- c("filename" = "input_data/labour_actual.csv", "freq" = 4, "horizon"= 12, 'name' = 'forecasts/labour')
-all_level_ts_train <-read_csv(labour['filename'])
-model_results_write(all_level_ts_train, labour['name'], as.integer(labour['freq']), as.integer(labour['horizon']))
+run_arima <- function (filename, freq, horizon, name) {
+  prison <- c("filename" = paste("input_data", filename, sep='/'), "freq" = freq, "horizon"= horizon, 'name' = paste("forecasts", name, sep='/'))
+  all_level_ts_train <-read_csv(prison['filename'])
+  model_results_write(all_level_ts_train, prison['name'], as.integer(prison['freq']), as.integer(prison['horizon']))
+}

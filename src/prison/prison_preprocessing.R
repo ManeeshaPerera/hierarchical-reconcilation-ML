@@ -80,7 +80,7 @@ top <- aggts %>%
   pivot_wider(names_from = Quarter, values_from = Count)
 
 all_level_ts <- rbind(top, level1, level2, level3, bts)
-
+write.table(all_level_ts, "input_data/prison.csv", col.names = TRUE, row.names = FALSE, sep = ",")
 
 all_level_ts_test <- all_level_ts[, (ncol(all_level_ts) - 7):ncol(all_level_ts)]
 all_level_ts_train <- all_level_ts[, 1: (ncol(all_level_ts) - 8)]
