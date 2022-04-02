@@ -19,10 +19,10 @@ library(Matrix)
 
 # Notations used below in comments. T - number of observations, M- total number of series, B - number of bottom level series, A - number of top level series, H- forecast horizon
 
-hts_benchmarks <- function (dataset_name, base_model_name){
-  actual <- as.matrix(read_csv(paste("input_data/", dataset_name, "_actual.csv", sep=''))[, -(1:2)]) # M X T matrix
-  base_fitted <- as.matrix(read_csv(paste("forecasts/", dataset_name, "_", base_model_name, "_fitted.csv", sep=''))[, -(1:2)]) # M X T matrix
-  forecasts <- as.matrix(read_csv(paste("forecasts/", dataset_name, "_", base_model_name, "_forecasts.csv", sep=''))[, -(1:2)]) # M X T matrix
+hts_benchmarks <- function (dataset_name, input_file_path, filename_fc, base_model_name){
+  actual <- as.matrix(read_csv(paste(input_file_path, "_actual.csv", sep=''))[, -(1:2)]) # M X T matrix
+  base_fitted <- as.matrix(read_csv(paste("forecasts/", filename_fc, "_", base_model_name, "_fitted.csv", sep=''))[, -(1:2)]) # M X T matrix
+  forecasts <- as.matrix(read_csv(paste("forecasts/", filename_fc, "_", base_model_name, "_forecasts.csv", sep=''))[, -(1:2)]) # M X T matrix
   if (dataset_name == 'prison'){
     hierarchy_nodes <- list(8, rep(2, 8), rep(2, 16), rep(2, 32))
   }
@@ -84,19 +84,19 @@ hts_benchmarks <- function (dataset_name, base_model_name){
   erm_fc <- summing_matrix %*% j_matrix %*% actual %*% tmp %*% forecasts # M X H
 
   # save the files
-  write.table(as.data.frame(as.matrix(bottom_up_fc)), paste('results/benchmarks/', dataset_name, "_", base_model_name, "_bottomup.csv", sep = ''),
+  write.table(as.data.frame(as.matrix(bottom_up_fc)), paste('results/new_results/benchmarks/', filename_fc, "_", base_model_name, "_bottomup.csv", sep = ''),
               col.names = TRUE, sep = ",")
-  write.table(as.data.frame(as.matrix(ols_fc)), paste('results/benchmarks/', dataset_name, "_", base_model_name, "_ols.csv", sep = ''),
+  write.table(as.data.frame(as.matrix(ols_fc)), paste('results/new_results/benchmarks/', filename_fc, "_", base_model_name, "_ols.csv", sep = ''),
               col.names = TRUE, sep = ",")
-  write.table(as.data.frame(as.matrix(wls_fc)), paste('results/benchmarks/', dataset_name, "_", base_model_name, "_wls.csv", sep = ''),
+  write.table(as.data.frame(as.matrix(wls_fc)), paste('results/new_results/benchmarks/', filename_fc, "_", base_model_name, "_wls.csv", sep = ''),
               col.names = TRUE, sep = ",")
   if (typeof(mint_sample_fc) == 'S4'){
-    write.table(as.data.frame(as.matrix(mint_sample_fc)), paste('results/benchmarks/', dataset_name, "_", base_model_name, "_mintsample.csv", sep = ''),
+    write.table(as.data.frame(as.matrix(mint_sample_fc)), paste('results/new_results/benchmarks/', filename_fc, "_", base_model_name, "_mintsample.csv", sep = ''),
                 col.names = TRUE, sep = ",")
   }
-  write.table(as.data.frame(as.matrix(mint_shrink_fc)), paste('results/benchmarks/', dataset_name, "_", base_model_name, "_mintshrink.csv", sep = ''),
+  write.table(as.data.frame(as.matrix(mint_shrink_fc)), paste('results/new_results/benchmarks/', filename_fc, "_", base_model_name, "_mintshrink.csv", sep = ''),
                 col.names = TRUE, sep = ",")
-  write.table(as.data.frame(as.matrix(erm_fc)), paste('results/benchmarks/', dataset_name, "_", base_model_name, "_erm.csv", sep = ''),
+  write.table(as.data.frame(as.matrix(erm_fc)), paste('results/new_results/benchmarks/', filename_fc, "_", base_model_name, "_erm.csv", sep = ''),
               col.names = TRUE, sep = ",")
 }
 

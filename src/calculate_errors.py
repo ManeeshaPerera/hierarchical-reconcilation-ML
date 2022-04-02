@@ -17,7 +17,6 @@ if __name__ == '__main__':
     model = 'ets'
     half_horizon = {'prison': 4, 'tourism': 6, 'wikipedia': 3, 'labour': 4}
     half_horizon_case = True
-    # FC_TYPE = ['base','bottomup', 'ols', 'wls', 'mintsample', 'mintshrink', 'erm', 'case1', 'case1_mean', 'case1_one_seed']
     FC_TYPE = ['base', 'bottomup', 'ols', 'wls', 'mintsample', 'mintshrink', 'erm',
                'case1', 'case1_mean', 'case1_lambda1', 'case1_lambda1_mean', 'case1_lambda2', 'case1_lambda2_mean',
                'case2', 'case2_mean', 'case2_lambda1', 'case2_lambda1_mean', 'case2_lambda2', 'case2_lambda2_mean']
@@ -31,7 +30,7 @@ if __name__ == '__main__':
         if fc_type == 'base':
             df_forecasts = pd.read_csv(f"forecasts/{file_name}_forecasts.csv", index_col=1).iloc[:, 1:]
         elif fc_type in adjusted_fc:
-            df_forecasts = pd.read_csv(f"results/{file_name}_adjusted_forecasts_{fc_type}.csv", index_col=0)
+            df_forecasts = pd.read_csv(f"results/new_results/{file_name}_adjusted_forecasts_{fc_type}.csv", index_col=0)
         else:
             if fc_type == 'mintsample' and (data == 'prison' or data == 'wikipedia'):
                 continue

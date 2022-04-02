@@ -2,10 +2,10 @@ import rpy2.robjects as robjects
 
 DATA = {'prison': {'freq': 4, 'horizon': 8, 'samples': 3},
         'tourism': {'freq': 12, 'horizon': 12, 'samples': 10},
-        'labour': {'freq': 4, 'horizon': 12, 'sample': 5},
-        'wikipedia': {'freq': 7, 'horizon': 7, 'sample': 10}}
+        'labour': {'freq': 4, 'horizon': 12, 'samples': 5},
+        'wikipedia': {'freq': 7, 'horizon': 7, 'samples': 10}}
 
-dataset_name = 'prison'
+dataset_name = 'wikipedia'
 samples = DATA[dataset_name]['samples']
 freq = DATA[dataset_name]['freq']
 horizon = DATA[dataset_name]['horizon']
