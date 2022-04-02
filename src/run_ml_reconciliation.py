@@ -20,10 +20,10 @@ def run_ml_reconciliation(data_actual, model_filename, save_file, lambda_range_r
                                  tune_hyper_params=True, tune_lambda=lambada_tune)
     forecasts_adjusted_case1, forecasts_adjusted_case1_mean, model_history_case1, best_hyper_params_case1 = ml_model_case1.run_ml_reconciliation()
 
-    forecasts_adjusted_case1.to_csv(f'results/new_results/ml_fc/{model_filename}_adjusted_forecasts_{save_file}_median.csv')
+    forecasts_adjusted_case1.to_csv(f'results/new_results/ml_fc/{model_filename}_{save_file}_median.csv')
     if len(seed_array) > 1:
         forecasts_adjusted_case1_mean.to_csv(
-            f'results/new_results/ml_fc/{model_filename}_adjusted_forecasts_{save_file}_mean.csv')
+            f'results/new_results/ml_fc/{model_filename}_{save_file}_mean.csv')
         model_history_case1.to_csv(f'results/new_results/model_history/{model_filename}_model_history_{save_file}.csv')
         best_hyper_params_case1.to_csv(
             f'results/new_results/model_history/{model_filename}_best_params_{save_file}.csv')
