@@ -1,0 +1,14 @@
+,0
+batch_size,84.0
+dropout_rate,0.14556498443989016
+epochs,91.0
+layers,3
+learning_rate,0.0006963731156801735
+max_norm_value,4.467281496960605
+no_units_layer_4_1,138.0
+no_units_layer_4_2,99.0
+no_units_layer_4_3,5.0
+no_units_layer_4_4,98.0
+reconciliation_loss_lambda,1.4151823067851517
+no_layers,4
+no_units_layer,"[138, 99, 5, 98]"
