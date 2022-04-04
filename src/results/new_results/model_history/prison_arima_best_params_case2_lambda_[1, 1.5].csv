@@ -1,12 +1,12 @@
 ,0
-batch_size,25.0
-dropout_rate,0.2406052698816747
-epochs,160.0
+batch_size,22.0
+dropout_rate,0.3643422213570058
+epochs,89.0
 layers,1
-learning_rate,0.022128078020238556
-max_norm_value,7.114735319837665
-no_units_layer_2_1,251.0
-no_units_layer_2_2,55.0
-reconciliation_loss_lambda,1.2493712892144593
+learning_rate,0.06160857405645728
+max_norm_value,6.049100456187589
+no_units_layer_2_1,225.0
+no_units_layer_2_2,192.0
+reconciliation_loss_lambda,1.2372922919938805
 no_layers,2
-no_units_layer,"[251, 55]"
+no_units_layer,"[225, 192]"

@@ -1,15 +1,14 @@
 ,0
-batch_size,4.0
-dropout_rate,0.3807456231971622
-epochs,34.0
-layers,4
-learning_rate,0.030973413099942018
-max_norm_value,4.49723425805953
-no_units_layer_5_1,145.0
-no_units_layer_5_2,129.0
-no_units_layer_5_3,255.0
-no_units_layer_5_4,3.0
-no_units_layer_5_5,218.0
-reconciliation_loss_lambda,3.7841057693316635
-no_layers,5
-no_units_layer,"[145, 129, 255, 3, 218]"
+batch_size,7.0
+dropout_rate,0.48307381204357525
+epochs,55.0
+layers,3
+learning_rate,0.05723957373564583
+max_norm_value,5.177801722498485
+no_units_layer_4_1,225.0
+no_units_layer_4_2,141.0
+no_units_layer_4_3,31.0
+no_units_layer_4_4,182.0
+reconciliation_loss_lambda,0.5204443460578985
+no_layers,4
+no_units_layer,"[225, 141, 31, 182]"
