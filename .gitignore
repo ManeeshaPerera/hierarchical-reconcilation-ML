@@ -2,6 +2,7 @@
 example_code/test-code.R
 src/*.out
 src/results/new_results/errors
+data/Latest_Results.pdf
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
