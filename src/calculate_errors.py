@@ -55,9 +55,9 @@ def calculate_errors_per_fc(fc_type, actual_test, file_name):
 
 
 if __name__ == '__main__':
-    data = 'labour'
+    data = 'prison'
     model = 'ets'
-    half_horizon_case = False
+    half_horizon_case = True
 
     half_horizon = {'prison': 4, 'tourism': 6, 'wikipedia': 3, 'labour': 4}
     dataset_samples = {'prison': 3, 'tourism': 10, 'wikipedia': 10, 'labour': 5}
@@ -77,11 +77,11 @@ if __name__ == '__main__':
     for fc_type in FC_TYPE:
         file_name = f'{data}_{model}'
         actual_test = pd.read_csv(f"input_data/{data}_test.csv", index_col=1)
-        calculate_errors_per_fc(actual_test, fc_type, file_name)
+        calculate_errors_per_fc(fc_type, actual_test, file_name)
 
         samples = dataset_samples[data]
         for sample in range(0, samples):
             actual_test = pd.read_csv(f"input_data/data_samples/{data}_{sample}_test.csv", index_col=1)
             file_name = f'{data}_{sample}_{model}'
-            calculate_errors_per_fc(actual_test, fc_type, file_name)
+            calculate_errors_per_fc(fc_type, actual_test, file_name)
 
