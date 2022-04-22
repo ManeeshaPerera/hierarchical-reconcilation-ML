@@ -16,8 +16,9 @@ r_source('../src/ets.R')
 run_ets = robjects.globalenv['run_ets']
 
 # full dataset
-result_r = run_ets(f'{dataset_name}_actual.csv', freq, horizon, dataset_name)
+# result_r = run_ets(f'{dataset_name}_actual.csv', freq, horizon, dataset_name)
 
 # samples
 for sample in range(0, samples):
-    result_r = run_ets(f'data_samples/{dataset_name}_{sample}_actual.csv', freq, horizon, f'{dataset_name}_{sample}')
+    result_r = run_ets(f'new_data_samples/{dataset_name}_{sample}_actual.csv', freq, horizon,
+                       f'new_data_samples/{dataset_name}_{sample}')

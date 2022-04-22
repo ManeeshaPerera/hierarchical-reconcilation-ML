@@ -15,9 +15,11 @@ r_source('../src/hts-benchmarks.R')
 
 hts_benchmarks = robjects.globalenv['hts_benchmarks']
 
-# defining the args
-result_r = hts_benchmarks(data, f'input_data/{data}', data, base_model)
+# full dataset
+# result_r = hts_benchmarks(data, f'input_data/{data}', data, base_model)
+
+# across samples
 for sample in range(0, samples):
-    input_file_name = f'input_data/data_samples/{data}_{sample}'
+    input_file_name = f'input_data/new_data_samples/{data}_{sample}'
     fc_file_name = f'{data}_{sample}'
     result_r = hts_benchmarks(data, input_file_name, fc_file_name, base_model)

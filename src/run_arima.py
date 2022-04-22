@@ -16,8 +16,9 @@ r_source('../src/arima.R')
 run_arima = robjects.globalenv['run_arima']
 
 # full dataset
-result_r = run_arima(f'{dataset_name}_actual.csv', freq, horizon, dataset_name)
+# result_r = run_arima(f'{dataset_name}_actual.csv', freq, horizon, dataset_name)
 
 # samples
 for sample in range(0, samples):
-    result_r = run_arima(f'data_samples/{dataset_name}_{sample}_actual.csv', freq, horizon, f'{dataset_name}_{sample}')
+    result_r = run_arima(f'new_data_samples/{dataset_name}_{sample}_actual.csv', freq, horizon,
+                         f'new_data_samples/{dataset_name}_{sample}')

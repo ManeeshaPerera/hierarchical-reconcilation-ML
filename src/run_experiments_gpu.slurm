@@ -21,7 +21,7 @@
 #SBATCH --time=05-00:00:0
 
 #Job array
-#SBATCH --array=0
+#SBATCH --array=0-3
 
 # Send yourself an email when the job:
 #SBATCH --mail-user=pereramg@student.unimelb.edu.au
@@ -40,7 +40,7 @@ python run_ml_reconciliation.py ${SLURM_ARRAY_TASK_ID} arima '' '' 0
 python run_ml_reconciliation.py ${SLURM_ARRAY_TASK_ID} arima True '' 0
 # case 1 lambda [0.1, 0.9]
 python run_ml_reconciliation.py ${SLURM_ARRAY_TASK_ID} arima True '' 1
-# case 1 lambda [1, 1.5]
+# case 1 lambda [1, 4]
 python run_ml_reconciliation.py ${SLURM_ARRAY_TASK_ID} arima True '' 2
 # case 1 lambda [0.01, 5]
 python run_ml_reconciliation.py ${SLURM_ARRAY_TASK_ID} arima True '' 3
@@ -52,7 +52,7 @@ python run_ml_reconciliation.py ${SLURM_ARRAY_TASK_ID} arima '' True 0
 python run_ml_reconciliation.py ${SLURM_ARRAY_TASK_ID} arima True True 0
 # case 2 lambda [0.1, 0.9]
 python run_ml_reconciliation.py ${SLURM_ARRAY_TASK_ID} arima True True 1
-# case 2 lambda [1, 1.5]
+# case 2 lambda [1, 4]
 python run_ml_reconciliation.py ${SLURM_ARRAY_TASK_ID} arima True True 2
 # case 2 lambda [0.01, 5]
 python run_ml_reconciliation.py ${SLURM_ARRAY_TASK_ID} arima True True 3
