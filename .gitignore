@@ -3,7 +3,9 @@ example_code/test-code.R
 src/*.out
 src/results/new_results/errors
 src/results/expanding_window_results/errors
-data/Latest_Results.pdf
+src/results/expanding_window_results/ml_fc
+src/results/expanding_window_results/model_history
+src/results/expanding_window_results/best_params
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
