@@ -12,7 +12,7 @@ def calculate_error(err_func, y_true, y_pred, error_list, ts_list, ts_idx, error
     error_list.append([ts_list[ts_idx], error_name, err, level_list[ts_idx]])
 
 
-def calculate_errors_per_fc(fc_type, actual_test, file_name):
+def calculate_errors_per_fc(fc_type, actual_test, file_name, half_horizon_case):
     print(fc_type)
 
     fc_type_ml = fc_type.split('_')[0]
@@ -55,7 +55,7 @@ def calculate_errors_per_fc(fc_type, actual_test, file_name):
 
 
 if __name__ == '__main__':
-    data = 'prison'
+    data = 'labour'
     model = 'ets'
     half_horizon_case = True
 
@@ -85,4 +85,4 @@ if __name__ == '__main__':
         for sample in range(0, samples):
             actual_test = pd.read_csv(f"input_data/new_data_samples/{data}_{sample}_test.csv", index_col=1)
             file_name = f'{data}_{sample}_{model}'
-            calculate_errors_per_fc(fc_type, actual_test, file_name)
+            calculate_errors_per_fc(fc_type, actual_test, file_name, half_horizon_case)
