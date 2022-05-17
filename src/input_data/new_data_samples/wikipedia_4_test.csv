@@ -1,951 +1,1096 @@
 Level,Description,2017-05-19,2017-05-20,2017-05-21,2017-05-22,2017-05-23,2017-05-24,2017-05-25
-1,Aggregated,273926,228545,232129,250229,247595,254113,241743
-2,de,17026,14079,16024,16956,17290,16082,14386
-2,en,218759,181309,180461,191022,187189,192503,184227
-2,es,30944,26277,28885,34797,35341,38247,36215
-2,zh,7197,6880,6759,7454,7775,7281,6915
-3,de-desktop,10286,6975,8436,10998,11061,10213,7346
-3,de-mobileapp,356,321,389,325,336,320,380
-3,de-mobileweb,6384,6783,7199,5633,5893,5549,6660
-3,en-desktop,112723,80375,79970,101621,96487,99332,94371
-3,en-mobileapp,1875,1625,1672,1499,1469,1450,1403
-3,en-mobileweb,104161,99309,98819,87902,89233,91721,88453
-3,es-desktop,15649,11533,12280,18312,19180,19583,19387
-3,es-mobileapp,101,112,103,99,104,118,130
-3,es-mobileweb,15194,14632,16502,16386,16057,18546,16698
-3,zh-desktop,5421,4682,4599,5523,5865,5428,5148
-3,zh-mobileapp,47,98,78,67,63,33,61
-3,zh-mobileweb,1729,2100,2082,1864,1847,1820,1706
-4,de-desktop-spider,449,333,398,505,321,344,226
-4,de-desktop-user,9837,6642,8038,10493,10740,9869,7120
-4,de-mobileapp-user,356,321,389,325,336,320,380
-4,de-mobileweb-spider,87,65,63,61,52,57,43
-4,de-mobileweb-user,6297,6718,7136,5572,5841,5492,6617
-4,en-desktop-spider,5504,4805,4771,11114,6517,10598,8216
-4,en-desktop-user,107219,75570,75199,90507,89970,88734,86155
-4,en-mobileapp-user,1875,1625,1672,1499,1469,1450,1403
-4,en-mobileweb-spider,685,617,1579,714,493,454,498
-4,en-mobileweb-user,103476,98692,97240,87188,88740,91267,87955
-4,es-desktop-spider,459,396,447,469,455,452,397
-4,es-desktop-user,15190,11137,11833,17843,18725,19131,18990
-4,es-mobileapp-user,101,112,103,99,104,118,130
-4,es-mobileweb-spider,98,101,72,88,61,87,75
-4,es-mobileweb-user,15096,14531,16430,16298,15996,18459,16623
-4,zh-desktop-spider,459,426,441,484,440,431,390
-4,zh-desktop-user,4962,4256,4158,5039,5425,4997,4758
-4,zh-mobileapp-user,47,98,78,67,63,33,61
-4,zh-mobileweb-spider,69,117,57,76,52,71,66
-4,zh-mobileweb-user,1660,1983,2025,1788,1795,1749,1640
-5,de-desktop-spider-23andMe,0,3,1,4,1,1,1
-5,de-desktop-user-23andMe,21,23,37,34,20,27,26
-5,de-desktop-spider-500px,4,5,6,0,2,5,1
-5,de-desktop-user-500px,16,5,14,14,8,10,14
-5,de-desktop-spider-Badoo,6,7,3,11,4,3,2
-5,de-desktop-user-Badoo,71,34,60,59,51,43,52
-5,de-desktop-spider-CouchSurfing,5,3,3,3,3,3,1
-5,de-desktop-user-CouchSurfing,104,68,78,98,82,98,85
-5,de-desktop-spider-DeviantArt,2,3,1,1,3,1,1
-5,de-desktop-user-DeviantArt,15,13,23,18,30,24,17
-5,de-desktop-spider-Facebook,74,46,66,125,74,39,48
-5,de-desktop-user-Facebook,1551,946,2109,2270,2435,2369,1897
-5,de-desktop-spider-Flickr,23,19,27,13,25,40,9
-5,de-desktop-user-Flickr,144,78,88,148,119,157,156
-5,de-desktop-spider-Foursquare,11,7,7,3,4,3,12
-5,de-desktop-user-Foursquare,34,34,21,36,41,32,22
-5,de-desktop-spider-Google+,14,10,12,15,5,10,3
-5,de-desktop-user-Google+,132,73,90,109,127,120,73
-5,de-desktop-spider-Imgur,2,3,0,3,0,4,3
-5,de-desktop-user-Imgur,34,16,22,18,36,38,35
-5,de-desktop-spider-Instagram,22,23,18,81,13,26,12
-5,de-desktop-user-Instagram,1072,643,758,1259,1109,1037,624
-5,de-desktop-spider-Kickstarter,2,9,5,4,5,5,3
-5,de-desktop-user-Kickstarter,24,10,14,19,25,24,12
-5,de-desktop-spider-Last.fm,7,8,7,8,3,7,1
-5,de-desktop-user-Last.fm,35,32,22,28,34,35,22
-5,de-desktop-spider-LinkedIn,5,7,6,3,4,4,5
-5,de-desktop-user-LinkedIn,504,189,231,595,759,600,364
-5,de-desktop-spider-LiveJournal,3,2,3,3,0,0,3
-5,de-desktop-user-LiveJournal,11,4,7,10,3,6,4
-5,de-desktop-spider-MyHeritage,4,5,17,5,3,2,6
-5,de-desktop-user-MyHeritage,18,11,22,18,18,31,27
-5,de-desktop-spider-Myspace,11,13,14,11,9,5,5
-5,de-desktop-user-Myspace,93,83,93,231,106,84,54
-5,de-desktop-spider-Pinterest,7,8,6,10,6,4,7
-5,de-desktop-user-Pinterest,651,862,535,613,559,582,481
-5,de-desktop-spider-Pixabay,4,2,4,7,1,4,1
-5,de-desktop-user-Pixabay,31,15,20,23,43,26,17
-5,de-desktop-spider-Quora,4,4,5,6,4,8,4
-5,de-desktop-user-Quora,40,29,19,31,51,37,14
-5,de-desktop-spider-Ravelry,6,4,5,5,1,4,2
-5,de-desktop-user-Ravelry,8,4,2,4,5,6,2
-5,de-desktop-spider-Reddit,7,6,9,5,4,7,0
-5,de-desktop-user-Reddit,232,248,204,254,207,187,131
-5,de-desktop-spider-Shutterfly,2,2,4,2,0,0,1
-5,de-desktop-user-Shutterfly,9,2,9,5,21,7,7
-5,de-desktop-spider-Skype,15,12,11,12,17,17,7
-5,de-desktop-user-Skype,351,214,232,349,336,306,229
-5,de-desktop-spider-Snapchat,16,7,11,9,2,30,7
-5,de-desktop-user-Snapchat,682,351,428,642,591,549,291
-5,de-desktop-spider-SoundCloud,4,6,6,8,5,5,1
-5,de-desktop-user-SoundCloud,177,130,104,130,124,133,98
-5,de-desktop-spider-StumbleUpon,0,2,5,3,5,2,2
-5,de-desktop-user-StumbleUpon,13,13,8,10,7,16,9
-5,de-desktop-spider-Tagged,3,4,5,6,0,1,1
-5,de-desktop-user-Tagged,4,2,2,6,3,4,2
-5,de-desktop-spider-Tumblr,28,10,10,5,9,6,4
-5,de-desktop-user-Tumblr,190,132,159,214,193,220,148
-5,de-desktop-spider-Twitter,27,21,29,48,38,27,24
-5,de-desktop-user-Twitter,606,372,460,589,794,569,382
-5,de-desktop-spider-Viadeo,5,4,2,4,1,1,2
-5,de-desktop-user-Viadeo,7,4,3,7,3,8,3
-5,de-desktop-spider-Viber,10,10,10,10,7,19,12
-5,de-desktop-user-Viber,70,44,64,49,72,58,37
-5,de-desktop-spider-WeChat,8,7,6,4,5,5,4
-5,de-desktop-user-WeChat,144,58,77,128,128,102,81
-5,de-desktop-spider-WhatsApp,63,12,19,14,10,11,7
-5,de-desktop-user-WhatsApp,1041,589,742,972,926,839,582
-5,de-desktop-spider-Xanga,3,2,3,4,3,2,1
-5,de-desktop-user-Xanga,3,5,4,4,3,1,3
-5,de-desktop-spider-Yelp,0,0,4,2,1,0,0
-5,de-desktop-user-Yelp,7,4,4,21,6,2,1
-5,de-desktop-spider-YouTube,32,27,42,39,43,31,22
-5,de-desktop-user-YouTube,1684,1289,1263,1459,1655,1471,1109
-5,de-desktop-spider-Zynga,10,10,6,9,1,2,1
-5,de-desktop-user-Zynga,8,13,10,19,10,11,9
-5,de-mobileapp-user-23andMe,1,2,0,1,1,1,2
-5,de-mobileapp-user-500px,0,1,1,1,0,0,1
-5,de-mobileapp-user-Badoo,2,3,5,4,4,4,7
-5,de-mobileapp-user-CouchSurfing,2,2,3,2,1,0,4
-5,de-mobileapp-user-DeviantArt,1,0,1,0,1,3,1
-5,de-mobileapp-user-Facebook,38,31,51,36,44,24,35
-5,de-mobileapp-user-Flickr,3,3,6,2,3,0,6
-5,de-mobileapp-user-Foursquare,1,3,9,1,0,1,0
-5,de-mobileapp-user-Google+,9,5,6,4,5,7,11
-5,de-mobileapp-user-Imgur,2,1,1,0,4,3,1
-5,de-mobileapp-user-Instagram,55,54,69,58,48,54,61
-5,de-mobileapp-user-Kickstarter,1,0,0,4,1,0,0
-5,de-mobileapp-user-Last.fm,1,1,3,0,3,1,0
-5,de-mobileapp-user-LinkedIn,15,8,13,11,13,14,18
-5,de-mobileapp-user-MyHeritage,3,0,2,0,0,1,3
-5,de-mobileapp-user-Myspace,4,15,5,16,8,6,6
-5,de-mobileapp-user-Pinterest,17,21,18,15,15,18,25
-5,de-mobileapp-user-Quora,2,1,1,1,3,0,0
-5,de-mobileapp-user-Reddit,18,15,15,10,5,6,7
-5,de-mobileapp-user-Skype,8,7,24,6,6,5,12
-5,de-mobileapp-user-Snapchat,40,37,28,28,32,42,35
-5,de-mobileapp-user-SoundCloud,6,6,10,2,6,6,10
-5,de-mobileapp-user-Tumblr,9,10,14,10,19,12,9
-5,de-mobileapp-user-Twitter,17,19,21,29,30,16,18
-5,de-mobileapp-user-Viber,1,2,1,3,5,7,4
-5,de-mobileapp-user-WeChat,9,8,2,4,6,8,2
-5,de-mobileapp-user-WhatsApp,51,20,36,17,37,30,44
-5,de-mobileapp-user-Yelp,1,1,0,0,0,0,1
-5,de-mobileapp-user-YouTube,39,45,44,59,36,51,57
-5,de-mobileapp-user-Zynga,0,0,0,1,0,0,0
-5,de-mobileweb-user-23andMe,18,19,19,25,27,23,16
-5,de-mobileweb-user-500px,6,3,10,7,3,8,8
-5,de-mobileweb-spider-Badoo,0,3,1,0,1,1,1
-5,de-mobileweb-user-Badoo,57,67,94,74,55,47,81
-5,de-mobileweb-spider-CouchSurfing,2,1,0,0,1,3,1
-5,de-mobileweb-user-CouchSurfing,128,110,102,104,80,98,111
-5,de-mobileweb-user-DeviantArt,13,8,20,8,6,4,8
-5,de-mobileweb-spider-Facebook,29,22,26,24,21,19,19
-5,de-mobileweb-user-Facebook,727,789,999,817,824,731,855
-5,de-mobileweb-spider-Flickr,1,1,3,1,0,4,0
-5,de-mobileweb-user-Flickr,45,48,38,37,22,25,42
-5,de-mobileweb-spider-Foursquare,0,2,1,0,2,1,0
-5,de-mobileweb-user-Foursquare,13,11,16,9,15,9,22
-5,de-mobileweb-spider-Google+,2,3,0,0,0,1,0
-5,de-mobileweb-user-Google+,71,70,80,63,58,55,66
-5,de-mobileweb-user-Imgur,16,11,19,16,19,22,17
-5,de-mobileweb-spider-Instagram,8,4,12,2,0,3,2
-5,de-mobileweb-user-Instagram,1019,1190,1450,923,960,914,1171
-5,de-mobileweb-spider-Kickstarter,0,1,0,1,1,0,1
-5,de-mobileweb-user-Kickstarter,7,10,14,24,12,8,15
-5,de-mobileweb-spider-Last.fm,0,0,1,1,0,1,0
-5,de-mobileweb-user-Last.fm,16,19,20,10,9,14,16
-5,de-mobileweb-spider-LinkedIn,1,4,0,1,2,2,2
-5,de-mobileweb-user-LinkedIn,347,253,224,315,368,366,399
-5,de-mobileweb-user-LiveJournal,3,0,3,1,0,0,1
-5,de-mobileweb-user-MyHeritage,3,9,13,6,7,10,11
-5,de-mobileweb-spider-Myspace,0,1,0,1,2,2,2
-5,de-mobileweb-user-Myspace,68,176,83,81,87,75,52
-5,de-mobileweb-spider-Pinterest,4,0,1,2,1,0,2
-5,de-mobileweb-user-Pinterest,336,451,409,287,315,281,429
-5,de-mobileweb-spider-Pixabay,0,1,0,0,1,0,0
-5,de-mobileweb-user-Pixabay,4,5,3,1,6,3,5
-5,de-mobileweb-user-Quora,13,15,4,5,10,11,10
-5,de-mobileweb-user-Ravelry,3,5,6,3,3,4,4
-5,de-mobileweb-spider-Reddit,2,1,1,1,0,1,0
-5,de-mobileweb-user-Reddit,135,189,134,108,96,72,96
-5,de-mobileweb-user-Shutterfly,4,8,21,6,13,6,18
-5,de-mobileweb-spider-Skype,2,2,0,2,0,1,0
-5,de-mobileweb-user-Skype,108,101,107,92,89,74,73
-5,de-mobileweb-spider-Snapchat,4,1,5,2,4,3,0
-5,de-mobileweb-user-Snapchat,796,794,885,635,583,668,832
-5,de-mobileweb-spider-SoundCloud,2,1,0,1,1,0,0
-5,de-mobileweb-user-SoundCloud,126,127,142,100,109,118,150
-5,de-mobileweb-user-StumbleUpon,0,1,2,0,0,0,1
-5,de-mobileweb-user-Tagged,2,3,4,6,4,4,6
-5,de-mobileweb-spider-Tumblr,1,1,0,1,0,1,0
-5,de-mobileweb-user-Tumblr,157,162,186,159,147,147,151
-5,de-mobileweb-spider-Twitter,14,2,2,2,0,3,2
-5,de-mobileweb-user-Twitter,308,289,284,270,441,262,325
-5,de-mobileweb-user-Viadeo,4,1,2,2,1,1,1
-5,de-mobileweb-spider-Viber,0,1,0,0,1,0,0
-5,de-mobileweb-user-Viber,66,85,75,91,76,59,84
-5,de-mobileweb-spider-WeChat,1,2,0,2,0,1,0
-5,de-mobileweb-user-WeChat,74,69,50,63,66,51,48
-5,de-mobileweb-spider-WhatsApp,1,3,3,6,3,1,2
-5,de-mobileweb-user-WhatsApp,547,512,535,442,419,406,453
-5,de-mobileweb-user-Xanga,2,2,0,1,1,0,0
-5,de-mobileweb-user-Yelp,3,3,5,4,2,3,0
-5,de-mobileweb-spider-YouTube,13,7,7,11,11,9,9
-5,de-mobileweb-user-YouTube,1046,1100,1070,771,906,906,1033
-5,de-mobileweb-spider-Zynga,0,1,0,0,0,0,0
-5,de-mobileweb-user-Zynga,6,3,8,6,2,7,7
-5,en-desktop-spider-23andMe,23,20,18,15,17,18,22
-5,en-desktop-user-23andMe,496,373,498,723,602,622,560
-5,en-desktop-spider-43_Things,17,23,15,12,6,7,20
-5,en-desktop-user-43_Things,53,43,52,60,71,56,49
-5,en-desktop-spider-500px,21,18,21,10,10,15,26
-5,en-desktop-user-500px,99,64,73,109,93,79,80
-5,en-desktop-spider-ASmallWorld,5,10,4,6,5,5,16
-5,en-desktop-user-ASmallWorld,70,42,41,60,59,39,35
-5,en-desktop-spider-Academia.edu,26,19,14,31,9,16,17
-5,en-desktop-user-Academia.edu,236,174,131,262,238,223,194
-5,en-desktop-spider-Ancestry.com,31,23,57,29,41,24,38
-5,en-desktop-user-Ancestry.com,684,256,318,468,440,335,364
-5,en-desktop-spider-AngelList,12,12,10,12,14,3,10
-5,en-desktop-user-AngelList,132,92,97,165,165,145,140
-5,en-desktop-spider-Badoo,42,40,33,41,41,45,43
-5,en-desktop-user-Badoo,282,255,245,290,289,276,265
-5,en-desktop-spider-BlackPlanet,11,14,6,6,6,7,7
-5,en-desktop-user-BlackPlanet,32,22,22,38,44,31,36
-5,en-desktop-spider-CafeMom,12,13,10,8,3,2,11
-5,en-desktop-user-CafeMom,33,12,19,24,26,18,27
-5,en-desktop-spider-Care2,8,9,5,11,4,8,5
-5,en-desktop-user-Care2,19,32,32,30,21,33,31
-5,en-desktop-spider-CaringBridge,9,9,6,7,3,6,2
-5,en-desktop-user-CaringBridge,27,21,19,26,22,33,30
-5,en-desktop-spider-Cellufun,6,5,2,3,1,4,4
-5,en-desktop-user-Cellufun,5,2,6,4,5,5,3
-5,en-desktop-spider-Classmates.com,12,12,5,15,10,8,7
-5,en-desktop-user-Classmates.com,75,54,51,62,94,76,68
-5,en-desktop-spider-CouchSurfing,23,16,30,11,17,22,18
-5,en-desktop-user-CouchSurfing,230,206,224,369,240,265,228
-5,en-desktop-spider-DeviantArt,28,25,34,44,23,17,21
-5,en-desktop-user-DeviantArt,224,218,222,250,268,254,262
-5,en-desktop-spider-Doximity,5,8,11,9,5,5,7
-5,en-desktop-user-Doximity,46,28,26,44,61,37,43
-5,"en-desktop-spider-English,_baby!",6,11,2,7,5,3,9
-5,"en-desktop-user-English,_baby!",15,11,6,16,11,13,8
-5,en-desktop-spider-Facebook,707,545,743,3141,1770,2041,2261
-5,en-desktop-user-Facebook,18508,14340,16870,16703,16423,16898,16903
-5,en-desktop-spider-Facebook_Messenger,99,94,97,90,68,85,61
-5,en-desktop-user-Facebook_Messenger,817,709,690,864,818,775,770
-5,en-desktop-spider-Flickr,158,82,79,87,86,62,72
-5,en-desktop-user-Flickr,607,481,453,619,1051,645,575
-5,en-desktop-spider-Flixster,26,35,19,30,24,18,23
-5,en-desktop-user-Flixster,56,85,63,60,68,57,70
-5,en-desktop-spider-Fotki,25,21,14,17,12,14,23
-5,en-desktop-user-Fotki,53,42,39,54,38,35,38
-5,en-desktop-spider-Fotolog,11,7,10,19,8,7,3
-5,en-desktop-user-Fotolog,28,24,17,34,30,27,32
-5,en-desktop-spider-Foursquare,43,42,20,67,42,275,48
-5,en-desktop-user-Foursquare,390,272,224,327,287,323,355
-5,en-desktop-spider-Funny_or_Die,29,29,39,25,23,31,18
-5,en-desktop-user-Funny_or_Die,226,174,200,221,234,204,245
-5,en-desktop-spider-Gaia_Online,35,33,20,40,23,10,50
-5,en-desktop-user-Gaia_Online,78,88,103,99,124,130,102
-5,en-desktop-spider-GirlsAskGuys,4,8,5,3,2,5,7
-5,en-desktop-user-GirlsAskGuys,13,18,13,18,17,14,21
-5,en-desktop-spider-GoFundMe,37,21,20,15,10,28,38
-5,en-desktop-user-GoFundMe,269,215,179,403,362,458,327
-5,en-desktop-spider-Goodreads,31,49,33,37,37,43,56
-5,en-desktop-user-Goodreads,242,202,176,226,225,214,202
-5,en-desktop-spider-Google+,82,74,160,88,68,72,86
-5,en-desktop-user-Google+,657,573,540,765,742,688,670
-5,en-desktop-spider-Habbo,21,21,24,14,52,19,21
-5,en-desktop-user-Habbo,190,161,146,185,202,153,184
-5,en-desktop-spider-Imgur,35,27,26,21,85,35,28
-5,en-desktop-user-Imgur,282,226,243,301,315,319,286
-5,en-desktop-spider-Instagram,515,259,278,257,487,491,465
-5,en-desktop-user-Instagram,5730,3700,3621,4662,5172,5502,4801
-5,en-desktop-spider-Italki,4,13,9,7,4,4,6
-5,en-desktop-user-Italki,32,22,18,34,33,29,27
-5,en-desktop-spider-Kickstarter,56,36,35,699,41,52,361
-5,en-desktop-user-Kickstarter,657,509,559,691,659,723,592
-5,en-desktop-spider-Kiwibox,15,7,3,4,5,2,6
-5,en-desktop-user-Kiwibox,19,19,14,20,24,26,29
-5,en-desktop-spider-Last.fm,50,52,42,55,27,281,26
-5,en-desktop-user-Last.fm,321,370,241,309,314,289,307
-5,en-desktop-spider-LinkedIn,73,71,60,70,104,62,312
-5,en-desktop-user-LinkedIn,2815,1174,1162,2188,2221,2251,2084
-5,en-desktop-spider-LiveJournal,36,23,28,46,34,49,40
-5,en-desktop-user-LiveJournal,159,141,148,194,165,144,127
-5,en-desktop-spider-MeetMe,15,22,18,18,11,16,15
-5,en-desktop-user-MeetMe,102,63,76,83,121,93,94
-5,en-desktop-spider-Meetup_(website),12,38,19,16,16,19,22
-5,en-desktop-user-Meetup_(website),178,123,142,218,211,206,159
-5,en-desktop-spider-Minds,14,10,14,6,14,10,10
-5,en-desktop-user-Minds,129,61,69,71,71,91,73
-5,en-desktop-spider-MocoSpace,12,13,9,10,11,7,9
-5,en-desktop-user-MocoSpace,23,14,18,13,17,23,17
-5,en-desktop-spider-MyHeritage,17,33,35,11,6,9,18
-5,en-desktop-user-MyHeritage,69,94,77,111,98,72,100
-5,en-desktop-spider-MyMFB,3,6,3,0,1,1,2
-5,en-desktop-user-MyMFB,7,4,2,5,8,5,2
-5,en-desktop-spider-Myspace,108,141,66,65,70,80,57
-5,en-desktop-user-Myspace,1325,741,844,1267,1151,1082,1083
-5,en-desktop-spider-Nexopia,8,31,6,7,8,13,8
-5,en-desktop-user-Nexopia,24,31,26,30,33,29,30
-5,en-desktop-spider-Nextdoor,17,13,24,35,20,19,28
-5,en-desktop-user-Nextdoor,296,229,229,387,364,373,364
-5,en-desktop-spider-Path_(social_network),16,14,16,15,16,11,9
-5,en-desktop-user-Path_(social_network),191,162,158,198,204,173,179
-5,en-desktop-spider-Photobucket,22,17,26,15,17,13,16
-5,en-desktop-user-Photobucket,68,54,55,84,98,94,108
-5,en-desktop-spider-Pinboard_(website),5,14,3,2,6,6,3
-5,en-desktop-user-Pinboard_(website),41,32,32,43,30,50,26
-5,en-desktop-spider-Pinterest,128,124,112,151,151,136,132
-5,en-desktop-user-Pinterest,1524,1283,1257,1659,1655,1577,1578
-5,en-desktop-spider-Pixabay,12,11,15,7,19,24,14
-5,en-desktop-user-Pixabay,64,38,38,73,97,79,63
-5,en-desktop-spider-PlentyOfFish,13,19,18,18,11,13,15
-5,en-desktop-user-PlentyOfFish,148,92,132,183,180,144,152
-5,en-desktop-spider-Plurk,9,15,9,14,13,9,9
-5,en-desktop-user-Plurk,53,29,22,52,34,49,29
-5,en-desktop-spider-Product_Hunt,11,12,7,8,5,5,32
-5,en-desktop-user-Product_Hunt,69,25,26,69,43,44,66
-5,en-desktop-spider-Quora,197,69,28,39,28,31,213
-5,en-desktop-user-Quora,819,609,587,925,988,968,908
-5,en-desktop-spider-Ravelry,26,12,18,18,12,12,19
-5,en-desktop-user-Ravelry,27,22,22,31,18,20,35
-5,en-desktop-spider-Reddit,145,126,204,207,167,857,238
-5,en-desktop-user-Reddit,2445,1888,1724,2245,2114,2249,2140
-5,en-desktop-spider-ReverbNation,8,13,8,7,13,3,9
-5,en-desktop-user-ReverbNation,39,30,29,41,68,40,43
-5,en-desktop-spider-Ryze,9,9,11,3,1,6,5
-5,en-desktop-user-Ryze,8,12,11,11,15,5,11
-5,en-desktop-spider-Shutterfly,27,16,19,13,22,16,21
-5,en-desktop-user-Shutterfly,141,88,81,166,347,267,235
-5,en-desktop-spider-Skype,291,278,294,329,365,763,314
-5,en-desktop-user-Skype,1488,1114,1321,1638,1796,1662,1702
-5,en-desktop-spider-Skyrock_(social_network_site),6,9,5,1,4,4,1
-5,en-desktop-user-Skyrock_(social_network_site),10,14,10,20,17,22,13
-5,en-desktop-spider-Snapchat,88,122,96,127,103,142,82
-5,en-desktop-user-Snapchat,2770,1855,1753,2845,2840,2685,2703
-5,en-desktop-spider-Snapfish,17,20,13,9,17,11,11
-5,en-desktop-user-Snapfish,70,52,47,77,75,90,82
-5,en-desktop-spider-Solaborate,12,14,18,18,9,10,10
-5,en-desktop-user-Solaborate,29,16,16,19,21,17,20
-5,en-desktop-spider-SoundCloud,53,64,33,36,130,40,43
-5,en-desktop-user-SoundCloud,755,535,536,678,828,736,737
-5,en-desktop-spider-StumbleUpon,20,21,13,19,9,15,20
-5,en-desktop-user-StumbleUpon,192,143,111,180,201,244,187
-5,en-desktop-spider-Tagged,43,31,40,27,31,33,28
-5,en-desktop-user-Tagged,150,112,96,123,153,126,113
-5,en-desktop-spider-Tinder_(app),49,61,27,51,60,72,45
-5,en-desktop-user-Tinder_(app),1595,1253,1305,1426,1440,1359,1288
-5,en-desktop-spider-Tout,11,16,8,7,3,6,10
-5,en-desktop-user-Tout,23,21,20,38,20,36,27
-5,en-desktop-spider-TravBuddy.com,8,11,4,3,4,7,1
-5,en-desktop-user-TravBuddy.com,7,9,7,8,10,4,3
-5,en-desktop-spider-Tumblr,88,103,123,110,119,144,297
-5,en-desktop-user-Tumblr,1059,884,862,1128,1099,1106,1279
-5,en-desktop-spider-Twitter,370,362,371,2650,569,1942,601
-5,en-desktop-user-Twitter,4343,4693,5530,3877,4761,4454,3874
-5,en-desktop-spider-Twoo.com,3,4,3,3,4,4,1
-5,en-desktop-user-Twoo.com,108,84,116,167,121,95,122
-5,en-desktop-spider-Untappd,12,9,13,17,11,9,12
-5,en-desktop-user-Untappd,44,34,28,33,36,42,38
-5,en-desktop-spider-Uplike,3,7,5,5,4,1,4
-5,en-desktop-user-Uplike,8,14,9,5,14,4,11
-5,en-desktop-spider-VK_(social_networking),41,38,106,60,34,40,52
-5,en-desktop-user-VK_(social_networking),9323,6438,5320,9831,8246,8762,9004
-5,en-desktop-spider-Vampirefreaks.com,9,10,12,8,9,0,7
-5,en-desktop-user-Vampirefreaks.com,16,15,19,11,18,20,26
-5,en-desktop-spider-Viadeo,14,11,8,11,10,7,14
-5,en-desktop-user-Viadeo,63,41,36,65,63,60,60
-5,en-desktop-spider-Viber,31,56,32,26,28,63,29
-5,en-desktop-user-Viber,465,309,374,491,423,440,458
-5,en-desktop-spider-Vine_(service),29,27,37,24,60,29,24
-5,en-desktop-user-Vine_(service),659,578,619,789,732,683,638
-5,en-desktop-spider-WAYN_(website),14,12,8,6,9,6,5
-5,en-desktop-user-WAYN_(website),197,125,131,207,249,212,184
-5,en-desktop-spider-WeChat,120,129,87,148,73,124,97
-5,en-desktop-user-WeChat,1353,742,802,1299,1314,1423,1168
-5,en-desktop-spider-We_Heart_It,30,21,10,7,15,10,13
-5,en-desktop-user-We_Heart_It,107,58,87,118,116,104,101
-5,en-desktop-spider-WhatsApp,114,131,110,328,164,123,101
-5,en-desktop-user-WhatsApp,3733,2746,2512,3593,3429,3469,3362
-5,en-desktop-spider-Xanga,30,5,18,26,11,28,22
-5,en-desktop-user-Xanga,125,65,68,102,101,94,107
-5,en-desktop-spider-Xing_Technology,5,4,3,3,7,1,3
-5,en-desktop-user-Xing_Technology,13,7,7,6,6,4,5
-5,en-desktop-spider-Yelp,53,27,46,55,60,253,71
-5,en-desktop-user-Yelp,467,269,303,512,464,483,488
-5,en-desktop-spider-YouTube,648,465,418,1114,694,1309,569
-5,en-desktop-user-YouTube,34985,21966,19435,20905,20774,19771,19363
-5,en-desktop-spider-Zynga,69,123,75,92,31,185,531
-5,en-desktop-user-Zynga,365,204,261,374,365,350,327
-5,en-mobileapp-user-23andMe,13,20,27,24,21,17,11
-5,en-mobileapp-user-500px,0,4,3,3,0,1,2
-5,en-mobileapp-user-ASmallWorld,1,4,0,1,1,0,0
-5,en-mobileapp-user-Academia.edu,3,1,0,2,0,1,2
-5,en-mobileapp-user-Ancestry.com,8,13,19,23,9,9,7
-5,en-mobileapp-user-AngelList,3,3,1,4,4,3,1
-5,en-mobileapp-user-Badoo,7,7,9,3,5,12,5
-5,en-mobileapp-user-BlackPlanet,0,0,0,0,1,0,0
-5,en-mobileapp-user-CafeMom,0,1,1,0,1,0,2
-5,en-mobileapp-user-Classmates.com,2,1,0,3,2,2,0
-5,en-mobileapp-user-CouchSurfing,2,5,7,4,5,1,4
-5,en-mobileapp-user-DeviantArt,0,2,13,2,2,2,2
-5,en-mobileapp-user-Doximity,0,0,2,1,0,4,0
-5,en-mobileapp-user-Facebook,279,237,195,211,208,252,233
-5,en-mobileapp-user-Facebook_Messenger,12,26,14,13,20,16,15
-5,en-mobileapp-user-Flickr,6,9,15,8,10,14,13
-5,en-mobileapp-user-Flixster,1,5,6,1,5,0,4
-5,en-mobileapp-user-Foursquare,8,12,4,7,4,3,13
-5,en-mobileapp-user-Funny_or_Die,2,11,9,7,17,7,6
-5,en-mobileapp-user-Gaia_Online,2,0,0,1,0,1,1
-5,en-mobileapp-user-GoFundMe,6,9,4,7,11,10,5
-5,en-mobileapp-user-Goodreads,2,3,5,5,8,9,6
-5,en-mobileapp-user-Google+,11,13,9,13,12,10,30
-5,en-mobileapp-user-Habbo,2,0,1,5,1,1,6
-5,en-mobileapp-user-Imgur,6,11,6,9,9,4,8
-5,en-mobileapp-user-Instagram,161,158,154,126,123,127,116
-5,en-mobileapp-user-Italki,0,0,0,0,0,0,0
-5,en-mobileapp-user-Kickstarter,18,12,18,13,8,12,16
-5,en-mobileapp-user-Last.fm,5,6,5,5,11,3,4
-5,en-mobileapp-user-LinkedIn,26,25,21,23,26,36,20
-5,en-mobileapp-user-LiveJournal,1,1,0,3,1,0,2
-5,en-mobileapp-user-MeetMe,0,0,2,1,6,0,2
-5,en-mobileapp-user-Meetup_(website),1,6,2,5,3,4,1
-5,en-mobileapp-user-Minds,0,2,0,0,4,1,1
-5,en-mobileapp-user-MocoSpace,0,0,1,4,1,1,0
-5,en-mobileapp-user-MyHeritage,0,0,1,0,1,0,0
-5,en-mobileapp-user-Myspace,50,48,47,55,27,43,27
-5,en-mobileapp-user-Nexopia,3,1,1,0,0,0,1
-5,en-mobileapp-user-Nextdoor,2,2,7,2,6,5,7
-5,en-mobileapp-user-Path_(social_network),3,1,1,2,1,6,0
-5,en-mobileapp-user-Photobucket,0,0,0,4,1,0,0
-5,en-mobileapp-user-Pinboard_(website),0,0,4,1,0,1,1
-5,en-mobileapp-user-Pinterest,19,22,32,23,22,24,24
-5,en-mobileapp-user-PlentyOfFish,7,5,4,1,5,4,4
-5,en-mobileapp-user-Plurk,0,0,3,0,0,0,0
-5,en-mobileapp-user-Product_Hunt,1,0,1,0,0,1,0
-5,en-mobileapp-user-Quora,27,20,20,11,29,23,18
-5,en-mobileapp-user-Reddit,74,69,93,70,73,31,68
-5,en-mobileapp-user-ReverbNation,1,1,1,2,0,0,1
-5,en-mobileapp-user-Shutterfly,0,1,2,4,25,13,11
-5,en-mobileapp-user-Skype,20,16,42,25,21,13,14
-5,en-mobileapp-user-Snapchat,109,126,94,92,83,89,92
-5,en-mobileapp-user-Snapfish,0,0,3,0,0,0,1
-5,en-mobileapp-user-SoundCloud,6,14,13,12,10,9,16
-5,en-mobileapp-user-StumbleUpon,1,2,3,4,1,2,1
-5,en-mobileapp-user-Tagged,1,0,2,2,5,3,4
-5,en-mobileapp-user-Tinder_(app),84,59,73,72,66,56,55
-5,en-mobileapp-user-Tout,2,2,3,9,1,3,2
-5,en-mobileapp-user-Tumblr,42,49,42,29,29,22,24
-5,en-mobileapp-user-Twitter,70,78,122,83,106,137,113
-5,en-mobileapp-user-Untappd,0,0,2,0,2,1,0
-5,en-mobileapp-user-VK_(social_networking),28,17,16,16,22,16,28
-5,en-mobileapp-user-Vampirefreaks.com,0,1,0,0,2,0,0
-5,en-mobileapp-user-Viadeo,0,1,0,0,0,0,0
-5,en-mobileapp-user-Viber,15,21,22,14,11,10,8
-5,en-mobileapp-user-Vine_(service),28,39,39,29,30,30,27
-5,en-mobileapp-user-WAYN_(website),5,3,4,4,6,2,6
-5,en-mobileapp-user-WeChat,18,29,26,41,17,25,21
-5,en-mobileapp-user-We_Heart_It,0,2,3,0,0,0,3
-5,en-mobileapp-user-WhatsApp,130,127,123,119,111,118,103
-5,en-mobileapp-user-Xanga,1,2,5,3,0,1,2
-5,en-mobileapp-user-Yelp,18,9,15,14,4,18,15
-5,en-mobileapp-user-YouTube,517,243,244,199,203,175,159
-5,en-mobileapp-user-Zynga,5,8,6,20,10,6,9
-5,en-mobileweb-spider-23andMe,5,3,2,4,3,2,2
-5,en-mobileweb-user-23andMe,435,582,705,524,449,473,503
-5,en-mobileweb-spider-43_Things,16,41,0,11,15,1,2
-5,en-mobileweb-user-43_Things,13,14,22,17,12,22,29
-5,en-mobileweb-spider-500px,2,4,1,4,4,2,0
-5,en-mobileweb-user-500px,29,42,35,22,34,40,37
-5,en-mobileweb-spider-ASmallWorld,0,3,1,2,0,0,1
-5,en-mobileweb-user-ASmallWorld,25,44,50,34,27,38,25
-5,en-mobileweb-spider-Academia.edu,3,1,2,0,4,2,2
-5,en-mobileweb-user-Academia.edu,67,45,50,59,85,64,68
-5,en-mobileweb-spider-Ancestry.com,5,7,4,5,4,5,2
-5,en-mobileweb-user-Ancestry.com,173,334,394,365,261,222,280
-5,en-mobileweb-spider-AngelList,1,0,1,2,2,2,2
-5,en-mobileweb-user-AngelList,57,43,46,68,70,53,50
-5,en-mobileweb-spider-Badoo,8,4,5,3,5,5,6
-5,en-mobileweb-user-Badoo,479,453,472,477,374,391,398
-5,en-mobileweb-spider-BlackPlanet,0,1,1,0,0,2,0
-5,en-mobileweb-user-BlackPlanet,24,26,34,18,31,23,15
-5,en-mobileweb-spider-CafeMom,0,1,1,1,0,0,1
-5,en-mobileweb-user-CafeMom,32,35,30,37,23,21,14
-5,en-mobileweb-spider-Care2,1,1,1,1,0,0,0
-5,en-mobileweb-user-Care2,5,6,10,8,14,0,7
-5,en-mobileweb-spider-CaringBridge,4,1,1,0,0,0,0
-5,en-mobileweb-user-CaringBridge,18,11,15,13,18,13,14
-5,en-mobileweb-spider-Cellufun,2,0,1,1,0,0,0
-5,en-mobileweb-user-Cellufun,2,6,6,2,3,4,6
-5,en-mobileweb-spider-Classmates.com,3,1,5,4,1,4,2
-5,en-mobileweb-user-Classmates.com,35,48,54,38,44,30,45
-5,en-mobileweb-spider-CouchSurfing,3,2,1,3,3,2,4
-5,en-mobileweb-user-CouchSurfing,249,243,227,245,230,237,257
-5,en-mobileweb-spider-DeviantArt,20,23,11,8,7,4,2
-5,en-mobileweb-user-DeviantArt,176,161,192,188,185,148,167
-5,en-mobileweb-spider-Doximity,1,0,1,0,0,0,1
-5,en-mobileweb-user-Doximity,24,27,32,23,30,28,24
-5,"en-mobileweb-spider-English,_baby!",1,2,0,1,0,1,0
-5,"en-mobileweb-user-English,_baby!",1,4,5,5,5,6,6
-5,en-mobileweb-spider-Facebook,128,112,97,117,107,87,112
-5,en-mobileweb-user-Facebook,15826,16684,16703,15803,15869,16241,16951
-5,en-mobileweb-spider-Facebook_Messenger,8,7,10,6,5,4,4
-5,en-mobileweb-user-Facebook_Messenger,1084,1057,1068,1030,1132,1189,1257
-5,en-mobileweb-spider-Flickr,9,5,5,7,6,8,5
-5,en-mobileweb-user-Flickr,260,258,321,288,318,275,234
-5,en-mobileweb-spider-Flixster,3,3,1,3,2,2,4
-5,en-mobileweb-user-Flixster,46,42,34,27,30,33,30
-5,en-mobileweb-spider-Fotki,0,1,1,1,0,3,0
-5,en-mobileweb-user-Fotki,10,5,12,11,19,36,33
-5,en-mobileweb-spider-Fotolog,1,2,0,1,0,0,0
-5,en-mobileweb-user-Fotolog,9,7,9,2,15,10,12
-5,en-mobileweb-spider-Foursquare,2,8,2,4,3,7,2
-5,en-mobileweb-user-Foursquare,320,365,193,201,242,156,355
-5,en-mobileweb-spider-Funny_or_Die,26,23,15,3,4,3,1
-5,en-mobileweb-user-Funny_or_Die,257,242,301,272,203,208,234
-5,en-mobileweb-spider-Gaia_Online,2,2,1,0,3,0,2
-5,en-mobileweb-user-Gaia_Online,39,51,45,49,75,101,53
-5,en-mobileweb-spider-GirlsAskGuys,1,0,1,0,0,0,0
-5,en-mobileweb-user-GirlsAskGuys,7,15,6,22,21,13,14
-5,en-mobileweb-spider-GoFundMe,5,4,2,2,1,4,2
-5,en-mobileweb-user-GoFundMe,336,309,319,377,388,449,393
-5,en-mobileweb-spider-Goodreads,10,3,5,5,4,6,3
-5,en-mobileweb-user-Goodreads,182,153,157,140,155,147,146
-5,en-mobileweb-spider-Google+,8,9,10,5,10,3,3
-5,en-mobileweb-user-Google+,443,460,495,502,481,461,359
-5,en-mobileweb-spider-Habbo,1,6,1,1,1,4,2
-5,en-mobileweb-user-Habbo,87,93,83,83,89,71,98
-5,en-mobileweb-spider-Imgur,6,4,2,3,1,3,2
-5,en-mobileweb-user-Imgur,224,249,267,229,277,235,202
-5,en-mobileweb-spider-Instagram,21,17,20,22,19,11,28
-5,en-mobileweb-user-Instagram,6437,6463,6647,5520,6161,7383,6013
-5,en-mobileweb-spider-Italki,1,1,1,2,1,1,1
-5,en-mobileweb-user-Italki,10,11,9,8,17,19,9
-5,en-mobileweb-spider-Kickstarter,10,4,3,9,5,4,5
-5,en-mobileweb-user-Kickstarter,383,369,445,400,378,405,359
-5,en-mobileweb-spider-Kiwibox,0,0,1,0,0,0,0
-5,en-mobileweb-user-Kiwibox,2,8,16,7,11,5,5
-5,en-mobileweb-spider-Last.fm,4,4,3,3,2,2,4
-5,en-mobileweb-user-Last.fm,50,87,64,50,58,71,37
-5,en-mobileweb-spider-LinkedIn,11,8,8,7,6,4,8
-5,en-mobileweb-user-LinkedIn,1389,1238,1139,1395,1345,1454,1450
-5,en-mobileweb-spider-LiveJournal,4,15,3,4,17,1,4
-5,en-mobileweb-user-LiveJournal,47,57,61,45,49,33,45
-5,en-mobileweb-spider-MeetMe,2,1,0,1,4,2,1
-5,en-mobileweb-user-MeetMe,109,110,124,119,108,129,137
-5,en-mobileweb-spider-Meetup_(website),5,3,3,2,2,4,2
-5,en-mobileweb-user-Meetup_(website),116,123,141,129,114,122,126
-5,en-mobileweb-spider-Minds,1,2,2,1,3,3,2
-5,en-mobileweb-user-Minds,40,33,38,39,44,32,33
-5,en-mobileweb-spider-MocoSpace,0,0,2,1,0,1,2
-5,en-mobileweb-user-MocoSpace,72,77,88,91,58,76,72
-5,en-mobileweb-spider-MyHeritage,4,3,5,3,3,1,0
-5,en-mobileweb-user-MyHeritage,41,40,37,32,42,20,35
-5,en-mobileweb-spider-MyMFB,2,0,1,1,1,1,2
-5,en-mobileweb-user-MyMFB,3,1,1,5,1,3,3
-5,en-mobileweb-spider-Myspace,10,3,3,5,4,2,4
-5,en-mobileweb-user-Myspace,1389,1252,1206,1211,1112,945,1027
-5,en-mobileweb-spider-Nexopia,3,0,1,0,1,0,1
-5,en-mobileweb-user-Nexopia,46,20,33,24,50,38,32
-5,en-mobileweb-spider-Nextdoor,4,3,2,2,1,1,0
-5,en-mobileweb-user-Nextdoor,158,124,121,158,192,196,181
-5,en-mobileweb-spider-Path_(social_network),2,2,2,2,2,2,4
-5,en-mobileweb-user-Path_(social_network),53,62,51,53,61,46,44
-5,en-mobileweb-spider-Photobucket,2,1,3,1,1,1,1
-5,en-mobileweb-user-Photobucket,54,52,51,45,40,59,53
-5,en-mobileweb-spider-Pinboard_(website),2,2,0,0,0,1,1
-5,en-mobileweb-user-Pinboard_(website),5,9,8,12,6,7,8
-5,en-mobileweb-spider-Pinterest,7,6,6,4,5,7,5
-5,en-mobileweb-user-Pinterest,1106,1196,1158,1105,1100,1085,1063
-5,en-mobileweb-spider-Pixabay,1,1,5,4,0,3,2
-5,en-mobileweb-user-Pixabay,21,10,10,25,16,17,18
-5,en-mobileweb-spider-PlentyOfFish,2,3,3,3,3,4,1
-5,en-mobileweb-user-PlentyOfFish,222,252,235,230,233,220,261
-5,en-mobileweb-spider-Plurk,1,0,1,0,3,9,1
-5,en-mobileweb-user-Plurk,8,10,12,10,10,27,13
-5,en-mobileweb-spider-Product_Hunt,0,0,3,0,1,0,1
-5,en-mobileweb-user-Product_Hunt,19,11,11,15,18,9,26
-5,en-mobileweb-spider-Quora,7,6,4,2,2,3,8
-5,en-mobileweb-user-Quora,673,730,752,711,761,802,671
-5,en-mobileweb-spider-Ravelry,0,1,1,0,0,0,1
-5,en-mobileweb-user-Ravelry,10,22,12,10,14,16,16
-5,en-mobileweb-spider-Reddit,16,5,9,21,6,14,24
-5,en-mobileweb-user-Reddit,1576,1963,1673,1465,1489,1429,1486
-5,en-mobileweb-spider-ReverbNation,1,2,1,1,0,1,1
-5,en-mobileweb-user-ReverbNation,31,25,28,35,35,17,38
-5,en-mobileweb-spider-Ryze,1,0,1,1,0,0,0
-5,en-mobileweb-user-Ryze,3,2,0,2,2,2,1
-5,en-mobileweb-spider-Shutterfly,0,2,3,1,2,0,0
-5,en-mobileweb-user-Shutterfly,126,109,99,133,760,422,337
-5,en-mobileweb-spider-Skype,11,4,9,4,9,7,6
-5,en-mobileweb-user-Skype,614,557,745,614,585,656,578
-5,en-mobileweb-spider-Skyrock_(social_network_site),0,1,1,0,1,1,0
-5,en-mobileweb-user-Skyrock_(social_network_site),4,2,2,2,2,7,2
-5,en-mobileweb-spider-Snapchat,10,9,9,5,7,8,8
-5,en-mobileweb-user-Snapchat,3863,4254,4320,3748,3700,3854,3841
-5,en-mobileweb-spider-Snapfish,0,2,0,2,1,1,0
-5,en-mobileweb-user-Snapfish,16,25,24,26,18,29,22
-5,en-mobileweb-spider-Solaborate,0,1,1,1,0,1,0
-5,en-mobileweb-user-Solaborate,3,2,3,3,0,5,1
-5,en-mobileweb-spider-SoundCloud,9,5,6,3,6,5,2
-5,en-mobileweb-user-SoundCloud,637,616,657,656,586,507,602
-5,en-mobileweb-spider-StumbleUpon,0,1,1,1,3,1,0
-5,en-mobileweb-user-StumbleUpon,115,85,107,86,92,113,94
-5,en-mobileweb-spider-Tagged,2,2,4,3,1,2,6
-5,en-mobileweb-user-Tagged,115,111,103,84,115,79,97
-5,en-mobileweb-spider-Tinder_(app),7,11,8,2,3,3,4
-5,en-mobileweb-user-Tinder_(app),2296,2526,2622,2214,2116,2042,2117
-5,en-mobileweb-spider-Tout,18,1,28,5,1,0,3
-5,en-mobileweb-user-Tout,28,27,22,34,33,23,19
-5,en-mobileweb-user-TravBuddy.com,2,3,5,4,5,1,1
-5,en-mobileweb-spider-Tumblr,10,7,10,9,8,8,14
-5,en-mobileweb-user-Tumblr,1039,1201,1281,1141,1177,1155,1044
-5,en-mobileweb-spider-Twitter,43,22,19,19,24,23,27
-5,en-mobileweb-user-Twitter,2913,3178,3387,2878,3496,4012,3769
-5,en-mobileweb-spider-Twoo.com,1,1,0,0,1,1,0
-5,en-mobileweb-user-Twoo.com,161,171,161,172,155,150,160
-5,en-mobileweb-spider-Untappd,0,0,0,0,0,0,1
-5,en-mobileweb-user-Untappd,36,32,27,29,13,11,23
-5,en-mobileweb-spider-Uplike,0,1,0,2,0,1,0
-5,en-mobileweb-user-Uplike,0,1,2,1,1,2,2
-5,en-mobileweb-spider-VK_(social_networking),14,11,13,8,12,11,7
-5,en-mobileweb-user-VK_(social_networking),3120,2087,1705,1713,2562,2579,2206
-5,en-mobileweb-spider-Vampirefreaks.com,1,2,1,0,0,0,3
-5,en-mobileweb-user-Vampirefreaks.com,22,23,26,30,20,22,25
-5,en-mobileweb-spider-Viadeo,0,0,0,1,2,0,2
-5,en-mobileweb-user-Viadeo,6,9,11,13,6,10,12
-5,en-mobileweb-spider-Viber,5,3,2,1,1,2,2
-5,en-mobileweb-user-Viber,438,463,416,328,326,358,385
-5,en-mobileweb-spider-Vine_(service),2,2,3,3,5,2,2
-5,en-mobileweb-user-Vine_(service),822,871,863,852,768,819,831
-5,en-mobileweb-spider-WAYN_(website),3,1,1,4,2,2,3
-5,en-mobileweb-user-WAYN_(website),169,179,133,151,191,160,166
-5,en-mobileweb-spider-WeChat,12,5,3,6,11,6,5
-5,en-mobileweb-user-WeChat,822,774,826,774,757,863,662
-5,en-mobileweb-spider-We_Heart_It,0,2,1,1,0,2,1
-5,en-mobileweb-user-We_Heart_It,64,46,74,56,56,60,46
-5,en-mobileweb-spider-WhatsApp,17,20,11,13,7,13,11
-5,en-mobileweb-user-WhatsApp,6395,6812,6236,5807,5809,5860,5869
-5,en-mobileweb-spider-Xanga,1,1,1,0,0,3,1
-5,en-mobileweb-user-Xanga,75,62,84,55,63,74,56
-5,en-mobileweb-spider-Xing_Technology,1,1,0,0,1,1,2
-5,en-mobileweb-user-Xing_Technology,4,0,0,4,1,0,4
-5,en-mobileweb-spider-Yelp,9,2,2,1,8,1,1
-5,en-mobileweb-user-Yelp,264,256,267,226,285,262,263
-5,en-mobileweb-spider-YouTube,96,116,1148,305,87,95,96
-5,en-mobileweb-user-YouTube,44004,37502,36254,31010,30105,30813,28946
-5,en-mobileweb-spider-Zynga,4,4,5,4,3,5,8
-5,en-mobileweb-user-Zynga,256,237,215,214,203,214,197
-5,es-desktop-spider-23andMe,1,2,8,4,5,2,0
-5,es-desktop-user-23andMe,13,15,19,14,23,23,15
-5,es-desktop-spider-500px,4,0,4,4,4,1,0
-5,es-desktop-user-500px,4,4,8,0,6,6,7
-5,es-desktop-spider-Badoo,6,6,10,5,6,7,21
-5,es-desktop-user-Badoo,120,76,73,123,120,123,131
-5,es-desktop-spider-CouchSurfing,2,3,4,7,23,4,4
-5,es-desktop-user-CouchSurfing,66,48,51,76,77,83,65
-5,es-desktop-spider-DeviantArt,3,4,5,5,5,2,6
-5,es-desktop-user-DeviantArt,16,31,37,42,33,29,32
-5,es-desktop-spider-Facebook,59,90,57,53,46,45,54
-5,es-desktop-user-Facebook,3907,2921,2903,4506,4793,5071,4957
-5,es-desktop-spider-Facebook_Messenger,10,1,5,40,11,6,7
-5,es-desktop-user-Facebook_Messenger,201,189,182,235,259,237,251
-5,es-desktop-spider-Flickr,17,10,5,11,14,7,13
-5,es-desktop-user-Flickr,181,119,140,181,244,246,183
-5,es-desktop-spider-Fotolog,8,4,10,20,10,5,8
-5,es-desktop-user-Fotolog,33,25,27,42,47,49,59
-5,es-desktop-spider-Foursquare,10,4,10,6,19,14,5
-5,es-desktop-user-Foursquare,37,28,26,45,35,54,41
-5,es-desktop-spider-Goodreads,5,2,3,3,3,3,1
-5,es-desktop-user-Goodreads,21,7,17,18,16,12,15
-5,es-desktop-spider-Google+,9,12,15,12,10,11,9
-5,es-desktop-user-Google+,187,177,145,270,322,244,218
-5,es-desktop-spider-Habbo,12,5,8,9,12,3,12
-5,es-desktop-user-Habbo,118,113,138,116,143,114,201
-5,es-desktop-spider-Instagram,51,17,38,25,32,19,17
-5,es-desktop-user-Instagram,1408,893,1023,1659,1722,1688,1691
-5,es-desktop-spider-Kickstarter,10,17,13,17,8,8,4
-5,es-desktop-user-Kickstarter,54,31,36,69,98,87,65
-5,es-desktop-spider-Last.fm,11,7,10,11,9,12,4
-5,es-desktop-user-Last.fm,24,18,20,16,26,32,21
-5,es-desktop-spider-LinkedIn,11,7,10,4,16,11,6
-5,es-desktop-user-LinkedIn,635,346,339,858,867,887,886
-5,es-desktop-spider-LiveJournal,3,4,2,2,7,3,6
-5,es-desktop-user-LiveJournal,10,9,14,15,16,12,13
-5,es-desktop-spider-MyHeritage,3,1,16,0,1,2,1
-5,es-desktop-user-MyHeritage,5,8,14,18,7,7,13
-5,es-desktop-spider-Myspace,5,8,7,12,4,4,1
-5,es-desktop-user-Myspace,187,91,105,192,178,171,142
-5,es-desktop-spider-Photobucket,3,3,1,3,0,4,0
-5,es-desktop-user-Photobucket,9,2,1,4,8,7,7
-5,es-desktop-spider-Pinterest,9,4,9,7,4,8,9
-5,es-desktop-user-Pinterest,313,189,232,328,413,424,333
-5,es-desktop-spider-Plurk,12,4,7,6,6,3,7
-5,es-desktop-user-Plurk,9,4,3,12,10,5,4
-5,es-desktop-spider-Quora,3,1,3,4,3,7,2
-5,es-desktop-user-Quora,29,20,18,38,25,25,16
-5,es-desktop-spider-Reddit,12,3,16,7,8,11,0
-5,es-desktop-user-Reddit,129,119,442,562,350,285,262
-5,es-desktop-spider-Skype,13,9,11,20,4,10,9
-5,es-desktop-user-Skype,283,167,231,356,384,364,400
-5,es-desktop-spider-Snapchat,9,6,11,8,5,14,4
-5,es-desktop-user-Snapchat,569,351,382,643,728,756,735
-5,es-desktop-spider-SoundCloud,7,1,1,5,10,3,5
-5,es-desktop-user-SoundCloud,69,70,52,71,92,99,71
-5,es-desktop-spider-StumbleUpon,4,2,6,2,7,8,3
-5,es-desktop-user-StumbleUpon,18,9,17,13,20,18,12
-5,es-desktop-spider-Tagged,3,4,7,4,4,5,0
-5,es-desktop-user-Tagged,45,32,27,58,28,42,32
-5,es-desktop-spider-Tumblr,16,21,16,9,13,15,12
-5,es-desktop-user-Tumblr,295,217,280,348,338,370,368
-5,es-desktop-spider-Twitter,40,39,32,68,43,80,85
-5,es-desktop-user-Twitter,1318,965,948,1426,1559,1503,1206
-5,es-desktop-spider-Viadeo,5,3,1,2,5,2,1
-5,es-desktop-user-Viadeo,15,4,18,12,14,15,14
-5,es-desktop-spider-Viber,6,3,5,4,2,5,0
-5,es-desktop-user-Viber,30,12,24,20,23,24,22
-5,es-desktop-spider-WeChat,2,4,2,3,2,5,1
-5,es-desktop-user-WeChat,51,42,53,78,75,72,84
-5,es-desktop-spider-WhatsApp,30,44,27,35,21,30,39
-5,es-desktop-user-WhatsApp,1439,810,990,1473,1577,1651,1511
-5,es-desktop-spider-YouTube,41,38,47,29,69,69,39
-5,es-desktop-user-YouTube,3336,2959,2790,3892,4033,4282,4892
-5,es-desktop-spider-Zynga,4,3,5,3,4,4,2
-5,es-desktop-user-Zynga,6,16,8,14,16,14,15
-5,es-mobileapp-user-Badoo,0,4,0,2,2,0,3
-5,es-mobileapp-user-CouchSurfing,1,1,1,0,2,0,0
-5,es-mobileapp-user-Facebook,28,28,12,20,36,51,28
-5,es-mobileapp-user-Facebook_Messenger,2,0,1,1,2,0,1
-5,es-mobileapp-user-Flickr,0,0,0,0,2,0,2
-5,es-mobileapp-user-Fotolog,0,0,0,1,0,0,0
-5,es-mobileapp-user-Google+,0,0,0,0,3,1,0
-5,es-mobileapp-user-Habbo,1,0,0,1,2,0,1
-5,es-mobileapp-user-Instagram,7,19,10,10,6,5,7
-5,es-mobileapp-user-Kickstarter,0,0,2,1,1,1,0
-5,es-mobileapp-user-Last.fm,0,0,0,0,0,0,0
-5,es-mobileapp-user-LinkedIn,3,3,4,2,2,1,8
-5,es-mobileapp-user-Myspace,2,1,1,3,4,2,5
-5,es-mobileapp-user-Pinterest,2,0,1,1,1,6,7
-5,es-mobileapp-user-Quora,0,0,0,0,0,0,0
-5,es-mobileapp-user-Reddit,1,4,7,8,0,0,2
-5,es-mobileapp-user-Skype,3,2,3,2,5,1,3
-5,es-mobileapp-user-Snapchat,8,3,3,8,5,4,7
-5,es-mobileapp-user-SoundCloud,1,1,0,0,0,2,1
-5,es-mobileapp-user-Tumblr,2,9,9,1,1,5,2
-5,es-mobileapp-user-Twitter,7,10,12,10,7,8,6
-5,es-mobileapp-user-Viber,0,0,0,0,0,0,0
-5,es-mobileapp-user-WeChat,0,0,0,0,0,0,0
-5,es-mobileapp-user-WhatsApp,21,11,17,11,7,7,18
-5,es-mobileapp-user-YouTube,12,16,20,17,16,24,29
-5,es-mobileweb-user-23andMe,14,8,24,14,12,14,9
-5,es-mobileweb-user-500px,4,3,6,2,1,2,0
-5,es-mobileweb-spider-Badoo,2,1,3,3,0,2,0
-5,es-mobileweb-user-Badoo,186,172,188,164,185,176,181
-5,es-mobileweb-spider-CouchSurfing,1,0,0,2,0,0,0
-5,es-mobileweb-user-CouchSurfing,73,78,79,60,81,88,66
-5,es-mobileweb-spider-DeviantArt,1,2,0,0,0,0,0
-5,es-mobileweb-user-DeviantArt,10,12,17,18,10,16,9
-5,es-mobileweb-spider-Facebook,32,36,24,40,31,36,29
-5,es-mobileweb-user-Facebook,5203,5066,5377,5223,5358,7438,6056
-5,es-mobileweb-spider-Facebook_Messenger,0,3,0,1,1,1,0
-5,es-mobileweb-user-Facebook_Messenger,274,248,210,220,201,258,224
-5,es-mobileweb-spider-Flickr,2,1,2,1,1,2,1
-5,es-mobileweb-user-Flickr,56,49,67,59,89,69,62
-5,es-mobileweb-spider-Fotolog,0,5,0,2,0,0,0
-5,es-mobileweb-user-Fotolog,46,40,49,48,44,47,54
-5,es-mobileweb-spider-Foursquare,0,0,0,0,0,0,0
-5,es-mobileweb-user-Foursquare,28,32,19,21,33,20,21
-5,es-mobileweb-spider-Goodreads,0,2,0,1,0,0,0
-5,es-mobileweb-user-Goodreads,17,11,9,8,6,12,7
-5,es-mobileweb-spider-Google+,4,1,3,3,0,2,1
-5,es-mobileweb-user-Google+,119,108,137,111,123,125,111
-5,es-mobileweb-spider-Habbo,1,1,0,1,0,1,1
-5,es-mobileweb-user-Habbo,41,39,46,35,36,41,48
-5,es-mobileweb-spider-Instagram,5,5,5,2,3,3,6
-5,es-mobileweb-user-Instagram,1189,1163,1389,1412,1368,1343,1365
-5,es-mobileweb-spider-Kickstarter,2,1,0,0,0,1,1
-5,es-mobileweb-user-Kickstarter,37,22,40,53,47,52,30
-5,es-mobileweb-spider-Last.fm,0,0,0,0,0,2,0
-5,es-mobileweb-user-Last.fm,11,4,12,11,23,15,11
-5,es-mobileweb-spider-LinkedIn,4,0,0,1,0,2,0
-5,es-mobileweb-user-LinkedIn,447,374,366,491,537,427,529
-5,es-mobileweb-spider-LiveJournal,0,1,0,0,1,1,0
-5,es-mobileweb-user-LiveJournal,3,4,7,5,4,7,16
-5,es-mobileweb-spider-MyHeritage,1,1,0,0,0,0,0
-5,es-mobileweb-user-MyHeritage,3,3,10,5,6,5,2
-5,es-mobileweb-spider-Myspace,2,2,0,0,1,0,2
-5,es-mobileweb-user-Myspace,173,111,104,114,123,124,117
-5,es-mobileweb-user-Photobucket,1,2,1,1,1,1,2
-5,es-mobileweb-spider-Pinterest,5,0,0,0,1,0,2
-5,es-mobileweb-user-Pinterest,268,257,348,355,346,282,281
-5,es-mobileweb-user-Plurk,1,1,3,1,4,0,1
-5,es-mobileweb-user-Quora,12,3,5,10,13,9,10
-5,es-mobileweb-spider-Reddit,1,1,1,1,1,1,1
-5,es-mobileweb-user-Reddit,48,62,235,285,151,122,121
-5,es-mobileweb-spider-Skype,5,2,2,2,1,0,0
-5,es-mobileweb-user-Skype,122,116,122,152,154,149,123
-5,es-mobileweb-spider-Snapchat,3,0,1,1,0,2,1
-5,es-mobileweb-user-Snapchat,614,505,650,628,635,682,638
-5,es-mobileweb-spider-SoundCloud,0,1,3,1,0,1,1
-5,es-mobileweb-user-SoundCloud,46,48,76,65,65,64,63
-5,es-mobileweb-user-StumbleUpon,1,4,7,5,6,5,1
-5,es-mobileweb-spider-Tagged,0,1,0,0,0,1,0
-5,es-mobileweb-user-Tagged,22,23,27,31,41,40,41
-5,es-mobileweb-spider-Tumblr,2,3,1,3,2,2,4
-5,es-mobileweb-user-Tumblr,268,375,435,361,369,365,311
-5,es-mobileweb-spider-Twitter,6,5,7,5,4,6,2
-5,es-mobileweb-user-Twitter,788,622,725,884,931,935,760
-5,es-mobileweb-user-Viadeo,6,2,3,8,4,3,3
-5,es-mobileweb-spider-Viber,1,1,1,1,0,1,0
-5,es-mobileweb-user-Viber,32,30,35,28,29,19,22
-5,es-mobileweb-spider-WeChat,1,1,1,1,1,1,1
-5,es-mobileweb-user-WeChat,39,53,58,42,55,58,37
-5,es-mobileweb-spider-WhatsApp,6,1,4,4,3,5,2
-5,es-mobileweb-user-WhatsApp,1660,1500,1644,1651,1593,1953,1705
-5,es-mobileweb-spider-YouTube,11,20,14,12,7,14,19
-5,es-mobileweb-user-YouTube,3220,3378,3896,3708,3305,3479,3575
-5,es-mobileweb-spider-Zynga,0,3,0,0,3,0,1
-5,es-mobileweb-user-Zynga,14,3,4,9,7,14,11
-5,zh-desktop-spider-500px,8,6,6,7,4,3,3
-5,zh-desktop-user-500px,11,2,6,2,9,4,4
-5,zh-desktop-spider-Facebook,61,56,59,42,34,48,61
-5,zh-desktop-user-Facebook,1018,1047,904,1194,1202,1151,1016
-5,zh-desktop-spider-Facebook_Messenger,15,8,7,13,12,5,9
-5,zh-desktop-user-Facebook_Messenger,31,30,20,15,24,24,18
-5,zh-desktop-spider-Flickr,20,15,5,22,22,19,19
-5,zh-desktop-user-Flickr,88,50,69,95,106,83,89
-5,zh-desktop-spider-Foursquare,3,3,6,5,5,7,3
-5,zh-desktop-user-Foursquare,19,19,20,29,31,23,24
-5,zh-desktop-spider-Goodreads,4,5,2,4,9,2,4
-5,zh-desktop-user-Goodreads,6,1,7,8,3,7,7
-5,zh-desktop-spider-Google+,10,19,23,14,11,17,14
-5,zh-desktop-user-Google+,77,50,61,78,106,75,78
-5,zh-desktop-spider-Imgur,3,1,4,6,5,9,5
-5,zh-desktop-user-Imgur,21,15,4,20,17,28,10
-5,zh-desktop-spider-Instagram,21,37,27,23,24,27,24
-5,zh-desktop-user-Instagram,418,302,338,420,423,449,342
-5,zh-desktop-spider-Kickstarter,5,8,9,9,7,9,7
-5,zh-desktop-user-Kickstarter,84,41,45,77,82,73,79
-5,zh-desktop-spider-Last.fm,17,11,11,9,14,15,7
-5,zh-desktop-user-Last.fm,12,12,9,14,8,15,10
-5,zh-desktop-spider-LinkedIn,5,5,2,10,9,0,6
-5,zh-desktop-user-LinkedIn,9,12,4,7,18,11,7
-5,zh-desktop-spider-LiveJournal,5,11,5,2,5,5,2
-5,zh-desktop-user-LiveJournal,10,4,10,3,3,5,8
-5,zh-desktop-spider-Myspace,9,9,9,14,6,12,10
-5,zh-desktop-user-Myspace,56,39,22,33,41,70,42
-5,zh-desktop-spider-Pinterest,13,8,14,17,12,12,9
-5,zh-desktop-user-Pinterest,153,93,80,160,167,132,130
-5,zh-desktop-spider-PlentyOfFish,3,9,16,15,7,6,11
-5,zh-desktop-user-PlentyOfFish,7,1,2,13,10,13,6
-5,zh-desktop-spider-Plurk,9,3,8,4,1,2,1
-5,zh-desktop-user-Plurk,3,3,7,7,10,17,5
-5,zh-desktop-spider-Quora,8,6,8,10,7,4,5
-5,zh-desktop-user-Quora,97,59,78,88,116,97,72
-5,zh-desktop-spider-Reddit,10,13,26,22,8,22,6
-5,zh-desktop-user-Reddit,120,93,92,113,126,204,152
-5,zh-desktop-spider-Skype,28,20,18,18,35,20,13
-5,zh-desktop-user-Skype,118,87,123,116,202,133,144
-5,zh-desktop-spider-Snapchat,6,11,21,10,18,14,12
-5,zh-desktop-user-Snapchat,233,151,149,214,268,247,270
-5,zh-desktop-spider-SoundCloud,10,6,6,7,7,13,8
-5,zh-desktop-user-SoundCloud,37,18,21,50,35,39,30
-5,zh-desktop-spider-Tumblr,26,23,10,16,14,26,15
-5,zh-desktop-user-Tumblr,233,197,200,226,286,269,231
-5,zh-desktop-spider-Twitter,36,37,39,37,37,40,44
-5,zh-desktop-user-Twitter,444,429,364,363,395,342,397
-5,zh-desktop-spider-Viber,9,15,8,15,9,8,7
-5,zh-desktop-user-Viber,43,19,15,34,37,31,32
-5,zh-desktop-spider-WhatsApp,16,12,18,16,23,13,12
-5,zh-desktop-user-WhatsApp,188,166,136,192,212,199,222
-5,zh-desktop-spider-Xanga,7,6,5,4,5,3,0
-5,zh-desktop-user-Xanga,21,17,8,19,19,20,10
-5,zh-desktop-spider-YouTube,87,60,59,108,83,65,68
-5,zh-desktop-user-YouTube,1386,1283,1347,1406,1451,1198,1298
-5,zh-desktop-spider-Zynga,5,3,10,5,7,5,5
-5,zh-desktop-user-Zynga,19,16,17,43,18,38,25
-5,zh-mobileapp-user-Facebook,5,31,20,16,14,5,14
-5,zh-mobileapp-user-Facebook_Messenger,0,1,1,0,0,0,0
-5,zh-mobileapp-user-Flickr,0,0,0,1,0,0,0
-5,zh-mobileapp-user-Google+,0,2,4,2,2,1,1
-5,zh-mobileapp-user-Instagram,2,2,2,5,11,3,8
-5,zh-mobileapp-user-Pinterest,4,0,1,1,0,0,3
-5,zh-mobileapp-user-Quora,2,6,1,1,3,1,0
-5,zh-mobileapp-user-Reddit,0,0,0,3,0,0,1
-5,zh-mobileapp-user-Skype,1,0,0,0,0,0,1
-5,zh-mobileapp-user-Snapchat,1,2,1,1,2,0,5
-5,zh-mobileapp-user-Tumblr,6,7,3,7,7,12,6
-5,zh-mobileapp-user-Twitter,8,13,13,6,4,1,7
-5,zh-mobileapp-user-WhatsApp,1,4,3,4,2,1,2
-5,zh-mobileapp-user-YouTube,17,30,29,20,18,9,13
-5,zh-mobileweb-spider-500px,0,4,0,2,0,0,0
-5,zh-mobileweb-user-500px,1,2,0,2,4,4,3
-5,zh-mobileweb-spider-Facebook,11,8,4,6,10,12,10
-5,zh-mobileweb-user-Facebook,313,360,343,341,321,345,298
-5,zh-mobileweb-spider-Facebook_Messenger,1,2,0,1,3,1,1
-5,zh-mobileweb-user-Facebook_Messenger,6,15,15,14,15,11,8
-5,zh-mobileweb-spider-Flickr,0,4,1,5,2,1,1
-5,zh-mobileweb-user-Flickr,25,18,18,16,25,26,20
-5,zh-mobileweb-spider-Foursquare,4,2,0,2,0,1,1
-5,zh-mobileweb-user-Foursquare,4,1,5,4,5,3,5
-5,zh-mobileweb-spider-Goodreads,1,2,0,1,1,0,2
-5,zh-mobileweb-user-Goodreads,1,2,2,4,2,4,0
-5,zh-mobileweb-spider-Google+,2,3,0,2,0,3,1
-5,zh-mobileweb-user-Google+,26,26,38,23,29,21,30
-5,zh-mobileweb-spider-Imgur,0,2,5,1,0,1,1
-5,zh-mobileweb-user-Imgur,4,6,3,4,6,6,8
-5,zh-mobileweb-spider-Instagram,3,5,3,5,7,6,11
-5,zh-mobileweb-user-Instagram,181,280,298,265,233,243,199
-5,zh-mobileweb-spider-Kickstarter,2,1,5,1,5,1,1
-5,zh-mobileweb-user-Kickstarter,17,25,45,24,28,9,23
-5,zh-mobileweb-spider-Last.fm,0,3,0,2,0,0,1
-5,zh-mobileweb-user-Last.fm,0,0,0,1,0,0,1
-5,zh-mobileweb-spider-LinkedIn,1,0,0,0,0,0,0
-5,zh-mobileweb-user-LinkedIn,1,6,6,1,5,3,1
-5,zh-mobileweb-spider-LiveJournal,1,0,1,0,0,4,1
-5,zh-mobileweb-user-LiveJournal,2,1,0,0,0,0,0
-5,zh-mobileweb-spider-Myspace,1,3,0,2,0,0,1
-5,zh-mobileweb-user-Myspace,16,9,10,10,10,5,8
-5,zh-mobileweb-spider-Pinterest,0,5,0,0,4,2,4
-5,zh-mobileweb-user-Pinterest,21,46,39,34,32,35,33
-5,zh-mobileweb-spider-PlentyOfFish,0,3,1,2,2,1,0
-5,zh-mobileweb-user-PlentyOfFish,0,0,1,3,2,1,3
-5,zh-mobileweb-spider-Plurk,2,2,3,3,3,2,2
-5,zh-mobileweb-user-Plurk,4,4,2,5,3,1,3
-5,zh-mobileweb-spider-Quora,1,5,1,1,0,3,3
-5,zh-mobileweb-user-Quora,15,14,20,20,20,10,10
-5,zh-mobileweb-spider-Reddit,4,4,0,2,1,1,0
-5,zh-mobileweb-user-Reddit,27,24,19,22,27,30,27
-5,zh-mobileweb-spider-Skype,5,7,5,4,1,11,5
-5,zh-mobileweb-user-Skype,20,33,29,42,35,24,26
-5,zh-mobileweb-spider-Snapchat,1,4,1,6,1,4,0
-5,zh-mobileweb-user-Snapchat,98,106,114,91,88,91,105
-5,zh-mobileweb-spider-SoundCloud,0,3,0,0,0,0,2
-5,zh-mobileweb-user-SoundCloud,9,8,14,6,6,13,6
-5,zh-mobileweb-spider-Tumblr,5,13,3,3,2,2,1
-5,zh-mobileweb-user-Tumblr,104,99,104,103,131,96,91
-5,zh-mobileweb-spider-Twitter,6,7,6,11,2,4,4
-5,zh-mobileweb-user-Twitter,128,175,158,171,182,152,143
-5,zh-mobileweb-spider-Viber,2,1,0,1,0,1,0
-5,zh-mobileweb-user-Viber,24,10,12,13,11,7,11
-5,zh-mobileweb-spider-WhatsApp,5,5,5,2,0,2,3
-5,zh-mobileweb-user-WhatsApp,109,101,90,93,90,91,87
-5,zh-mobileweb-spider-Xanga,1,2,0,3,0,0,0
-5,zh-mobileweb-user-Xanga,9,9,3,5,8,4,7
-5,zh-mobileweb-spider-YouTube,9,13,12,8,8,7,10
-5,zh-mobileweb-user-YouTube,491,595,633,468,471,511,479
-5,zh-mobileweb-spider-Zynga,1,4,1,0,0,1,0
-5,zh-mobileweb-user-Zynga,4,8,4,3,6,3,5
+1,Aggregated,231881.781369038,217503.386201899,225680.873439014,238465.757461677,241630.805521178,242689.785117257,234749.773737041
+2,desktop,123110.052705289,100182.917689949,103342.37972429,125110.187487457,128141.559720611,126202.876930282,120185.163563549
+2,mobileapp,2051.4124194552,2156.0,2232.56118667393,1981.96317514458,1951.80289655078,1911.7632912631,1952.47970840729
+2,mobileweb,106720.316244293,115164.46851195,120105.93252805,111373.606799076,111537.442904016,114575.144895711,112612.130465085
+3,desktop-spider,6714.54444886652,5914.45809430712,6028.44721964759,7675.10431715084,7557.10496396302,7907.7829591272,7959.8327412545
+3,desktop-user,116395.508256423,94268.4595956416,97313.9325046419,117435.083170306,120584.454756648,118295.093971155,112225.330822294
+3,mobileapp-user,2051.4124194552,2156.0,2232.56118667393,1981.96317514458,1951.80289655078,1911.7632912631,1952.47970840729
+3,mobileweb-spider,860.252210771002,810.012230107538,687.516258045867,725.870111040558,631.726682732544,662.545999342245,682.0
+3,mobileweb-user,105860.064033522,114354.456281843,119418.416270004,110647.736688035,110905.716221284,113912.598896369,111930.130465085
+4,desktop-spider-de,432.530922315247,333.0,384.889762373685,380.814937538766,321.0,320.403677795342,226.0
+4,desktop-spider-en,5364.01352655127,4759.45809430712,4771.0,6386.06926567131,6364.37483425373,6704.37928133186,6946.8327412545
+4,desktop-spider-es,459.0,396.0,431.557457273906,424.220113940756,431.730129709288,452.0,397.0
+4,desktop-spider-zh,459.0,426.0,441.0,484.0,440.0,431.0,390.0
+4,desktop-user-de,9837.0,6246.80935656808,8038.0,10363.9804882219,10723.6623953566,9869.0,7743.36314546651
+4,desktop-user-en,86406.5082564228,72628.6502390735,73576.750212305,84518.308156965,85789.9568130323,84298.0939711552,81575.0262369662
+4,desktop-user-es,15190.0,11137.0,11541.1822923369,17513.794525119,18645.8355482593,19131.0,18148.9414398615
+4,desktop-user-zh,4962.0,4256.0,4158.0,5039.0,5425.0,4997.0,4758.0
+4,mobileapp-user-de,356.0,321.0,382.238714262449,325.0,336.0,320.0,380.0
+4,mobileapp-user-en,1547.4124194552,1625.0,1669.32247241148,1490.96317514458,1448.80289655078,1440.7632912631,1381.47970840729
+4,mobileapp-user-es,101.0,112.0,103.0,99.0,104.0,118.0,130.0
+4,mobileapp-user-zh,47.0,98.0,78.0,67.0,63.0,33.0,61.0
+4,mobileweb-spider-de,74.2964723799843,65.0,54.4712851041064,61.0,52.0,57.0,43.0
+4,mobileweb-spider-en,618.955738391018,544.282736780314,507.603911627912,500.870111040558,466.726682732544,447.545999342245,498.0
+4,mobileweb-spider-es,98.0,95.9212179057207,72.0,88.0,61.0,87.0,75.0
+4,mobileweb-spider-zh,69.0,104.808275421503,53.4410613138482,76.0,52.0,71.0,66.0
+4,mobileweb-user-de,6297.0,6623.67156762445,7136.0,5572.0,5841.0,5492.0,6617.0
+4,mobileweb-user-en,82807.0640335223,91216.7847142183,93957.742827631,87139.4342582338,87273.7162212838,90097.1555131494,87050.1304650849
+4,mobileweb-user-es,15096.0,14531.0,16299.6734423732,16148.3024298012,15996.0,16574.4433832197,16623.0
+4,mobileweb-user-zh,1660.0,1983.0,2025.0,1788.0,1795.0,1749.0,1640.0
+5,desktop-spider-de-Blogging Related,6.0,4.0,6.0,7.0,3.0,2.0,4.0
+5,desktop-spider-de-Business,5.0,4.0,2.0,4.0,1.0,1.0,2.0
+5,desktop-spider-de-Gaming,10.0,10.0,6.0,9.0,1.0,2.0,1.0
+5,desktop-spider-de-General Purpose,316.530922315247,225.0,261.0,262.814937538766,226.0,232.0,169.0
+5,desktop-spider-de-Lifestyle,17.0,18.0,18.0,21.0,9.0,16.0,4.0
+5,desktop-spider-de-Photo Sharing,37.0,34.0,42.0,26.0,31.0,30.4036777953423,16.0
+5,desktop-spider-de-Reunion,4.0,8.0,4.8897623736849,9.0,4.0,3.0,7.0
+5,desktop-spider-de-Travel,5.0,3.0,3.0,3.0,3.0,3.0,1.0
+5,desktop-spider-de-Video,32.0,27.0,42.0,39.0,43.0,31.0,22.0
+5,desktop-spider-en-Blogging Related,75.0,43.0,55.0,86.0,58.0,86.0,71.0
+5,desktop-spider-en-Business,40.0,38.0,40.0,35.0,27.0,24.0,32.0
+5,desktop-spider-en-Gaming,108.0,162.0,110.0,119.0,95.0,108.548887382924,162.286159456423
+5,desktop-spider-en-General Purpose,3414.01352655127,3035.6138727712,3251.0,4168.06926567131,4679.0,5062.57878805541,5227.54658179808
+5,desktop-spider-en-Lifestyle,460.0,507.844221535917,353.0,437.0,340.768702020232,361.702976929904,443.0
+5,desktop-spider-en-Photo Sharing,422.0,309.0,303.0,281.0,280.606132233497,243.0,281.0
+5,desktop-spider-en-Reunion,83.0,88.0,115.0,70.0,74.0,59.0,85.0
+5,desktop-spider-en-Travel,45.0,39.0,42.0,20.0,30.0,35.0,24.0
+5,desktop-spider-en-Video,717.0,537.0,502.0,1170.0,780.0,724.548628963622,621.0
+5,desktop-spider-es-Blogging Related,15.0,8.0,9.0,8.0,13.0,6.0,13.0
+5,desktop-spider-es-Business,5.0,3.0,1.0,2.0,5.0,2.0,1.0
+5,desktop-spider-es-Gaming,16.0,8.0,13.0,12.0,16.0,7.0,14.0
+5,desktop-spider-es-General Purpose,318.0,302.0,310.0,312.568735160712,260.986207449374,323.0,288.0
+5,desktop-spider-es-Lifestyle,23.0,10.0,14.0,19.0,22.0,18.0,10.0
+5,desktop-spider-es-Photo Sharing,35.0,21.0,25.0,30.6513787800445,33.0,19.0,27.0
+5,desktop-spider-es-Reunion,4.0,3.0,8.55745727390611,4.0,6.0,4.0,1.0
+5,desktop-spider-es-Travel,2.0,3.0,4.0,7.0,6.74392225991359,4.0,4.0
+5,desktop-spider-es-Video,41.0,38.0,47.0,29.0,69.0,69.0,39.0
+5,desktop-spider-zh-Blogging Related,21.0,20.0,18.0,10.0,11.0,10.0,3.0
+5,desktop-spider-zh-Gaming,5.0,3.0,10.0,5.0,7.0,5.0,5.0
+5,desktop-spider-zh-General Purpose,281.0,290.0,304.0,291.0,271.0,284.0,257.0
+5,desktop-spider-zh-Lifestyle,34.0,31.0,35.0,35.0,37.0,36.0,30.0
+5,desktop-spider-zh-Photo Sharing,31.0,22.0,15.0,35.0,31.0,31.0,27.0
+5,desktop-spider-zh-Video,87.0,60.0,59.0,108.0,83.0,65.0,68.0
+5,desktop-user-de-Blogging Related,14.0,9.0,11.0,14.0,6.0,7.0,7.0
+5,desktop-user-de-Business,7.0,4.0,3.0,7.0,3.0,8.0,3.0
+5,desktop-user-de-Gaming,8.0,13.0,10.0,19.0,10.0,11.0,9.0
+5,desktop-user-de-General Purpose,7512.0,4534.80935656808,6310.0,8326.98048822185,8526.0,7780.0,6109.36314546651
+5,desktop-user-de-Lifestyle,220.0,166.0,128.0,162.0,163.0,174.0,122.0
+5,desktop-user-de-Photo Sharing,249.0,129.0,176.0,226.0,240.662395356615,262.0,246.0
+5,desktop-user-de-Reunion,39.0,34.0,59.0,52.0,38.0,58.0,53.0
+5,desktop-user-de-Travel,104.0,68.0,78.0,98.0,82.0,98.0,85.0
+5,desktop-user-de-Video,1684.0,1289.0,1263.0,1459.0,1655.0,1471.0,1109.0
+5,desktop-user-en-Blogging Related,337.0,235.0,238.0,348.0,300.0,287.0,263.0
+5,desktop-user-en-Business,113.0,76.0,70.0,101.0,105.0,86.0,96.0
+5,desktop-user-en-Gaming,583.0,381.0,431.0,576.0,589.0,531.0,531.0
+5,desktop-user-en-General Purpose,54566.4643038764,43123.3363631883,46418.9211404802,53385.2632607401,54296.1575688684,54764.2314683046,52920.8804532217
+5,desktop-user-en-Lifestyle,4291.83186934284,3393.31387588522,3264.82907182483,4170.157040307,4330.19255662061,4123.86250285059,3883.14578374451
+5,desktop-user-en-Photo Sharing,1995.0,1564.0,1574.0,2148.0,2676.60668754329,2226.0,2101.0
+5,desktop-user-en-Reunion,946.178199916346,777.0,944.0,1364.0,1234.0,1105.0,1092.0
+5,desktop-user-en-Travel,434.0,340.0,362.0,472.887855917944,499.0,481.0,415.0
+5,desktop-user-en-Video,23140.0338832871,22739.0,20274.0,21953.0,21760.0,20694.0,20273.0
+5,desktop-user-es-Blogging Related,19.0,13.0,17.0,27.0,26.0,17.0,17.0
+5,desktop-user-es-Business,15.0,4.0,18.0,12.0,14.0,15.0,14.0
+5,desktop-user-es-Gaming,124.0,129.0,146.0,130.0,159.0,128.0,216.0
+5,desktop-user-es-General Purpose,11255.0,7685.0,8184.18229233694,12970.794525119,13834.8355482593,14096.0,13363.0
+5,desktop-user-es-Lifestyle,114.0,95.0,89.0,105.0,134.0,143.0,107.0
+5,desktop-user-es-Photo Sharing,243.0,181.0,213.0,269.0,338.0,337.0,288.0
+5,desktop-user-es-Reunion,18.0,23.0,33.0,32.0,30.0,30.0,28.0
+5,desktop-user-es-Travel,66.0,48.0,51.0,76.0,77.0,83.0,65.0
+5,desktop-user-es-Video,3336.0,2959.0,2790.0,3892.0,4033.0,4282.0,4050.94143986153
+5,desktop-user-zh-Blogging Related,34.0,24.0,25.0,29.0,32.0,42.0,23.0
+5,desktop-user-zh-Gaming,19.0,16.0,17.0,43.0,18.0,38.0,25.0
+5,desktop-user-zh-General Purpose,3341.0,2834.0,2651.0,3359.0,3736.0,3530.0,3256.0
+5,desktop-user-zh-Lifestyle,62.0,32.0,39.0,85.0,56.0,74.0,53.0
+5,desktop-user-zh-Photo Sharing,120.0,67.0,79.0,117.0,132.0,115.0,103.0
+5,desktop-user-zh-Video,1386.0,1283.0,1347.0,1406.0,1451.0,1198.0,1298.0
+5,mobileapp-user-de-Gaming,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+5,mobileapp-user-de-General Purpose,298.0,260.0,311.238714262449,257.0,281.0,254.0,295.0
+5,mobileapp-user-de-Lifestyle,7.0,7.0,13.0,2.0,9.0,7.0,10.0
+5,mobileapp-user-de-Photo Sharing,6.0,5.0,9.0,3.0,8.0,6.0,9.0
+5,mobileapp-user-de-Reunion,4.0,2.0,2.0,1.0,1.0,2.0,5.0
+5,mobileapp-user-de-Travel,2.0,2.0,3.0,2.0,1.0,0.0,4.0
+5,mobileapp-user-de-Video,39.0,45.0,44.0,59.0,36.0,51.0,57.0
+5,mobileapp-user-en-Blogging Related,2.0,3.0,8.0,6.0,1.0,1.0,4.0
+5,mobileapp-user-en-Business,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+5,mobileapp-user-en-Gaming,7.0,8.0,8.0,29.0,12.0,8.0,15.0
+5,mobileapp-user-en-General Purpose,1151.0,1134.0,1137.32247241148,1020.0,986.0,1056.0,998.47970840729
+5,mobileapp-user-en-Lifestyle,121.0,112.0,117.0,110.0,127.0,95.1743984268334,102.0
+5,mobileapp-user-en-Photo Sharing,15.0,30.0,46.0,32.0,27.8028965507836,34.5888928362709,40.0
+5,mobileapp-user-en-Reunion,23.0,34.0,47.0,50.0,33.0,28.0,18.0
+5,mobileapp-user-en-Travel,7.0,8.0,11.0,8.0,11.0,3.0,10.0
+5,mobileapp-user-en-Video,221.412419455204,295.0,295.0,235.963175144583,251.0,215.0,194.0
+5,mobileapp-user-es-Gaming,1.0,0.0,0.0,1.0,2.0,0.0,1.0
+5,mobileapp-user-es-General Purpose,86.0,94.0,82.0,80.0,82.0,92.0,97.0
+5,mobileapp-user-es-Lifestyle,1.0,1.0,0.0,0.0,0.0,2.0,1.0
+5,mobileapp-user-es-Photo Sharing,0.0,0.0,0.0,1.0,2.0,0.0,2.0
+5,mobileapp-user-es-Travel,1.0,1.0,1.0,0.0,2.0,0.0,0.0
+5,mobileapp-user-es-Video,12.0,16.0,20.0,17.0,16.0,24.0,29.0
+5,mobileapp-user-zh-General Purpose,30.0,68.0,49.0,46.0,45.0,24.0,48.0
+5,mobileapp-user-zh-Photo Sharing,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+5,mobileapp-user-zh-Video,17.0,30.0,29.0,20.0,18.0,9.0,13.0
+5,mobileweb-spider-de-Gaming,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+5,mobileweb-spider-de-General Purpose,56.2964723799843,53.0,43.4712851041064,47.0,38.0,40.0,33.0
+5,mobileweb-spider-de-Lifestyle,2.0,1.0,1.0,2.0,1.0,1.0,0.0
+5,mobileweb-spider-de-Photo Sharing,1.0,2.0,3.0,1.0,1.0,4.0,0.0
+5,mobileweb-spider-de-Travel,2.0,1.0,0.0,0.0,1.0,3.0,1.0
+5,mobileweb-spider-de-Video,13.0,7.0,7.0,11.0,11.0,9.0,9.0
+5,mobileweb-spider-en-Blogging Related,6.0,16.0,5.0,4.0,7.13973237387282,6.54599934224525,6.0
+5,mobileweb-spider-en-Business,2.0,2.0,2.0,3.0,3.0,2.0,4.0
+5,mobileweb-spider-en-Gaming,7.0,10.0,9.0,7.0,4.0,10.0,12.0
+5,mobileweb-spider-en-General Purpose,385.0,286.0,272.0,282.0,280.0,245.0,303.0
+5,mobileweb-spider-en-Lifestyle,61.0,53.0,45.0,31.0,34.0,37.0,39.0
+5,mobileweb-spider-en-Photo Sharing,32.8870753644204,38.9241954871283,35.3250728867916,38.8558512587569,25.586950358671,31.0,19.0
+5,mobileweb-spider-en-Reunion,17.0,14.0,16.0,16.0,11.0,12.0,6.0
+5,mobileweb-spider-en-Travel,6.0,3.0,2.0,7.0,5.0,4.0,7.0
+5,mobileweb-spider-en-Video,102.068663026598,121.358541293186,121.278838741121,112.014259781801,97.0,100.0,102.0
+5,mobileweb-spider-es-Blogging Related,0.0,1.0,0.0,0.0,1.0,1.0,0.0
+5,mobileweb-spider-es-Gaming,1.0,4.0,0.0,1.0,3.0,1.0,2.0
+5,mobileweb-spider-es-General Purpose,81.0,64.0,53.0,68.0,49.0,66.0,52.0
+5,mobileweb-spider-es-Lifestyle,0.0,3.0,3.0,2.0,0.0,3.0,1.0
+5,mobileweb-spider-es-Photo Sharing,3.0,2.92121790572067,2.0,3.0,1.0,2.0,1.0
+5,mobileweb-spider-es-Reunion,1.0,1.0,0.0,0.0,0.0,0.0,0.0
+5,mobileweb-spider-es-Travel,1.0,0.0,0.0,2.0,0.0,0.0,0.0
+5,mobileweb-spider-es-Video,11.0,20.0,14.0,12.0,7.0,14.0,19.0
+5,mobileweb-spider-zh-Blogging Related,4.0,4.0,4.0,6.0,3.0,6.0,3.0
+5,mobileweb-spider-zh-Gaming,1.0,4.0,1.0,0.0,0.0,1.0,0.0
+5,mobileweb-spider-zh-General Purpose,54.0,66.8082754214313,33.0,49.0,36.0,54.0,46.0
+5,mobileweb-spider-zh-Lifestyle,1.0,11.0,1.0,5.0,3.0,1.0,5.0
+5,mobileweb-spider-zh-Photo Sharing,0.0,6.00000000007212,2.44106131384823,8.0,2.0,2.0,2.0
+5,mobileweb-spider-zh-Video,9.0,13.0,12.0,8.0,8.0,7.0,10.0
+5,mobileweb-user-de-Blogging Related,5.0,2.0,3.0,2.0,1.0,0.0,1.0
+5,mobileweb-user-de-Business,4.0,1.0,2.0,2.0,1.0,1.0,1.0
+5,mobileweb-user-de-Gaming,6.0,3.0,8.0,6.0,2.0,7.0,7.0
+5,mobileweb-user-de-General Purpose,4854.0,5145.67156762445,5640.0,4468.0,4627.0,4243.0,5169.0
+5,mobileweb-user-de-Lifestyle,145.0,151.0,168.0,113.0,121.0,136.0,170.0
+5,mobileweb-user-de-Photo Sharing,88.0,83.0,111.0,75.0,69.0,68.0,98.0
+5,mobileweb-user-de-Reunion,21.0,28.0,32.0,31.0,34.0,33.0,27.0
+5,mobileweb-user-de-Travel,128.0,110.0,102.0,104.0,80.0,98.0,111.0
+5,mobileweb-user-de-Video,1046.0,1100.0,1070.0,771.0,906.0,906.0,1033.0
+5,mobileweb-user-en-Blogging Related,130.0,129.0,157.0,110.0,122.0,134.0,114.0
+5,mobileweb-user-en-Business,16.0,13.0,14.0,22.0,9.0,17.0,18.0
+5,mobileweb-user-en-Gaming,417.0,413.0,392.0,390.0,353.0,365.0,373.0
+5,mobileweb-user-en-General Purpose,49724.8206136659,51954.9916802282,51940.765419801,47874.4342582338,49196.6173112458,51523.5818873669,50172.1585435167
+5,mobileweb-user-en-Lifestyle,4202.0,4401.0,4533.0,4120.0,4068.0,3921.0,3991.0
+5,mobileweb-user-en-Photo Sharing,1055.0,1041.0,1169.0,1096.0,1194.09891003793,1130.57362578254,1064.97192156818
+5,mobileweb-user-en-Reunion,684.0,1004.0,1190.0,959.0,796.0,745.0,863.0
+5,mobileweb-user-en-Travel,420.0,425.0,365.0,400.0,426.0,398.0,424.0
+5,mobileweb-user-en-Video,26158.2434198564,31835.7930339901,34196.9774078299,32168.0,31109.0,31863.0,30030.0
+5,mobileweb-user-es-Blogging Related,4.0,5.0,10.0,6.0,8.0,7.0,17.0
+5,mobileweb-user-es-Business,6.0,2.0,3.0,8.0,4.0,3.0,3.0
+5,mobileweb-user-es-Gaming,55.0,42.0,50.0,44.0,43.0,55.0,59.0
+5,mobileweb-user-es-General Purpose,11530.0,10846.0,11990.6734423732,12091.3024298012,12298.0,12697.4433832197,12684.0
+5,mobileweb-user-es-Lifestyle,74.0,63.0,97.0,84.0,94.0,91.0,81.0
+5,mobileweb-user-es-Photo Sharing,117.0,106.0,140.0,128.0,145.0,135.0,127.0
+5,mobileweb-user-es-Reunion,17.0,11.0,34.0,19.0,18.0,19.0,11.0
+5,mobileweb-user-es-Travel,73.0,78.0,79.0,60.0,81.0,88.0,66.0
+5,mobileweb-user-es-Video,3220.0,3378.0,3896.0,3708.0,3305.0,3479.0,3575.0
+5,mobileweb-user-zh-Blogging Related,15.0,14.0,5.0,10.0,11.0,5.0,10.0
+5,mobileweb-user-zh-Gaming,4.0,8.0,4.0,3.0,6.0,3.0,5.0
+5,mobileweb-user-zh-General Purpose,1110.0,1330.0,1345.0,1271.0,1262.0,1176.0,1105.0
+5,mobileweb-user-zh-Lifestyle,10.0,10.0,17.0,14.0,10.0,18.0,10.0
+5,mobileweb-user-zh-Photo Sharing,30.0,26.0,21.0,22.0,35.0,36.0,31.0
+5,mobileweb-user-zh-Video,491.0,595.0,633.0,468.0,471.0,511.0,479.0
+6,desktop-spider-de-Blogging Related-LiveJournal,3.0,2.0,3.0,3.0,0.0,0.0,3.0
+6,desktop-spider-de-Blogging Related-Xanga,3.0,2.0,3.0,4.0,3.0,2.0,1.0
+6,desktop-spider-de-Business-Viadeo,5.0,4.0,2.0,4.0,1.0,1.0,2.0
+6,desktop-spider-de-Gaming-Zynga,10.0,10.0,6.0,9.0,1.0,2.0,1.0
+6,desktop-spider-de-General Purpose-Badoo,6.0,7.0,3.0,11.0,4.0,3.0,2.0
+6,desktop-spider-de-General Purpose-Facebook,74.0,46.0,66.0,67.04228289686,74.0,39.0,48.0
+6,desktop-spider-de-General Purpose-Foursquare,11.0,7.0,7.0,3.0,4.0,3.0,12.0
+6,desktop-spider-de-General Purpose-Google+,14.0,10.0,12.0,15.0,5.0,10.0,3.0
+6,desktop-spider-de-General Purpose-Instagram,22.0,23.0,18.0,14.7726546419062,13.0,26.0,12.0
+6,desktop-spider-de-General Purpose-Kickstarter,2.0,9.0,5.0,4.0,5.0,5.0,3.0
+6,desktop-spider-de-General Purpose-LinkedIn,5.0,7.0,6.0,3.0,4.0,4.0,5.0
+6,desktop-spider-de-General Purpose-Myspace,11.0,13.0,14.0,11.0,9.0,5.0,5.0
+6,desktop-spider-de-General Purpose-Pinterest,7.0,8.0,6.0,10.0,6.0,4.0,7.0
+6,desktop-spider-de-General Purpose-Quora,4.0,4.0,5.0,6.0,4.0,8.0,4.0
+6,desktop-spider-de-General Purpose-Reddit,7.0,6.0,9.0,5.0,4.0,7.0,0.0
+6,desktop-spider-de-General Purpose-Skype,15.0,12.0,11.0,12.0,17.0,17.0,7.0
+6,desktop-spider-de-General Purpose-Snapchat,16.0,7.0,11.0,9.0,2.0,30.0,7.0
+6,desktop-spider-de-General Purpose-StumbleUpon,0.0,2.0,5.0,3.0,5.0,2.0,2.0
+6,desktop-spider-de-General Purpose-Tagged,3.0,4.0,5.0,6.0,0.0,1.0,1.0
+6,desktop-spider-de-General Purpose-Tumblr,11.5309223152467,10.0,10.0,5.0,9.0,6.0,4.0
+6,desktop-spider-de-General Purpose-Twitter,27.0,21.0,29.0,48.0,38.0,27.0,24.0
+6,desktop-spider-de-General Purpose-Viber,10.0,10.0,10.0,10.0,7.0,19.0,12.0
+6,desktop-spider-de-General Purpose-WeChat,8.0,7.0,6.0,4.0,5.0,5.0,4.0
+6,desktop-spider-de-General Purpose-WhatsApp,63.0,12.0,19.0,14.0,10.0,11.0,7.0
+6,desktop-spider-de-General Purpose-Yelp,0.0,0.0,4.0,2.0,1.0,0.0,0.0
+6,desktop-spider-de-Lifestyle-Last.fm,7.0,8.0,7.0,8.0,3.0,7.0,1.0
+6,desktop-spider-de-Lifestyle-Ravelry,6.0,4.0,5.0,5.0,1.0,4.0,2.0
+6,desktop-spider-de-Lifestyle-SoundCloud,4.0,6.0,6.0,8.0,5.0,5.0,1.0
+6,desktop-spider-de-Photo Sharing-500px,4.0,5.0,6.0,0.0,2.0,5.0,1.0
+6,desktop-spider-de-Photo Sharing-DeviantArt,2.0,3.0,1.0,1.0,3.0,1.0,1.0
+6,desktop-spider-de-Photo Sharing-Flickr,23.0,19.0,27.0,13.0,25.0,16.4036777953423,9.0
+6,desktop-spider-de-Photo Sharing-Imgur,2.0,3.0,0.0,3.0,0.0,4.0,3.0
+6,desktop-spider-de-Photo Sharing-Pixabay,4.0,2.0,4.0,7.0,1.0,4.0,1.0
+6,desktop-spider-de-Photo Sharing-Shutterfly,2.0,2.0,4.0,2.0,0.0,0.0,1.0
+6,desktop-spider-de-Reunion-23andMe,0.0,3.0,1.0,4.0,1.0,1.0,1.0
+6,desktop-spider-de-Reunion-MyHeritage,4.0,5.0,3.8897623736849,5.0,3.0,2.0,6.0
+6,desktop-spider-de-Travel-CouchSurfing,5.0,3.0,3.0,3.0,3.0,3.0,1.0
+6,desktop-spider-de-Video-YouTube,32.0,27.0,42.0,39.0,43.0,31.0,22.0
+6,desktop-spider-en-Blogging Related-LiveJournal,36.0,23.0,28.0,46.0,34.0,49.0,40.0
+6,desktop-spider-en-Blogging Related-Plurk,9.0,15.0,9.0,14.0,13.0,9.0,9.0
+6,desktop-spider-en-Blogging Related-Xanga,30.0,5.0,18.0,26.0,11.0,28.0,22.0
+6,desktop-spider-en-Business-Ryze,9.0,9.0,11.0,3.0,1.0,6.0,5.0
+6,desktop-spider-en-Business-Solaborate,12.0,14.0,18.0,18.0,9.0,10.0,10.0
+6,desktop-spider-en-Business-Viadeo,14.0,11.0,8.0,11.0,10.0,7.0,14.0
+6,desktop-spider-en-Business-Xing_Technology,5.0,4.0,3.0,3.0,7.0,1.0,3.0
+6,desktop-spider-en-Gaming-Cellufun,6.0,5.0,2.0,3.0,1.0,4.0,4.0
+6,desktop-spider-en-Gaming-Habbo,21.0,21.0,24.0,14.0,52.0,19.0,21.0
+6,desktop-spider-en-Gaming-MocoSpace,12.0,13.0,9.0,10.0,11.0,7.0,9.0
+6,desktop-spider-en-Gaming-Zynga,69.0,123.0,75.0,92.0,31.0,78.5488873829243,128.286159456423
+6,desktop-spider-en-General Purpose-AngelList,12.0,12.0,10.0,12.0,14.0,3.0,10.0
+6,desktop-spider-en-General Purpose-Badoo,42.0,40.0,33.0,41.0,41.0,45.0,43.0
+6,desktop-spider-en-General Purpose-Facebook,707.0,545.0,743.0,1160.09059942064,1770.0,2041.0,2261.0
+6,desktop-spider-en-General Purpose-Facebook_Messenger,99.0,94.0,97.0,90.0,68.0,85.0,61.0
+6,desktop-spider-en-General Purpose-Foursquare,43.0,42.0,20.0,67.0,42.0,41.1434902145233,48.0
+6,desktop-spider-en-General Purpose-GirlsAskGuys,4.0,8.0,5.0,3.0,2.0,5.0,7.0
+6,desktop-spider-en-General Purpose-Google+,82.0,74.0,160.0,88.0,68.0,72.0,86.0
+6,desktop-spider-en-General Purpose-Instagram,515.0,259.0,278.0,257.0,487.0,491.0,465.0
+6,desktop-spider-en-General Purpose-Kickstarter,56.0,36.0,35.0,56.3183535983173,41.0,52.0,57.7798595076738
+6,desktop-spider-en-General Purpose-Kiwibox,15.0,7.0,3.0,4.0,5.0,2.0,6.0
+6,desktop-spider-en-General Purpose-LinkedIn,73.0,71.0,60.0,70.0,104.0,62.0,95.9070349012115
+6,desktop-spider-en-General Purpose-MeetMe,15.0,22.0,18.0,18.0,11.0,16.0,15.0
+6,desktop-spider-en-General Purpose-Meetup_(website),12.0,15.6138727712013,19.0,16.0,16.0,19.0,22.0
+6,desktop-spider-en-General Purpose-Myspace,108.0,141.0,66.0,65.0,70.0,80.0,57.0
+6,desktop-spider-en-General Purpose-Nextdoor,17.0,13.0,24.0,35.0,20.0,19.0,28.0
+6,desktop-spider-en-General Purpose-Pinboard_(website),5.0,14.0,3.0,2.0,6.0,6.0,3.0
+6,desktop-spider-en-General Purpose-Pinterest,128.0,124.0,112.0,151.0,151.0,136.0,132.0
+6,desktop-spider-en-General Purpose-Product_Hunt,11.0,12.0,7.0,8.0,5.0,5.0,5.7445815603204
+6,desktop-spider-en-General Purpose-Quora,57.0135265512745,69.0,28.0,39.0,28.0,31.0,38.9111036454045
+6,desktop-spider-en-General Purpose-Reddit,145.0,126.0,204.0,207.0,167.0,204.622834121679,238.0
+6,desktop-spider-en-General Purpose-Skype,291.0,278.0,294.0,329.0,365.0,326.356968325359,314.0
+6,desktop-spider-en-General Purpose-Skyrock_(social_network_site),6.0,9.0,5.0,1.0,4.0,4.0,1.0
+6,desktop-spider-en-General Purpose-Snapchat,88.0,122.0,96.0,127.0,103.0,142.0,82.0
+6,desktop-spider-en-General Purpose-StumbleUpon,20.0,21.0,13.0,19.0,9.0,15.0,20.0
+6,desktop-spider-en-General Purpose-Tagged,43.0,31.0,40.0,27.0,31.0,33.0,28.0
+6,desktop-spider-en-General Purpose-Tumblr,88.0,103.0,123.0,110.0,119.0,144.0,150.204002183471
+6,desktop-spider-en-General Purpose-Twitter,370.0,362.0,371.0,545.66031265236,569.0,564.687652995168,601.0
+6,desktop-spider-en-General Purpose-Twoo.com,3.0,4.0,3.0,3.0,4.0,4.0,1.0
+6,desktop-spider-en-General Purpose-VK_(social_networking),41.0,38.0,106.0,60.0,34.0,40.0,52.0
+6,desktop-spider-en-General Purpose-Viber,31.0,56.0,32.0,26.0,28.0,63.0,29.0
+6,desktop-spider-en-General Purpose-WeChat,120.0,129.0,87.0,148.0,73.0,124.0,97.0
+6,desktop-spider-en-General Purpose-WhatsApp,114.0,131.0,110.0,328.0,164.0,123.0,101.0
+6,desktop-spider-en-General Purpose-Yelp,53.0,27.0,46.0,55.0,60.0,63.7678423986822,71.0
+6,desktop-spider-en-Lifestyle-ASmallWorld,5.0,10.0,4.0,6.0,5.0,5.0,16.0
+6,desktop-spider-en-Lifestyle-Academia.edu,26.0,19.0,14.0,31.0,9.0,16.0,17.0
+6,desktop-spider-en-Lifestyle-BlackPlanet,11.0,14.0,6.0,6.0,6.0,7.0,7.0
+6,desktop-spider-en-Lifestyle-CafeMom,12.0,13.0,10.0,8.0,3.0,2.0,11.0
+6,desktop-spider-en-Lifestyle-Care2,8.0,9.0,5.0,11.0,4.0,8.0,5.0
+6,desktop-spider-en-Lifestyle-CaringBridge,9.0,9.0,6.0,7.0,3.0,6.0,2.0
+6,desktop-spider-en-Lifestyle-Doximity,5.0,8.0,11.0,9.0,5.0,5.0,7.0
+6,"desktop-spider-en-Lifestyle-English,_baby!",6.0,11.0,2.0,7.0,5.0,3.0,9.0
+6,desktop-spider-en-Lifestyle-Flixster,26.0,35.0,19.0,30.0,24.0,18.0,23.0
+6,desktop-spider-en-Lifestyle-Gaia_Online,35.0,33.0,20.0,40.0,23.0,10.0,50.0
+6,desktop-spider-en-Lifestyle-GoFundMe,37.0,21.0,20.0,15.0,10.0,28.0,38.0
+6,desktop-spider-en-Lifestyle-Goodreads,31.0,49.0,33.0,37.0,37.0,43.0,56.0
+6,desktop-spider-en-Lifestyle-Italki,4.0,13.0,9.0,7.0,4.0,4.0,6.0
+6,desktop-spider-en-Lifestyle-Last.fm,50.0,52.0,42.0,55.0,27.0,33.7029769299038,26.0
+6,desktop-spider-en-Lifestyle-Minds,14.0,10.0,14.0,6.0,14.0,10.0,10.0
+6,desktop-spider-en-Lifestyle-MyMFB,3.0,6.0,3.0,0.0,1.0,1.0,2.0
+6,desktop-spider-en-Lifestyle-Nexopia,8.0,7.84422153591709,6.0,7.0,8.0,13.0,8.0
+6,desktop-spider-en-Lifestyle-PlentyOfFish,13.0,19.0,18.0,18.0,11.0,13.0,15.0
+6,desktop-spider-en-Lifestyle-Ravelry,26.0,12.0,18.0,18.0,12.0,12.0,19.0
+6,desktop-spider-en-Lifestyle-ReverbNation,8.0,13.0,8.0,7.0,13.0,3.0,9.0
+6,desktop-spider-en-Lifestyle-SoundCloud,53.0,64.0,33.0,36.0,36.7687020202323,40.0,43.0
+6,desktop-spider-en-Lifestyle-Tinder_(app),49.0,61.0,27.0,51.0,60.0,72.0,45.0
+6,desktop-spider-en-Lifestyle-Untappd,12.0,9.0,13.0,17.0,11.0,9.0,12.0
+6,desktop-spider-en-Lifestyle-Vampirefreaks.com,9.0,10.0,12.0,8.0,9.0,0.0,7.0
+6,desktop-spider-en-Photo Sharing-43_Things,17.0,23.0,15.0,12.0,6.0,7.0,20.0
+6,desktop-spider-en-Photo Sharing-500px,21.0,18.0,21.0,10.0,10.0,15.0,26.0
+6,desktop-spider-en-Photo Sharing-DeviantArt,28.0,25.0,34.0,44.0,23.0,17.0,21.0
+6,desktop-spider-en-Photo Sharing-Flickr,158.0,82.0,79.0,87.0,86.0,62.0,72.0
+6,desktop-spider-en-Photo Sharing-Fotki,25.0,21.0,14.0,17.0,12.0,14.0,23.0
+6,desktop-spider-en-Photo Sharing-Fotolog,11.0,7.0,10.0,19.0,8.0,7.0,3.0
+6,desktop-spider-en-Photo Sharing-Imgur,35.0,27.0,26.0,21.0,25.6061322334974,35.0,28.0
+6,desktop-spider-en-Photo Sharing-Path_(social_network),16.0,14.0,16.0,15.0,16.0,11.0,9.0
+6,desktop-spider-en-Photo Sharing-Photobucket,22.0,17.0,26.0,15.0,17.0,13.0,16.0
+6,desktop-spider-en-Photo Sharing-Pixabay,12.0,11.0,15.0,7.0,19.0,24.0,14.0
+6,desktop-spider-en-Photo Sharing-Shutterfly,27.0,16.0,19.0,13.0,22.0,16.0,21.0
+6,desktop-spider-en-Photo Sharing-Snapfish,17.0,20.0,13.0,9.0,17.0,11.0,11.0
+6,desktop-spider-en-Photo Sharing-Uplike,3.0,7.0,5.0,5.0,4.0,1.0,4.0
+6,desktop-spider-en-Photo Sharing-We_Heart_It,30.0,21.0,10.0,7.0,15.0,10.0,13.0
+6,desktop-spider-en-Reunion-23andMe,23.0,20.0,18.0,15.0,17.0,18.0,22.0
+6,desktop-spider-en-Reunion-Ancestry.com,31.0,23.0,57.0,29.0,41.0,24.0,38.0
+6,desktop-spider-en-Reunion-Classmates.com,12.0,12.0,5.0,15.0,10.0,8.0,7.0
+6,desktop-spider-en-Reunion-MyHeritage,17.0,33.0,35.0,11.0,6.0,9.0,18.0
+6,desktop-spider-en-Travel-CouchSurfing,23.0,16.0,30.0,11.0,17.0,22.0,18.0
+6,desktop-spider-en-Travel-TravBuddy.com,8.0,11.0,4.0,3.0,4.0,7.0,1.0
+6,desktop-spider-en-Travel-WAYN_(website),14.0,12.0,8.0,6.0,9.0,6.0,5.0
+6,desktop-spider-en-Video-Funny_or_Die,29.0,29.0,39.0,25.0,23.0,31.0,18.0
+6,desktop-spider-en-Video-Tout,11.0,16.0,8.0,7.0,3.0,6.0,10.0
+6,desktop-spider-en-Video-Vine_(service),29.0,27.0,37.0,24.0,60.0,29.0,24.0
+6,desktop-spider-en-Video-YouTube,648.0,465.0,418.0,1114.0,694.0,658.548628963622,569.0
+6,desktop-spider-es-Blogging Related-LiveJournal,3.0,4.0,2.0,2.0,7.0,3.0,6.0
+6,desktop-spider-es-Blogging Related-Plurk,12.0,4.0,7.0,6.0,6.0,3.0,7.0
+6,desktop-spider-es-Business-Viadeo,5.0,3.0,1.0,2.0,5.0,2.0,1.0
+6,desktop-spider-es-Gaming-Habbo,12.0,5.0,8.0,9.0,12.0,3.0,12.0
+6,desktop-spider-es-Gaming-Zynga,4.0,3.0,5.0,3.0,4.0,4.0,2.0
+6,desktop-spider-es-General Purpose-Badoo,6.0,6.0,10.0,5.0,6.0,7.0,21.0
+6,desktop-spider-es-General Purpose-Facebook,59.0,90.0,57.0,53.0,46.0,45.0,54.0
+6,desktop-spider-es-General Purpose-Facebook_Messenger,10.0,1.0,5.0,7.56873516071178,11.0,6.0,7.0
+6,desktop-spider-es-General Purpose-Foursquare,10.0,4.0,10.0,6.0,11.9862074493744,14.0,5.0
+6,desktop-spider-es-General Purpose-Google+,9.0,12.0,15.0,12.0,10.0,11.0,9.0
+6,desktop-spider-es-General Purpose-Instagram,51.0,17.0,38.0,25.0,32.0,19.0,17.0
+6,desktop-spider-es-General Purpose-Kickstarter,10.0,17.0,13.0,17.0,8.0,8.0,4.0
+6,desktop-spider-es-General Purpose-LinkedIn,11.0,7.0,10.0,4.0,16.0,11.0,6.0
+6,desktop-spider-es-General Purpose-Myspace,5.0,8.0,7.0,12.0,4.0,4.0,1.0
+6,desktop-spider-es-General Purpose-Pinterest,9.0,4.0,9.0,7.0,4.0,8.0,9.0
+6,desktop-spider-es-General Purpose-Quora,3.0,1.0,3.0,4.0,3.0,7.0,2.0
+6,desktop-spider-es-General Purpose-Reddit,12.0,3.0,16.0,7.0,8.0,11.0,0.0
+6,desktop-spider-es-General Purpose-Skype,13.0,9.0,11.0,20.0,4.0,10.0,9.0
+6,desktop-spider-es-General Purpose-Snapchat,9.0,6.0,11.0,8.0,5.0,14.0,4.0
+6,desktop-spider-es-General Purpose-StumbleUpon,4.0,2.0,6.0,2.0,7.0,8.0,3.0
+6,desktop-spider-es-General Purpose-Tagged,3.0,4.0,7.0,4.0,4.0,5.0,0.0
+6,desktop-spider-es-General Purpose-Tumblr,16.0,21.0,16.0,9.0,13.0,15.0,12.0
+6,desktop-spider-es-General Purpose-Twitter,40.0,39.0,32.0,68.0,43.0,80.0,85.0
+6,desktop-spider-es-General Purpose-Viber,6.0,3.0,5.0,4.0,2.0,5.0,0.0
+6,desktop-spider-es-General Purpose-WeChat,2.0,4.0,2.0,3.0,2.0,5.0,1.0
+6,desktop-spider-es-General Purpose-WhatsApp,30.0,44.0,27.0,35.0,21.0,30.0,39.0
+6,desktop-spider-es-Lifestyle-Goodreads,5.0,2.0,3.0,3.0,3.0,3.0,1.0
+6,desktop-spider-es-Lifestyle-Last.fm,11.0,7.0,10.0,11.0,9.0,12.0,4.0
+6,desktop-spider-es-Lifestyle-SoundCloud,7.0,1.0,1.0,5.0,10.0,3.0,5.0
+6,desktop-spider-es-Photo Sharing-500px,4.0,0.0,4.0,4.0,4.0,1.0,0.0
+6,desktop-spider-es-Photo Sharing-DeviantArt,3.0,4.0,5.0,5.0,5.0,2.0,6.0
+6,desktop-spider-es-Photo Sharing-Flickr,17.0,10.0,5.0,11.0,14.0,7.0,13.0
+6,desktop-spider-es-Photo Sharing-Fotolog,8.0,4.0,10.0,7.65137878004445,10.0,5.0,8.0
+6,desktop-spider-es-Photo Sharing-Photobucket,3.0,3.0,1.0,3.0,0.0,4.0,0.0
+6,desktop-spider-es-Reunion-23andMe,1.0,2.0,8.0,4.0,5.0,2.0,0.0
+6,desktop-spider-es-Reunion-MyHeritage,3.0,1.0,0.557457273906114,0.0,1.0,2.0,1.0
+6,desktop-spider-es-Travel-CouchSurfing,2.0,3.0,4.0,7.0,6.74392225991359,4.0,4.0
+6,desktop-spider-es-Video-YouTube,41.0,38.0,47.0,29.0,69.0,69.0,39.0
+6,desktop-spider-zh-Blogging Related-LiveJournal,5.0,11.0,5.0,2.0,5.0,5.0,2.0
+6,desktop-spider-zh-Blogging Related-Plurk,9.0,3.0,8.0,4.0,1.0,2.0,1.0
+6,desktop-spider-zh-Blogging Related-Xanga,7.0,6.0,5.0,4.0,5.0,3.0,0.0
+6,desktop-spider-zh-Gaming-Zynga,5.0,3.0,10.0,5.0,7.0,5.0,5.0
+6,desktop-spider-zh-General Purpose-Facebook,61.0,56.0,59.0,42.0,34.0,48.0,61.0
+6,desktop-spider-zh-General Purpose-Facebook_Messenger,15.0,8.0,7.0,13.0,12.0,5.0,9.0
+6,desktop-spider-zh-General Purpose-Foursquare,3.0,3.0,6.0,5.0,5.0,7.0,3.0
+6,desktop-spider-zh-General Purpose-Google+,10.0,19.0,23.0,14.0,11.0,17.0,14.0
+6,desktop-spider-zh-General Purpose-Instagram,21.0,37.0,27.0,23.0,24.0,27.0,24.0
+6,desktop-spider-zh-General Purpose-Kickstarter,5.0,8.0,9.0,9.0,7.0,9.0,7.0
+6,desktop-spider-zh-General Purpose-LinkedIn,5.0,5.0,2.0,10.0,9.0,0.0,6.0
+6,desktop-spider-zh-General Purpose-Myspace,9.0,9.0,9.0,14.0,6.0,12.0,10.0
+6,desktop-spider-zh-General Purpose-Pinterest,13.0,8.0,14.0,17.0,12.0,12.0,9.0
+6,desktop-spider-zh-General Purpose-Quora,8.0,6.0,8.0,10.0,7.0,4.0,5.0
+6,desktop-spider-zh-General Purpose-Reddit,10.0,13.0,26.0,22.0,8.0,22.0,6.0
+6,desktop-spider-zh-General Purpose-Skype,28.0,20.0,18.0,18.0,35.0,20.0,13.0
+6,desktop-spider-zh-General Purpose-Snapchat,6.0,11.0,21.0,10.0,18.0,14.0,12.0
+6,desktop-spider-zh-General Purpose-Tumblr,26.0,23.0,10.0,16.0,14.0,26.0,15.0
+6,desktop-spider-zh-General Purpose-Twitter,36.0,37.0,39.0,37.0,37.0,40.0,44.0
+6,desktop-spider-zh-General Purpose-Viber,9.0,15.0,8.0,15.0,9.0,8.0,7.0
+6,desktop-spider-zh-General Purpose-WhatsApp,16.0,12.0,18.0,16.0,23.0,13.0,12.0
+6,desktop-spider-zh-Lifestyle-Goodreads,4.0,5.0,2.0,4.0,9.0,2.0,4.0
+6,desktop-spider-zh-Lifestyle-Last.fm,17.0,11.0,11.0,9.0,14.0,15.0,7.0
+6,desktop-spider-zh-Lifestyle-PlentyOfFish,3.0,9.0,16.0,15.0,7.0,6.0,11.0
+6,desktop-spider-zh-Lifestyle-SoundCloud,10.0,6.0,6.0,7.0,7.0,13.0,8.0
+6,desktop-spider-zh-Photo Sharing-500px,8.0,6.0,6.0,7.0,4.0,3.0,3.0
+6,desktop-spider-zh-Photo Sharing-Flickr,20.0,15.0,5.0,22.0,22.0,19.0,19.0
+6,desktop-spider-zh-Photo Sharing-Imgur,3.0,1.0,4.0,6.0,5.0,9.0,5.0
+6,desktop-spider-zh-Video-YouTube,87.0,60.0,59.0,108.0,83.0,65.0,68.0
+6,desktop-user-de-Blogging Related-LiveJournal,11.0,4.0,7.0,10.0,3.0,6.0,4.0
+6,desktop-user-de-Blogging Related-Xanga,3.0,5.0,4.0,4.0,3.0,1.0,3.0
+6,desktop-user-de-Business-Viadeo,7.0,4.0,3.0,7.0,3.0,8.0,3.0
+6,desktop-user-de-Gaming-Zynga,8.0,13.0,10.0,19.0,10.0,11.0,9.0
+6,desktop-user-de-General Purpose-Badoo,71.0,34.0,60.0,59.0,51.0,43.0,52.0
+6,desktop-user-de-General Purpose-Facebook,1551.0,946.0,2109.0,2270.0,2435.0,2369.0,1897.0
+6,desktop-user-de-General Purpose-Foursquare,34.0,34.0,21.0,36.0,41.0,32.0,22.0
+6,desktop-user-de-General Purpose-Google+,132.0,73.0,90.0,109.0,127.0,120.0,73.0
+6,desktop-user-de-General Purpose-Instagram,1072.0,643.0,758.0,1259.0,1109.0,1037.0,1012.17238865923
+6,desktop-user-de-General Purpose-Kickstarter,24.0,10.0,14.0,19.0,25.0,24.0,12.0
+6,desktop-user-de-General Purpose-LinkedIn,504.0,189.0,231.0,595.0,759.0,600.0,599.190756807285
+6,desktop-user-de-General Purpose-Myspace,93.0,83.0,93.0,101.980488221854,106.0,84.0,54.0
+6,desktop-user-de-General Purpose-Pinterest,651.0,466.80935656808,535.0,613.0,559.0,582.0,481.0
+6,desktop-user-de-General Purpose-Quora,40.0,29.0,19.0,31.0,51.0,37.0,14.0
+6,desktop-user-de-General Purpose-Reddit,232.0,248.0,204.0,254.0,207.0,187.0,131.0
+6,desktop-user-de-General Purpose-Skype,351.0,214.0,232.0,349.0,336.0,306.0,229.0
+6,desktop-user-de-General Purpose-Snapchat,682.0,351.0,428.0,642.0,591.0,549.0,291.0
+6,desktop-user-de-General Purpose-StumbleUpon,13.0,13.0,8.0,10.0,7.0,16.0,9.0
+6,desktop-user-de-General Purpose-Tagged,4.0,2.0,2.0,6.0,3.0,4.0,2.0
+6,desktop-user-de-General Purpose-Tumblr,190.0,132.0,159.0,214.0,193.0,220.0,148.0
+6,desktop-user-de-General Purpose-Twitter,606.0,372.0,460.0,589.0,794.0,569.0,382.0
+6,desktop-user-de-General Purpose-Viber,70.0,44.0,64.0,49.0,72.0,58.0,37.0
+6,desktop-user-de-General Purpose-WeChat,144.0,58.0,77.0,128.0,128.0,102.0,81.0
+6,desktop-user-de-General Purpose-WhatsApp,1041.0,589.0,742.0,972.0,926.0,839.0,582.0
+6,desktop-user-de-General Purpose-Yelp,7.0,4.0,4.0,21.0,6.0,2.0,1.0
+6,desktop-user-de-Lifestyle-Last.fm,35.0,32.0,22.0,28.0,34.0,35.0,22.0
+6,desktop-user-de-Lifestyle-Ravelry,8.0,4.0,2.0,4.0,5.0,6.0,2.0
+6,desktop-user-de-Lifestyle-SoundCloud,177.0,130.0,104.0,130.0,124.0,133.0,98.0
+6,desktop-user-de-Photo Sharing-500px,16.0,5.0,14.0,14.0,8.0,10.0,14.0
+6,desktop-user-de-Photo Sharing-DeviantArt,15.0,13.0,23.0,18.0,30.0,24.0,17.0
+6,desktop-user-de-Photo Sharing-Flickr,144.0,78.0,88.0,148.0,119.0,157.0,156.0
+6,desktop-user-de-Photo Sharing-Imgur,34.0,16.0,22.0,18.0,36.0,38.0,35.0
+6,desktop-user-de-Photo Sharing-Pixabay,31.0,15.0,20.0,23.0,43.0,26.0,17.0
+6,desktop-user-de-Photo Sharing-Shutterfly,9.0,2.0,9.0,5.0,4.66239535661492,7.0,7.0
+6,desktop-user-de-Reunion-23andMe,21.0,23.0,37.0,34.0,20.0,27.0,26.0
+6,desktop-user-de-Reunion-MyHeritage,18.0,11.0,22.0,18.0,18.0,31.0,27.0
+6,desktop-user-de-Travel-CouchSurfing,104.0,68.0,78.0,98.0,82.0,98.0,85.0
+6,desktop-user-de-Video-YouTube,1684.0,1289.0,1263.0,1459.0,1655.0,1471.0,1109.0
+6,desktop-user-en-Blogging Related-LiveJournal,159.0,141.0,148.0,194.0,165.0,144.0,127.0
+6,desktop-user-en-Blogging Related-Plurk,53.0,29.0,22.0,52.0,34.0,49.0,29.0
+6,desktop-user-en-Blogging Related-Xanga,125.0,65.0,68.0,102.0,101.0,94.0,107.0
+6,desktop-user-en-Business-Ryze,8.0,12.0,11.0,11.0,15.0,5.0,11.0
+6,desktop-user-en-Business-Solaborate,29.0,16.0,16.0,19.0,21.0,17.0,20.0
+6,desktop-user-en-Business-Viadeo,63.0,41.0,36.0,65.0,63.0,60.0,60.0
+6,desktop-user-en-Business-Xing_Technology,13.0,7.0,7.0,6.0,6.0,4.0,5.0
+6,desktop-user-en-Gaming-Cellufun,5.0,2.0,6.0,4.0,5.0,5.0,3.0
+6,desktop-user-en-Gaming-Habbo,190.0,161.0,146.0,185.0,202.0,153.0,184.0
+6,desktop-user-en-Gaming-MocoSpace,23.0,14.0,18.0,13.0,17.0,23.0,17.0
+6,desktop-user-en-Gaming-Zynga,365.0,204.0,261.0,374.0,365.0,350.0,327.0
+6,desktop-user-en-General Purpose-AngelList,132.0,92.0,97.0,165.0,165.0,145.0,140.0
+6,desktop-user-en-General Purpose-Badoo,282.0,255.0,245.0,290.0,289.0,276.0,265.0
+6,desktop-user-en-General Purpose-Facebook,18508.0,14340.0,16870.0,16703.0,16423.0,16898.0,16903.0
+6,desktop-user-en-General Purpose-Facebook_Messenger,817.0,709.0,690.0,864.0,818.0,775.0,770.0
+6,desktop-user-en-General Purpose-Foursquare,390.0,272.0,224.0,327.0,287.0,323.0,355.0
+6,desktop-user-en-General Purpose-GirlsAskGuys,13.0,18.0,13.0,18.0,17.0,14.0,21.0
+6,desktop-user-en-General Purpose-Google+,657.0,573.0,540.0,765.0,742.0,688.0,670.0
+6,desktop-user-en-General Purpose-Instagram,4623.46282067467,3700.0,3621.0,4662.0,5172.0,5502.0,4801.0
+6,desktop-user-en-General Purpose-Kickstarter,657.0,509.0,559.0,691.0,659.0,723.0,592.0
+6,desktop-user-en-General Purpose-Kiwibox,19.0,19.0,14.0,20.0,24.0,26.0,29.0
+6,desktop-user-en-General Purpose-LinkedIn,2029.98233294425,1174.0,1162.0,2188.0,2221.0,2251.0,2084.0
+6,desktop-user-en-General Purpose-MeetMe,102.0,63.0,76.0,83.0,121.0,93.0,94.0
+6,desktop-user-en-General Purpose-Meetup_(website),178.0,123.0,142.0,218.0,211.0,206.0,159.0
+6,desktop-user-en-General Purpose-Myspace,1325.0,741.0,844.0,1267.0,1151.0,1082.0,1083.0
+6,desktop-user-en-General Purpose-Nextdoor,296.0,229.0,229.0,387.0,364.0,373.0,364.0
+6,desktop-user-en-General Purpose-Pinboard_(website),41.0,32.0,32.0,43.0,30.0,50.0,26.0
+6,desktop-user-en-General Purpose-Pinterest,1524.0,1283.0,1257.0,1659.0,1655.0,1577.0,1578.0
+6,desktop-user-en-General Purpose-Product_Hunt,69.0,25.0,26.0,69.0,43.0,44.0,66.0
+6,desktop-user-en-General Purpose-Quora,819.0,609.0,587.0,925.0,988.0,968.0,908.0
+6,desktop-user-en-General Purpose-Reddit,2445.0,1888.0,1724.0,2245.0,2114.0,2249.0,2140.0
+6,desktop-user-en-General Purpose-Skype,1488.0,1114.0,1321.0,1638.0,1796.0,1662.0,1702.0
+6,desktop-user-en-General Purpose-Skyrock_(social_network_site),10.0,14.0,10.0,20.0,17.0,22.0,13.0
+6,desktop-user-en-General Purpose-Snapchat,2770.0,1855.0,1753.0,2845.0,2840.0,2685.0,2703.0
+6,desktop-user-en-General Purpose-StumbleUpon,192.0,143.0,111.0,180.0,201.0,244.0,187.0
+6,desktop-user-en-General Purpose-Tagged,150.0,112.0,96.0,123.0,153.0,126.0,113.0
+6,desktop-user-en-General Purpose-Tumblr,1059.0,884.0,862.0,1128.0,1099.0,1106.0,1279.0
+6,desktop-user-en-General Purpose-Twitter,4343.0,4693.0,5530.0,3877.0,4761.0,4454.0,3874.0
+6,desktop-user-en-General Purpose-Twoo.com,108.0,84.0,89.1277752771013,92.8891065186911,94.3482816929337,95.0,106.153943114002
+6,desktop-user-en-General Purpose-VK_(social_networking),3501.0191502575,3504.33636318832,3703.79336520308,3997.3741542214,4210.80928717545,4292.23146830464,4419.7265101077
+6,desktop-user-en-General Purpose-Viber,465.0,309.0,374.0,491.0,423.0,440.0,458.0
+6,desktop-user-en-General Purpose-WeChat,1353.0,742.0,802.0,1299.0,1314.0,1423.0,1168.0
+6,desktop-user-en-General Purpose-WhatsApp,3733.0,2746.0,2512.0,3593.0,3429.0,3469.0,3362.0
+6,desktop-user-en-General Purpose-Yelp,467.0,269.0,303.0,512.0,464.0,483.0,488.0
+6,desktop-user-en-Lifestyle-ASmallWorld,70.0,42.0,41.0,60.0,59.0,39.0,35.0
+6,desktop-user-en-Lifestyle-Academia.edu,236.0,174.0,131.0,262.0,238.0,223.0,194.0
+6,desktop-user-en-Lifestyle-BlackPlanet,32.0,22.0,22.0,38.0,44.0,31.0,36.0
+6,desktop-user-en-Lifestyle-CafeMom,33.0,12.0,19.0,24.0,26.0,18.0,27.0
+6,desktop-user-en-Lifestyle-Care2,19.0,32.0,32.0,30.0,21.0,33.0,31.0
+6,desktop-user-en-Lifestyle-CaringBridge,27.0,21.0,19.0,26.0,22.0,33.0,30.0
+6,desktop-user-en-Lifestyle-Doximity,46.0,28.0,26.0,44.0,61.0,37.0,43.0
+6,"desktop-user-en-Lifestyle-English,_baby!",15.0,11.0,6.0,16.0,11.0,13.0,8.0
+6,desktop-user-en-Lifestyle-Flixster,87.8318693428381,77.3138758852235,83.8290718248253,90.1570403070031,90.1925566206117,90.8625028505867,90.1457837445059
+6,desktop-user-en-Lifestyle-Gaia_Online,78.0,88.0,103.0,99.0,124.0,130.0,102.0
+6,desktop-user-en-Lifestyle-GoFundMe,269.0,215.0,179.0,403.0,362.0,458.0,327.0
+6,desktop-user-en-Lifestyle-Goodreads,242.0,202.0,176.0,226.0,225.0,214.0,202.0
+6,desktop-user-en-Lifestyle-Italki,32.0,22.0,18.0,34.0,33.0,29.0,27.0
+6,desktop-user-en-Lifestyle-Last.fm,321.0,370.0,241.0,309.0,314.0,289.0,307.0
+6,desktop-user-en-Lifestyle-Minds,129.0,61.0,69.0,71.0,71.0,91.0,73.0
+6,desktop-user-en-Lifestyle-MyMFB,7.0,4.0,2.0,5.0,8.0,5.0,2.0
+6,desktop-user-en-Lifestyle-Nexopia,24.0,31.0,26.0,30.0,33.0,29.0,30.0
+6,desktop-user-en-Lifestyle-PlentyOfFish,148.0,92.0,132.0,183.0,180.0,144.0,152.0
+6,desktop-user-en-Lifestyle-Ravelry,27.0,22.0,22.0,31.0,18.0,20.0,35.0
+6,desktop-user-en-Lifestyle-ReverbNation,39.0,30.0,29.0,41.0,68.0,40.0,43.0
+6,desktop-user-en-Lifestyle-SoundCloud,755.0,535.0,536.0,678.0,828.0,736.0,737.0
+6,desktop-user-en-Lifestyle-Tinder_(app),1595.0,1253.0,1305.0,1426.0,1440.0,1359.0,1288.0
+6,desktop-user-en-Lifestyle-Untappd,44.0,34.0,28.0,33.0,36.0,42.0,38.0
+6,desktop-user-en-Lifestyle-Vampirefreaks.com,16.0,15.0,19.0,11.0,18.0,20.0,26.0
+6,desktop-user-en-Photo Sharing-43_Things,53.0,43.0,52.0,60.0,71.0,56.0,49.0
+6,desktop-user-en-Photo Sharing-500px,99.0,64.0,73.0,109.0,93.0,79.0,80.0
+6,desktop-user-en-Photo Sharing-DeviantArt,224.0,218.0,222.0,250.0,268.0,254.0,262.0
+6,desktop-user-en-Photo Sharing-Flickr,607.0,481.0,453.0,619.0,1051.0,645.0,575.0
+6,desktop-user-en-Photo Sharing-Fotki,53.0,42.0,39.0,54.0,38.0,35.0,38.0
+6,desktop-user-en-Photo Sharing-Fotolog,28.0,24.0,17.0,34.0,30.0,27.0,32.0
+6,desktop-user-en-Photo Sharing-Imgur,282.0,226.0,243.0,301.0,315.0,319.0,286.0
+6,desktop-user-en-Photo Sharing-Path_(social_network),191.0,162.0,158.0,198.0,204.0,173.0,179.0
+6,desktop-user-en-Photo Sharing-Photobucket,68.0,54.0,55.0,84.0,98.0,94.0,108.0
+6,desktop-user-en-Photo Sharing-Pixabay,64.0,38.0,38.0,73.0,97.0,79.0,63.0
+6,desktop-user-en-Photo Sharing-Shutterfly,141.0,88.0,81.0,166.0,206.606687543294,267.0,235.0
+6,desktop-user-en-Photo Sharing-Snapfish,70.0,52.0,47.0,77.0,75.0,90.0,82.0
+6,desktop-user-en-Photo Sharing-Uplike,8.0,14.0,9.0,5.0,14.0,4.0,11.0
+6,desktop-user-en-Photo Sharing-We_Heart_It,107.0,58.0,87.0,118.0,116.0,104.0,101.0
+6,desktop-user-en-Reunion-23andMe,496.0,373.0,498.0,723.0,602.0,622.0,560.0
+6,desktop-user-en-Reunion-Ancestry.com,306.178199916346,256.0,318.0,468.0,440.0,335.0,364.0
+6,desktop-user-en-Reunion-Classmates.com,75.0,54.0,51.0,62.0,94.0,76.0,68.0
+6,desktop-user-en-Reunion-MyHeritage,69.0,94.0,77.0,111.0,98.0,72.0,100.0
+6,desktop-user-en-Travel-CouchSurfing,230.0,206.0,224.0,257.887855917944,240.0,265.0,228.0
+6,desktop-user-en-Travel-TravBuddy.com,7.0,9.0,7.0,8.0,10.0,4.0,3.0
+6,desktop-user-en-Travel-WAYN_(website),197.0,125.0,131.0,207.0,249.0,212.0,184.0
+6,desktop-user-en-Video-Funny_or_Die,226.0,174.0,200.0,221.0,234.0,204.0,245.0
+6,desktop-user-en-Video-Tout,23.0,21.0,20.0,38.0,20.0,36.0,27.0
+6,desktop-user-en-Video-Vine_(service),659.0,578.0,619.0,789.0,732.0,683.0,638.0
+6,desktop-user-en-Video-YouTube,22232.0338832871,21966.0,19435.0,20905.0,20774.0,19771.0,19363.0
+6,desktop-user-es-Blogging Related-LiveJournal,10.0,9.0,14.0,15.0,16.0,12.0,13.0
+6,desktop-user-es-Blogging Related-Plurk,9.0,4.0,3.0,12.0,10.0,5.0,4.0
+6,desktop-user-es-Business-Viadeo,15.0,4.0,18.0,12.0,14.0,15.0,14.0
+6,desktop-user-es-Gaming-Habbo,118.0,113.0,138.0,116.0,143.0,114.0,201.0
+6,desktop-user-es-Gaming-Zynga,6.0,16.0,8.0,14.0,16.0,14.0,15.0
+6,desktop-user-es-General Purpose-Badoo,120.0,76.0,73.0,123.0,120.0,123.0,131.0
+6,desktop-user-es-General Purpose-Facebook,3907.0,2921.0,2903.0,4506.0,4793.0,5071.0,4957.0
+6,desktop-user-es-General Purpose-Facebook_Messenger,201.0,189.0,182.0,235.0,259.0,237.0,251.0
+6,desktop-user-es-General Purpose-Foursquare,37.0,28.0,26.0,45.0,35.0,54.0,41.0
+6,desktop-user-es-General Purpose-Google+,187.0,177.0,145.0,270.0,322.0,244.0,218.0
+6,desktop-user-es-General Purpose-Instagram,1408.0,893.0,1023.0,1659.0,1722.0,1688.0,1691.0
+6,desktop-user-es-General Purpose-Kickstarter,54.0,31.0,36.0,69.0,98.0,87.0,65.0
+6,desktop-user-es-General Purpose-LinkedIn,635.0,346.0,339.0,858.0,867.0,887.0,886.0
+6,desktop-user-es-General Purpose-Myspace,187.0,91.0,105.0,192.0,178.0,171.0,142.0
+6,desktop-user-es-General Purpose-Pinterest,313.0,189.0,232.0,328.0,413.0,424.0,333.0
+6,desktop-user-es-General Purpose-Quora,29.0,20.0,18.0,38.0,25.0,25.0,16.0
+6,desktop-user-es-General Purpose-Reddit,129.0,119.0,150.182292336936,232.794525118975,270.835548259316,285.0,262.0
+6,desktop-user-es-General Purpose-Skype,283.0,167.0,231.0,356.0,384.0,364.0,400.0
+6,desktop-user-es-General Purpose-Snapchat,569.0,351.0,382.0,643.0,728.0,756.0,735.0
+6,desktop-user-es-General Purpose-StumbleUpon,18.0,9.0,17.0,13.0,20.0,18.0,12.0
+6,desktop-user-es-General Purpose-Tagged,45.0,32.0,27.0,58.0,28.0,42.0,32.0
+6,desktop-user-es-General Purpose-Tumblr,295.0,217.0,280.0,348.0,338.0,370.0,368.0
+6,desktop-user-es-General Purpose-Twitter,1318.0,965.0,948.0,1426.0,1559.0,1503.0,1206.0
+6,desktop-user-es-General Purpose-Viber,30.0,12.0,24.0,20.0,23.0,24.0,22.0
+6,desktop-user-es-General Purpose-WeChat,51.0,42.0,53.0,78.0,75.0,72.0,84.0
+6,desktop-user-es-General Purpose-WhatsApp,1439.0,810.0,990.0,1473.0,1577.0,1651.0,1511.0
+6,desktop-user-es-Lifestyle-Goodreads,21.0,7.0,17.0,18.0,16.0,12.0,15.0
+6,desktop-user-es-Lifestyle-Last.fm,24.0,18.0,20.0,16.0,26.0,32.0,21.0
+6,desktop-user-es-Lifestyle-SoundCloud,69.0,70.0,52.0,71.0,92.0,99.0,71.0
+6,desktop-user-es-Photo Sharing-500px,4.0,4.0,8.0,0.0,6.0,6.0,7.0
+6,desktop-user-es-Photo Sharing-DeviantArt,16.0,31.0,37.0,42.0,33.0,29.0,32.0
+6,desktop-user-es-Photo Sharing-Flickr,181.0,119.0,140.0,181.0,244.0,246.0,183.0
+6,desktop-user-es-Photo Sharing-Fotolog,33.0,25.0,27.0,42.0,47.0,49.0,59.0
+6,desktop-user-es-Photo Sharing-Photobucket,9.0,2.0,1.0,4.0,8.0,7.0,7.0
+6,desktop-user-es-Reunion-23andMe,13.0,15.0,19.0,14.0,23.0,23.0,15.0
+6,desktop-user-es-Reunion-MyHeritage,5.0,8.0,14.0,18.0,7.0,7.0,13.0
+6,desktop-user-es-Travel-CouchSurfing,66.0,48.0,51.0,76.0,77.0,83.0,65.0
+6,desktop-user-es-Video-YouTube,3336.0,2959.0,2790.0,3892.0,4033.0,4282.0,4050.94143986153
+6,desktop-user-zh-Blogging Related-LiveJournal,10.0,4.0,10.0,3.0,3.0,5.0,8.0
+6,desktop-user-zh-Blogging Related-Plurk,3.0,3.0,7.0,7.0,10.0,17.0,5.0
+6,desktop-user-zh-Blogging Related-Xanga,21.0,17.0,8.0,19.0,19.0,20.0,10.0
+6,desktop-user-zh-Gaming-Zynga,19.0,16.0,17.0,43.0,18.0,38.0,25.0
+6,desktop-user-zh-General Purpose-Facebook,1018.0,1047.0,904.0,1194.0,1202.0,1151.0,1016.0
+6,desktop-user-zh-General Purpose-Facebook_Messenger,31.0,30.0,20.0,15.0,24.0,24.0,18.0
+6,desktop-user-zh-General Purpose-Foursquare,19.0,19.0,20.0,29.0,31.0,23.0,24.0
+6,desktop-user-zh-General Purpose-Google+,77.0,50.0,61.0,78.0,106.0,75.0,78.0
+6,desktop-user-zh-General Purpose-Instagram,418.0,302.0,338.0,420.0,423.0,449.0,342.0
+6,desktop-user-zh-General Purpose-Kickstarter,84.0,41.0,45.0,77.0,82.0,73.0,79.0
+6,desktop-user-zh-General Purpose-LinkedIn,9.0,12.0,4.0,7.0,18.0,11.0,7.0
+6,desktop-user-zh-General Purpose-Myspace,56.0,39.0,22.0,33.0,41.0,70.0,42.0
+6,desktop-user-zh-General Purpose-Pinterest,153.0,93.0,80.0,160.0,167.0,132.0,130.0
+6,desktop-user-zh-General Purpose-Quora,97.0,59.0,78.0,88.0,116.0,97.0,72.0
+6,desktop-user-zh-General Purpose-Reddit,120.0,93.0,92.0,113.0,126.0,204.0,152.0
+6,desktop-user-zh-General Purpose-Skype,118.0,87.0,123.0,116.0,202.0,133.0,144.0
+6,desktop-user-zh-General Purpose-Snapchat,233.0,151.0,149.0,214.0,268.0,247.0,270.0
+6,desktop-user-zh-General Purpose-Tumblr,233.0,197.0,200.0,226.0,286.0,269.0,231.0
+6,desktop-user-zh-General Purpose-Twitter,444.0,429.0,364.0,363.0,395.0,342.0,397.0
+6,desktop-user-zh-General Purpose-Viber,43.0,19.0,15.0,34.0,37.0,31.0,32.0
+6,desktop-user-zh-General Purpose-WhatsApp,188.0,166.0,136.0,192.0,212.0,199.0,222.0
+6,desktop-user-zh-Lifestyle-Goodreads,6.0,1.0,7.0,8.0,3.0,7.0,7.0
+6,desktop-user-zh-Lifestyle-Last.fm,12.0,12.0,9.0,14.0,8.0,15.0,10.0
+6,desktop-user-zh-Lifestyle-PlentyOfFish,7.0,1.0,2.0,13.0,10.0,13.0,6.0
+6,desktop-user-zh-Lifestyle-SoundCloud,37.0,18.0,21.0,50.0,35.0,39.0,30.0
+6,desktop-user-zh-Photo Sharing-500px,11.0,2.0,6.0,2.0,9.0,4.0,4.0
+6,desktop-user-zh-Photo Sharing-Flickr,88.0,50.0,69.0,95.0,106.0,83.0,89.0
+6,desktop-user-zh-Photo Sharing-Imgur,21.0,15.0,4.0,20.0,17.0,28.0,10.0
+6,desktop-user-zh-Video-YouTube,1386.0,1283.0,1347.0,1406.0,1451.0,1198.0,1298.0
+6,mobileapp-user-de-Gaming-Zynga,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+6,mobileapp-user-de-General Purpose-Badoo,2.0,3.0,5.0,4.0,4.0,4.0,7.0
+6,mobileapp-user-de-General Purpose-Facebook,38.0,31.0,51.0,36.0,44.0,24.0,35.0
+6,mobileapp-user-de-General Purpose-Foursquare,1.0,3.0,2.23871426244951,1.0,0.0,1.0,0.0
+6,mobileapp-user-de-General Purpose-Google+,9.0,5.0,6.0,4.0,5.0,7.0,11.0
+6,mobileapp-user-de-General Purpose-Instagram,55.0,54.0,69.0,58.0,48.0,54.0,61.0
+6,mobileapp-user-de-General Purpose-Kickstarter,1.0,0.0,0.0,4.0,1.0,0.0,0.0
+6,mobileapp-user-de-General Purpose-LinkedIn,15.0,8.0,13.0,11.0,13.0,14.0,18.0
+6,mobileapp-user-de-General Purpose-Myspace,4.0,15.0,5.0,16.0,8.0,6.0,6.0
+6,mobileapp-user-de-General Purpose-Pinterest,17.0,21.0,18.0,15.0,15.0,18.0,25.0
+6,mobileapp-user-de-General Purpose-Quora,2.0,1.0,1.0,1.0,3.0,0.0,0.0
+6,mobileapp-user-de-General Purpose-Reddit,18.0,15.0,15.0,10.0,5.0,6.0,7.0
+6,mobileapp-user-de-General Purpose-Skype,8.0,7.0,24.0,6.0,6.0,5.0,12.0
+6,mobileapp-user-de-General Purpose-Snapchat,40.0,37.0,28.0,28.0,32.0,42.0,35.0
+6,mobileapp-user-de-General Purpose-Tumblr,9.0,10.0,14.0,10.0,19.0,12.0,9.0
+6,mobileapp-user-de-General Purpose-Twitter,17.0,19.0,21.0,29.0,30.0,16.0,18.0
+6,mobileapp-user-de-General Purpose-Viber,1.0,2.0,1.0,3.0,5.0,7.0,4.0
+6,mobileapp-user-de-General Purpose-WeChat,9.0,8.0,2.0,4.0,6.0,8.0,2.0
+6,mobileapp-user-de-General Purpose-WhatsApp,51.0,20.0,36.0,17.0,37.0,30.0,44.0
+6,mobileapp-user-de-General Purpose-Yelp,1.0,1.0,0.0,0.0,0.0,0.0,1.0
+6,mobileapp-user-de-Lifestyle-Last.fm,1.0,1.0,3.0,0.0,3.0,1.0,0.0
+6,mobileapp-user-de-Lifestyle-SoundCloud,6.0,6.0,10.0,2.0,6.0,6.0,10.0
+6,mobileapp-user-de-Photo Sharing-500px,0.0,1.0,1.0,1.0,0.0,0.0,1.0
+6,mobileapp-user-de-Photo Sharing-DeviantArt,1.0,0.0,1.0,0.0,1.0,3.0,1.0
+6,mobileapp-user-de-Photo Sharing-Flickr,3.0,3.0,6.0,2.0,3.0,0.0,6.0
+6,mobileapp-user-de-Photo Sharing-Imgur,2.0,1.0,1.0,0.0,4.0,3.0,1.0
+6,mobileapp-user-de-Reunion-23andMe,1.0,2.0,0.0,1.0,1.0,1.0,2.0
+6,mobileapp-user-de-Reunion-MyHeritage,3.0,0.0,2.0,0.0,0.0,1.0,3.0
+6,mobileapp-user-de-Travel-CouchSurfing,2.0,2.0,3.0,2.0,1.0,0.0,4.0
+6,mobileapp-user-de-Video-YouTube,39.0,45.0,44.0,59.0,36.0,51.0,57.0
+6,mobileapp-user-en-Blogging Related-LiveJournal,1.0,1.0,0.0,3.0,1.0,0.0,2.0
+6,mobileapp-user-en-Blogging Related-Plurk,0.0,0.0,3.0,0.0,0.0,0.0,0.0
+6,mobileapp-user-en-Blogging Related-Xanga,1.0,2.0,5.0,3.0,0.0,1.0,2.0
+6,mobileapp-user-en-Business-Viadeo,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+6,mobileapp-user-en-Gaming-Habbo,2.0,0.0,1.0,5.0,1.0,1.0,6.0
+6,mobileapp-user-en-Gaming-MocoSpace,0.0,0.0,1.0,4.0,1.0,1.0,0.0
+6,mobileapp-user-en-Gaming-Zynga,5.0,8.0,6.0,20.0,10.0,6.0,9.0
+6,mobileapp-user-en-General Purpose-AngelList,3.0,3.0,1.0,4.0,4.0,3.0,1.0
+6,mobileapp-user-en-General Purpose-Badoo,7.0,7.0,9.0,3.0,5.0,12.0,5.0
+6,mobileapp-user-en-General Purpose-Facebook,279.0,237.0,195.0,211.0,208.0,252.0,233.0
+6,mobileapp-user-en-General Purpose-Facebook_Messenger,12.0,26.0,14.0,13.0,20.0,16.0,15.0
+6,mobileapp-user-en-General Purpose-Foursquare,8.0,12.0,4.0,7.0,4.0,3.0,13.0
+6,mobileapp-user-en-General Purpose-Google+,11.0,13.0,9.0,13.0,12.0,10.0,8.47970840729042
+6,mobileapp-user-en-General Purpose-Instagram,161.0,158.0,154.0,126.0,123.0,127.0,116.0
+6,mobileapp-user-en-General Purpose-Kickstarter,18.0,12.0,18.0,13.0,8.0,12.0,16.0
+6,mobileapp-user-en-General Purpose-LinkedIn,26.0,25.0,21.0,23.0,26.0,36.0,20.0
+6,mobileapp-user-en-General Purpose-MeetMe,0.0,0.0,2.0,1.0,6.0,0.0,2.0
+6,mobileapp-user-en-General Purpose-Meetup_(website),1.0,6.0,2.0,5.0,3.0,4.0,1.0
+6,mobileapp-user-en-General Purpose-Myspace,50.0,48.0,47.0,55.0,27.0,43.0,27.0
+6,mobileapp-user-en-General Purpose-Nextdoor,2.0,2.0,7.0,2.0,6.0,5.0,7.0
+6,mobileapp-user-en-General Purpose-Pinboard_(website),0.0,0.0,1.32247241148152,1.0,0.0,1.0,1.0
+6,mobileapp-user-en-General Purpose-Pinterest,19.0,22.0,32.0,23.0,22.0,24.0,24.0
+6,mobileapp-user-en-General Purpose-Product_Hunt,1.0,0.0,1.0,0.0,0.0,1.0,0.0
+6,mobileapp-user-en-General Purpose-Quora,27.0,20.0,20.0,11.0,29.0,23.0,18.0
+6,mobileapp-user-en-General Purpose-Reddit,74.0,69.0,93.0,70.0,73.0,31.0,68.0
+6,mobileapp-user-en-General Purpose-Skype,20.0,16.0,42.0,25.0,21.0,13.0,14.0
+6,mobileapp-user-en-General Purpose-Snapchat,109.0,126.0,94.0,92.0,83.0,89.0,92.0
+6,mobileapp-user-en-General Purpose-StumbleUpon,1.0,2.0,3.0,4.0,1.0,2.0,1.0
+6,mobileapp-user-en-General Purpose-Tagged,1.0,0.0,2.0,2.0,5.0,3.0,4.0
+6,mobileapp-user-en-General Purpose-Tumblr,42.0,49.0,42.0,29.0,29.0,22.0,24.0
+6,mobileapp-user-en-General Purpose-Twitter,70.0,78.0,122.0,83.0,106.0,137.0,113.0
+6,mobileapp-user-en-General Purpose-VK_(social_networking),28.0,17.0,16.0,16.0,22.0,16.0,28.0
+6,mobileapp-user-en-General Purpose-Viber,15.0,21.0,22.0,14.0,11.0,10.0,8.0
+6,mobileapp-user-en-General Purpose-WeChat,18.0,29.0,26.0,41.0,17.0,25.0,21.0
+6,mobileapp-user-en-General Purpose-WhatsApp,130.0,127.0,123.0,119.0,111.0,118.0,103.0
+6,mobileapp-user-en-General Purpose-Yelp,18.0,9.0,15.0,14.0,4.0,18.0,15.0
+6,mobileapp-user-en-Lifestyle-ASmallWorld,1.0,4.0,0.0,1.0,1.0,0.0,0.0
+6,mobileapp-user-en-Lifestyle-Academia.edu,3.0,1.0,0.0,2.0,0.0,1.0,2.0
+6,mobileapp-user-en-Lifestyle-BlackPlanet,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+6,mobileapp-user-en-Lifestyle-CafeMom,0.0,1.0,1.0,0.0,1.0,0.0,2.0
+6,mobileapp-user-en-Lifestyle-Doximity,0.0,0.0,2.0,1.0,0.0,0.17439842683342,0.0
+6,mobileapp-user-en-Lifestyle-Flixster,1.0,5.0,6.0,1.0,5.0,0.0,4.0
+6,mobileapp-user-en-Lifestyle-Gaia_Online,2.0,0.0,0.0,1.0,0.0,1.0,1.0
+6,mobileapp-user-en-Lifestyle-GoFundMe,6.0,9.0,4.0,7.0,11.0,10.0,5.0
+6,mobileapp-user-en-Lifestyle-Goodreads,2.0,3.0,5.0,5.0,8.0,9.0,6.0
+6,mobileapp-user-en-Lifestyle-Italki,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+6,mobileapp-user-en-Lifestyle-Last.fm,5.0,6.0,5.0,5.0,11.0,3.0,4.0
+6,mobileapp-user-en-Lifestyle-Minds,0.0,2.0,0.0,0.0,4.0,1.0,1.0
+6,mobileapp-user-en-Lifestyle-Nexopia,3.0,1.0,1.0,0.0,0.0,0.0,1.0
+6,mobileapp-user-en-Lifestyle-PlentyOfFish,7.0,5.0,4.0,1.0,5.0,4.0,4.0
+6,mobileapp-user-en-Lifestyle-ReverbNation,1.0,1.0,1.0,2.0,0.0,0.0,1.0
+6,mobileapp-user-en-Lifestyle-SoundCloud,6.0,14.0,13.0,12.0,10.0,9.0,16.0
+6,mobileapp-user-en-Lifestyle-Tinder_(app),84.0,59.0,73.0,72.0,66.0,56.0,55.0
+6,mobileapp-user-en-Lifestyle-Untappd,0.0,0.0,2.0,0.0,2.0,1.0,0.0
+6,mobileapp-user-en-Lifestyle-Vampirefreaks.com,0.0,1.0,0.0,0.0,2.0,0.0,0.0
+6,mobileapp-user-en-Photo Sharing-500px,0.0,4.0,3.0,3.0,0.0,1.0,2.0
+6,mobileapp-user-en-Photo Sharing-DeviantArt,0.0,2.0,13.0,2.0,2.0,2.0,2.0
+6,mobileapp-user-en-Photo Sharing-Flickr,6.0,9.0,15.0,8.0,10.0,14.0,13.0
+6,mobileapp-user-en-Photo Sharing-Imgur,6.0,11.0,6.0,9.0,9.0,4.0,8.0
+6,mobileapp-user-en-Photo Sharing-Path_(social_network),3.0,1.0,1.0,2.0,1.0,6.0,0.0
+6,mobileapp-user-en-Photo Sharing-Photobucket,0.0,0.0,0.0,4.0,1.0,0.0,0.0
+6,mobileapp-user-en-Photo Sharing-Shutterfly,0.0,1.0,2.0,4.0,4.80289655078363,7.58889283627092,11.0
+6,mobileapp-user-en-Photo Sharing-Snapfish,0.0,0.0,3.0,0.0,0.0,0.0,1.0
+6,mobileapp-user-en-Photo Sharing-We_Heart_It,0.0,2.0,3.0,0.0,0.0,0.0,3.0
+6,mobileapp-user-en-Reunion-23andMe,13.0,20.0,27.0,24.0,21.0,17.0,11.0
+6,mobileapp-user-en-Reunion-Ancestry.com,8.0,13.0,19.0,23.0,9.0,9.0,7.0
+6,mobileapp-user-en-Reunion-Classmates.com,2.0,1.0,0.0,3.0,2.0,2.0,0.0
+6,mobileapp-user-en-Reunion-MyHeritage,0.0,0.0,1.0,0.0,1.0,0.0,0.0
+6,mobileapp-user-en-Travel-CouchSurfing,2.0,5.0,7.0,4.0,5.0,1.0,4.0
+6,mobileapp-user-en-Travel-WAYN_(website),5.0,3.0,4.0,4.0,6.0,2.0,6.0
+6,mobileapp-user-en-Video-Funny_or_Die,2.0,11.0,9.0,7.0,17.0,7.0,6.0
+6,mobileapp-user-en-Video-Tout,2.0,2.0,3.0,0.963175144582991,1.0,3.0,2.0
+6,mobileapp-user-en-Video-Vine_(service),28.0,39.0,39.0,29.0,30.0,30.0,27.0
+6,mobileapp-user-en-Video-YouTube,189.412419455204,243.0,244.0,199.0,203.0,175.0,159.0
+6,mobileapp-user-es-Gaming-Habbo,1.0,0.0,0.0,1.0,2.0,0.0,1.0
+6,mobileapp-user-es-General Purpose-Badoo,0.0,4.0,0.0,2.0,2.0,0.0,3.0
+6,mobileapp-user-es-General Purpose-Facebook,28.0,28.0,12.0,20.0,36.0,51.0,28.0
+6,mobileapp-user-es-General Purpose-Facebook_Messenger,2.0,0.0,1.0,1.0,2.0,0.0,1.0
+6,mobileapp-user-es-General Purpose-Google+,0.0,0.0,0.0,0.0,3.0,1.0,0.0
+6,mobileapp-user-es-General Purpose-Instagram,7.0,19.0,10.0,10.0,6.0,5.0,7.0
+6,mobileapp-user-es-General Purpose-Kickstarter,0.0,0.0,2.0,1.0,1.0,1.0,0.0
+6,mobileapp-user-es-General Purpose-LinkedIn,3.0,3.0,4.0,2.0,2.0,1.0,8.0
+6,mobileapp-user-es-General Purpose-Myspace,2.0,1.0,1.0,3.0,4.0,2.0,5.0
+6,mobileapp-user-es-General Purpose-Pinterest,2.0,0.0,1.0,1.0,1.0,6.0,7.0
+6,mobileapp-user-es-General Purpose-Quora,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+6,mobileapp-user-es-General Purpose-Reddit,1.0,4.0,7.0,8.0,0.0,0.0,2.0
+6,mobileapp-user-es-General Purpose-Skype,3.0,2.0,3.0,2.0,5.0,1.0,3.0
+6,mobileapp-user-es-General Purpose-Snapchat,8.0,3.0,3.0,8.0,5.0,4.0,7.0
+6,mobileapp-user-es-General Purpose-Tumblr,2.0,9.0,9.0,1.0,1.0,5.0,2.0
+6,mobileapp-user-es-General Purpose-Twitter,7.0,10.0,12.0,10.0,7.0,8.0,6.0
+6,mobileapp-user-es-General Purpose-Viber,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+6,mobileapp-user-es-General Purpose-WeChat,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+6,mobileapp-user-es-General Purpose-WhatsApp,21.0,11.0,17.0,11.0,7.0,7.0,18.0
+6,mobileapp-user-es-Lifestyle-Last.fm,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+6,mobileapp-user-es-Lifestyle-SoundCloud,1.0,1.0,0.0,0.0,0.0,2.0,1.0
+6,mobileapp-user-es-Photo Sharing-Flickr,0.0,0.0,0.0,0.0,2.0,0.0,2.0
+6,mobileapp-user-es-Photo Sharing-Fotolog,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+6,mobileapp-user-es-Travel-CouchSurfing,1.0,1.0,1.0,0.0,2.0,0.0,0.0
+6,mobileapp-user-es-Video-YouTube,12.0,16.0,20.0,17.0,16.0,24.0,29.0
+6,mobileapp-user-zh-General Purpose-Facebook,5.0,31.0,20.0,16.0,14.0,5.0,14.0
+6,mobileapp-user-zh-General Purpose-Facebook_Messenger,0.0,1.0,1.0,0.0,0.0,0.0,0.0
+6,mobileapp-user-zh-General Purpose-Google+,0.0,2.0,4.0,2.0,2.0,1.0,1.0
+6,mobileapp-user-zh-General Purpose-Instagram,2.0,2.0,2.0,5.0,11.0,3.0,8.0
+6,mobileapp-user-zh-General Purpose-Pinterest,4.0,0.0,1.0,1.0,0.0,0.0,3.0
+6,mobileapp-user-zh-General Purpose-Quora,2.0,6.0,1.0,1.0,3.0,1.0,0.0
+6,mobileapp-user-zh-General Purpose-Reddit,0.0,0.0,0.0,3.0,0.0,0.0,1.0
+6,mobileapp-user-zh-General Purpose-Skype,1.0,0.0,0.0,0.0,0.0,0.0,1.0
+6,mobileapp-user-zh-General Purpose-Snapchat,1.0,2.0,1.0,1.0,2.0,0.0,5.0
+6,mobileapp-user-zh-General Purpose-Tumblr,6.0,7.0,3.0,7.0,7.0,12.0,6.0
+6,mobileapp-user-zh-General Purpose-Twitter,8.0,13.0,13.0,6.0,4.0,1.0,7.0
+6,mobileapp-user-zh-General Purpose-WhatsApp,1.0,4.0,3.0,4.0,2.0,1.0,2.0
+6,mobileapp-user-zh-Photo Sharing-Flickr,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+6,mobileapp-user-zh-Video-YouTube,17.0,30.0,29.0,20.0,18.0,9.0,13.0
+6,mobileweb-spider-de-Gaming-Zynga,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+6,mobileweb-spider-de-General Purpose-Badoo,0.0,3.0,1.0,0.0,1.0,1.0,1.0
+6,mobileweb-spider-de-General Purpose-Facebook,29.0,22.0,26.0,24.0,21.0,19.0,19.0
+6,mobileweb-spider-de-General Purpose-Foursquare,0.0,2.0,1.0,0.0,2.0,1.0,0.0
+6,mobileweb-spider-de-General Purpose-Google+,2.0,3.0,0.0,0.0,0.0,1.0,0.0
+6,mobileweb-spider-de-General Purpose-Instagram,8.0,4.0,3.47128510410635,2.0,0.0,3.0,2.0
+6,mobileweb-spider-de-General Purpose-Kickstarter,0.0,1.0,0.0,1.0,1.0,0.0,1.0
+6,mobileweb-spider-de-General Purpose-LinkedIn,1.0,4.0,0.0,1.0,2.0,2.0,2.0
+6,mobileweb-spider-de-General Purpose-Myspace,0.0,1.0,0.0,1.0,2.0,2.0,2.0
+6,mobileweb-spider-de-General Purpose-Pinterest,4.0,0.0,1.0,2.0,1.0,0.0,2.0
+6,mobileweb-spider-de-General Purpose-Reddit,2.0,1.0,1.0,1.0,0.0,1.0,0.0
+6,mobileweb-spider-de-General Purpose-Skype,2.0,2.0,0.0,2.0,0.0,1.0,0.0
+6,mobileweb-spider-de-General Purpose-Snapchat,4.0,1.0,5.0,2.0,4.0,3.0,0.0
+6,mobileweb-spider-de-General Purpose-Tumblr,1.0,1.0,0.0,1.0,0.0,1.0,0.0
+6,mobileweb-spider-de-General Purpose-Twitter,1.29647237998432,2.0,2.0,2.0,0.0,3.0,2.0
+6,mobileweb-spider-de-General Purpose-Viber,0.0,1.0,0.0,0.0,1.0,0.0,0.0
+6,mobileweb-spider-de-General Purpose-WeChat,1.0,2.0,0.0,2.0,0.0,1.0,0.0
+6,mobileweb-spider-de-General Purpose-WhatsApp,1.0,3.0,3.0,6.0,3.0,1.0,2.0
+6,mobileweb-spider-de-Lifestyle-Last.fm,0.0,0.0,1.0,1.0,0.0,1.0,0.0
+6,mobileweb-spider-de-Lifestyle-SoundCloud,2.0,1.0,0.0,1.0,1.0,0.0,0.0
+6,mobileweb-spider-de-Photo Sharing-Flickr,1.0,1.0,3.0,1.0,0.0,4.0,0.0
+6,mobileweb-spider-de-Photo Sharing-Pixabay,0.0,1.0,0.0,0.0,1.0,0.0,0.0
+6,mobileweb-spider-de-Travel-CouchSurfing,2.0,1.0,0.0,0.0,1.0,3.0,1.0
+6,mobileweb-spider-de-Video-YouTube,13.0,7.0,7.0,11.0,11.0,9.0,9.0
+6,mobileweb-spider-en-Blogging Related-LiveJournal,4.0,15.0,3.0,4.0,4.13973237387282,1.0,4.0
+6,mobileweb-spider-en-Blogging Related-Plurk,1.0,0.0,1.0,0.0,3.0,2.54599934224525,1.0
+6,mobileweb-spider-en-Blogging Related-Xanga,1.0,1.0,1.0,0.0,0.0,3.0,1.0
+6,mobileweb-spider-en-Business-Ryze,1.0,0.0,1.0,1.0,0.0,0.0,0.0
+6,mobileweb-spider-en-Business-Solaborate,0.0,1.0,1.0,1.0,0.0,1.0,0.0
+6,mobileweb-spider-en-Business-Viadeo,0.0,0.0,0.0,1.0,2.0,0.0,2.0
+6,mobileweb-spider-en-Business-Xing_Technology,1.0,1.0,0.0,0.0,1.0,1.0,2.0
+6,mobileweb-spider-en-Gaming-Cellufun,2.0,0.0,1.0,1.0,0.0,0.0,0.0
+6,mobileweb-spider-en-Gaming-Habbo,1.0,6.0,1.0,1.0,1.0,4.0,2.0
+6,mobileweb-spider-en-Gaming-MocoSpace,0.0,0.0,2.0,1.0,0.0,1.0,2.0
+6,mobileweb-spider-en-Gaming-Zynga,4.0,4.0,5.0,4.0,3.0,5.0,8.0
+6,mobileweb-spider-en-General Purpose-AngelList,1.0,0.0,1.0,2.0,2.0,2.0,2.0
+6,mobileweb-spider-en-General Purpose-Badoo,8.0,4.0,5.0,3.0,5.0,5.0,6.0
+6,mobileweb-spider-en-General Purpose-Facebook,128.0,112.0,97.0,117.0,107.0,87.0,112.0
+6,mobileweb-spider-en-General Purpose-Facebook_Messenger,8.0,7.0,10.0,6.0,5.0,4.0,4.0
+6,mobileweb-spider-en-General Purpose-Foursquare,2.0,8.0,2.0,4.0,3.0,7.0,2.0
+6,mobileweb-spider-en-General Purpose-GirlsAskGuys,1.0,0.0,1.0,0.0,0.0,0.0,0.0
+6,mobileweb-spider-en-General Purpose-Google+,8.0,9.0,10.0,5.0,10.0,3.0,3.0
+6,mobileweb-spider-en-General Purpose-Instagram,21.0,17.0,20.0,22.0,19.0,11.0,28.0
+6,mobileweb-spider-en-General Purpose-Kickstarter,10.0,4.0,3.0,9.0,5.0,4.0,5.0
+6,mobileweb-spider-en-General Purpose-Kiwibox,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+6,mobileweb-spider-en-General Purpose-LinkedIn,11.0,8.0,8.0,7.0,6.0,4.0,8.0
+6,mobileweb-spider-en-General Purpose-MeetMe,2.0,1.0,0.0,1.0,4.0,2.0,1.0
+6,mobileweb-spider-en-General Purpose-Meetup_(website),5.0,3.0,3.0,2.0,2.0,4.0,2.0
+6,mobileweb-spider-en-General Purpose-Myspace,10.0,3.0,3.0,5.0,4.0,2.0,4.0
+6,mobileweb-spider-en-General Purpose-Nextdoor,4.0,3.0,2.0,2.0,1.0,1.0,0.0
+6,mobileweb-spider-en-General Purpose-Pinboard_(website),2.0,2.0,0.0,0.0,0.0,1.0,1.0
+6,mobileweb-spider-en-General Purpose-Pinterest,7.0,6.0,6.0,4.0,5.0,7.0,5.0
+6,mobileweb-spider-en-General Purpose-Product_Hunt,0.0,0.0,3.0,0.0,1.0,0.0,1.0
+6,mobileweb-spider-en-General Purpose-Quora,7.0,6.0,4.0,2.0,2.0,3.0,8.0
+6,mobileweb-spider-en-General Purpose-Reddit,16.0,5.0,9.0,21.0,6.0,14.0,24.0
+6,mobileweb-spider-en-General Purpose-Skype,11.0,4.0,9.0,4.0,9.0,7.0,6.0
+6,mobileweb-spider-en-General Purpose-Skyrock_(social_network_site),0.0,1.0,1.0,0.0,1.0,1.0,0.0
+6,mobileweb-spider-en-General Purpose-Snapchat,10.0,9.0,9.0,5.0,7.0,8.0,8.0
+6,mobileweb-spider-en-General Purpose-StumbleUpon,0.0,1.0,1.0,1.0,3.0,1.0,0.0
+6,mobileweb-spider-en-General Purpose-Tagged,2.0,2.0,4.0,3.0,1.0,2.0,6.0
+6,mobileweb-spider-en-General Purpose-Tumblr,10.0,7.0,10.0,9.0,8.0,8.0,14.0
+6,mobileweb-spider-en-General Purpose-Twitter,43.0,22.0,19.0,19.0,24.0,23.0,27.0
+6,mobileweb-spider-en-General Purpose-Twoo.com,1.0,1.0,0.0,0.0,1.0,1.0,0.0
+6,mobileweb-spider-en-General Purpose-VK_(social_networking),14.0,11.0,13.0,8.0,12.0,11.0,7.0
+6,mobileweb-spider-en-General Purpose-Viber,5.0,3.0,2.0,1.0,1.0,2.0,2.0
+6,mobileweb-spider-en-General Purpose-WeChat,12.0,5.0,3.0,6.0,11.0,6.0,5.0
+6,mobileweb-spider-en-General Purpose-WhatsApp,17.0,20.0,11.0,13.0,7.0,13.0,11.0
+6,mobileweb-spider-en-General Purpose-Yelp,9.0,2.0,2.0,1.0,8.0,1.0,1.0
+6,mobileweb-spider-en-Lifestyle-ASmallWorld,0.0,3.0,1.0,2.0,0.0,0.0,1.0
+6,mobileweb-spider-en-Lifestyle-Academia.edu,3.0,1.0,2.0,0.0,4.0,2.0,2.0
+6,mobileweb-spider-en-Lifestyle-BlackPlanet,0.0,1.0,1.0,0.0,0.0,2.0,0.0
+6,mobileweb-spider-en-Lifestyle-CafeMom,0.0,1.0,1.0,1.0,0.0,0.0,1.0
+6,mobileweb-spider-en-Lifestyle-Care2,1.0,1.0,1.0,1.0,0.0,0.0,0.0
+6,mobileweb-spider-en-Lifestyle-CaringBridge,4.0,1.0,1.0,0.0,0.0,0.0,0.0
+6,mobileweb-spider-en-Lifestyle-Doximity,1.0,0.0,1.0,0.0,0.0,0.0,1.0
+6,"mobileweb-spider-en-Lifestyle-English,_baby!",1.0,2.0,0.0,1.0,0.0,1.0,0.0
+6,mobileweb-spider-en-Lifestyle-Flixster,3.0,3.0,1.0,3.0,2.0,2.0,4.0
+6,mobileweb-spider-en-Lifestyle-Gaia_Online,2.0,2.0,1.0,0.0,3.0,0.0,2.0
+6,mobileweb-spider-en-Lifestyle-GoFundMe,5.0,4.0,2.0,2.0,1.0,4.0,2.0
+6,mobileweb-spider-en-Lifestyle-Goodreads,10.0,3.0,5.0,5.0,4.0,6.0,3.0
+6,mobileweb-spider-en-Lifestyle-Italki,1.0,1.0,1.0,2.0,1.0,1.0,1.0
+6,mobileweb-spider-en-Lifestyle-Last.fm,4.0,4.0,3.0,3.0,2.0,2.0,4.0
+6,mobileweb-spider-en-Lifestyle-Minds,1.0,2.0,2.0,1.0,3.0,3.0,2.0
+6,mobileweb-spider-en-Lifestyle-MyMFB,2.0,0.0,1.0,1.0,1.0,1.0,2.0
+6,mobileweb-spider-en-Lifestyle-Nexopia,3.0,0.0,1.0,0.0,1.0,0.0,1.0
+6,mobileweb-spider-en-Lifestyle-PlentyOfFish,2.0,3.0,3.0,3.0,3.0,4.0,1.0
+6,mobileweb-spider-en-Lifestyle-Ravelry,0.0,1.0,1.0,0.0,0.0,0.0,1.0
+6,mobileweb-spider-en-Lifestyle-ReverbNation,1.0,2.0,1.0,1.0,0.0,1.0,1.0
+6,mobileweb-spider-en-Lifestyle-SoundCloud,9.0,5.0,6.0,3.0,6.0,5.0,2.0
+6,mobileweb-spider-en-Lifestyle-Tinder_(app),7.0,11.0,8.0,2.0,3.0,3.0,4.0
+6,mobileweb-spider-en-Lifestyle-Untappd,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+6,mobileweb-spider-en-Lifestyle-Vampirefreaks.com,1.0,2.0,1.0,0.0,0.0,0.0,3.0
+6,mobileweb-spider-en-Photo Sharing-43_Things,1.87427380347058,2.24073461342509,1.32507288679159,1.85585125875693,1.58695035867103,1.0,2.0
+6,mobileweb-spider-en-Photo Sharing-500px,2.0,4.0,1.0,4.0,4.0,2.0,0.0
+6,mobileweb-spider-en-Photo Sharing-DeviantArt,8.01280156094983,9.6834608737032,11.0,8.0,7.0,4.0,2.0
+6,mobileweb-spider-en-Photo Sharing-Flickr,9.0,5.0,5.0,7.0,6.0,8.0,5.0
+6,mobileweb-spider-en-Photo Sharing-Fotki,0.0,1.0,1.0,1.0,0.0,3.0,0.0
+6,mobileweb-spider-en-Photo Sharing-Fotolog,1.0,2.0,0.0,1.0,0.0,0.0,0.0
+6,mobileweb-spider-en-Photo Sharing-Imgur,6.0,4.0,2.0,3.0,1.0,3.0,2.0
+6,mobileweb-spider-en-Photo Sharing-Path_(social_network),2.0,2.0,2.0,2.0,2.0,2.0,4.0
+6,mobileweb-spider-en-Photo Sharing-Photobucket,2.0,1.0,3.0,1.0,1.0,1.0,1.0
+6,mobileweb-spider-en-Photo Sharing-Pixabay,1.0,1.0,5.0,4.0,0.0,3.0,2.0
+6,mobileweb-spider-en-Photo Sharing-Shutterfly,0.0,2.0,3.0,1.0,2.0,0.0,0.0
+6,mobileweb-spider-en-Photo Sharing-Snapfish,0.0,2.0,0.0,2.0,1.0,1.0,0.0
+6,mobileweb-spider-en-Photo Sharing-Uplike,0.0,1.0,0.0,2.0,0.0,1.0,0.0
+6,mobileweb-spider-en-Photo Sharing-We_Heart_It,0.0,2.0,1.0,1.0,0.0,2.0,1.0
+6,mobileweb-spider-en-Reunion-23andMe,5.0,3.0,2.0,4.0,3.0,2.0,2.0
+6,mobileweb-spider-en-Reunion-Ancestry.com,5.0,7.0,4.0,5.0,4.0,5.0,2.0
+6,mobileweb-spider-en-Reunion-Classmates.com,3.0,1.0,5.0,4.0,1.0,4.0,2.0
+6,mobileweb-spider-en-Reunion-MyHeritage,4.0,3.0,5.0,3.0,3.0,1.0,0.0
+6,mobileweb-spider-en-Travel-CouchSurfing,3.0,2.0,1.0,3.0,3.0,2.0,4.0
+6,mobileweb-spider-en-Travel-WAYN_(website),3.0,1.0,1.0,4.0,2.0,2.0,3.0
+6,mobileweb-spider-en-Video-Funny_or_Die,3.87188104183255,2.35854129318558,4.01317682486314,3.0,4.0,3.0,1.0
+6,mobileweb-spider-en-Video-Tout,0.19678198476504,1.0,3.76737041434988,5.0,1.0,0.0,3.0
+6,mobileweb-spider-en-Video-Vine_(service),2.0,2.0,3.0,3.0,5.0,2.0,2.0
+6,mobileweb-spider-en-Video-YouTube,96.0,116.0,110.498291501907,101.014259781801,87.0,95.0,96.0
+6,mobileweb-spider-es-Blogging Related-LiveJournal,0.0,1.0,0.0,0.0,1.0,1.0,0.0
+6,mobileweb-spider-es-Gaming-Habbo,1.0,1.0,0.0,1.0,0.0,1.0,1.0
+6,mobileweb-spider-es-Gaming-Zynga,0.0,3.0,0.0,0.0,3.0,0.0,1.0
+6,mobileweb-spider-es-General Purpose-Badoo,2.0,1.0,3.0,3.0,0.0,2.0,0.0
+6,mobileweb-spider-es-General Purpose-Facebook,32.0,36.0,24.0,40.0,31.0,36.0,29.0
+6,mobileweb-spider-es-General Purpose-Facebook_Messenger,0.0,3.0,0.0,1.0,1.0,1.0,0.0
+6,mobileweb-spider-es-General Purpose-Foursquare,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+6,mobileweb-spider-es-General Purpose-Google+,4.0,1.0,3.0,3.0,0.0,2.0,1.0
+6,mobileweb-spider-es-General Purpose-Instagram,5.0,5.0,5.0,2.0,3.0,3.0,6.0
+6,mobileweb-spider-es-General Purpose-Kickstarter,2.0,1.0,0.0,0.0,0.0,1.0,1.0
+6,mobileweb-spider-es-General Purpose-LinkedIn,4.0,0.0,0.0,1.0,0.0,2.0,0.0
+6,mobileweb-spider-es-General Purpose-Myspace,2.0,2.0,0.0,0.0,1.0,0.0,2.0
+6,mobileweb-spider-es-General Purpose-Pinterest,5.0,0.0,0.0,0.0,1.0,0.0,2.0
+6,mobileweb-spider-es-General Purpose-Reddit,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+6,mobileweb-spider-es-General Purpose-Skype,5.0,2.0,2.0,2.0,1.0,0.0,0.0
+6,mobileweb-spider-es-General Purpose-Snapchat,3.0,0.0,1.0,1.0,0.0,2.0,1.0
+6,mobileweb-spider-es-General Purpose-Tagged,0.0,1.0,0.0,0.0,0.0,1.0,0.0
+6,mobileweb-spider-es-General Purpose-Tumblr,2.0,3.0,1.0,3.0,2.0,2.0,4.0
+6,mobileweb-spider-es-General Purpose-Twitter,6.0,5.0,7.0,5.0,4.0,6.0,2.0
+6,mobileweb-spider-es-General Purpose-Viber,1.0,1.0,1.0,1.0,0.0,1.0,0.0
+6,mobileweb-spider-es-General Purpose-WeChat,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+6,mobileweb-spider-es-General Purpose-WhatsApp,6.0,1.0,4.0,4.0,3.0,5.0,2.0
+6,mobileweb-spider-es-Lifestyle-Goodreads,0.0,2.0,0.0,1.0,0.0,0.0,0.0
+6,mobileweb-spider-es-Lifestyle-Last.fm,0.0,0.0,0.0,0.0,0.0,2.0,0.0
+6,mobileweb-spider-es-Lifestyle-SoundCloud,0.0,1.0,3.0,1.0,0.0,1.0,1.0
+6,mobileweb-spider-es-Photo Sharing-DeviantArt,1.0,2.0,0.0,0.0,0.0,0.0,0.0
+6,mobileweb-spider-es-Photo Sharing-Flickr,2.0,1.0,2.0,1.0,1.0,2.0,1.0
+6,mobileweb-spider-es-Photo Sharing-Fotolog,0.0,-0.0787820942793337,0.0,2.0,0.0,0.0,0.0
+6,mobileweb-spider-es-Reunion-MyHeritage,1.0,1.0,0.0,0.0,0.0,0.0,0.0
+6,mobileweb-spider-es-Travel-CouchSurfing,1.0,0.0,0.0,2.0,0.0,0.0,0.0
+6,mobileweb-spider-es-Video-YouTube,11.0,20.0,14.0,12.0,7.0,14.0,19.0
+6,mobileweb-spider-zh-Blogging Related-LiveJournal,1.0,0.0,1.0,0.0,0.0,4.0,1.0
+6,mobileweb-spider-zh-Blogging Related-Plurk,2.0,2.0,3.0,3.0,3.0,2.0,2.0
+6,mobileweb-spider-zh-Blogging Related-Xanga,1.0,2.0,0.0,3.0,0.0,0.0,0.0
+6,mobileweb-spider-zh-Gaming-Zynga,1.0,4.0,1.0,0.0,0.0,1.0,0.0
+6,mobileweb-spider-zh-General Purpose-Facebook,11.0,8.0,4.0,6.0,10.0,12.0,10.0
+6,mobileweb-spider-zh-General Purpose-Facebook_Messenger,1.0,2.0,0.0,1.0,3.0,1.0,1.0
+6,mobileweb-spider-zh-General Purpose-Foursquare,4.0,2.0,0.0,2.0,0.0,1.0,1.0
+6,mobileweb-spider-zh-General Purpose-Google+,2.0,3.0,0.0,2.0,0.0,3.0,1.0
+6,mobileweb-spider-zh-General Purpose-Instagram,3.0,5.0,3.0,5.0,7.0,6.0,11.0
+6,mobileweb-spider-zh-General Purpose-Kickstarter,2.0,1.0,5.0,1.0,5.0,1.0,1.0
+6,mobileweb-spider-zh-General Purpose-LinkedIn,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+6,mobileweb-spider-zh-General Purpose-Myspace,1.0,3.0,0.0,2.0,0.0,0.0,1.0
+6,mobileweb-spider-zh-General Purpose-Pinterest,0.0,5.0,0.0,0.0,4.0,2.0,4.0
+6,mobileweb-spider-zh-General Purpose-Quora,1.0,5.0,1.0,1.0,0.0,3.0,3.0
+6,mobileweb-spider-zh-General Purpose-Reddit,4.0,4.0,0.0,2.0,1.0,1.0,0.0
+6,mobileweb-spider-zh-General Purpose-Skype,5.0,7.0,5.0,4.0,1.0,11.0,5.0
+6,mobileweb-spider-zh-General Purpose-Snapchat,1.0,4.0,1.0,6.0,1.0,4.0,0.0
+6,mobileweb-spider-zh-General Purpose-Tumblr,5.0,4.8082754214313,3.0,3.0,2.0,2.0,1.0
+6,mobileweb-spider-zh-General Purpose-Twitter,6.0,7.0,6.0,11.0,2.0,4.0,4.0
+6,mobileweb-spider-zh-General Purpose-Viber,2.0,1.0,0.0,1.0,0.0,1.0,0.0
+6,mobileweb-spider-zh-General Purpose-WhatsApp,5.0,5.0,5.0,2.0,0.0,2.0,3.0
+6,mobileweb-spider-zh-Lifestyle-Goodreads,1.0,2.0,0.0,1.0,1.0,0.0,2.0
+6,mobileweb-spider-zh-Lifestyle-Last.fm,0.0,3.0,0.0,2.0,0.0,0.0,1.0
+6,mobileweb-spider-zh-Lifestyle-PlentyOfFish,0.0,3.0,1.0,2.0,2.0,1.0,0.0
+6,mobileweb-spider-zh-Lifestyle-SoundCloud,0.0,3.0,0.0,0.0,0.0,0.0,2.0
+6,mobileweb-spider-zh-Photo Sharing-500px,0.0,7.212147098591169e-11,0.0,2.0,0.0,0.0,0.0
+6,mobileweb-spider-zh-Photo Sharing-Flickr,0.0,4.0,1.0,5.0,2.0,1.0,1.0
+6,mobileweb-spider-zh-Photo Sharing-Imgur,0.0,2.0,1.44106131384823,1.0,0.0,1.0,1.0
+6,mobileweb-spider-zh-Video-YouTube,9.0,13.0,12.0,8.0,8.0,7.0,10.0
+6,mobileweb-user-de-Blogging Related-LiveJournal,3.0,0.0,3.0,1.0,0.0,0.0,1.0
+6,mobileweb-user-de-Blogging Related-Xanga,2.0,2.0,0.0,1.0,1.0,0.0,0.0
+6,mobileweb-user-de-Business-Viadeo,4.0,1.0,2.0,2.0,1.0,1.0,1.0
+6,mobileweb-user-de-Gaming-Zynga,6.0,3.0,8.0,6.0,2.0,7.0,7.0
+6,mobileweb-user-de-General Purpose-Badoo,57.0,67.0,94.0,74.0,55.0,47.0,81.0
+6,mobileweb-user-de-General Purpose-Facebook,727.0,789.0,999.0,817.0,824.0,731.0,855.0
+6,mobileweb-user-de-General Purpose-Foursquare,13.0,11.0,16.0,9.0,15.0,9.0,22.0
+6,mobileweb-user-de-General Purpose-Google+,71.0,70.0,80.0,63.0,58.0,55.0,66.0
+6,mobileweb-user-de-General Purpose-Instagram,1019.0,1190.0,1450.0,923.0,960.0,914.0,1171.0
+6,mobileweb-user-de-General Purpose-Kickstarter,7.0,10.0,14.0,24.0,12.0,8.0,15.0
+6,mobileweb-user-de-General Purpose-LinkedIn,347.0,253.0,224.0,315.0,368.0,366.0,399.0
+6,mobileweb-user-de-General Purpose-Myspace,68.0,81.6715676244463,83.0,81.0,87.0,75.0,52.0
+6,mobileweb-user-de-General Purpose-Pinterest,336.0,451.0,409.0,287.0,315.0,281.0,429.0
+6,mobileweb-user-de-General Purpose-Quora,13.0,15.0,4.0,5.0,10.0,11.0,10.0
+6,mobileweb-user-de-General Purpose-Reddit,135.0,189.0,134.0,108.0,96.0,72.0,96.0
+6,mobileweb-user-de-General Purpose-Skype,108.0,101.0,107.0,92.0,89.0,74.0,73.0
+6,mobileweb-user-de-General Purpose-Snapchat,796.0,794.0,885.0,635.0,583.0,668.0,832.0
+6,mobileweb-user-de-General Purpose-StumbleUpon,0.0,1.0,2.0,0.0,0.0,0.0,1.0
+6,mobileweb-user-de-General Purpose-Tagged,2.0,3.0,4.0,6.0,4.0,4.0,6.0
+6,mobileweb-user-de-General Purpose-Tumblr,157.0,162.0,186.0,159.0,147.0,147.0,151.0
+6,mobileweb-user-de-General Purpose-Twitter,308.0,289.0,284.0,270.0,441.0,262.0,325.0
+6,mobileweb-user-de-General Purpose-Viber,66.0,85.0,75.0,91.0,76.0,59.0,84.0
+6,mobileweb-user-de-General Purpose-WeChat,74.0,69.0,50.0,63.0,66.0,51.0,48.0
+6,mobileweb-user-de-General Purpose-WhatsApp,547.0,512.0,535.0,442.0,419.0,406.0,453.0
+6,mobileweb-user-de-General Purpose-Yelp,3.0,3.0,5.0,4.0,2.0,3.0,0.0
+6,mobileweb-user-de-Lifestyle-Last.fm,16.0,19.0,20.0,10.0,9.0,14.0,16.0
+6,mobileweb-user-de-Lifestyle-Ravelry,3.0,5.0,6.0,3.0,3.0,4.0,4.0
+6,mobileweb-user-de-Lifestyle-SoundCloud,126.0,127.0,142.0,100.0,109.0,118.0,150.0
+6,mobileweb-user-de-Photo Sharing-500px,6.0,3.0,10.0,7.0,3.0,8.0,8.0
+6,mobileweb-user-de-Photo Sharing-DeviantArt,13.0,8.0,20.0,8.0,6.0,4.0,8.0
+6,mobileweb-user-de-Photo Sharing-Flickr,45.0,48.0,38.0,37.0,22.0,25.0,42.0
+6,mobileweb-user-de-Photo Sharing-Imgur,16.0,11.0,19.0,16.0,19.0,22.0,17.0
+6,mobileweb-user-de-Photo Sharing-Pixabay,4.0,5.0,3.0,1.0,6.0,3.0,5.0
+6,mobileweb-user-de-Photo Sharing-Shutterfly,4.0,8.0,21.0,6.0,13.0,6.0,18.0
+6,mobileweb-user-de-Reunion-23andMe,18.0,19.0,19.0,25.0,27.0,23.0,16.0
+6,mobileweb-user-de-Reunion-MyHeritage,3.0,9.0,13.0,6.0,7.0,10.0,11.0
+6,mobileweb-user-de-Travel-CouchSurfing,128.0,110.0,102.0,104.0,80.0,98.0,111.0
+6,mobileweb-user-de-Video-YouTube,1046.0,1100.0,1070.0,771.0,906.0,906.0,1033.0
+6,mobileweb-user-en-Blogging Related-LiveJournal,47.0,57.0,61.0,45.0,49.0,33.0,45.0
+6,mobileweb-user-en-Blogging Related-Plurk,8.0,10.0,12.0,10.0,10.0,27.0,13.0
+6,mobileweb-user-en-Blogging Related-Xanga,75.0,62.0,84.0,55.0,63.0,74.0,56.0
+6,mobileweb-user-en-Business-Ryze,3.0,2.0,0.0,2.0,2.0,2.0,1.0
+6,mobileweb-user-en-Business-Solaborate,3.0,2.0,3.0,3.0,0.0,5.0,1.0
+6,mobileweb-user-en-Business-Viadeo,6.0,9.0,11.0,13.0,6.0,10.0,12.0
+6,mobileweb-user-en-Business-Xing_Technology,4.0,0.0,0.0,4.0,1.0,0.0,4.0
+6,mobileweb-user-en-Gaming-Cellufun,2.0,6.0,6.0,2.0,3.0,4.0,6.0
+6,mobileweb-user-en-Gaming-Habbo,87.0,93.0,83.0,83.0,89.0,71.0,98.0
+6,mobileweb-user-en-Gaming-MocoSpace,72.0,77.0,88.0,91.0,58.0,76.0,72.0
+6,mobileweb-user-en-Gaming-Zynga,256.0,237.0,215.0,214.0,203.0,214.0,197.0
+6,mobileweb-user-en-General Purpose-AngelList,57.0,43.0,46.0,68.0,70.0,53.0,50.0
+6,mobileweb-user-en-General Purpose-Badoo,479.0,453.0,472.0,477.0,374.0,391.0,398.0
+6,mobileweb-user-en-General Purpose-Facebook,15826.0,16684.0,16703.0,15803.0,15869.0,16241.0,16951.0
+6,mobileweb-user-en-General Purpose-Facebook_Messenger,1084.0,1057.0,1068.0,1030.0,1132.0,1189.0,1257.0
+6,mobileweb-user-en-General Purpose-Foursquare,159.227372968605,172.693796245975,193.0,201.0,242.0,156.0,176.793383705999
+6,mobileweb-user-en-General Purpose-GirlsAskGuys,7.0,15.0,6.0,22.0,21.0,13.0,14.0
+6,mobileweb-user-en-General Purpose-Google+,443.0,460.0,495.0,502.0,481.0,461.0,359.0
+6,mobileweb-user-en-General Purpose-Instagram,6437.0,6463.0,6647.0,5520.0,6161.0,7383.0,6013.0
+6,mobileweb-user-en-General Purpose-Kickstarter,383.0,369.0,445.0,400.0,378.0,405.0,359.0
+6,mobileweb-user-en-General Purpose-Kiwibox,2.0,8.0,16.0,7.0,11.0,5.0,5.0
+6,mobileweb-user-en-General Purpose-LinkedIn,1389.0,1238.0,1139.0,1395.0,1345.0,1454.0,1450.0
+6,mobileweb-user-en-General Purpose-MeetMe,109.0,110.0,124.0,119.0,108.0,129.0,137.0
+6,mobileweb-user-en-General Purpose-Meetup_(website),116.0,123.0,141.0,129.0,114.0,122.0,126.0
+6,mobileweb-user-en-General Purpose-Myspace,1389.0,1252.0,1206.0,1211.0,1112.0,945.0,1027.0
+6,mobileweb-user-en-General Purpose-Nextdoor,158.0,124.0,121.0,158.0,192.0,196.0,181.0
+6,mobileweb-user-en-General Purpose-Pinboard_(website),5.0,9.0,8.0,12.0,6.0,7.0,8.0
+6,mobileweb-user-en-General Purpose-Pinterest,1106.0,1196.0,1158.0,1105.0,1100.0,1085.0,1063.0
+6,mobileweb-user-en-General Purpose-Product_Hunt,19.0,11.0,11.0,15.0,18.0,9.0,26.0
+6,mobileweb-user-en-General Purpose-Quora,673.0,730.0,752.0,711.0,761.0,802.0,671.0
+6,mobileweb-user-en-General Purpose-Reddit,1576.0,1963.0,1673.0,1465.0,1489.0,1429.0,1486.0
+6,mobileweb-user-en-General Purpose-Skype,614.0,557.0,745.0,614.0,585.0,656.0,578.0
+6,mobileweb-user-en-General Purpose-Skyrock_(social_network_site),4.0,2.0,2.0,2.0,2.0,7.0,2.0
+6,mobileweb-user-en-General Purpose-Snapchat,3863.0,4254.0,4320.0,3748.0,3700.0,3854.0,3841.0
+6,mobileweb-user-en-General Purpose-StumbleUpon,115.0,85.0,107.0,86.0,92.0,113.0,94.0
+6,mobileweb-user-en-General Purpose-Tagged,115.0,111.0,103.0,84.0,115.0,79.0,97.0
+6,mobileweb-user-en-General Purpose-Tumblr,1039.0,1201.0,1281.0,1141.0,1177.0,1155.0,1044.0
+6,mobileweb-user-en-General Purpose-Twitter,2913.0,3178.0,3387.0,2878.0,3496.0,4012.0,3769.0
+6,mobileweb-user-en-General Purpose-Twoo.com,117.262280172798,119.169534791631,121.765419801028,123.434258233806,124.258948207519,125.83195222961,127.176955322113
+6,mobileweb-user-en-General Purpose-VK_(social_networking),1608.33096052452,1662.12834919059,1705.0,1713.0,1744.35836303832,1703.74993513728,1683.18820448863
+6,mobileweb-user-en-General Purpose-Viber,438.0,463.0,416.0,328.0,326.0,358.0,385.0
+6,mobileweb-user-en-General Purpose-WeChat,822.0,774.0,826.0,774.0,757.0,863.0,662.0
+6,mobileweb-user-en-General Purpose-WhatsApp,6395.0,6812.0,6236.0,5807.0,5809.0,5860.0,5869.0
+6,mobileweb-user-en-General Purpose-Yelp,264.0,256.0,267.0,226.0,285.0,262.0,263.0
+6,mobileweb-user-en-Lifestyle-ASmallWorld,25.0,44.0,50.0,34.0,27.0,38.0,25.0
+6,mobileweb-user-en-Lifestyle-Academia.edu,67.0,45.0,50.0,59.0,85.0,64.0,68.0
+6,mobileweb-user-en-Lifestyle-BlackPlanet,24.0,26.0,34.0,18.0,31.0,23.0,15.0
+6,mobileweb-user-en-Lifestyle-CafeMom,32.0,35.0,30.0,37.0,23.0,21.0,14.0
+6,mobileweb-user-en-Lifestyle-Care2,5.0,6.0,10.0,8.0,14.0,0.0,7.0
+6,mobileweb-user-en-Lifestyle-CaringBridge,18.0,11.0,15.0,13.0,18.0,13.0,14.0
+6,mobileweb-user-en-Lifestyle-Doximity,24.0,27.0,32.0,23.0,30.0,28.0,24.0
+6,"mobileweb-user-en-Lifestyle-English,_baby!",1.0,4.0,5.0,5.0,5.0,6.0,6.0
+6,mobileweb-user-en-Lifestyle-Flixster,46.0,42.0,34.0,27.0,30.0,33.0,30.0
+6,mobileweb-user-en-Lifestyle-Gaia_Online,39.0,51.0,45.0,49.0,75.0,101.0,53.0
+6,mobileweb-user-en-Lifestyle-GoFundMe,336.0,309.0,319.0,377.0,388.0,449.0,393.0
+6,mobileweb-user-en-Lifestyle-Goodreads,182.0,153.0,157.0,140.0,155.0,147.0,146.0
+6,mobileweb-user-en-Lifestyle-Italki,10.0,11.0,9.0,8.0,17.0,19.0,9.0
+6,mobileweb-user-en-Lifestyle-Last.fm,50.0,87.0,64.0,50.0,58.0,71.0,37.0
+6,mobileweb-user-en-Lifestyle-Minds,40.0,33.0,38.0,39.0,44.0,32.0,33.0
+6,mobileweb-user-en-Lifestyle-MyMFB,3.0,1.0,1.0,5.0,1.0,3.0,3.0
+6,mobileweb-user-en-Lifestyle-Nexopia,46.0,20.0,33.0,24.0,50.0,38.0,32.0
+6,mobileweb-user-en-Lifestyle-PlentyOfFish,222.0,252.0,235.0,230.0,233.0,220.0,261.0
+6,mobileweb-user-en-Lifestyle-Ravelry,10.0,22.0,12.0,10.0,14.0,16.0,16.0
+6,mobileweb-user-en-Lifestyle-ReverbNation,31.0,25.0,28.0,35.0,35.0,17.0,38.0
+6,mobileweb-user-en-Lifestyle-SoundCloud,637.0,616.0,657.0,656.0,586.0,507.0,602.0
+6,mobileweb-user-en-Lifestyle-Tinder_(app),2296.0,2526.0,2622.0,2214.0,2116.0,2042.0,2117.0
+6,mobileweb-user-en-Lifestyle-Untappd,36.0,32.0,27.0,29.0,13.0,11.0,23.0
+6,mobileweb-user-en-Lifestyle-Vampirefreaks.com,22.0,23.0,26.0,30.0,20.0,22.0,25.0
+6,mobileweb-user-en-Photo Sharing-43_Things,13.0,14.0,22.0,17.0,12.0,22.0,29.0
+6,mobileweb-user-en-Photo Sharing-500px,29.0,42.0,35.0,22.0,34.0,40.0,37.0
+6,mobileweb-user-en-Photo Sharing-DeviantArt,176.0,161.0,192.0,188.0,185.0,148.0,167.0
+6,mobileweb-user-en-Photo Sharing-Flickr,260.0,258.0,321.0,288.0,318.0,275.0,234.0
+6,mobileweb-user-en-Photo Sharing-Fotki,10.0,5.0,12.0,11.0,19.0,30.9517975104399,33.0
+6,mobileweb-user-en-Photo Sharing-Fotolog,9.0,7.0,9.0,2.0,15.0,10.0,12.0
+6,mobileweb-user-en-Photo Sharing-Imgur,224.0,249.0,267.0,229.0,277.0,235.0,202.0
+6,mobileweb-user-en-Photo Sharing-Path_(social_network),53.0,62.0,51.0,53.0,61.0,46.0,44.0
+6,mobileweb-user-en-Photo Sharing-Photobucket,54.0,52.0,51.0,45.0,40.0,59.0,53.0
+6,mobileweb-user-en-Photo Sharing-Pixabay,21.0,10.0,10.0,25.0,16.0,17.0,18.0
+6,mobileweb-user-en-Photo Sharing-Shutterfly,126.0,109.0,99.0,133.0,142.098910037926,156.621828272097,165.971921568177
+6,mobileweb-user-en-Photo Sharing-Snapfish,16.0,25.0,24.0,26.0,18.0,29.0,22.0
+6,mobileweb-user-en-Photo Sharing-Uplike,0.0,1.0,2.0,1.0,1.0,2.0,2.0
+6,mobileweb-user-en-Photo Sharing-We_Heart_It,64.0,46.0,74.0,56.0,56.0,60.0,46.0
+6,mobileweb-user-en-Reunion-23andMe,435.0,582.0,705.0,524.0,449.0,473.0,503.0
+6,mobileweb-user-en-Reunion-Ancestry.com,173.0,334.0,394.0,365.0,261.0,222.0,280.0
+6,mobileweb-user-en-Reunion-Classmates.com,35.0,48.0,54.0,38.0,44.0,30.0,45.0
+6,mobileweb-user-en-Reunion-MyHeritage,41.0,40.0,37.0,32.0,42.0,20.0,35.0
+6,mobileweb-user-en-Travel-CouchSurfing,249.0,243.0,227.0,245.0,230.0,237.0,257.0
+6,mobileweb-user-en-Travel-TravBuddy.com,2.0,3.0,5.0,4.0,5.0,1.0,1.0
+6,mobileweb-user-en-Travel-WAYN_(website),169.0,179.0,133.0,151.0,191.0,160.0,166.0
+6,mobileweb-user-en-Video-Funny_or_Die,257.0,242.0,301.0,272.0,203.0,208.0,234.0
+6,mobileweb-user-en-Video-Tout,28.0,27.0,22.0,34.0,33.0,23.0,19.0
+6,mobileweb-user-en-Video-Vine_(service),822.0,871.0,863.0,852.0,768.0,819.0,831.0
+6,mobileweb-user-en-Video-YouTube,25051.2434198564,30695.7930339901,33010.9774078299,31010.0,30105.0,30813.0,28946.0
+6,mobileweb-user-es-Blogging Related-LiveJournal,3.0,4.0,7.0,5.0,4.0,7.0,16.0
+6,mobileweb-user-es-Blogging Related-Plurk,1.0,1.0,3.0,1.0,4.0,0.0,1.0
+6,mobileweb-user-es-Business-Viadeo,6.0,2.0,3.0,8.0,4.0,3.0,3.0
+6,mobileweb-user-es-Gaming-Habbo,41.0,39.0,46.0,35.0,36.0,41.0,48.0
+6,mobileweb-user-es-Gaming-Zynga,14.0,3.0,4.0,9.0,7.0,14.0,11.0
+6,mobileweb-user-es-General Purpose-Badoo,186.0,172.0,188.0,164.0,185.0,176.0,181.0
+6,mobileweb-user-es-General Purpose-Facebook,5203.0,5066.0,5377.0,5223.0,5358.0,5553.44338321967,6056.0
+6,mobileweb-user-es-General Purpose-Facebook_Messenger,274.0,248.0,210.0,220.0,201.0,258.0,224.0
+6,mobileweb-user-es-General Purpose-Foursquare,28.0,32.0,19.0,21.0,33.0,20.0,21.0
+6,mobileweb-user-es-General Purpose-Google+,119.0,108.0,137.0,111.0,123.0,125.0,111.0
+6,mobileweb-user-es-General Purpose-Instagram,1189.0,1163.0,1389.0,1412.0,1368.0,1343.0,1365.0
+6,mobileweb-user-es-General Purpose-Kickstarter,37.0,22.0,40.0,53.0,47.0,52.0,30.0
+6,mobileweb-user-es-General Purpose-LinkedIn,447.0,374.0,366.0,491.0,537.0,427.0,529.0
+6,mobileweb-user-es-General Purpose-Myspace,173.0,111.0,104.0,114.0,123.0,124.0,117.0
+6,mobileweb-user-es-General Purpose-Pinterest,268.0,257.0,348.0,355.0,346.0,282.0,281.0
+6,mobileweb-user-es-General Purpose-Quora,12.0,3.0,5.0,10.0,13.0,9.0,10.0
+6,mobileweb-user-es-General Purpose-Reddit,48.0,62.0,104.673442373228,135.302429801207,151.0,122.0,121.0
+6,mobileweb-user-es-General Purpose-Skype,122.0,116.0,122.0,152.0,154.0,149.0,123.0
+6,mobileweb-user-es-General Purpose-Snapchat,614.0,505.0,650.0,628.0,635.0,682.0,638.0
+6,mobileweb-user-es-General Purpose-StumbleUpon,1.0,4.0,7.0,5.0,6.0,5.0,1.0
+6,mobileweb-user-es-General Purpose-Tagged,22.0,23.0,27.0,31.0,41.0,40.0,41.0
+6,mobileweb-user-es-General Purpose-Tumblr,268.0,375.0,435.0,361.0,369.0,365.0,311.0
+6,mobileweb-user-es-General Purpose-Twitter,788.0,622.0,725.0,884.0,931.0,935.0,760.0
+6,mobileweb-user-es-General Purpose-Viber,32.0,30.0,35.0,28.0,29.0,19.0,22.0
+6,mobileweb-user-es-General Purpose-WeChat,39.0,53.0,58.0,42.0,55.0,58.0,37.0
+6,mobileweb-user-es-General Purpose-WhatsApp,1660.0,1500.0,1644.0,1651.0,1593.0,1953.0,1705.0
+6,mobileweb-user-es-Lifestyle-Goodreads,17.0,11.0,9.0,8.0,6.0,12.0,7.0
+6,mobileweb-user-es-Lifestyle-Last.fm,11.0,4.0,12.0,11.0,23.0,15.0,11.0
+6,mobileweb-user-es-Lifestyle-SoundCloud,46.0,48.0,76.0,65.0,65.0,64.0,63.0
+6,mobileweb-user-es-Photo Sharing-500px,4.0,3.0,6.0,2.0,1.0,2.0,0.0
+6,mobileweb-user-es-Photo Sharing-DeviantArt,10.0,12.0,17.0,18.0,10.0,16.0,9.0
+6,mobileweb-user-es-Photo Sharing-Flickr,56.0,49.0,67.0,59.0,89.0,69.0,62.0
+6,mobileweb-user-es-Photo Sharing-Fotolog,46.0,40.0,49.0,48.0,44.0,47.0,54.0
+6,mobileweb-user-es-Photo Sharing-Photobucket,1.0,2.0,1.0,1.0,1.0,1.0,2.0
+6,mobileweb-user-es-Reunion-23andMe,14.0,8.0,24.0,14.0,12.0,14.0,9.0
+6,mobileweb-user-es-Reunion-MyHeritage,3.0,3.0,10.0,5.0,6.0,5.0,2.0
+6,mobileweb-user-es-Travel-CouchSurfing,73.0,78.0,79.0,60.0,81.0,88.0,66.0
+6,mobileweb-user-es-Video-YouTube,3220.0,3378.0,3896.0,3708.0,3305.0,3479.0,3575.0
+6,mobileweb-user-zh-Blogging Related-LiveJournal,2.0,1.0,0.0,0.0,0.0,0.0,0.0
+6,mobileweb-user-zh-Blogging Related-Plurk,4.0,4.0,2.0,5.0,3.0,1.0,3.0
+6,mobileweb-user-zh-Blogging Related-Xanga,9.0,9.0,3.0,5.0,8.0,4.0,7.0
+6,mobileweb-user-zh-Gaming-Zynga,4.0,8.0,4.0,3.0,6.0,3.0,5.0
+6,mobileweb-user-zh-General Purpose-Facebook,313.0,360.0,343.0,341.0,321.0,345.0,298.0
+6,mobileweb-user-zh-General Purpose-Facebook_Messenger,6.0,15.0,15.0,14.0,15.0,11.0,8.0
+6,mobileweb-user-zh-General Purpose-Foursquare,4.0,1.0,5.0,4.0,5.0,3.0,5.0
+6,mobileweb-user-zh-General Purpose-Google+,26.0,26.0,38.0,23.0,29.0,21.0,30.0
+6,mobileweb-user-zh-General Purpose-Instagram,181.0,280.0,298.0,265.0,233.0,243.0,199.0
+6,mobileweb-user-zh-General Purpose-Kickstarter,17.0,25.0,45.0,24.0,28.0,9.0,23.0
+6,mobileweb-user-zh-General Purpose-LinkedIn,1.0,6.0,6.0,1.0,5.0,3.0,1.0
+6,mobileweb-user-zh-General Purpose-Myspace,16.0,9.0,10.0,10.0,10.0,5.0,8.0
+6,mobileweb-user-zh-General Purpose-Pinterest,21.0,46.0,39.0,34.0,32.0,35.0,33.0
+6,mobileweb-user-zh-General Purpose-Quora,15.0,14.0,20.0,20.0,20.0,10.0,10.0
+6,mobileweb-user-zh-General Purpose-Reddit,27.0,24.0,19.0,22.0,27.0,30.0,27.0
+6,mobileweb-user-zh-General Purpose-Skype,20.0,33.0,29.0,42.0,35.0,24.0,26.0
+6,mobileweb-user-zh-General Purpose-Snapchat,98.0,106.0,114.0,91.0,88.0,91.0,105.0
+6,mobileweb-user-zh-General Purpose-Tumblr,104.0,99.0,104.0,103.0,131.0,96.0,91.0
+6,mobileweb-user-zh-General Purpose-Twitter,128.0,175.0,158.0,171.0,182.0,152.0,143.0
+6,mobileweb-user-zh-General Purpose-Viber,24.0,10.0,12.0,13.0,11.0,7.0,11.0
+6,mobileweb-user-zh-General Purpose-WhatsApp,109.0,101.0,90.0,93.0,90.0,91.0,87.0
+6,mobileweb-user-zh-Lifestyle-Goodreads,1.0,2.0,2.0,4.0,2.0,4.0,0.0
+6,mobileweb-user-zh-Lifestyle-Last.fm,0.0,0.0,0.0,1.0,0.0,0.0,1.0
+6,mobileweb-user-zh-Lifestyle-PlentyOfFish,0.0,0.0,1.0,3.0,2.0,1.0,3.0
+6,mobileweb-user-zh-Lifestyle-SoundCloud,9.0,8.0,14.0,6.0,6.0,13.0,6.0
+6,mobileweb-user-zh-Photo Sharing-500px,1.0,2.0,0.0,2.0,4.0,4.0,3.0
+6,mobileweb-user-zh-Photo Sharing-Flickr,25.0,18.0,18.0,16.0,25.0,26.0,20.0
+6,mobileweb-user-zh-Photo Sharing-Imgur,4.0,6.0,3.0,4.0,6.0,6.0,8.0
+6,mobileweb-user-zh-Video-YouTube,491.0,595.0,633.0,468.0,471.0,511.0,479.0

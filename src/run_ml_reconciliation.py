@@ -31,7 +31,7 @@ def run_ml_reconciliation(data_actual, model_filename, save_file, lambda_range_r
 if __name__ == '__main__':
     DATASET = ['prison', 'tourism', 'wikipedia', 'labour']
     dataset_samples = {'prison': 3, 'tourism': 10, 'wikipedia': 10, 'labour': 5}
-    levels_in_hierarchy = {'prison': 5, 'tourism': 3, 'wikipedia': 5, 'labour': 4}
+    levels_in_hierarchy = {'prison': 5, 'tourism': 3, 'wikipedia': 6, 'labour': 4}
     data = DATASET[int(sys.argv[1])]
     model = sys.argv[2]
     file_name = f'{data}_{model}'
