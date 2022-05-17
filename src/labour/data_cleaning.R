@@ -1,15 +1,3 @@
-# Title     : Labour dataset preprocessing
-# Created by: pereramg
-# Created on: 7/3/22
-
-### Australian labour Force (no. of people in thousands)
-# Monthly data from August 1986 to June 2021 (Removing Covid Period and taking upto 2018)
-# source: ABS website
-# Level 0: Total employed individuals
-# Level 1: Main occupation category
-# Level 2: Main occupation x Employment status (Full time, Part-time)
-# Level 3: Main occupation x Employment status x Gender (Female, Male) (bottom level)
-
 library(readr)
 library(lubridate)
 library(tidyverse)
@@ -86,73 +74,30 @@ labour <- select(labour, -Sub_occupation)
 labour <-  labour %>% group_by(Sex, Month, Employment_status, Main_occupation) %>% summarise(Count = sum(Count))
 
 
-labour %>% unite(col = "all_var", 1,3,4, sep = "#") %>% pivot_wider(names_from = Month, values_from = Count) -> labour
-
 labour %>%
+  as_tsibble(key = c("Sex", "Employment_status", "Main_occupation")) %>%
+  arrange(Sex, Employment_status, Main_occupation) %>%
+  autoplot(Count) + theme(legend.position="none")
+
+# ggsave('data/labour_original.png')
+
+labour %>% unite(col = "all_var", 1,3,4, sep = "#") %>% pivot_wider(names_from = Month, values_from = Count) -> labour_out
+
+labour_out %>%
   split(.$all_var) %>%
   map(~ .x[-1]) %>%
   map_dfr(~ tsclean(ts(as.numeric(.x), frequency = 4))) %>%
-  bind_cols(Month = colnames(labour)[-1], .) %>%
+  bind_cols(Month = colnames(labour_out)[-1], .) %>%
   mutate(Month = yearmonth(Month)) %>%
   pivot_longer(-1, names_to = "all_var", values_to = "Count") %>%
   separate(col = 2,
            into = c("Sex", "Employment_status", "Main_occupation"),
-           sep = "#") -> labour
+           sep = "#") -> new_data_labour
 
+new_data_labour %>%
+  as_tsibble(key = c("Sex", "Employment_status", "Main_occupation")) %>%
+  arrange(Sex, Employment_status, Main_occupation)  %>%
+  autoplot(Count) + theme(legend.position="none")
 
-aggts <- labour %>%
-  as_tsibble(key = c(Sex, Main_occupation, Employment_status)) %>%
-  aggregate_key(Main_occupation/Employment_status/Sex, Count = sum(Count))
-
-
-bts <- labour %>%
-  arrange(Main_occupation, Employment_status, Sex) %>% as_tibble() %>%
-  unite(col = "Description", c(Main_occupation, Employment_status, Sex), sep = "-") %>%
-  mutate(Level = 4) %>% pivot_wider(names_from = Month, values_from = Count)
-
-
-# aggregated by sex
-level2 <- aggts %>%
-  filter(!is_aggregated(Main_occupation),
-         !is_aggregated(Employment_status), is_aggregated(Sex)) %>%
-  select(-Sex) %>%
-  mutate(Main_occupation = as.character(Main_occupation),
-         Employment_status = as.character(Employment_status)) %>%
-  arrange(Main_occupation, Employment_status) %>% as_tibble() %>%
-  unite(col = "Description", c(Main_occupation, Employment_status), sep = "-") %>%
-  mutate(Level = 3) %>% pivot_wider(names_from = Month, values_from = Count)
-
-
-# aggregated by sex and employment status
-level1 <- aggts %>%
-  filter(!is_aggregated(Main_occupation),
-         is_aggregated(Employment_status), is_aggregated(Sex)) %>%
-  select(-Employment_status, -Sex) %>%
-  mutate(Main_occupation = as.character(Main_occupation)) %>%
-  arrange(Main_occupation)%>% as_tibble() %>%
-  rename(Description = Main_occupation) %>%
-  mutate(Level = 2) %>% pivot_wider(names_from = Month, values_from = Count)
-
-# top level
-top <- aggts %>%
-  filter(is_aggregated(Main_occupation),
-         is_aggregated(Employment_status), is_aggregated(Sex)) %>%
-  select(-Main_occupation, -Employment_status, -Sex) %>% as_tibble() %>%
-  mutate(Level = 1, Description = "Aggregated") %>%
-  pivot_wider(names_from = Month, values_from = Count)
-
-all_level_ts <- rbind(top, level1, level2, bts)
-
-all_level_ts <- all_level_ts[, c(1, 2, 5:(ncol(all_level_ts)-10))] # remove 2019
-write.table(all_level_ts, "input_data/labour.csv", col.names = TRUE, row.names = FALSE, sep = ",")
-
-all_level_ts_test <- all_level_ts[, (ncol(all_level_ts) - 11):ncol(all_level_ts)] #2016 Feb to 2018 Nov
-all_level_ts_train <- all_level_ts[, 1: (ncol(all_level_ts) - 12)] #1987 Feb to 2015 Nov
-
-
-meta_info <- all_level_ts_train[, c(1,2)] # get level and description
-final_test <- cbind(meta_info, all_level_ts_test)
-write.table(final_test, "input_data/labour_test.csv", col.names = TRUE, row.names = FALSE, sep = ",")
-write.table(all_level_ts_train, "input_data/labour_actual.csv", col.names = TRUE, row.names = FALSE, sep = ",")
-
+ggsave('data/labour_clean.png')
 

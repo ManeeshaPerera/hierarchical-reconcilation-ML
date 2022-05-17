@@ -45,6 +45,22 @@ tourism <- tourism %>%
   ))
 
 
+tourism %>% unite(col = "all_var", 2,3,4, sep = "#") %>% pivot_wider(names_from = Year_month, values_from = Trips) -> tourism
+
+tourism %>%
+  split(.$all_var) %>%
+  map(~ .x[-1]) %>%
+  map_dfr(~ tsclean(ts(as.numeric(.x), frequency = 12))) %>%
+  bind_cols(Year_month = colnames(tourism)[-1], .) %>%
+  mutate(Year_month = yearmonth(Year_month)) %>%
+  pivot_longer(-1, names_to = "all_var", values_to = "Trips") %>%
+  separate(col = 2,
+           into = c("State", "Region", "Purpose"),
+           sep = "#") -> tourism
+
+tourism <- tourism %>%
+  as_tsibble(key = c(State, Region, Purpose), index = Year_month)
+
 bottom_level_ts <- tourism %>% group_by(State, Region) %>%
   summarise(Trips = sum(Trips)) %>%
   ungroup() %>% as_tibble() %>%
