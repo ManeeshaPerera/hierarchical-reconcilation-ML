@@ -36,7 +36,7 @@ model_results_write <- function(df, data, frequency, horizon){
 }
 
 run_arima <- function (filename, freq, horizon, name) {
-  prison <- c("filename" = paste("input_data", filename, sep='/'), "freq" = freq, "horizon"= horizon, 'name' = paste("forecasts", name, sep='/'))
-  all_level_ts_train <-read_csv(prison['filename'])
-  model_results_write(all_level_ts_train, prison['name'], as.integer(prison['freq']), as.integer(prison['horizon']))
+  dataframe <- c("filename" = paste("input_data", filename, sep='/'), "freq" = freq, "horizon"= horizon, 'name' = paste("forecasts", name, sep='/'))
+  all_level_ts_train <-read_csv(dataframe['filename'])
+  model_results_write(all_level_ts_train, dataframe['name'], as.integer(dataframe['freq']), as.integer(dataframe['horizon']))
 }

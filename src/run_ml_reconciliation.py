@@ -43,6 +43,7 @@ if __name__ == '__main__':
     tune_lambda = bool(sys.argv[3])
     validate_hf_loss = bool(sys.argv[4])
     lambda_range_idx = int(sys.argv[5])
+    remove_skip = bool(sys.argv[6])
     lambda_range = [[0.01, 0.09], [0.1, 0.9], [1, 4], [0.01, 5]]
     l1_regularizer = False
 
@@ -73,15 +74,26 @@ if __name__ == '__main__':
         lambda_case = lambda_range[lambda_range_idx]
     name_file = f'{name_file}_lambda_{lambda_case}'
     print(lambda_case)
+    # print(name_file)
+
+    if remove_skip:
+        name_file = f'{name_file}_lambda_{lambda_case}_no_skip'
     print(name_file)
 
-    # full dataset
-    # run_ml_reconciliation(data, file_name, name_file, lambda_case, seed_value, seed_runs, number_of_levels, tune_lambda)
-    samples = dataset_samples[data]
+    # # full dataset
+    # # run_ml_reconciliation(data, file_name, name_file, lambda_case, seed_value, seed_runs, number_of_levels, tune_lambda)
+    # # samples = dataset_samples[data]
+    #
+    # # samples
+    # # for sample in range(0, samples):
+    # #     data_path = f'new_data_samples/{data}_{sample}'
+    # #     model_file_path = f'{data}_{sample}_{model}'
+    # #     run_ml_reconciliation(data_path, model_file_path, name_file, lambda_case, seed_value, seed_runs,
+    # #                           number_of_levels, tune_lambda)
+    sample = int(sys.argv[7])
+    print(sample)
 
-    # samples
-    for sample in range(0, samples):
-        data_path = f'new_data_samples/{data}_{sample}'
-        model_file_path = f'{data}_{sample}_{model}'
-        run_ml_reconciliation(data_path, model_file_path, name_file, lambda_case, seed_value, seed_runs,
-                              number_of_levels, tune_lambda)
+    data_path = f'new_data_samples/{data}_{sample}'
+    model_file_path = f'{data}_{sample}_{model}'
+    run_ml_reconciliation(data_path, model_file_path, name_file, lambda_case, seed_value, seed_runs,
+                          number_of_levels, tune_lambda)

@@ -17,7 +17,8 @@ from construct_heirarchy import ConstructHierarchy
 class MLReconcile:
     def __init__(self, seed_value, actual_data, fitted_data, forecasts, number_of_levels, seed_runs, hyper_params_tune,
                  best_hyper_params=None, tune_hyper_params=True, random_state=42, split_size=0.2,
-                 validate_hf_loss=False, l1_regularizer=False, return_seed_forecast=False, tune_lambda=True):
+                 validate_hf_loss=False, l1_regularizer=False, return_seed_forecast=False, tune_lambda=True,
+                 remove_skip=False):
         """
         Class initialization
         :param seed_value: seed value for tensorflow to achieve reproducibility
@@ -66,6 +67,7 @@ class MLReconcile:
         self.l1_regularizer = l1_regularizer
         self.return_seed_forecast = return_seed_forecast
         self.tune_lambda = tune_lambda
+        self.remove_skip = remove_skip
         self._run_initialization(seed_value, tune_hyper_params, hyper_params_tune, best_hyper_params)
 
     def _transpose_data(self, dataframe):
@@ -181,11 +183,14 @@ class MLReconcile:
 
         model_outputs = layers.Dense(bottom_level_ts)(last_output)
 
-        bottom_level_actual = (inputs[:, start_index_bottom_ts:] - tf.constant(
-            self.scaler.min_[start_index_bottom_ts:])) / tf.constant(self.scaler.scale_[start_index_bottom_ts:])
+        if self.remove_skip:
+            model = keras.Model(inputs=inputs, outputs=model_outputs)
+        else:
+            bottom_level_actual = (inputs[:, start_index_bottom_ts:] - tf.constant(
+                self.scaler.min_[start_index_bottom_ts:])) / tf.constant(self.scaler.scale_[start_index_bottom_ts:])
 
-        outputs = tf.add(model_outputs, bottom_level_actual)  # skip connection from input to bypass the model
-        model = keras.Model(inputs=inputs, outputs=outputs)
+            outputs = tf.add(model_outputs, bottom_level_actual)  # skip connection from input to bypass the model
+            model = keras.Model(inputs=inputs, outputs=outputs)
 
         model.compile(loss=self._custom_loss(reconciliation_loss_lambda=reconciliation_loss_lambda),
                       optimizer=tf.keras.optimizers.Adam(learning_rate))
