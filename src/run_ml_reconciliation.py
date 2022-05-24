@@ -4,7 +4,7 @@ import sys
 
 
 def run_ml_reconciliation(data_actual, model_filename, save_file, lambda_range_run, seed_to_run, seed_array, hf_levels,
-                          lambada_tune):
+                          lambada_tune, remove_skip):
     df_actual = pd.read_csv(f"input_data/{data_actual}_actual.csv")
     df_fitted = pd.read_csv(f"forecasts/new_data_samples/{model_filename}_fitted.csv")
     df_forecasts = pd.read_csv(f"forecasts/new_data_samples/{model_filename}_forecasts.csv")
@@ -17,7 +17,7 @@ def run_ml_reconciliation(data_actual, model_filename, save_file, lambda_range_r
 
     ml_model_case = MLReconcile(seed_to_run, df_actual, df_fitted, df_forecasts, hf_levels, seed_array,
                                 hyper_params_tune=hyper_params,
-                                tune_hyper_params=True, tune_lambda=lambada_tune)
+                                tune_hyper_params=True, tune_lambda=lambada_tune, remove_skip=remove_skip)
     forecasts_adjusted_median, forecasts_adjusted_mean, model_history, best_hyper_params = ml_model_case.run_ml_reconciliation()
 
     # new change - only saving the mean across the seeds
@@ -96,4 +96,4 @@ if __name__ == '__main__':
     data_path = f'new_data_samples/{data}_{sample}'
     model_file_path = f'{data}_{sample}_{model}'
     run_ml_reconciliation(data_path, model_file_path, name_file, lambda_case, seed_value, seed_runs,
-                          number_of_levels, tune_lambda)
+                          number_of_levels, tune_lambda, remove_skip)
