@@ -33,4 +33,4 @@ module load gcc/8.3.0 cuda/10.1.243 openmpi/3.1.4
 module load python/3.8.6
 
 # The job command(s):
-python run_global_models.py ${SLURM_ARRAY_TASK_ID}
+python run_global_models.py ${SLURM_ARRAY_TASK_ID} 0
