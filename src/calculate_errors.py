@@ -72,7 +72,17 @@ if __name__ == '__main__':
                'case2_lambda_[0.01, 0.09]',
                'case2_lambda_[0.1, 0.9]',
                'case2_lambda_[1, 4]',
-               'case2_lambda_[0.01, 5]']
+               'case2_lambda_[0.01, 5]',
+               'case1_lambda_1_no_skip',
+               'case1_lambda_[0.01, 0.09]_no_skip',
+               'case1_lambda_[0.1, 0.9]_no_skip',
+               'case1_lambda_[1, 4]_no_skip',
+               'case1_lambda_[0.01, 5]_no_skip',
+               'case2_lambda_1_no_skip',
+               'case2_lambda_[0.01, 0.09]_no_skip',
+               'case2_lambda_[0.1, 0.9]_no_skip',
+               'case2_lambda_[1, 4]_no_skip',
+               'case2_lambda_[0.01, 5]_no_skip']
 
     for fc_type in FC_TYPE:
         file_name = f'{data}_{model}'
