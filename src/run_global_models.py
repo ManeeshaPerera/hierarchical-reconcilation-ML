@@ -16,7 +16,7 @@ start_date = DATA[data]['start_date']
 samples = DATA[data]['samples']
 levels = levels_in_hierarchy[data]
 
-for sample in samples:
+for sample in range(0, samples):
     sample_train = pd.read_csv(f'input_data/new_data_samples/{data}_{sample}_actual.csv')
     sample_test = pd.read_csv(f'input_data/new_data_samples/{data}_{sample}_test.csv')
 
