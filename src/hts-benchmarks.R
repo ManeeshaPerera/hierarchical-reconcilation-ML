@@ -20,9 +20,16 @@ library(Matrix)
 # Notations used below in comments. T - number of observations, M- total number of series, B - number of bottom level series, A - number of top level series, H- forecast horizon
 
 hts_benchmarks <- function (dataset_name, input_file_path, filename_fc, base_model_name){
-  actual <- as.matrix(read_csv(paste(input_file_path, "_actual.csv", sep=''))[, -(1:2)]) # M X T matrix
-  base_fitted <- as.matrix(read_csv(paste("forecasts/new_data_samples/", filename_fc, "_", base_model_name, "_fitted.csv", sep=''))[, -(1:2)]) # M X T matrix
-  forecasts <- as.matrix(read_csv(paste("forecasts/new_data_samples/", filename_fc, "_", base_model_name, "_forecasts.csv", sep=''))[, -(1:2)]) # M X T matrix
+  fitted <- read_csv(paste("forecasts/new_data_samples/", filename_fc, "_", base_model_name, "_fitted.csv", sep=''))[, -(1:2)]
+  base_fitted <- as.matrix(fitted) # M X T matrix
+  forecasts <- as.matrix(read_csv(paste("forecasts/new_data_samples/", filename_fc, "_", base_model_name, "_forecasts.csv", sep=''))[, -(1:2)]) # M X H matrix
+  fitted_len <- length(fitted)
+  actual <- read_csv(paste(input_file_path, "_actual.csv", sep=''))[, -(1:2)] # M X T matrix
+  actual_len <- length(actual)
+  start_idx <- actual_len - fitted_len + 1
+  # for DeepAR and WaveNet fitted values were less than the actual so adding this operation to make the lengths equal
+  actual <- actual[, (start_idx:actual_len)]
+  actual <- as.matrix(actual)# M X T matrix
   if (dataset_name == 'prison'){
     hierarchy_nodes <- list(8, rep(2, 8), rep(2, 16), rep(2, 32))
   }

@@ -1,7 +1,7 @@
 import rpy2.robjects as robjects
 
 data = 'wikipedia'
-base_model = 'arima'
+base_model = 'waveNet'
 
 DATA = {'prison': 3,
         'tourism': 10,

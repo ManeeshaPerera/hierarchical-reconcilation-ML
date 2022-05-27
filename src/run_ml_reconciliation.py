@@ -9,6 +9,12 @@ def run_ml_reconciliation(data_actual, model_filename, save_file, lambda_range_r
     df_fitted = pd.read_csv(f"forecasts/new_data_samples/{model_filename}_fitted.csv")
     df_forecasts = pd.read_csv(f"forecasts/new_data_samples/{model_filename}_forecasts.csv")
 
+    # this is for DeepAR and WaveNet implementations
+    if len(df_actual.columns) > len(df_fitted.columns):
+        meta_data = df_actual.iloc[:, 0:2]
+        ts_values = df_actual.iloc[:, -len(df_fitted.columns[2:]):]
+        df_actual = pd.concat([meta_data, ts_values], axis=1)
+
     hyper_params = {'number_of_layers': 5, 'epochs': [10, 200], 'dropout_rate': [0, 0.5], 'max_norm_value': [0, 10],
                     'reconciliation_loss_lambda': lambda_range_run, 'learning_rate': [0.0001, 0.1]}
 
