@@ -31,15 +31,21 @@ def calculate_errors_per_fc(data, fc_type, actual_test, file_name, half_horizon_
     ts_names = actual_test.index.values
     levels = actual_test['Level'].values
     for ts in range(len(actual_test)):
-        if half_horizon_case:
+        if half_horizon_case == 'half':
             idx = half_horizon[data]
             actual_test_ts = actual_test.iloc[ts: ts + 1, 1:idx + 1].values[0]
             # fc
             ts_fc = df_forecasts.iloc[ts: ts + 1, 0:idx].values[0]
-        else:
+        elif half_horizon_case == 'full':
             actual_test_ts = actual_test.iloc[ts: ts + 1, 1:].values[0]
             # fc
             ts_fc = df_forecasts.iloc[ts: ts + 1, :].values[0]
+        else:
+            # one horizon
+            idx = 1
+            actual_test_ts = actual_test.iloc[ts: ts + 1, 1:idx + 1].values[0]
+            # fc
+            ts_fc = df_forecasts.iloc[ts: ts + 1, 0:idx].values[0]
         calculate_error(mean_squared_error, actual_test_ts, ts_fc, errors, ts_names, ts, 'MSE',
                         levels)
         calculate_error(mean_absolute_error, actual_test_ts, ts_fc, errors, ts_names, ts,
@@ -51,8 +57,10 @@ def calculate_errors_per_fc(data, fc_type, actual_test, file_name, half_horizon_
     errors.columns = ['ts_name', 'error_metric', 'error', 'level']
     if len(forecast_type) > 3:
         fc_type = f'{forecast_type[0]}_{forecast_type[1]}_{forecast_type[2]}_no_skip'
-    if half_horizon_case:
+    if half_horizon_case == 'half':
         file_name = f'{file_name}_short_horizon'
+    elif half_horizon_case == 'one':
+        file_name = f'{file_name}_one_step_horizon'
     errors.to_csv(f'results/expanding_window_results/errors/{file_name}_{fc_type}.csv')
 
 
@@ -69,17 +77,17 @@ def run_errors(data, model, half_horizon_case):
                'case2_lambda_[0.01, 0.09]',
                'case2_lambda_[0.1, 0.9]',
                'case2_lambda_[1, 4]',
-               'case2_lambda_[0.01, 5]']
-               # 'case1_lambda_1_lambda_1_no_skip',
-               # 'case1_lambda_[0.01, 0.09]_lambda_[0.01, 0.09]_no_skip',
-               # 'case1_lambda_[0.1, 0.9]_lambda_[0.1, 0.9]_no_skip',
-               # 'case1_lambda_[1, 4]_lambda_[1, 4]_no_skip',
-               # 'case1_lambda_[0.01, 5]_lambda_[0.01, 5]_no_skip',
-               # 'case2_lambda_1_lambda_1_no_skip',
-               # 'case2_lambda_[0.01, 0.09]_lambda_[0.01, 0.09]_no_skip',
-               # 'case2_lambda_[0.1, 0.9]_lambda_[0.1, 0.9]_no_skip',
-               # 'case2_lambda_[1, 4]_lambda_[1, 4]_no_skip',
-               # 'case2_lambda_[0.01, 5]_lambda_[0.01, 5]_no_skip']
+               'case2_lambda_[0.01, 5]',
+               'case1_lambda_1_lambda_1_no_skip',
+               'case1_lambda_[0.01, 0.09]_lambda_[0.01, 0.09]_no_skip',
+               'case1_lambda_[0.1, 0.9]_lambda_[0.1, 0.9]_no_skip',
+               'case1_lambda_[1, 4]_lambda_[1, 4]_no_skip',
+               'case1_lambda_[0.01, 5]_lambda_[0.01, 5]_no_skip',
+               'case2_lambda_1_lambda_1_no_skip',
+               'case2_lambda_[0.01, 0.09]_lambda_[0.01, 0.09]_no_skip',
+               'case2_lambda_[0.1, 0.9]_lambda_[0.1, 0.9]_no_skip',
+               'case2_lambda_[1, 4]_lambda_[1, 4]_no_skip',
+               'case2_lambda_[0.01, 5]_lambda_[0.01, 5]_no_skip']
 
     for fc_type in FC_TYPE:
         # file_name = f'{data}_{model}'
@@ -100,10 +108,12 @@ if __name__ == '__main__':
     dataset_samples = {'prison': 3, 'tourism': 10, 'wikipedia': 10, 'labour': 5}
 
     datasets = ['prison', 'labour', 'tourism', 'wikipedia']
-    half_horizon_cases = [True, False]
-    # models = ['arima', 'ets']
-    models = ['deepAR', 'waveNet']
+    half_horizon_cases = ['half', 'full', 'one']
+    models = ['arima', 'ets']
+    # models = ['deepAR', 'waveNet']
     for data in datasets:
         for model in models:
-            for half_horizon_val in half_horizon_cases:
-                run_errors(data, model, half_horizon_val)
+            # one step ahead horizon
+            run_errors(data, model, 'one')
+            # for half_horizon_val in half_horizon_cases:
+            #     run_errors(data, model, half_horizon_val)
