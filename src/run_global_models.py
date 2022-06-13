@@ -23,12 +23,11 @@ start_date = DATA[data]['start_date']
 samples = DATA[data]['samples']
 levels = levels_in_hierarchy[data]
 
-for sample in range(0, 1):
+for sample in range(0, samples):
     sample_train = pd.read_csv(f'input_data/new_data_samples/{data}_{sample}_actual.csv')
     sample_test = pd.read_csv(f'input_data/new_data_samples/{data}_{sample}_test.csv')
 
     if clusters:
-
         cluster_df = pd.read_csv(f'input_data/ts_features/{data}_clusters.csv')
         level_wise_fitted = []
         level_wise_fc = []
