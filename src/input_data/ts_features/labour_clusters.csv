@@ -1,0 +1,58 @@
+Level,Description,cluster
+1,Aggregated,16
+2,Clerical and Administrative Workers,15
+2,Community and Personal Service Workers,3
+2,Labourers,11
+2,Machinery Operators and Drivers,12
+2,Managers,4
+2,Professionals,3
+2,Sales Workers,0
+2,Technicians and Trades Workers,10
+3,Clerical and Administrative Workers-Full time,8
+3,Clerical and Administrative Workers-Part time,5
+3,Community and Personal Service Workers-Full time,0
+3,Community and Personal Service Workers-Part time,3
+3,Labourers-Full time,1
+3,Labourers-Part time,5
+3,Machinery Operators and Drivers-Full time,12
+3,Machinery Operators and Drivers-Part time,15
+3,Managers-Full time,0
+3,Managers-Part time,10
+3,Professionals-Full time,4
+3,Professionals-Part time,3
+3,Sales Workers-Full time,17
+3,Sales Workers-Part time,5
+3,Technicians and Trades Workers-Full time,10
+3,Technicians and Trades Workers-Part time,4
+4,Clerical and Administrative Workers-Full time-Females,8
+4,Clerical and Administrative Workers-Full time-Males,2
+4,Clerical and Administrative Workers-Part time-Females,5
+4,Clerical and Administrative Workers-Part time-Males,3
+4,Community and Personal Service Workers-Full time-Females,0
+4,Community and Personal Service Workers-Full time-Males,4
+4,Community and Personal Service Workers-Part time-Females,3
+4,Community and Personal Service Workers-Part time-Males,3
+4,Labourers-Full time-Females,14
+4,Labourers-Full time-Males,1
+4,Labourers-Part time-Females,11
+4,Labourers-Part time-Males,5
+4,Machinery Operators and Drivers-Full time-Females,6
+4,Machinery Operators and Drivers-Full time-Males,12
+4,Machinery Operators and Drivers-Part time-Females,7
+4,Machinery Operators and Drivers-Part time-Males,5
+4,Managers-Full time-Females,0
+4,Managers-Full time-Males,19
+4,Managers-Part time-Females,18
+4,Managers-Part time-Males,4
+4,Professionals-Full time-Females,4
+4,Professionals-Full time-Males,4
+4,Professionals-Part time-Females,3
+4,Professionals-Part time-Males,3
+4,Sales Workers-Full time-Females,13
+4,Sales Workers-Full time-Males,9
+4,Sales Workers-Part time-Females,5
+4,Sales Workers-Part time-Males,5
+4,Technicians and Trades Workers-Full time-Females,8
+4,Technicians and Trades Workers-Full time-Males,10
+4,Technicians and Trades Workers-Part time-Females,0
+4,Technicians and Trades Workers-Part time-Males,4

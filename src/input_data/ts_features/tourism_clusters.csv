@@ -1,0 +1,86 @@
+Level,Description,cluster
+1,Aggregated,5
+2,NSW,16
+2,NT,2
+2,QLD,5
+2,SA,6
+2,TAS,3
+2,VIC,12
+2,WA,17
+3,NSW-Blue Mountains,18
+3,NSW-Canberra,12
+3,NSW-Capital Country,5
+3,NSW-Central Coast,10
+3,NSW-Central NSW,5
+3,NSW-Hunter,12
+3,NSW-New England North West,6
+3,NSW-North Coast NSW,1
+3,NSW-Outback NSW,8
+3,NSW-Riverina,16
+3,NSW-Snowy Mountains,2
+3,NSW-South Coast,7
+3,NSW-Sydney,16
+3,NSW-The Murray,7
+3,NT-Alice Springs,2
+3,NT-Barkly,0
+3,NT-Darwin,2
+3,NT-Katherine Daly,0
+3,NT-Lasseter,0
+3,NT-Litchfield Kakadu Arnhem,2
+3,NT-MacDonnell,2
+3,QLD-Brisbane,5
+3,QLD-Bundaberg,2
+3,QLD-Capricorn,2
+3,QLD-Fraser Coast,6
+3,QLD-Gladstone,13
+3,QLD-Gold Coast,10
+3,QLD-Mackay,13
+3,QLD-Outback Queensland,8
+3,QLD-Southern Queensland Country,5
+3,QLD-Sunshine Coast,1
+3,QLD-Townsville,2
+3,QLD-Tropical North Queensland,2
+3,QLD-Whitsundays,2
+3,SA-Adelaide,7
+3,SA-Adelaide Hills,11
+3,SA-Barossa,3
+3,SA-Clare Valley,19
+3,SA-Eyre Peninsula,7
+3,SA-Fleurieu Peninsula,3
+3,SA-Flinders Ranges and Outback,0
+3,SA-Kangaroo Island,1
+3,SA-Limestone Coast,3
+3,"SA-Murray River, Lakes and Coorong",7
+3,SA-Riverland,6
+3,SA-Yorke Peninsula,3
+3,TAS-East Coast,3
+3,TAS-Hobart and the South,12
+3,TAS-Launceston and the North,3
+3,TAS-North West,12
+3,TAS-West Coast,7
+3,VIC-Ballarat,12
+3,VIC-Bendigo Loddon,5
+3,VIC-Central Highlands,14
+3,VIC-Central Murray,3
+3,VIC-Geelong and the Bellarine,1
+3,VIC-Gippsland,3
+3,VIC-Goulburn,12
+3,VIC-Great Ocean Road,3
+3,VIC-High Country,5
+3,VIC-Lakes,3
+3,VIC-Macedon,12
+3,VIC-Mallee,6
+3,VIC-Melbourne,17
+3,VIC-Melbourne East,15
+3,VIC-Murray East,1
+3,VIC-Peninsula,3
+3,VIC-Phillip Island,3
+3,VIC-Spa Country,9
+3,VIC-Upper Yarra,7
+3,VIC-Western Grampians,14
+3,VIC-Wimmera,12
+3,WA-Australia's Coral Coast,2
+3,WA-Australia's Golden Outback,8
+3,WA-Australia's North West,4
+3,WA-Australia's South West,12
+3,WA-Destination Perth,5

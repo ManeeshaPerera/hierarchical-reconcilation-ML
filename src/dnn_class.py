@@ -4,10 +4,17 @@ from gluonts.evaluation import make_evaluation_predictions
 
 
 class DNN:
-    def __init__(self, level, data_train, data_test, start_date, freq, horizon):
-        self.level = level
-        self.data_train = data_train.loc[data_train['Level'] == level]
-        original_test = data_test.loc[data_test['Level'] == level]
+    def __init__(self, level, data_train, data_test, start_date, freq, horizon, cluster=False, cluster_num=None,
+                 cluster_df=None):
+        if cluster:
+            description = cluster_df.loc[cluster_df['cluster'] == cluster_num]['Description'].values
+            self.cluster = cluster_num
+            self.data_train = data_train.loc[data_train['Description'].isin(description)]
+            original_test = data_test.loc[data_test['Description'].isin(description)]
+        else:
+            self.level = level
+            self.data_train = data_train.loc[data_train['Level'] == level]
+            original_test = data_test.loc[data_test['Level'] == level]
         self.data_test = pd.concat([self.data_train, original_test.iloc[:, 2:]], axis=1)
         self.train_dataset = None
         self.test_dataset = None
@@ -18,6 +25,7 @@ class DNN:
         self.freq = freq
         self.horizon = horizon
         self.predictor = None
+        self.level_data = self.data_train['Level'].values.tolist()
         self.meta_data = self.data_train['Description'].values.tolist()
         self.process_data_model(self.data_train, self.train_list)
         self.process_data_model(self.data_test, self.test_list)
@@ -55,7 +63,7 @@ class DNN:
         for i in range(0, len(forecast_list)):
             fc_values = forecast_list[i].median.tolist()
             fc_values.insert(0, self.meta_data[i])
-            fc_values.insert(0, self.level)
+            fc_values.insert(0, self.level_data[i])
             fc_data.append(fc_values)
         return self.add_meta_data(fc_data)
 
@@ -102,5 +110,5 @@ class DNN:
                     fitted_data[i].extend(fc_values)
         for ts in range(len(fitted_data)):
             fitted_data[ts].insert(0, self.meta_data[ts])
-            fitted_data[ts].insert(0, self.level)
+            fitted_data[ts].insert(0, self.level_data[ts])
         return self.add_meta_data(fitted_data)

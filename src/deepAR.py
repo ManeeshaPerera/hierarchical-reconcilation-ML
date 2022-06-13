@@ -4,8 +4,10 @@ from dnn_class import DNN
 
 
 class DeepAR(DNN):
-    def __init__(self, level, data_train, data_test, start_date, freq, horizon):
-        super().__init__(level, data_train, data_test, start_date, freq, horizon)
+    def __init__(self, level, data_train, data_test, start_date, freq, horizon, cluster=False, cluster_num=None,
+                 cluster_df=None):
+        super().__init__(level, data_train, data_test, start_date, freq, horizon, cluster, cluster_num,
+                         cluster_df)
 
     def train_model(self):
         estimator = DeepAREstimator(freq=self.freq, prediction_length=self.horizon, trainer=Trainer(epochs=50))

@@ -1,0 +1,1096 @@
+Level,Description,cluster
+1,Aggregated,7
+2,desktop,18
+2,mobileapp,2
+2,mobileweb,10
+3,desktop-spider,9
+3,desktop-user,18
+3,mobileapp-user,2
+3,mobileweb-spider,0
+3,mobileweb-user,10
+4,desktop-spider-de,14
+4,desktop-spider-en,9
+4,desktop-spider-es,0
+4,desktop-spider-zh,13
+4,desktop-user-de,3
+4,desktop-user-en,7
+4,desktop-user-es,1
+4,desktop-user-zh,8
+4,mobileapp-user-de,5
+4,mobileapp-user-en,2
+4,mobileapp-user-es,6
+4,mobileapp-user-zh,13
+4,mobileweb-spider-de,11
+4,mobileweb-spider-en,0
+4,mobileweb-spider-es,7
+4,mobileweb-spider-zh,10
+4,mobileweb-user-de,3
+4,mobileweb-user-en,10
+4,mobileweb-user-es,0
+4,mobileweb-user-zh,10
+5,desktop-spider-de-Blogging Related,1
+5,desktop-spider-de-Business,11
+5,desktop-spider-de-Gaming,1
+5,desktop-spider-de-General Purpose,14
+5,desktop-spider-de-Lifestyle,5
+5,desktop-spider-de-Photo Sharing,14
+5,desktop-spider-de-Reunion,12
+5,desktop-spider-de-Travel,15
+5,desktop-spider-de-Video,11
+5,desktop-spider-en-Blogging Related,5
+5,desktop-spider-en-Business,5
+5,desktop-spider-en-Gaming,18
+5,desktop-spider-en-General Purpose,4
+5,desktop-spider-en-Lifestyle,9
+5,desktop-spider-en-Photo Sharing,0
+5,desktop-spider-en-Reunion,5
+5,desktop-spider-en-Travel,17
+5,desktop-spider-en-Video,16
+5,desktop-spider-es-Blogging Related,0
+5,desktop-spider-es-Business,11
+5,desktop-spider-es-Gaming,9
+5,desktop-spider-es-General Purpose,9
+5,desktop-spider-es-Lifestyle,0
+5,desktop-spider-es-Photo Sharing,0
+5,desktop-spider-es-Reunion,4
+5,desktop-spider-es-Travel,5
+5,desktop-spider-es-Video,9
+5,desktop-spider-zh-Blogging Related,1
+5,desktop-spider-zh-Gaming,4
+5,desktop-spider-zh-General Purpose,2
+5,desktop-spider-zh-Lifestyle,4
+5,desktop-spider-zh-Photo Sharing,8
+5,desktop-spider-zh-Video,13
+5,desktop-user-de-Blogging Related,16
+5,desktop-user-de-Business,14
+5,desktop-user-de-Gaming,17
+5,desktop-user-de-General Purpose,3
+5,desktop-user-de-Lifestyle,16
+5,desktop-user-de-Photo Sharing,17
+5,desktop-user-de-Reunion,9
+5,desktop-user-de-Travel,12
+5,desktop-user-de-Video,2
+5,desktop-user-en-Blogging Related,16
+5,desktop-user-en-Business,14
+5,desktop-user-en-Gaming,16
+5,desktop-user-en-General Purpose,18
+5,desktop-user-en-Lifestyle,14
+5,desktop-user-en-Photo Sharing,17
+5,desktop-user-en-Reunion,7
+5,desktop-user-en-Travel,2
+5,desktop-user-en-Video,13
+5,desktop-user-es-Blogging Related,18
+5,desktop-user-es-Business,18
+5,desktop-user-es-Gaming,3
+5,desktop-user-es-General Purpose,17
+5,desktop-user-es-Lifestyle,17
+5,desktop-user-es-Photo Sharing,17
+5,desktop-user-es-Reunion,4
+5,desktop-user-es-Travel,17
+5,desktop-user-es-Video,13
+5,desktop-user-zh-Blogging Related,16
+5,desktop-user-zh-Gaming,16
+5,desktop-user-zh-General Purpose,8
+5,desktop-user-zh-Lifestyle,7
+5,desktop-user-zh-Photo Sharing,11
+5,desktop-user-zh-Video,13
+5,mobileapp-user-de-Gaming,18
+5,mobileapp-user-de-General Purpose,5
+5,mobileapp-user-de-Lifestyle,18
+5,mobileapp-user-de-Photo Sharing,1
+5,mobileapp-user-de-Reunion,9
+5,mobileapp-user-de-Travel,12
+5,mobileapp-user-de-Video,8
+5,mobileapp-user-en-Blogging Related,7
+5,mobileapp-user-en-Business,17
+5,mobileapp-user-en-Gaming,11
+5,mobileapp-user-en-General Purpose,2
+5,mobileapp-user-en-Lifestyle,12
+5,mobileapp-user-en-Photo Sharing,12
+5,mobileapp-user-en-Reunion,8
+5,mobileapp-user-en-Travel,2
+5,mobileapp-user-en-Video,8
+5,mobileapp-user-es-Gaming,1
+5,mobileapp-user-es-General Purpose,6
+5,mobileapp-user-es-Lifestyle,5
+5,mobileapp-user-es-Photo Sharing,17
+5,mobileapp-user-es-Travel,11
+5,mobileapp-user-es-Video,17
+5,mobileapp-user-zh-General Purpose,2
+5,mobileapp-user-zh-Photo Sharing,1
+5,mobileapp-user-zh-Video,2
+5,mobileweb-spider-de-Gaming,18
+5,mobileweb-spider-de-General Purpose,11
+5,mobileweb-spider-de-Lifestyle,16
+5,mobileweb-spider-de-Photo Sharing,5
+5,mobileweb-spider-de-Travel,11
+5,mobileweb-spider-de-Video,2
+5,mobileweb-spider-en-Blogging Related,8
+5,mobileweb-spider-en-Business,4
+5,mobileweb-spider-en-Gaming,0
+5,mobileweb-spider-en-General Purpose,0
+5,mobileweb-spider-en-Lifestyle,0
+5,mobileweb-spider-en-Photo Sharing,8
+5,mobileweb-spider-en-Reunion,0
+5,mobileweb-spider-en-Travel,0
+5,mobileweb-spider-en-Video,13
+5,mobileweb-spider-es-Blogging Related,1
+5,mobileweb-spider-es-Gaming,11
+5,mobileweb-spider-es-General Purpose,7
+5,mobileweb-spider-es-Lifestyle,5
+5,mobileweb-spider-es-Photo Sharing,5
+5,mobileweb-spider-es-Reunion,1
+5,mobileweb-spider-es-Travel,18
+5,mobileweb-spider-es-Video,7
+5,mobileweb-spider-zh-Blogging Related,4
+5,mobileweb-spider-zh-Gaming,1
+5,mobileweb-spider-zh-General Purpose,10
+5,mobileweb-spider-zh-Lifestyle,1
+5,mobileweb-spider-zh-Photo Sharing,18
+5,mobileweb-spider-zh-Video,8
+5,mobileweb-user-de-Blogging Related,16
+5,mobileweb-user-de-Business,18
+5,mobileweb-user-de-Gaming,11
+5,mobileweb-user-de-General Purpose,3
+5,mobileweb-user-de-Lifestyle,9
+5,mobileweb-user-de-Photo Sharing,18
+5,mobileweb-user-de-Reunion,19
+5,mobileweb-user-de-Travel,11
+5,mobileweb-user-de-Video,9
+5,mobileweb-user-en-Blogging Related,7
+5,mobileweb-user-en-Business,14
+5,mobileweb-user-en-Gaming,11
+5,mobileweb-user-en-General Purpose,18
+5,mobileweb-user-en-Lifestyle,3
+5,mobileweb-user-en-Photo Sharing,18
+5,mobileweb-user-en-Reunion,10
+5,mobileweb-user-en-Travel,2
+5,mobileweb-user-en-Video,10
+5,mobileweb-user-es-Blogging Related,9
+5,mobileweb-user-es-Business,11
+5,mobileweb-user-es-Gaming,9
+5,mobileweb-user-es-General Purpose,4
+5,mobileweb-user-es-Lifestyle,7
+5,mobileweb-user-es-Photo Sharing,17
+5,mobileweb-user-es-Reunion,8
+5,mobileweb-user-es-Travel,9
+5,mobileweb-user-es-Video,10
+5,mobileweb-user-zh-Blogging Related,1
+5,mobileweb-user-zh-Gaming,1
+5,mobileweb-user-zh-General Purpose,10
+5,mobileweb-user-zh-Lifestyle,9
+5,mobileweb-user-zh-Photo Sharing,11
+5,mobileweb-user-zh-Video,10
+6,desktop-spider-de-Blogging Related-LiveJournal,1
+6,desktop-spider-de-Blogging Related-Xanga,1
+6,desktop-spider-de-Business-Viadeo,11
+6,desktop-spider-de-Gaming-Zynga,1
+6,desktop-spider-de-General Purpose-Badoo,14
+6,desktop-spider-de-General Purpose-Facebook,4
+6,desktop-spider-de-General Purpose-Foursquare,5
+6,desktop-spider-de-General Purpose-Google+,11
+6,desktop-spider-de-General Purpose-Instagram,16
+6,desktop-spider-de-General Purpose-Kickstarter,12
+6,desktop-spider-de-General Purpose-LinkedIn,15
+6,desktop-spider-de-General Purpose-Myspace,5
+6,desktop-spider-de-General Purpose-Pinterest,15
+6,desktop-spider-de-General Purpose-Quora,9
+6,desktop-spider-de-General Purpose-Reddit,17
+6,desktop-spider-de-General Purpose-Skype,17
+6,desktop-spider-de-General Purpose-Snapchat,14
+6,desktop-spider-de-General Purpose-StumbleUpon,14
+6,desktop-spider-de-General Purpose-Tagged,12
+6,desktop-spider-de-General Purpose-Tumblr,15
+6,desktop-spider-de-General Purpose-Twitter,4
+6,desktop-spider-de-General Purpose-Viber,2
+6,desktop-spider-de-General Purpose-WeChat,5
+6,desktop-spider-de-General Purpose-WhatsApp,16
+6,desktop-spider-de-General Purpose-Yelp,5
+6,desktop-spider-de-Lifestyle-Last.fm,5
+6,desktop-spider-de-Lifestyle-Ravelry,11
+6,desktop-spider-de-Lifestyle-SoundCloud,14
+6,desktop-spider-de-Photo Sharing-500px,5
+6,desktop-spider-de-Photo Sharing-DeviantArt,14
+6,desktop-spider-de-Photo Sharing-Flickr,14
+6,desktop-spider-de-Photo Sharing-Imgur,1
+6,desktop-spider-de-Photo Sharing-Pixabay,5
+6,desktop-spider-de-Photo Sharing-Shutterfly,1
+6,desktop-spider-de-Reunion-23andMe,12
+6,desktop-spider-de-Reunion-MyHeritage,1
+6,desktop-spider-de-Travel-CouchSurfing,15
+6,desktop-spider-de-Video-YouTube,11
+6,desktop-spider-en-Blogging Related-LiveJournal,5
+6,desktop-spider-en-Blogging Related-Plurk,1
+6,desktop-spider-en-Blogging Related-Xanga,16
+6,desktop-spider-en-Business-Ryze,1
+6,desktop-spider-en-Business-Solaborate,11
+6,desktop-spider-en-Business-Viadeo,16
+6,desktop-spider-en-Business-Xing_Technology,1
+6,desktop-spider-en-Gaming-Cellufun,1
+6,desktop-spider-en-Gaming-Habbo,16
+6,desktop-spider-en-Gaming-MocoSpace,15
+6,desktop-spider-en-Gaming-Zynga,18
+6,desktop-spider-en-General Purpose-AngelList,3
+6,desktop-spider-en-General Purpose-Badoo,8
+6,desktop-spider-en-General Purpose-Facebook,0
+6,desktop-spider-en-General Purpose-Facebook_Messenger,13
+6,desktop-spider-en-General Purpose-Foursquare,18
+6,desktop-spider-en-General Purpose-GirlsAskGuys,5
+6,desktop-spider-en-General Purpose-Google+,18
+6,desktop-spider-en-General Purpose-Instagram,8
+6,desktop-spider-en-General Purpose-Kickstarter,16
+6,desktop-spider-en-General Purpose-Kiwibox,17
+6,desktop-spider-en-General Purpose-LinkedIn,14
+6,desktop-spider-en-General Purpose-MeetMe,14
+6,desktop-spider-en-General Purpose-Meetup_(website),18
+6,desktop-spider-en-General Purpose-Myspace,14
+6,desktop-spider-en-General Purpose-Nextdoor,9
+6,desktop-spider-en-General Purpose-Pinboard_(website),5
+6,desktop-spider-en-General Purpose-Pinterest,14
+6,desktop-spider-en-General Purpose-Product_Hunt,16
+6,desktop-spider-en-General Purpose-Quora,1
+6,desktop-spider-en-General Purpose-Reddit,4
+6,desktop-spider-en-General Purpose-Skype,19
+6,desktop-spider-en-General Purpose-Skyrock_(social_network_site),5
+6,desktop-spider-en-General Purpose-Snapchat,5
+6,desktop-spider-en-General Purpose-StumbleUpon,18
+6,desktop-spider-en-General Purpose-Tagged,4
+6,desktop-spider-en-General Purpose-Tumblr,18
+6,desktop-spider-en-General Purpose-Twitter,14
+6,desktop-spider-en-General Purpose-Twoo.com,2
+6,desktop-spider-en-General Purpose-VK_(social_networking),9
+6,desktop-spider-en-General Purpose-Viber,16
+6,desktop-spider-en-General Purpose-WeChat,14
+6,desktop-spider-en-General Purpose-WhatsApp,16
+6,desktop-spider-en-General Purpose-Yelp,4
+6,desktop-spider-en-Lifestyle-ASmallWorld,14
+6,desktop-spider-en-Lifestyle-Academia.edu,3
+6,desktop-spider-en-Lifestyle-BlackPlanet,14
+6,desktop-spider-en-Lifestyle-CafeMom,11
+6,desktop-spider-en-Lifestyle-Care2,18
+6,desktop-spider-en-Lifestyle-CaringBridge,14
+6,desktop-spider-en-Lifestyle-Doximity,5
+6,"desktop-spider-en-Lifestyle-English,_baby!",11
+6,desktop-spider-en-Lifestyle-Flixster,17
+6,desktop-spider-en-Lifestyle-Gaia_Online,7
+6,desktop-spider-en-Lifestyle-GoFundMe,18
+6,desktop-spider-en-Lifestyle-Goodreads,18
+6,desktop-spider-en-Lifestyle-Italki,18
+6,desktop-spider-en-Lifestyle-Last.fm,4
+6,desktop-spider-en-Lifestyle-Minds,8
+6,desktop-spider-en-Lifestyle-MyMFB,1
+6,desktop-spider-en-Lifestyle-Nexopia,11
+6,desktop-spider-en-Lifestyle-PlentyOfFish,18
+6,desktop-spider-en-Lifestyle-Ravelry,8
+6,desktop-spider-en-Lifestyle-ReverbNation,1
+6,desktop-spider-en-Lifestyle-SoundCloud,18
+6,desktop-spider-en-Lifestyle-Tinder_(app),18
+6,desktop-spider-en-Lifestyle-Untappd,9
+6,desktop-spider-en-Lifestyle-Vampirefreaks.com,2
+6,desktop-spider-en-Photo Sharing-43_Things,5
+6,desktop-spider-en-Photo Sharing-500px,7
+6,desktop-spider-en-Photo Sharing-DeviantArt,16
+6,desktop-spider-en-Photo Sharing-Flickr,4
+6,desktop-spider-en-Photo Sharing-Fotki,11
+6,desktop-spider-en-Photo Sharing-Fotolog,1
+6,desktop-spider-en-Photo Sharing-Imgur,9
+6,desktop-spider-en-Photo Sharing-Path_(social_network),14
+6,desktop-spider-en-Photo Sharing-Photobucket,16
+6,desktop-spider-en-Photo Sharing-Pixabay,9
+6,desktop-spider-en-Photo Sharing-Shutterfly,13
+6,desktop-spider-en-Photo Sharing-Snapfish,4
+6,desktop-spider-en-Photo Sharing-Uplike,5
+6,desktop-spider-en-Photo Sharing-We_Heart_It,7
+6,desktop-spider-en-Reunion-23andMe,18
+6,desktop-spider-en-Reunion-Ancestry.com,1
+6,desktop-spider-en-Reunion-Classmates.com,16
+6,desktop-spider-en-Reunion-MyHeritage,4
+6,desktop-spider-en-Travel-CouchSurfing,17
+6,desktop-spider-en-Travel-TravBuddy.com,11
+6,desktop-spider-en-Travel-WAYN_(website),17
+6,desktop-spider-en-Video-Funny_or_Die,16
+6,desktop-spider-en-Video-Tout,5
+6,desktop-spider-en-Video-Vine_(service),18
+6,desktop-spider-en-Video-YouTube,16
+6,desktop-spider-es-Blogging Related-LiveJournal,4
+6,desktop-spider-es-Blogging Related-Plurk,7
+6,desktop-spider-es-Business-Viadeo,11
+6,desktop-spider-es-Gaming-Habbo,9
+6,desktop-spider-es-Gaming-Zynga,1
+6,desktop-spider-es-General Purpose-Badoo,2
+6,desktop-spider-es-General Purpose-Facebook,16
+6,desktop-spider-es-General Purpose-Facebook_Messenger,5
+6,desktop-spider-es-General Purpose-Foursquare,11
+6,desktop-spider-es-General Purpose-Google+,4
+6,desktop-spider-es-General Purpose-Instagram,9
+6,desktop-spider-es-General Purpose-Kickstarter,8
+6,desktop-spider-es-General Purpose-LinkedIn,9
+6,desktop-spider-es-General Purpose-Myspace,9
+6,desktop-spider-es-General Purpose-Pinterest,17
+6,desktop-spider-es-General Purpose-Quora,9
+6,desktop-spider-es-General Purpose-Reddit,9
+6,desktop-spider-es-General Purpose-Skype,1
+6,desktop-spider-es-General Purpose-Snapchat,5
+6,desktop-spider-es-General Purpose-StumbleUpon,8
+6,desktop-spider-es-General Purpose-Tagged,4
+6,desktop-spider-es-General Purpose-Tumblr,11
+6,desktop-spider-es-General Purpose-Twitter,9
+6,desktop-spider-es-General Purpose-Viber,4
+6,desktop-spider-es-General Purpose-WeChat,11
+6,desktop-spider-es-General Purpose-WhatsApp,18
+6,desktop-spider-es-Lifestyle-Goodreads,9
+6,desktop-spider-es-Lifestyle-Last.fm,8
+6,desktop-spider-es-Lifestyle-SoundCloud,16
+6,desktop-spider-es-Photo Sharing-500px,5
+6,desktop-spider-es-Photo Sharing-DeviantArt,9
+6,desktop-spider-es-Photo Sharing-Flickr,7
+6,desktop-spider-es-Photo Sharing-Fotolog,4
+6,desktop-spider-es-Photo Sharing-Photobucket,4
+6,desktop-spider-es-Reunion-23andMe,11
+6,desktop-spider-es-Reunion-MyHeritage,5
+6,desktop-spider-es-Travel-CouchSurfing,5
+6,desktop-spider-es-Video-YouTube,9
+6,desktop-spider-zh-Blogging Related-LiveJournal,1
+6,desktop-spider-zh-Blogging Related-Plurk,17
+6,desktop-spider-zh-Blogging Related-Xanga,1
+6,desktop-spider-zh-Gaming-Zynga,4
+6,desktop-spider-zh-General Purpose-Facebook,12
+6,desktop-spider-zh-General Purpose-Facebook_Messenger,8
+6,desktop-spider-zh-General Purpose-Foursquare,1
+6,desktop-spider-zh-General Purpose-Google+,8
+6,desktop-spider-zh-General Purpose-Instagram,8
+6,desktop-spider-zh-General Purpose-Kickstarter,5
+6,desktop-spider-zh-General Purpose-LinkedIn,12
+6,desktop-spider-zh-General Purpose-Myspace,4
+6,desktop-spider-zh-General Purpose-Pinterest,17
+6,desktop-spider-zh-General Purpose-Quora,2
+6,desktop-spider-zh-General Purpose-Reddit,2
+6,desktop-spider-zh-General Purpose-Skype,1
+6,desktop-spider-zh-General Purpose-Snapchat,0
+6,desktop-spider-zh-General Purpose-Tumblr,12
+6,desktop-spider-zh-General Purpose-Twitter,8
+6,desktop-spider-zh-General Purpose-Viber,2
+6,desktop-spider-zh-General Purpose-WhatsApp,5
+6,desktop-spider-zh-Lifestyle-Goodreads,14
+6,desktop-spider-zh-Lifestyle-Last.fm,8
+6,desktop-spider-zh-Lifestyle-PlentyOfFish,4
+6,desktop-spider-zh-Lifestyle-SoundCloud,4
+6,desktop-spider-zh-Photo Sharing-500px,4
+6,desktop-spider-zh-Photo Sharing-Flickr,8
+6,desktop-spider-zh-Photo Sharing-Imgur,11
+6,desktop-spider-zh-Video-YouTube,13
+6,desktop-user-de-Blogging Related-LiveJournal,16
+6,desktop-user-de-Blogging Related-Xanga,18
+6,desktop-user-de-Business-Viadeo,14
+6,desktop-user-de-Gaming-Zynga,17
+6,desktop-user-de-General Purpose-Badoo,3
+6,desktop-user-de-General Purpose-Facebook,15
+6,desktop-user-de-General Purpose-Foursquare,17
+6,desktop-user-de-General Purpose-Google+,14
+6,desktop-user-de-General Purpose-Instagram,18
+6,desktop-user-de-General Purpose-Kickstarter,12
+6,desktop-user-de-General Purpose-LinkedIn,16
+6,desktop-user-de-General Purpose-Myspace,17
+6,desktop-user-de-General Purpose-Pinterest,19
+6,desktop-user-de-General Purpose-Quora,0
+6,desktop-user-de-General Purpose-Reddit,16
+6,desktop-user-de-General Purpose-Skype,3
+6,desktop-user-de-General Purpose-Snapchat,15
+6,desktop-user-de-General Purpose-StumbleUpon,14
+6,desktop-user-de-General Purpose-Tagged,14
+6,desktop-user-de-General Purpose-Tumblr,3
+6,desktop-user-de-General Purpose-Twitter,16
+6,desktop-user-de-General Purpose-Viber,3
+6,desktop-user-de-General Purpose-WeChat,18
+6,desktop-user-de-General Purpose-WhatsApp,3
+6,desktop-user-de-General Purpose-Yelp,14
+6,desktop-user-de-Lifestyle-Last.fm,15
+6,desktop-user-de-Lifestyle-Ravelry,18
+6,desktop-user-de-Lifestyle-SoundCloud,9
+6,desktop-user-de-Photo Sharing-500px,17
+6,desktop-user-de-Photo Sharing-DeviantArt,14
+6,desktop-user-de-Photo Sharing-Flickr,17
+6,desktop-user-de-Photo Sharing-Imgur,16
+6,desktop-user-de-Photo Sharing-Pixabay,9
+6,desktop-user-de-Photo Sharing-Shutterfly,12
+6,desktop-user-de-Reunion-23andMe,1
+6,desktop-user-de-Reunion-MyHeritage,19
+6,desktop-user-de-Travel-CouchSurfing,12
+6,desktop-user-de-Video-YouTube,2
+6,desktop-user-en-Blogging Related-LiveJournal,4
+6,desktop-user-en-Blogging Related-Plurk,16
+6,desktop-user-en-Blogging Related-Xanga,4
+6,desktop-user-en-Business-Ryze,11
+6,desktop-user-en-Business-Solaborate,17
+6,desktop-user-en-Business-Viadeo,17
+6,desktop-user-en-Business-Xing_Technology,14
+6,desktop-user-en-Gaming-Cellufun,4
+6,desktop-user-en-Gaming-Habbo,19
+6,desktop-user-en-Gaming-MocoSpace,15
+6,desktop-user-en-Gaming-Zynga,17
+6,desktop-user-en-General Purpose-AngelList,3
+6,desktop-user-en-General Purpose-Badoo,15
+6,desktop-user-en-General Purpose-Facebook,19
+6,desktop-user-en-General Purpose-Facebook_Messenger,10
+6,desktop-user-en-General Purpose-Foursquare,16
+6,desktop-user-en-General Purpose-GirlsAskGuys,14
+6,desktop-user-en-General Purpose-Google+,17
+6,desktop-user-en-General Purpose-Instagram,0
+6,desktop-user-en-General Purpose-Kickstarter,18
+6,desktop-user-en-General Purpose-Kiwibox,4
+6,desktop-user-en-General Purpose-LinkedIn,17
+6,desktop-user-en-General Purpose-MeetMe,17
+6,desktop-user-en-General Purpose-Meetup_(website),1
+6,desktop-user-en-General Purpose-Myspace,4
+6,desktop-user-en-General Purpose-Nextdoor,10
+6,desktop-user-en-General Purpose-Pinboard_(website),4
+6,desktop-user-en-General Purpose-Pinterest,9
+6,desktop-user-en-General Purpose-Product_Hunt,9
+6,desktop-user-en-General Purpose-Quora,4
+6,desktop-user-en-General Purpose-Reddit,16
+6,desktop-user-en-General Purpose-Skype,3
+6,desktop-user-en-General Purpose-Skyrock_(social_network_site),12
+6,desktop-user-en-General Purpose-Snapchat,16
+6,desktop-user-en-General Purpose-StumbleUpon,17
+6,desktop-user-en-General Purpose-Tagged,15
+6,desktop-user-en-General Purpose-Tumblr,3
+6,desktop-user-en-General Purpose-Twitter,16
+6,desktop-user-en-General Purpose-Twoo.com,13
+6,desktop-user-en-General Purpose-VK_(social_networking),13
+6,desktop-user-en-General Purpose-Viber,15
+6,desktop-user-en-General Purpose-WeChat,4
+6,desktop-user-en-General Purpose-WhatsApp,16
+6,desktop-user-en-General Purpose-Yelp,1
+6,desktop-user-en-Lifestyle-ASmallWorld,3
+6,desktop-user-en-Lifestyle-Academia.edu,11
+6,desktop-user-en-Lifestyle-BlackPlanet,14
+6,desktop-user-en-Lifestyle-CafeMom,17
+6,desktop-user-en-Lifestyle-Care2,18
+6,desktop-user-en-Lifestyle-CaringBridge,0
+6,desktop-user-en-Lifestyle-Doximity,12
+6,"desktop-user-en-Lifestyle-English,_baby!",14
+6,desktop-user-en-Lifestyle-Flixster,14
+6,desktop-user-en-Lifestyle-Gaia_Online,9
+6,desktop-user-en-Lifestyle-GoFundMe,18
+6,desktop-user-en-Lifestyle-Goodreads,18
+6,desktop-user-en-Lifestyle-Italki,15
+6,desktop-user-en-Lifestyle-Last.fm,0
+6,desktop-user-en-Lifestyle-Minds,10
+6,desktop-user-en-Lifestyle-MyMFB,17
+6,desktop-user-en-Lifestyle-Nexopia,14
+6,desktop-user-en-Lifestyle-PlentyOfFish,15
+6,desktop-user-en-Lifestyle-Ravelry,16
+6,desktop-user-en-Lifestyle-ReverbNation,14
+6,desktop-user-en-Lifestyle-SoundCloud,9
+6,desktop-user-en-Lifestyle-Tinder_(app),15
+6,desktop-user-en-Lifestyle-Untappd,9
+6,desktop-user-en-Lifestyle-Vampirefreaks.com,17
+6,desktop-user-en-Photo Sharing-43_Things,15
+6,desktop-user-en-Photo Sharing-500px,3
+6,desktop-user-en-Photo Sharing-DeviantArt,17
+6,desktop-user-en-Photo Sharing-Flickr,16
+6,desktop-user-en-Photo Sharing-Fotki,14
+6,desktop-user-en-Photo Sharing-Fotolog,17
+6,desktop-user-en-Photo Sharing-Imgur,14
+6,desktop-user-en-Photo Sharing-Path_(social_network),14
+6,desktop-user-en-Photo Sharing-Photobucket,15
+6,desktop-user-en-Photo Sharing-Pixabay,18
+6,desktop-user-en-Photo Sharing-Shutterfly,16
+6,desktop-user-en-Photo Sharing-Snapfish,15
+6,desktop-user-en-Photo Sharing-Uplike,14
+6,desktop-user-en-Photo Sharing-We_Heart_It,2
+6,desktop-user-en-Reunion-23andMe,8
+6,desktop-user-en-Reunion-Ancestry.com,7
+6,desktop-user-en-Reunion-Classmates.com,17
+6,desktop-user-en-Reunion-MyHeritage,16
+6,desktop-user-en-Travel-CouchSurfing,15
+6,desktop-user-en-Travel-TravBuddy.com,17
+6,desktop-user-en-Travel-WAYN_(website),13
+6,desktop-user-en-Video-Funny_or_Die,17
+6,desktop-user-en-Video-Tout,17
+6,desktop-user-en-Video-Vine_(service),19
+6,desktop-user-en-Video-YouTube,13
+6,desktop-user-es-Blogging Related-LiveJournal,18
+6,desktop-user-es-Blogging Related-Plurk,18
+6,desktop-user-es-Business-Viadeo,18
+6,desktop-user-es-Gaming-Habbo,3
+6,desktop-user-es-Gaming-Zynga,17
+6,desktop-user-es-General Purpose-Badoo,14
+6,desktop-user-es-General Purpose-Facebook,17
+6,desktop-user-es-General Purpose-Facebook_Messenger,10
+6,desktop-user-es-General Purpose-Foursquare,17
+6,desktop-user-es-General Purpose-Google+,18
+6,desktop-user-es-General Purpose-Instagram,11
+6,desktop-user-es-General Purpose-Kickstarter,16
+6,desktop-user-es-General Purpose-LinkedIn,11
+6,desktop-user-es-General Purpose-Myspace,17
+6,desktop-user-es-General Purpose-Pinterest,15
+6,desktop-user-es-General Purpose-Quora,17
+6,desktop-user-es-General Purpose-Reddit,18
+6,desktop-user-es-General Purpose-Skype,17
+6,desktop-user-es-General Purpose-Snapchat,6
+6,desktop-user-es-General Purpose-StumbleUpon,17
+6,desktop-user-es-General Purpose-Tagged,14
+6,desktop-user-es-General Purpose-Tumblr,11
+6,desktop-user-es-General Purpose-Twitter,14
+6,desktop-user-es-General Purpose-Viber,17
+6,desktop-user-es-General Purpose-WeChat,7
+6,desktop-user-es-General Purpose-WhatsApp,16
+6,desktop-user-es-Lifestyle-Goodreads,18
+6,desktop-user-es-Lifestyle-Last.fm,18
+6,desktop-user-es-Lifestyle-SoundCloud,17
+6,desktop-user-es-Photo Sharing-500px,17
+6,desktop-user-es-Photo Sharing-DeviantArt,17
+6,desktop-user-es-Photo Sharing-Flickr,17
+6,desktop-user-es-Photo Sharing-Fotolog,17
+6,desktop-user-es-Photo Sharing-Photobucket,17
+6,desktop-user-es-Reunion-23andMe,11
+6,desktop-user-es-Reunion-MyHeritage,4
+6,desktop-user-es-Travel-CouchSurfing,17
+6,desktop-user-es-Video-YouTube,13
+6,desktop-user-zh-Blogging Related-LiveJournal,11
+6,desktop-user-zh-Blogging Related-Plurk,14
+6,desktop-user-zh-Blogging Related-Xanga,16
+6,desktop-user-zh-Gaming-Zynga,16
+6,desktop-user-zh-General Purpose-Facebook,8
+6,desktop-user-zh-General Purpose-Facebook_Messenger,8
+6,desktop-user-zh-General Purpose-Foursquare,0
+6,desktop-user-zh-General Purpose-Google+,11
+6,desktop-user-zh-General Purpose-Instagram,8
+6,desktop-user-zh-General Purpose-Kickstarter,18
+6,desktop-user-zh-General Purpose-LinkedIn,12
+6,desktop-user-zh-General Purpose-Myspace,11
+6,desktop-user-zh-General Purpose-Pinterest,8
+6,desktop-user-zh-General Purpose-Quora,0
+6,desktop-user-zh-General Purpose-Reddit,18
+6,desktop-user-zh-General Purpose-Skype,12
+6,desktop-user-zh-General Purpose-Snapchat,0
+6,desktop-user-zh-General Purpose-Tumblr,2
+6,desktop-user-zh-General Purpose-Twitter,7
+6,desktop-user-zh-General Purpose-Viber,1
+6,desktop-user-zh-General Purpose-WhatsApp,11
+6,desktop-user-zh-Lifestyle-Goodreads,4
+6,desktop-user-zh-Lifestyle-Last.fm,16
+6,desktop-user-zh-Lifestyle-PlentyOfFish,11
+6,desktop-user-zh-Lifestyle-SoundCloud,9
+6,desktop-user-zh-Photo Sharing-500px,11
+6,desktop-user-zh-Photo Sharing-Flickr,11
+6,desktop-user-zh-Photo Sharing-Imgur,18
+6,desktop-user-zh-Video-YouTube,13
+6,mobileapp-user-de-Gaming-Zynga,18
+6,mobileapp-user-de-General Purpose-Badoo,5
+6,mobileapp-user-de-General Purpose-Facebook,18
+6,mobileapp-user-de-General Purpose-Foursquare,1
+6,mobileapp-user-de-General Purpose-Google+,5
+6,mobileapp-user-de-General Purpose-Instagram,8
+6,mobileapp-user-de-General Purpose-Kickstarter,1
+6,mobileapp-user-de-General Purpose-LinkedIn,4
+6,mobileapp-user-de-General Purpose-Myspace,11
+6,mobileapp-user-de-General Purpose-Pinterest,19
+6,mobileapp-user-de-General Purpose-Quora,4
+6,mobileapp-user-de-General Purpose-Reddit,5
+6,mobileapp-user-de-General Purpose-Skype,18
+6,mobileapp-user-de-General Purpose-Snapchat,15
+6,mobileapp-user-de-General Purpose-Tumblr,18
+6,mobileapp-user-de-General Purpose-Twitter,9
+6,mobileapp-user-de-General Purpose-Viber,1
+6,mobileapp-user-de-General Purpose-WeChat,11
+6,mobileapp-user-de-General Purpose-WhatsApp,17
+6,mobileapp-user-de-General Purpose-Yelp,17
+6,mobileapp-user-de-Lifestyle-Last.fm,5
+6,mobileapp-user-de-Lifestyle-SoundCloud,5
+6,mobileapp-user-de-Photo Sharing-500px,5
+6,mobileapp-user-de-Photo Sharing-DeviantArt,5
+6,mobileapp-user-de-Photo Sharing-Flickr,1
+6,mobileapp-user-de-Photo Sharing-Imgur,5
+6,mobileapp-user-de-Reunion-23andMe,4
+6,mobileapp-user-de-Reunion-MyHeritage,9
+6,mobileapp-user-de-Travel-CouchSurfing,12
+6,mobileapp-user-de-Video-YouTube,8
+6,mobileapp-user-en-Blogging Related-LiveJournal,4
+6,mobileapp-user-en-Blogging Related-Plurk,19
+6,mobileapp-user-en-Blogging Related-Xanga,1
+6,mobileapp-user-en-Business-Viadeo,17
+6,mobileapp-user-en-Gaming-Habbo,7
+6,mobileapp-user-en-Gaming-MocoSpace,1
+6,mobileapp-user-en-Gaming-Zynga,2
+6,mobileapp-user-en-General Purpose-AngelList,3
+6,mobileapp-user-en-General Purpose-Badoo,12
+6,mobileapp-user-en-General Purpose-Facebook,8
+6,mobileapp-user-en-General Purpose-Facebook_Messenger,7
+6,mobileapp-user-en-General Purpose-Foursquare,4
+6,mobileapp-user-en-General Purpose-Google+,1
+6,mobileapp-user-en-General Purpose-Instagram,13
+6,mobileapp-user-en-General Purpose-Kickstarter,2
+6,mobileapp-user-en-General Purpose-LinkedIn,12
+6,mobileapp-user-en-General Purpose-MeetMe,1
+6,mobileapp-user-en-General Purpose-Meetup_(website),11
+6,mobileapp-user-en-General Purpose-Myspace,2
+6,mobileapp-user-en-General Purpose-Nextdoor,0
+6,mobileapp-user-en-General Purpose-Pinboard_(website),11
+6,mobileapp-user-en-General Purpose-Pinterest,2
+6,mobileapp-user-en-General Purpose-Product_Hunt,1
+6,mobileapp-user-en-General Purpose-Quora,8
+6,mobileapp-user-en-General Purpose-Reddit,7
+6,mobileapp-user-en-General Purpose-Skype,12
+6,mobileapp-user-en-General Purpose-Snapchat,12
+6,mobileapp-user-en-General Purpose-StumbleUpon,4
+6,mobileapp-user-en-General Purpose-Tagged,1
+6,mobileapp-user-en-General Purpose-Tumblr,12
+6,mobileapp-user-en-General Purpose-Twitter,15
+6,mobileapp-user-en-General Purpose-VK_(social_networking),8
+6,mobileapp-user-en-General Purpose-Viber,1
+6,mobileapp-user-en-General Purpose-WeChat,2
+6,mobileapp-user-en-General Purpose-WhatsApp,11
+6,mobileapp-user-en-General Purpose-Yelp,2
+6,mobileapp-user-en-Lifestyle-ASmallWorld,1
+6,mobileapp-user-en-Lifestyle-Academia.edu,5
+6,mobileapp-user-en-Lifestyle-BlackPlanet,1
+6,mobileapp-user-en-Lifestyle-CafeMom,4
+6,mobileapp-user-en-Lifestyle-Doximity,4
+6,mobileapp-user-en-Lifestyle-Flixster,1
+6,mobileapp-user-en-Lifestyle-Gaia_Online,11
+6,mobileapp-user-en-Lifestyle-GoFundMe,1
+6,mobileapp-user-en-Lifestyle-Goodreads,1
+6,mobileapp-user-en-Lifestyle-Italki,14
+6,mobileapp-user-en-Lifestyle-Last.fm,1
+6,mobileapp-user-en-Lifestyle-Minds,0
+6,mobileapp-user-en-Lifestyle-Nexopia,5
+6,mobileapp-user-en-Lifestyle-PlentyOfFish,5
+6,mobileapp-user-en-Lifestyle-ReverbNation,16
+6,mobileapp-user-en-Lifestyle-SoundCloud,11
+6,mobileapp-user-en-Lifestyle-Tinder_(app),12
+6,mobileapp-user-en-Lifestyle-Untappd,2
+6,mobileapp-user-en-Lifestyle-Vampirefreaks.com,16
+6,mobileapp-user-en-Photo Sharing-500px,5
+6,mobileapp-user-en-Photo Sharing-DeviantArt,1
+6,mobileapp-user-en-Photo Sharing-Flickr,12
+6,mobileapp-user-en-Photo Sharing-Imgur,11
+6,mobileapp-user-en-Photo Sharing-Path_(social_network),5
+6,mobileapp-user-en-Photo Sharing-Photobucket,11
+6,mobileapp-user-en-Photo Sharing-Shutterfly,1
+6,mobileapp-user-en-Photo Sharing-Snapfish,1
+6,mobileapp-user-en-Photo Sharing-We_Heart_It,12
+6,mobileapp-user-en-Reunion-23andMe,8
+6,mobileapp-user-en-Reunion-Ancestry.com,8
+6,mobileapp-user-en-Reunion-Classmates.com,11
+6,mobileapp-user-en-Reunion-MyHeritage,11
+6,mobileapp-user-en-Travel-CouchSurfing,1
+6,mobileapp-user-en-Travel-WAYN_(website),2
+6,mobileapp-user-en-Video-Funny_or_Die,1
+6,mobileapp-user-en-Video-Tout,1
+6,mobileapp-user-en-Video-Vine_(service),19
+6,mobileapp-user-en-Video-YouTube,2
+6,mobileapp-user-es-Gaming-Habbo,1
+6,mobileapp-user-es-General Purpose-Badoo,4
+6,mobileapp-user-es-General Purpose-Facebook,12
+6,mobileapp-user-es-General Purpose-Facebook_Messenger,14
+6,mobileapp-user-es-General Purpose-Google+,16
+6,mobileapp-user-es-General Purpose-Instagram,1
+6,mobileapp-user-es-General Purpose-Kickstarter,4
+6,mobileapp-user-es-General Purpose-LinkedIn,14
+6,mobileapp-user-es-General Purpose-Myspace,5
+6,mobileapp-user-es-General Purpose-Pinterest,1
+6,mobileapp-user-es-General Purpose-Quora,17
+6,mobileapp-user-es-General Purpose-Reddit,1
+6,mobileapp-user-es-General Purpose-Skype,14
+6,mobileapp-user-es-General Purpose-Snapchat,6
+6,mobileapp-user-es-General Purpose-Tumblr,1
+6,mobileapp-user-es-General Purpose-Twitter,14
+6,mobileapp-user-es-General Purpose-Viber,16
+6,mobileapp-user-es-General Purpose-WeChat,11
+6,mobileapp-user-es-General Purpose-WhatsApp,17
+6,mobileapp-user-es-Lifestyle-Last.fm,16
+6,mobileapp-user-es-Lifestyle-SoundCloud,5
+6,mobileapp-user-es-Photo Sharing-Flickr,1
+6,mobileapp-user-es-Photo Sharing-Fotolog,12
+6,mobileapp-user-es-Travel-CouchSurfing,11
+6,mobileapp-user-es-Video-YouTube,17
+6,mobileapp-user-zh-General Purpose-Facebook,2
+6,mobileapp-user-zh-General Purpose-Facebook_Messenger,11
+6,mobileapp-user-zh-General Purpose-Google+,1
+6,mobileapp-user-zh-General Purpose-Instagram,4
+6,mobileapp-user-zh-General Purpose-Pinterest,5
+6,mobileapp-user-zh-General Purpose-Quora,5
+6,mobileapp-user-zh-General Purpose-Reddit,16
+6,mobileapp-user-zh-General Purpose-Skype,1
+6,mobileapp-user-zh-General Purpose-Snapchat,11
+6,mobileapp-user-zh-General Purpose-Tumblr,2
+6,mobileapp-user-zh-General Purpose-Twitter,2
+6,mobileapp-user-zh-General Purpose-WhatsApp,12
+6,mobileapp-user-zh-Photo Sharing-Flickr,1
+6,mobileapp-user-zh-Video-YouTube,2
+6,mobileweb-spider-de-Gaming-Zynga,18
+6,mobileweb-spider-de-General Purpose-Badoo,16
+6,mobileweb-spider-de-General Purpose-Facebook,2
+6,mobileweb-spider-de-General Purpose-Foursquare,14
+6,mobileweb-spider-de-General Purpose-Google+,16
+6,mobileweb-spider-de-General Purpose-Instagram,7
+6,mobileweb-spider-de-General Purpose-Kickstarter,1
+6,mobileweb-spider-de-General Purpose-LinkedIn,11
+6,mobileweb-spider-de-General Purpose-Myspace,5
+6,mobileweb-spider-de-General Purpose-Pinterest,18
+6,mobileweb-spider-de-General Purpose-Reddit,16
+6,mobileweb-spider-de-General Purpose-Skype,18
+6,mobileweb-spider-de-General Purpose-Snapchat,7
+6,mobileweb-spider-de-General Purpose-Tumblr,18
+6,mobileweb-spider-de-General Purpose-Twitter,0
+6,mobileweb-spider-de-General Purpose-Viber,16
+6,mobileweb-spider-de-General Purpose-WeChat,4
+6,mobileweb-spider-de-General Purpose-WhatsApp,18
+6,mobileweb-spider-de-Lifestyle-Last.fm,16
+6,mobileweb-spider-de-Lifestyle-SoundCloud,1
+6,mobileweb-spider-de-Photo Sharing-Flickr,5
+6,mobileweb-spider-de-Photo Sharing-Pixabay,16
+6,mobileweb-spider-de-Travel-CouchSurfing,11
+6,mobileweb-spider-de-Video-YouTube,2
+6,mobileweb-spider-en-Blogging Related-LiveJournal,8
+6,mobileweb-spider-en-Blogging Related-Plurk,5
+6,mobileweb-spider-en-Blogging Related-Xanga,16
+6,mobileweb-spider-en-Business-Ryze,9
+6,mobileweb-spider-en-Business-Solaborate,4
+6,mobileweb-spider-en-Business-Viadeo,1
+6,mobileweb-spider-en-Business-Xing_Technology,18
+6,mobileweb-spider-en-Gaming-Cellufun,5
+6,mobileweb-spider-en-Gaming-Habbo,11
+6,mobileweb-spider-en-Gaming-MocoSpace,16
+6,mobileweb-spider-en-Gaming-Zynga,8
+6,mobileweb-spider-en-General Purpose-AngelList,7
+6,mobileweb-spider-en-General Purpose-Badoo,0
+6,mobileweb-spider-en-General Purpose-Facebook,13
+6,mobileweb-spider-en-General Purpose-Facebook_Messenger,8
+6,mobileweb-spider-en-General Purpose-Foursquare,4
+6,mobileweb-spider-en-General Purpose-GirlsAskGuys,16
+6,mobileweb-spider-en-General Purpose-Google+,0
+6,mobileweb-spider-en-General Purpose-Instagram,0
+6,mobileweb-spider-en-General Purpose-Kickstarter,0
+6,mobileweb-spider-en-General Purpose-Kiwibox,4
+6,mobileweb-spider-en-General Purpose-LinkedIn,11
+6,mobileweb-spider-en-General Purpose-MeetMe,0
+6,mobileweb-spider-en-General Purpose-Meetup_(website),0
+6,mobileweb-spider-en-General Purpose-Myspace,0
+6,mobileweb-spider-en-General Purpose-Nextdoor,0
+6,mobileweb-spider-en-General Purpose-Pinboard_(website),5
+6,mobileweb-spider-en-General Purpose-Pinterest,0
+6,mobileweb-spider-en-General Purpose-Product_Hunt,11
+6,mobileweb-spider-en-General Purpose-Quora,0
+6,mobileweb-spider-en-General Purpose-Reddit,19
+6,mobileweb-spider-en-General Purpose-Skype,0
+6,mobileweb-spider-en-General Purpose-Skyrock_(social_network_site),1
+6,mobileweb-spider-en-General Purpose-Snapchat,7
+6,mobileweb-spider-en-General Purpose-StumbleUpon,11
+6,mobileweb-spider-en-General Purpose-Tagged,11
+6,mobileweb-spider-en-General Purpose-Tumblr,0
+6,mobileweb-spider-en-General Purpose-Twitter,16
+6,mobileweb-spider-en-General Purpose-Twoo.com,11
+6,mobileweb-spider-en-General Purpose-VK_(social_networking),7
+6,mobileweb-spider-en-General Purpose-Viber,0
+6,mobileweb-spider-en-General Purpose-WeChat,11
+6,mobileweb-spider-en-General Purpose-WhatsApp,0
+6,mobileweb-spider-en-General Purpose-Yelp,0
+6,mobileweb-spider-en-Lifestyle-ASmallWorld,11
+6,mobileweb-spider-en-Lifestyle-Academia.edu,7
+6,mobileweb-spider-en-Lifestyle-BlackPlanet,11
+6,mobileweb-spider-en-Lifestyle-CafeMom,4
+6,mobileweb-spider-en-Lifestyle-Care2,11
+6,mobileweb-spider-en-Lifestyle-CaringBridge,4
+6,mobileweb-spider-en-Lifestyle-Doximity,11
+6,"mobileweb-spider-en-Lifestyle-English,_baby!",0
+6,mobileweb-spider-en-Lifestyle-Flixster,4
+6,mobileweb-spider-en-Lifestyle-Gaia_Online,4
+6,mobileweb-spider-en-Lifestyle-GoFundMe,0
+6,mobileweb-spider-en-Lifestyle-Goodreads,7
+6,mobileweb-spider-en-Lifestyle-Italki,4
+6,mobileweb-spider-en-Lifestyle-Last.fm,7
+6,mobileweb-spider-en-Lifestyle-Minds,7
+6,mobileweb-spider-en-Lifestyle-MyMFB,11
+6,mobileweb-spider-en-Lifestyle-Nexopia,4
+6,mobileweb-spider-en-Lifestyle-PlentyOfFish,0
+6,mobileweb-spider-en-Lifestyle-Ravelry,4
+6,mobileweb-spider-en-Lifestyle-ReverbNation,4
+6,mobileweb-spider-en-Lifestyle-SoundCloud,0
+6,mobileweb-spider-en-Lifestyle-Tinder_(app),7
+6,mobileweb-spider-en-Lifestyle-Untappd,16
+6,mobileweb-spider-en-Lifestyle-Vampirefreaks.com,11
+6,mobileweb-spider-en-Photo Sharing-43_Things,2
+6,mobileweb-spider-en-Photo Sharing-500px,7
+6,mobileweb-spider-en-Photo Sharing-DeviantArt,8
+6,mobileweb-spider-en-Photo Sharing-Flickr,8
+6,mobileweb-spider-en-Photo Sharing-Fotki,4
+6,mobileweb-spider-en-Photo Sharing-Fotolog,5
+6,mobileweb-spider-en-Photo Sharing-Imgur,0
+6,mobileweb-spider-en-Photo Sharing-Path_(social_network),7
+6,mobileweb-spider-en-Photo Sharing-Photobucket,4
+6,mobileweb-spider-en-Photo Sharing-Pixabay,5
+6,mobileweb-spider-en-Photo Sharing-Shutterfly,4
+6,mobileweb-spider-en-Photo Sharing-Snapfish,1
+6,mobileweb-spider-en-Photo Sharing-Uplike,4
+6,mobileweb-spider-en-Photo Sharing-We_Heart_It,11
+6,mobileweb-spider-en-Reunion-23andMe,0
+6,mobileweb-spider-en-Reunion-Ancestry.com,0
+6,mobileweb-spider-en-Reunion-Classmates.com,0
+6,mobileweb-spider-en-Reunion-MyHeritage,4
+6,mobileweb-spider-en-Travel-CouchSurfing,0
+6,mobileweb-spider-en-Travel-WAYN_(website),7
+6,mobileweb-spider-en-Video-Funny_or_Die,8
+6,mobileweb-spider-en-Video-Tout,8
+6,mobileweb-spider-en-Video-Vine_(service),0
+6,mobileweb-spider-en-Video-YouTube,13
+6,mobileweb-spider-es-Blogging Related-LiveJournal,1
+6,mobileweb-spider-es-Gaming-Habbo,7
+6,mobileweb-spider-es-Gaming-Zynga,1
+6,mobileweb-spider-es-General Purpose-Badoo,9
+6,mobileweb-spider-es-General Purpose-Facebook,13
+6,mobileweb-spider-es-General Purpose-Facebook_Messenger,11
+6,mobileweb-spider-es-General Purpose-Foursquare,5
+6,mobileweb-spider-es-General Purpose-Google+,7
+6,mobileweb-spider-es-General Purpose-Instagram,7
+6,mobileweb-spider-es-General Purpose-Kickstarter,1
+6,mobileweb-spider-es-General Purpose-LinkedIn,7
+6,mobileweb-spider-es-General Purpose-Myspace,7
+6,mobileweb-spider-es-General Purpose-Pinterest,0
+6,mobileweb-spider-es-General Purpose-Reddit,16
+6,mobileweb-spider-es-General Purpose-Skype,0
+6,mobileweb-spider-es-General Purpose-Snapchat,1
+6,mobileweb-spider-es-General Purpose-Tagged,1
+6,mobileweb-spider-es-General Purpose-Tumblr,16
+6,mobileweb-spider-es-General Purpose-Twitter,7
+6,mobileweb-spider-es-General Purpose-Viber,18
+6,mobileweb-spider-es-General Purpose-WeChat,18
+6,mobileweb-spider-es-General Purpose-WhatsApp,7
+6,mobileweb-spider-es-Lifestyle-Goodreads,5
+6,mobileweb-spider-es-Lifestyle-Last.fm,12
+6,mobileweb-spider-es-Lifestyle-SoundCloud,5
+6,mobileweb-spider-es-Photo Sharing-DeviantArt,16
+6,mobileweb-spider-es-Photo Sharing-Flickr,5
+6,mobileweb-spider-es-Photo Sharing-Fotolog,18
+6,mobileweb-spider-es-Reunion-MyHeritage,1
+6,mobileweb-spider-es-Travel-CouchSurfing,18
+6,mobileweb-spider-es-Video-YouTube,7
+6,mobileweb-spider-zh-Blogging Related-LiveJournal,4
+6,mobileweb-spider-zh-Blogging Related-Plurk,1
+6,mobileweb-spider-zh-Blogging Related-Xanga,16
+6,mobileweb-spider-zh-Gaming-Zynga,1
+6,mobileweb-spider-zh-General Purpose-Facebook,0
+6,mobileweb-spider-zh-General Purpose-Facebook_Messenger,16
+6,mobileweb-spider-zh-General Purpose-Foursquare,5
+6,mobileweb-spider-zh-General Purpose-Google+,16
+6,mobileweb-spider-zh-General Purpose-Instagram,9
+6,mobileweb-spider-zh-General Purpose-Kickstarter,11
+6,mobileweb-spider-zh-General Purpose-LinkedIn,16
+6,mobileweb-spider-zh-General Purpose-Myspace,16
+6,mobileweb-spider-zh-General Purpose-Pinterest,11
+6,mobileweb-spider-zh-General Purpose-Quora,11
+6,mobileweb-spider-zh-General Purpose-Reddit,4
+6,mobileweb-spider-zh-General Purpose-Skype,7
+6,mobileweb-spider-zh-General Purpose-Snapchat,16
+6,mobileweb-spider-zh-General Purpose-Tumblr,5
+6,mobileweb-spider-zh-General Purpose-Twitter,11
+6,mobileweb-spider-zh-General Purpose-Viber,5
+6,mobileweb-spider-zh-General Purpose-WhatsApp,18
+6,mobileweb-spider-zh-Lifestyle-Goodreads,5
+6,mobileweb-spider-zh-Lifestyle-Last.fm,5
+6,mobileweb-spider-zh-Lifestyle-PlentyOfFish,4
+6,mobileweb-spider-zh-Lifestyle-SoundCloud,16
+6,mobileweb-spider-zh-Photo Sharing-500px,18
+6,mobileweb-spider-zh-Photo Sharing-Flickr,16
+6,mobileweb-spider-zh-Photo Sharing-Imgur,1
+6,mobileweb-spider-zh-Video-YouTube,8
+6,mobileweb-user-de-Blogging Related-LiveJournal,18
+6,mobileweb-user-de-Blogging Related-Xanga,4
+6,mobileweb-user-de-Business-Viadeo,18
+6,mobileweb-user-de-Gaming-Zynga,11
+6,mobileweb-user-de-General Purpose-Badoo,3
+6,mobileweb-user-de-General Purpose-Facebook,6
+6,mobileweb-user-de-General Purpose-Foursquare,5
+6,mobileweb-user-de-General Purpose-Google+,3
+6,mobileweb-user-de-General Purpose-Instagram,9
+6,mobileweb-user-de-General Purpose-Kickstarter,2
+6,mobileweb-user-de-General Purpose-LinkedIn,9
+6,mobileweb-user-de-General Purpose-Myspace,10
+6,mobileweb-user-de-General Purpose-Pinterest,19
+6,mobileweb-user-de-General Purpose-Quora,7
+6,mobileweb-user-de-General Purpose-Reddit,9
+6,mobileweb-user-de-General Purpose-Skype,3
+6,mobileweb-user-de-General Purpose-Snapchat,15
+6,mobileweb-user-de-General Purpose-StumbleUpon,16
+6,mobileweb-user-de-General Purpose-Tagged,7
+6,mobileweb-user-de-General Purpose-Tumblr,19
+6,mobileweb-user-de-General Purpose-Twitter,19
+6,mobileweb-user-de-General Purpose-Viber,3
+6,mobileweb-user-de-General Purpose-WeChat,9
+6,mobileweb-user-de-General Purpose-WhatsApp,15
+6,mobileweb-user-de-General Purpose-Yelp,16
+6,mobileweb-user-de-Lifestyle-Last.fm,3
+6,mobileweb-user-de-Lifestyle-Ravelry,18
+6,mobileweb-user-de-Lifestyle-SoundCloud,9
+6,mobileweb-user-de-Photo Sharing-500px,18
+6,mobileweb-user-de-Photo Sharing-DeviantArt,18
+6,mobileweb-user-de-Photo Sharing-Flickr,17
+6,mobileweb-user-de-Photo Sharing-Imgur,9
+6,mobileweb-user-de-Photo Sharing-Pixabay,9
+6,mobileweb-user-de-Photo Sharing-Shutterfly,12
+6,mobileweb-user-de-Reunion-23andMe,2
+6,mobileweb-user-de-Reunion-MyHeritage,19
+6,mobileweb-user-de-Travel-CouchSurfing,11
+6,mobileweb-user-de-Video-YouTube,9
+6,mobileweb-user-en-Blogging Related-LiveJournal,11
+6,mobileweb-user-en-Blogging Related-Plurk,19
+6,mobileweb-user-en-Blogging Related-Xanga,8
+6,mobileweb-user-en-Business-Ryze,11
+6,mobileweb-user-en-Business-Solaborate,14
+6,mobileweb-user-en-Business-Viadeo,14
+6,mobileweb-user-en-Business-Xing_Technology,5
+6,mobileweb-user-en-Gaming-Cellufun,18
+6,mobileweb-user-en-Gaming-Habbo,9
+6,mobileweb-user-en-Gaming-MocoSpace,15
+6,mobileweb-user-en-Gaming-Zynga,2
+6,mobileweb-user-en-General Purpose-AngelList,3
+6,mobileweb-user-en-General Purpose-Badoo,6
+6,mobileweb-user-en-General Purpose-Facebook,19
+6,mobileweb-user-en-General Purpose-Facebook_Messenger,10
+6,mobileweb-user-en-General Purpose-Foursquare,8
+6,mobileweb-user-en-General Purpose-GirlsAskGuys,15
+6,mobileweb-user-en-General Purpose-Google+,6
+6,mobileweb-user-en-General Purpose-Instagram,13
+6,mobileweb-user-en-General Purpose-Kickstarter,10
+6,mobileweb-user-en-General Purpose-Kiwibox,1
+6,mobileweb-user-en-General Purpose-LinkedIn,6
+6,mobileweb-user-en-General Purpose-MeetMe,3
+6,mobileweb-user-en-General Purpose-Meetup_(website),7
+6,mobileweb-user-en-General Purpose-Myspace,8
+6,mobileweb-user-en-General Purpose-Nextdoor,10
+6,mobileweb-user-en-General Purpose-Pinboard_(website),7
+6,mobileweb-user-en-General Purpose-Pinterest,13
+6,mobileweb-user-en-General Purpose-Product_Hunt,9
+6,mobileweb-user-en-General Purpose-Quora,10
+6,mobileweb-user-en-General Purpose-Reddit,7
+6,mobileweb-user-en-General Purpose-Skype,17
+6,mobileweb-user-en-General Purpose-Skyrock_(social_network_site),5
+6,mobileweb-user-en-General Purpose-Snapchat,3
+6,mobileweb-user-en-General Purpose-StumbleUpon,11
+6,mobileweb-user-en-General Purpose-Tagged,17
+6,mobileweb-user-en-General Purpose-Tumblr,9
+6,mobileweb-user-en-General Purpose-Twitter,15
+6,mobileweb-user-en-General Purpose-Twoo.com,13
+6,mobileweb-user-en-General Purpose-VK_(social_networking),13
+6,mobileweb-user-en-General Purpose-Viber,12
+6,mobileweb-user-en-General Purpose-WeChat,12
+6,mobileweb-user-en-General Purpose-WhatsApp,19
+6,mobileweb-user-en-General Purpose-Yelp,12
+6,mobileweb-user-en-Lifestyle-ASmallWorld,16
+6,mobileweb-user-en-Lifestyle-Academia.edu,8
+6,mobileweb-user-en-Lifestyle-BlackPlanet,5
+6,mobileweb-user-en-Lifestyle-CafeMom,1
+6,mobileweb-user-en-Lifestyle-Care2,18
+6,mobileweb-user-en-Lifestyle-CaringBridge,16
+6,mobileweb-user-en-Lifestyle-Doximity,2
+6,"mobileweb-user-en-Lifestyle-English,_baby!",17
+6,mobileweb-user-en-Lifestyle-Flixster,17
+6,mobileweb-user-en-Lifestyle-Gaia_Online,9
+6,mobileweb-user-en-Lifestyle-GoFundMe,11
+6,mobileweb-user-en-Lifestyle-Goodreads,18
+6,mobileweb-user-en-Lifestyle-Italki,14
+6,mobileweb-user-en-Lifestyle-Last.fm,18
+6,mobileweb-user-en-Lifestyle-Minds,10
+6,mobileweb-user-en-Lifestyle-MyMFB,5
+6,mobileweb-user-en-Lifestyle-Nexopia,14
+6,mobileweb-user-en-Lifestyle-PlentyOfFish,3
+6,mobileweb-user-en-Lifestyle-Ravelry,18
+6,mobileweb-user-en-Lifestyle-ReverbNation,17
+6,mobileweb-user-en-Lifestyle-SoundCloud,10
+6,mobileweb-user-en-Lifestyle-Tinder_(app),15
+6,mobileweb-user-en-Lifestyle-Untappd,8
+6,mobileweb-user-en-Lifestyle-Vampirefreaks.com,1
+6,mobileweb-user-en-Photo Sharing-43_Things,15
+6,mobileweb-user-en-Photo Sharing-500px,15
+6,mobileweb-user-en-Photo Sharing-DeviantArt,11
+6,mobileweb-user-en-Photo Sharing-Flickr,18
+6,mobileweb-user-en-Photo Sharing-Fotki,1
+6,mobileweb-user-en-Photo Sharing-Fotolog,14
+6,mobileweb-user-en-Photo Sharing-Imgur,11
+6,mobileweb-user-en-Photo Sharing-Path_(social_network),15
+6,mobileweb-user-en-Photo Sharing-Photobucket,16
+6,mobileweb-user-en-Photo Sharing-Pixabay,18
+6,mobileweb-user-en-Photo Sharing-Shutterfly,9
+6,mobileweb-user-en-Photo Sharing-Snapfish,18
+6,mobileweb-user-en-Photo Sharing-Uplike,17
+6,mobileweb-user-en-Photo Sharing-We_Heart_It,2
+6,mobileweb-user-en-Reunion-23andMe,10
+6,mobileweb-user-en-Reunion-Ancestry.com,10
+6,mobileweb-user-en-Reunion-Classmates.com,11
+6,mobileweb-user-en-Reunion-MyHeritage,18
+6,mobileweb-user-en-Travel-CouchSurfing,6
+6,mobileweb-user-en-Travel-TravBuddy.com,17
+6,mobileweb-user-en-Travel-WAYN_(website),13
+6,mobileweb-user-en-Video-Funny_or_Die,18
+6,mobileweb-user-en-Video-Tout,3
+6,mobileweb-user-en-Video-Vine_(service),19
+6,mobileweb-user-en-Video-YouTube,10
+6,mobileweb-user-es-Blogging Related-LiveJournal,7
+6,mobileweb-user-es-Blogging Related-Plurk,19
+6,mobileweb-user-es-Business-Viadeo,11
+6,mobileweb-user-es-Gaming-Habbo,9
+6,mobileweb-user-es-Gaming-Zynga,16
+6,mobileweb-user-es-General Purpose-Badoo,8
+6,mobileweb-user-es-General Purpose-Facebook,13
+6,mobileweb-user-es-General Purpose-Facebook_Messenger,19
+6,mobileweb-user-es-General Purpose-Foursquare,4
+6,mobileweb-user-es-General Purpose-Google+,3
+6,mobileweb-user-es-General Purpose-Instagram,8
+6,mobileweb-user-es-General Purpose-Kickstarter,11
+6,mobileweb-user-es-General Purpose-LinkedIn,7
+6,mobileweb-user-es-General Purpose-Myspace,1
+6,mobileweb-user-es-General Purpose-Pinterest,18
+6,mobileweb-user-es-General Purpose-Quora,18
+6,mobileweb-user-es-General Purpose-Reddit,9
+6,mobileweb-user-es-General Purpose-Skype,3
+6,mobileweb-user-es-General Purpose-Snapchat,6
+6,mobileweb-user-es-General Purpose-StumbleUpon,12
+6,mobileweb-user-es-General Purpose-Tagged,7
+6,mobileweb-user-es-General Purpose-Tumblr,13
+6,mobileweb-user-es-General Purpose-Twitter,9
+6,mobileweb-user-es-General Purpose-Viber,1
+6,mobileweb-user-es-General Purpose-WeChat,0
+6,mobileweb-user-es-General Purpose-WhatsApp,15
+6,mobileweb-user-es-Lifestyle-Goodreads,18
+6,mobileweb-user-es-Lifestyle-Last.fm,1
+6,mobileweb-user-es-Lifestyle-SoundCloud,7
+6,mobileweb-user-es-Photo Sharing-500px,18
+6,mobileweb-user-es-Photo Sharing-DeviantArt,18
+6,mobileweb-user-es-Photo Sharing-Flickr,18
+6,mobileweb-user-es-Photo Sharing-Fotolog,12
+6,mobileweb-user-es-Photo Sharing-Photobucket,14
+6,mobileweb-user-es-Reunion-23andMe,8
+6,mobileweb-user-es-Reunion-MyHeritage,11
+6,mobileweb-user-es-Travel-CouchSurfing,9
+6,mobileweb-user-es-Video-YouTube,10
+6,mobileweb-user-zh-Blogging Related-LiveJournal,1
+6,mobileweb-user-zh-Blogging Related-Plurk,4
+6,mobileweb-user-zh-Blogging Related-Xanga,18
+6,mobileweb-user-zh-Gaming-Zynga,1
+6,mobileweb-user-zh-General Purpose-Facebook,7
+6,mobileweb-user-zh-General Purpose-Facebook_Messenger,8
+6,mobileweb-user-zh-General Purpose-Foursquare,7
+6,mobileweb-user-zh-General Purpose-Google+,11
+6,mobileweb-user-zh-General Purpose-Instagram,8
+6,mobileweb-user-zh-General Purpose-Kickstarter,18
+6,mobileweb-user-zh-General Purpose-LinkedIn,14
+6,mobileweb-user-zh-General Purpose-Myspace,11
+6,mobileweb-user-zh-General Purpose-Pinterest,10
+6,mobileweb-user-zh-General Purpose-Quora,7
+6,mobileweb-user-zh-General Purpose-Reddit,18
+6,mobileweb-user-zh-General Purpose-Skype,4
+6,mobileweb-user-zh-General Purpose-Snapchat,7
+6,mobileweb-user-zh-General Purpose-Tumblr,13
+6,mobileweb-user-zh-General Purpose-Twitter,10
+6,mobileweb-user-zh-General Purpose-Viber,11
+6,mobileweb-user-zh-General Purpose-WhatsApp,12
+6,mobileweb-user-zh-Lifestyle-Goodreads,11
+6,mobileweb-user-zh-Lifestyle-Last.fm,1
+6,mobileweb-user-zh-Lifestyle-PlentyOfFish,5
+6,mobileweb-user-zh-Lifestyle-SoundCloud,9
+6,mobileweb-user-zh-Photo Sharing-500px,11
+6,mobileweb-user-zh-Photo Sharing-Flickr,11
+6,mobileweb-user-zh-Photo Sharing-Imgur,1
+6,mobileweb-user-zh-Video-YouTube,10
