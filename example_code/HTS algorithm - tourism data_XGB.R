@@ -9,8 +9,6 @@ library(rpart)
 library(kernlab)
 library(gbm)
 
-setwd("C:/Users/FSU_Team/Desktop/ML HTS Tourism")
-
 error_cal <- function(insample, outsample, forecasts, ppy){
   
   #insample=Insample[,i];outsample=Forecasts_temp[,i];forecasts=Outsample[,i];ppy=12
@@ -70,7 +68,7 @@ td <- function(frc_base){
 #Read data & Create validation set
 ###################################################################################################
 #Read file (from 01/1998 to 12/2017)
-input <- read.csv("VN_FullDataSet Edited by George2017.csv", stringsAsFactors = F)
+input <- read.csv("data.csv", stringsAsFactors = F)
 #Keep what needed
 input <- input[5:(nrow(input)-3),]
 input$SuperWEB2.tm. <- NULL
