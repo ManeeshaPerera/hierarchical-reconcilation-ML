@@ -77,17 +77,17 @@ def run_errors(data, model, half_horizon_case):
                'case2_lambda_[0.01, 0.09]',
                'case2_lambda_[0.1, 0.9]',
                'case2_lambda_[1, 4]',
-               'case2_lambda_[0.01, 5]',
-               'case1_lambda_1_lambda_1_no_skip',
-               'case1_lambda_[0.01, 0.09]_lambda_[0.01, 0.09]_no_skip',
-               'case1_lambda_[0.1, 0.9]_lambda_[0.1, 0.9]_no_skip',
-               'case1_lambda_[1, 4]_lambda_[1, 4]_no_skip',
-               'case1_lambda_[0.01, 5]_lambda_[0.01, 5]_no_skip',
-               'case2_lambda_1_lambda_1_no_skip',
-               'case2_lambda_[0.01, 0.09]_lambda_[0.01, 0.09]_no_skip',
-               'case2_lambda_[0.1, 0.9]_lambda_[0.1, 0.9]_no_skip',
-               'case2_lambda_[1, 4]_lambda_[1, 4]_no_skip',
-               'case2_lambda_[0.01, 5]_lambda_[0.01, 5]_no_skip']
+               'case2_lambda_[0.01, 5]']
+               # 'case1_lambda_1_lambda_1_no_skip',
+               # 'case1_lambda_[0.01, 0.09]_lambda_[0.01, 0.09]_no_skip',
+               # 'case1_lambda_[0.1, 0.9]_lambda_[0.1, 0.9]_no_skip',
+               # 'case1_lambda_[1, 4]_lambda_[1, 4]_no_skip',
+               # 'case1_lambda_[0.01, 5]_lambda_[0.01, 5]_no_skip',
+               # 'case2_lambda_1_lambda_1_no_skip',
+               # 'case2_lambda_[0.01, 0.09]_lambda_[0.01, 0.09]_no_skip',
+               # 'case2_lambda_[0.1, 0.9]_lambda_[0.1, 0.9]_no_skip',
+               # 'case2_lambda_[1, 4]_lambda_[1, 4]_no_skip',
+               # 'case2_lambda_[0.01, 5]_lambda_[0.01, 5]_no_skip']
 
     for fc_type in FC_TYPE:
         # file_name = f'{data}_{model}'
@@ -109,11 +109,12 @@ if __name__ == '__main__':
 
     datasets = ['prison', 'labour', 'tourism', 'wikipedia']
     half_horizon_cases = ['half', 'full', 'one']
-    models = ['arima', 'ets']
+    # models = ['arima', 'ets']
     # models = ['deepAR', 'waveNet']
+    models = ['deepAR_cluster', 'waveNet_cluster']
     for data in datasets:
         for model in models:
-            # one step ahead horizon
-            run_errors(data, model, 'one')
-            # for half_horizon_val in half_horizon_cases:
-            #     run_errors(data, model, half_horizon_val)
+            # # one step ahead horizon
+            # run_errors(data, model, 'one')
+            for half_horizon_val in half_horizon_cases:
+                run_errors(data, model, half_horizon_val)

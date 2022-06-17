@@ -1,7 +1,7 @@
 import rpy2.robjects as robjects
 
 data = 'wikipedia'
-base_model = 'waveNet'
+base_model = 'deepAR_cluster'
 
 DATA = {'prison': 3,
         'tourism': 10,
