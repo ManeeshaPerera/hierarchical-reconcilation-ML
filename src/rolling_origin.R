@@ -80,8 +80,14 @@ run_rolling_origin <- function (dataset_name, h, freq, min_train_length, arima_e
     # convert to data frame and add meta info
     actual_df <- cbind(ts_meta_df, data.frame(actual_itr))
     fitted_df <- cbind(ts_meta_df, data.frame(fitted_itr))
-    fcasts_df <- cbind(ts_meta_df, data.frame(fcasts_itr))
-    test_df <- cbind(ts_meta_df, data.frame(test_itr))
+
+    fcasts_df <- data.frame(fcasts_itr)
+    colnames(fcasts_df) <- seq(1:h)
+    fcasts_df <- cbind(ts_meta_df, fcasts_df)
+
+    test_df <- data.frame(test_itr)
+    colnames(test_df) <- seq(1:h)
+    test_df <- cbind(ts_meta_df, test_df)
 
   if (store_train_test == TRUE) {
     write.table(actual_df, paste('rolling_window_experiments', dataset_name, paste(paste('actual', itr, sep = '_'), 'csv', sep = '.'), sep = '/'),
