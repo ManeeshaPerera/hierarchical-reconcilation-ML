@@ -1,21 +1,28 @@
 import rpy2.robjects as robjects
+import sys
 
 DATA = {'prison': {'freq': 4, 'horizon': 8, 'min_train_length': 24},
         'tourism': {'freq': 12, 'horizon': 12, 'min_train_length': 144},
         'labour': {'freq': 4, 'horizon': 12, 'min_train_length': 68},
         'wikipedia': {'freq': 7, 'horizon': 7, 'min_train_length': 324}}
 
-dataset_name = 'prison'
+DATASET = ['prison', 'tourism', 'wikipedia', 'labour']
+
+dataset_name = DATASET[int(sys.argv[1])]
+arima_ets = sys.argv[2]
+
 min_train_length = DATA[dataset_name]['min_train_length']
 freq = DATA[dataset_name]['freq']
-horizon = DATA[dataset_name]['horizon']
+# horizon = DATA[dataset_name]['horizon']
+horizon = 1  # for now, we are using a horizon of 1
 
 r_source = robjects.r['source']
 r_source('../src/rolling_origin.R')
 
 run_rollin_origin = robjects.globalenv['run_rolling_origin']
 
-run_rollin_origin(dataset_name, horizon, freq, min_train_length, 'arima', True)
-run_rollin_origin(dataset_name, horizon, freq, min_train_length, 'ets', False)
-
-
+if arima_ets == 'arima':
+    run_rollin_origin(dataset_name, horizon, freq, min_train_length, 'arima', True)
+elif arima_ets == 'ets':
+    run_rollin_origin(dataset_name, horizon, freq, min_train_length, 'ets',
+                      False)  # passing false as we don't want to save the actual/ test rolling windows again for the same dataset
