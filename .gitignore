@@ -6,6 +6,7 @@ src/results/expanding_window_results/errors
 src/results/expanding_window_results/ml_fc
 src/results/expanding_window_results/model_history
 src/results/expanding_window_results/best_params
+src/rolling_window_experiments
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
