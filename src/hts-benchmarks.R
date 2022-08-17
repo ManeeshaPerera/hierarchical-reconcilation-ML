@@ -19,22 +19,11 @@ library(Matrix)
 
 # Notations used below in comments. T - number of observations, M- total number of series, B - number of bottom level series, A - number of top level series, H- forecast horizon
 
-hts_benchmarks <- function (dataset_name, input_file_path, filename_fc, base_model_name, fitted_iter, fc_iter){
-  # exapanding window experiments
-  # fitted <- read_csv(paste("forecasts/new_data_samples/", filename_fc, "_", base_model_name, "_fitted.csv", sep=''))[, -(1:2)]
-  # base_fitted <- as.matrix(fitted) # M X T matrix
-  # forecasts <- as.matrix(read_csv(paste("forecasts/new_data_samples/", filename_fc, "_", base_model_name, "_forecasts.csv", sep=''))[, -(1:2)]) # M X H matrix
-  # fitted_len <- length(fitted)
-  # actual <- read_csv(paste(input_file_path, "_actual.csv", sep=''))[, -(1:2)] # M X T matrix
 
-  # rolling window experiments
-  fitted <- read_csv(paste0("rolling_window_experiments/", dataset_name, "/", base_model_name, "_fitted", '_', fitted_iter, '.csv'))[, -(1:2)]
-  base_fitted <- as.matrix(fitted) # M X T matrix
-  forecasts <- as.matrix(read_csv(paste0("rolling_window_experiments/", dataset_name, "/", base_model_name, "_forecasts", '_', fc_iter, '.csv'))[, -(1:2)]) # M X H matrix
-  fitted_len <- length(fitted)
-  actual <- read_csv(paste0("rolling_window_experiments/", dataset_name, "/", "actual", '_', fitted_iter, '.csv'))[, -(1:2)] # M X T matrix
-
+run_benchmarks <- function (dataset_name, actual, fitted, forecasts){
   actual_len <- length(actual)
+  base_fitted <- as.matrix(fitted) # M X T matrix
+  fitted_len <- length(fitted)
   start_idx <- actual_len - fitted_len + 1
   # for DeepAR and WaveNet fitted values were less than the actual so adding this operation to make the lengths equal
   actual <- actual[, (start_idx:actual_len)]
@@ -107,36 +96,69 @@ hts_benchmarks <- function (dataset_name, input_file_path, filename_fc, base_mod
 
   erm_fc <- summing_matrix %*% j_matrix %*% actual %*% tmp %*% forecasts # M X H
 
-  # save the files
-  # write.table(as.data.frame(as.matrix(bottom_up_fc)), paste('results/expanding_window_results/benchmarks/', filename_fc, "_", base_model_name, "_bottomup.csv", sep = ''),
-  #             col.names = TRUE, sep = ",")
-  # write.table(as.data.frame(as.matrix(ols_fc)), paste('results/expanding_window_results/benchmarks/', filename_fc, "_", base_model_name, "_ols.csv", sep = ''),
-  #             col.names = TRUE, sep = ",")
-  # write.table(as.data.frame(as.matrix(wls_fc)), paste('results/expanding_window_results/benchmarks/', filename_fc, "_", base_model_name, "_wls.csv", sep = ''),
-  #             col.names = TRUE, sep = ",")
-  # if (typeof(mint_sample_fc) == 'S4'){
-  #   write.table(as.data.frame(as.matrix(mint_sample_fc)), paste('results/expanding_window_results/benchmarks/', filename_fc, "_", base_model_name, "_mintsample.csv", sep = ''),
-  #               col.names = TRUE, sep = ",")
-  # }
-  # write.table(as.data.frame(as.matrix(mint_shrink_fc)), paste('results/expanding_window_results/benchmarks/', filename_fc, "_", base_model_name, "_mintshrink.csv", sep = ''),
-  #               col.names = TRUE, sep = ",")
-  # write.table(as.data.frame(as.matrix(erm_fc)), paste('results/expanding_window_results/benchmarks/', filename_fc, "_", base_model_name, "_erm.csv", sep = ''),
-  #             col.names = TRUE, sep = ",")
-
-
-   write.table(as.data.frame(as.matrix(bottom_up_fc)), paste0('rolling_window_experiments/hts/', dataset_name, "/", base_model_name, "_bottomup_", fc_iter, '.csv'),
-               col.names = FALSE, sep = ",")
-  write.table(as.data.frame(as.matrix(ols_fc)), paste0('rolling_window_experiments/hts/', dataset_name, "/", base_model_name, "_ols_", fc_iter, '.csv'),
-              col.names = FALSE, sep = ",")
-  write.table(as.data.frame(as.matrix(wls_fc)), paste0('rolling_window_experiments/hts/', dataset_name, "/", base_model_name, "_wls_", fc_iter, '.csv'),
-              col.names = FALSE, sep = ",")
   if (typeof(mint_sample_fc) == 'S4'){
-    write.table(as.data.frame(as.matrix(mint_sample_fc)), paste0('rolling_window_experiments/hts/', dataset_name, "/", base_model_name, "_mintsample_", fc_iter, '.csv', sep = ''),
-                col.names = FALSE, sep = ",")
+        list(bottomup = as.data.frame(as.matrix(bottom_up_fc)), ols = as.data.frame(as.matrix(ols_fc)), wls = as.data.frame(as.matrix(wls_fc)), mintsample = as.data.frame(as.matrix(mint_sample_fc)), mintshrink = as.data.frame(as.matrix(mint_shrink_fc)), erm = as.data.frame(as.matrix(erm_fc)))
+    }
+  else {
+      list(bottomup = as.data.frame(as.matrix(bottom_up_fc)), ols = as.data.frame(as.matrix(ols_fc)), wls = as.data.frame(as.matrix(wls_fc)), mintsample = FALSE, mintshrink = as.data.frame(as.matrix(mint_shrink_fc)), erm = as.data.frame(as.matrix(erm_fc)))
   }
-  write.table(as.data.frame(as.matrix(mint_shrink_fc)), paste0('rolling_window_experiments/hts/', dataset_name, "/", base_model_name, "_mintshrink_", fc_iter, '.csv'),
-              col.names = FALSE, sep = ",")
-  write.table(as.data.frame(as.matrix(erm_fc)), paste0('rolling_window_experiments/hts/', dataset_name, "/", base_model_name, "_erm_", fc_iter, '.csv'),
-              col.names = FALSE, sep = ",")
+
+}
+
+hts_benchmarks <- function (dataset_name, input_file_path, filename_fc, base_model_name, fitted_iter, fc_iter, experiment){
+  if (experiment == 'expanding_window') {
+    # exapanding window experiments
+    fitted <- read_csv(paste0("forecasts/new_data_samples/", filename_fc, "_", base_model_name, "_fitted.csv"))[, -(1:2)]
+    forecasts <- as.matrix(read_csv(paste0("forecasts/new_data_samples/", filename_fc, "_", base_model_name, "_forecasts.csv"))[, -(1:2)]) # M X H matrix
+    actual <- read_csv(paste0(input_file_path, "_actual.csv"))[, -(1:2)] # M X T matrix
+  }
+  else if (experiment == 'rolling_window'){
+    # rolling window experiments
+    fitted <- read_csv(paste0("rolling_window_experiments/", dataset_name, "/", base_model_name, "_fitted", '_', fitted_iter, '.csv'))[, -(1:2)]
+    forecasts <- as.matrix(read_csv(paste0("rolling_window_experiments/", dataset_name, "/", base_model_name, "_forecasts", '_', fc_iter, '.csv'))[, -(1:2)]) # M X H matrix
+    actual <- read_csv(paste0("rolling_window_experiments/", dataset_name, "/", "actual", '_', fitted_iter, '.csv'))[, -(1:2)] # M X T matrix
+  }
+
+  output <- run_benchmarks(dataset_name, actual, fitted, forecasts)
+  bottom_up <- output$bottomup
+  ols <- output$ols
+  wls <- output$wls
+  mintshrink <- output$mintshrink
+  erm <- output$erm
+  mintsample <- output$mintsample
+
+  if (experiment == 'expanding_window'){
+    write.table(bottom_up, paste0('results/expanding_window_results/benchmarks/', filename_fc, "_", base_model_name, "_bottomup.csv"),
+                col.names = TRUE, sep = ",")
+    write.table(ols, paste0('results/expanding_window_results/benchmarks/', filename_fc, "_", base_model_name, "_ols.csv"),
+                col.names = TRUE, sep = ",")
+    write.table(wls, paste0('results/expanding_window_results/benchmarks/', filename_fc, "_", base_model_name, "_wls.csv"),
+                col.names = TRUE, sep = ",")
+    if (mintsample != FALSE){
+      write.table(mintsample, paste0('results/expanding_window_results/benchmarks/', filename_fc, "_", base_model_name, "_mintsample.csv"),
+                  col.names = TRUE, sep = ",")
+    }
+    write.table(mintshrink, paste0('results/expanding_window_results/benchmarks/', filename_fc, "_", base_model_name, "_mintshrink.csv"),
+                col.names = TRUE, sep = ",")
+    write.table(erm, paste0('results/expanding_window_results/benchmarks/', filename_fc, "_", base_model_name, "_erm.csv"),
+                col.names = TRUE, sep = ",")
+  }
+  else if (experiment == 'rolling_window'){
+    write.table(bottom_up, paste0('rolling_window_experiments/hts/', dataset_name, "/", base_model_name, "_bottomup_", fc_iter, '.csv'),
+                col.names = TRUE, sep = ",")
+    write.table(ols, paste0('rolling_window_experiments/hts/', dataset_name, "/", base_model_name, "_ols_", fc_iter, '.csv'),
+                col.names = TRUE, sep = ",")
+    write.table(wls, paste0('rolling_window_experiments/hts/', dataset_name, "/", base_model_name, "_wls_", fc_iter, '.csv'),
+                col.names = TRUE, sep = ",")
+    if (mintsample != FALSE){
+      colnames(mintsample) <- seq(1:h+1)
+      write.table(mintsample, paste0('rolling_window_experiments/hts/', dataset_name, "/", base_model_name, "_mintsample_", fc_iter, '.csv', sep = ''),
+                  col.names = TRUE, sep = ",")
+    }
+    write.table(mintshrink, paste0('rolling_window_experiments/hts/', dataset_name, "/", base_model_name, "_mintshrink_", fc_iter, '.csv'),
+                col.names = TRUE, sep = ",")
+    write.table(erm, paste0('rolling_window_experiments/hts/', dataset_name, "/", base_model_name, "_erm_", fc_iter, '.csv'),
+                col.names = TRUE, sep = ",")
+  }
 }
 

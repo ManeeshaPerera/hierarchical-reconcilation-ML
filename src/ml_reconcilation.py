@@ -18,7 +18,7 @@ class MLReconcile:
     def __init__(self, seed_value, actual_data, fitted_data, forecasts, number_of_levels, seed_runs, hyper_params_tune,
                  best_hyper_params=None, tune_hyper_params=True, random_state=42, split_size=0.2,
                  validate_hf_loss=False, l1_regularizer=False, return_seed_forecast=False, tune_lambda=True,
-                 remove_skip=False):
+                 remove_skip=False, saved_model = False, saved_models=[]):
         """
         Class initialization
         :param seed_value: seed value for tensorflow to achieve reproducibility
@@ -68,6 +68,8 @@ class MLReconcile:
         self.return_seed_forecast = return_seed_forecast
         self.tune_lambda = tune_lambda
         self.remove_skip = remove_skip
+        self.saved_models = saved_models
+        self.run_saved_models = saved_model
         self._run_initialization(seed_value, tune_hyper_params, hyper_params_tune, best_hyper_params)
 
     def _transpose_data(self, dataframe):
@@ -103,7 +105,8 @@ class MLReconcile:
             if best_hyper_params:
                 self.best_hyper_params = best_hyper_params
             else:
-                raise Exception("Please provide best_hyper_params parameter if tune_hyper_params is False")
+                if not self.run_saved_models:
+                    raise Exception("Please provide best_hyper_params parameter if tune_hyper_params is False")
 
         self.actual_transpose = self._transpose_data(self.actual_data)
         self.fitted_transpose = self._transpose_data(self.fitted_data)
@@ -329,22 +332,34 @@ class MLReconcile:
         model_history = []
         for run in range(len(self.seed_runs)):
             tf.random.set_seed(self.seed_runs[run])  # set seed for tensorflow for a run
-            ml_rec_model = self.train_model(self.best_hyper_params, data_dic)
+            if not self.run_saved_models:
+                ml_rec_model = self.train_model(self.best_hyper_params, data_dic)
+                self.saved_models.append(ml_rec_model)
+            else:
+                # retrieve the model we saved in a previous rolling window iteration
+                ml_rec_model = self.saved_models[run]
+
             # forward propagate the forecasts to get the adjusted forecasts
             adjusted_forecasts = pd.DataFrame(ml_rec_model.predict(x=data_dic['X_test']))
             adjusted_forecasts.columns = self.hierarchy.hierarchy_levels[self.number_of_levels]
             adjusted_forecasts = adjusted_forecasts.transpose()
             predictions.append(adjusted_forecasts)
-            model_history_per_run = pd.DataFrame(self.model_history.history)
-            model_history_per_run.columns = [f'loss_run_{run + 1}']
-            model_history.append(model_history_per_run)
+
+            if not self.run_saved_models:
+                model_history_per_run = pd.DataFrame(self.model_history.history)
+                model_history_per_run.columns = [f'loss_run_{run + 1}']
+                model_history.append(model_history_per_run)
         seed_forecasts = pd.concat(predictions)
         median_forecast = seed_forecasts.groupby(seed_forecasts.index).median()
         mean_forecast = seed_forecasts.groupby(seed_forecasts.index).mean()
         forecast_for_hierarchy_median = self._get_bottom_up_forecasts(median_forecast)
         forecast_for_hierarchy_mean = self._get_bottom_up_forecasts(mean_forecast)
-        return forecast_for_hierarchy_median, forecast_for_hierarchy_mean, pd.concat(model_history,
-                                                                                     axis=1), seed_forecasts
+
+        if not self.run_saved_models:
+            return forecast_for_hierarchy_median, forecast_for_hierarchy_mean, pd.concat(model_history,
+                                                                                         axis=1), seed_forecasts
+        else:
+            return forecast_for_hierarchy_median, forecast_for_hierarchy_mean, [], seed_forecasts
 
     def run_ml_reconciliation(self):
         # split the dataset
@@ -368,7 +383,8 @@ class MLReconcile:
                 algo=tpe.suggest,
                 trials=trials,
                 max_evals=max_evals,
-                rstate=random_state
+                rstate=random_state,
+                show_progressbar = False
             )
 
             # run the model with best parameters
@@ -382,5 +398,8 @@ class MLReconcile:
             return forecasts_median, forecast_mean, model_history, pd.DataFrame.from_dict(self.best_hyper_params,
                                                                                           'index'), seed_forecast
         else:
-            return forecasts_median, forecast_mean, model_history, pd.DataFrame.from_dict(self.best_hyper_params,
-                                                                                          'index')
+            if self.run_saved_models:
+                return forecasts_median, forecast_mean, None, None, self.saved_models
+            else:
+                return forecasts_median, forecast_mean, model_history, pd.DataFrame.from_dict(self.best_hyper_params,
+                                                                                          'index'), self.saved_models
