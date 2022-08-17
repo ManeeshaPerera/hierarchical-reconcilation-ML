@@ -1,6 +1,7 @@
 import pandas as pd
 from ml_reconcilation import MLReconcile
 import sys
+import time
 
 
 def run_ml_reconciliation(dataset, rolling_iter, ml_method, lambda_range_run, seed_to_run, seed_array, hf_levels,
@@ -43,6 +44,7 @@ def run_ml_reconciliation(dataset, rolling_iter, ml_method, lambda_range_run, se
 
 
 if __name__ == '__main__':
+    times = []
     DATASET = ['prison', 'tourism', 'wikipedia', 'labour']
     rolling_windows = {'prison': 24,
                        'tourism': 120,
@@ -84,16 +86,27 @@ if __name__ == '__main__':
 
     n = 10  # refit after 10 samples
     saved_models = None
+    times = []
 
     # we need to only calculate hyper-params after like 10th window
     for rolling_window in range(1, num_rolling_windows + 1):
         if rolling_window % n == 1:
+            # get the start time
+            st = time.time()
             saved_models = run_ml_reconciliation(data, rolling_window, ml_method_name, lambda_case, seed_value,
                                                  seed_runs,
                                                  number_of_levels,
                                                  tune_lambda, remove_skip, run_saved_model=False)
+            et = time.time()
+            times.append(et-st)
+
         else:
-            print("here")
+            st = time.time()
             run_ml_reconciliation(data, rolling_window, ml_method_name, lambda_case, seed_value, seed_runs,
                                   number_of_levels,
                                   tune_lambda, remove_skip, run_saved_model=True, saved_models=saved_models)
+            et = time.time()
+            times.append(et - st)
+
+    exe_time = pd.DataFrame(times, columns=['program time'])
+    exe_time.to_csv(f'rolling_window_experiments/hyper_params/{data}/EXE_{model}_{ml_method_name}.csv')
