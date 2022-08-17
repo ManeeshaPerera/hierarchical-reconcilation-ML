@@ -3,7 +3,7 @@
 #SBATCH --account="punim0512"
 
 # The name of the job:
-#SBATCH --job-name="prison-arima"
+#SBATCH --job-name="rolling-ml"
 
 # Partition for the job:
 #SBATCH --partition gpgpu
