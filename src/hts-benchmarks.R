@@ -151,7 +151,6 @@ hts_benchmarks <- function (dataset_name, input_file_path, filename_fc, base_mod
     write.table(wls, paste0('rolling_window_experiments/hts/', dataset_name, "/", base_model_name, "_wls_", fc_iter, '.csv'),
                 col.names = TRUE, sep = ",")
     if (mintsample != FALSE){
-      colnames(mintsample) <- seq(1:h+1)
       write.table(mintsample, paste0('rolling_window_experiments/hts/', dataset_name, "/", base_model_name, "_mintsample_", fc_iter, '.csv', sep = ''),
                   col.names = TRUE, sep = ",")
     }
