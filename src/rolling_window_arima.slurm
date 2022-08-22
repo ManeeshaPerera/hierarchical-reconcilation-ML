@@ -21,7 +21,7 @@
 #SBATCH --time=06-00:00:0
 
 #Job array
-#SBATCH --array=0,1,3
+#SBATCH --array=0,1,2,3
 
 # Send yourself an email when the job:
 #SBATCH --mail-user=pereramg@student.unimelb.edu.au
@@ -34,25 +34,11 @@ module load python/3.7.4
 module load tensorflow/2.3.1-python-3.7.4
 
 # The job command(s):
-# case 1 lambda 1 -- last param doesn't add value
-python run_ml_method_rolling_origin.py ${SLURM_ARRAY_TASK_ID} arima '' '' 0 ''
-# case 1 lambda [0.01, 0.09]
-python run_ml_method_rolling_origin.py ${SLURM_ARRAY_TASK_ID} arima True '' 0 ''
-# case 1 lambda [0.1, 0.9]
-python run_ml_method_rolling_origin.py ${SLURM_ARRAY_TASK_ID} arima True '' 1 ''
-# case 1 lambda [1, 4]
-python run_ml_method_rolling_origin.py ${SLURM_ARRAY_TASK_ID} arima True '' 2 ''
-# case 1 lambda [0.01, 5]
-python run_ml_method_rolling_origin.py ${SLURM_ARRAY_TASK_ID} arima True '' 3 ''
-
-
-# case 2 lambda 1
-python run_ml_method_rolling_origin.py ${SLURM_ARRAY_TASK_ID} arima '' True 0 ''
 # case 2 lambda [0.01, 0.09]
 python run_ml_method_rolling_origin.py ${SLURM_ARRAY_TASK_ID} arima True True 0 ''
 # case 2 lambda [0.1, 0.9]
-python run_ml_method_rolling_origin.py ${SLURM_ARRAY_TASK_ID} arima True True 0 ''
+python run_ml_method_rolling_origin.py ${SLURM_ARRAY_TASK_ID} arima True True 2 ''
 # case 2 lambda [1, 4]
-python run_ml_method_rolling_origin.py ${SLURM_ARRAY_TASK_ID} arima True True 0 ''
+python run_ml_method_rolling_origin.py ${SLURM_ARRAY_TASK_ID} arima True True 3 ''
 # case 2 lambda [0.01, 5]
-python run_ml_method_rolling_origin.py ${SLURM_ARRAY_TASK_ID} arima True True 0 ''
+python run_ml_method_rolling_origin.py ${SLURM_ARRAY_TASK_ID} arima True True 4 ''
