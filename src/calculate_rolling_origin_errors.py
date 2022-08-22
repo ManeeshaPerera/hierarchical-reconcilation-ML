@@ -14,15 +14,11 @@ def calculate_errors_per_fc(data, fc_type, actual_test, model, iteration):
     if fc_type == 'base':
         df_forecasts = pd.read_csv(f"rolling_window_experiments/{data}/{model}_forecasts_{iteration}.csv",
                                    index_col=1).iloc[:, 1:]
-
-    elif fc_type == 'mintsample' and (data == 'prison' or data == 'wikipedia'):
-        return
     else:
         df_forecasts = pd.read_csv(f"rolling_window_experiments/hts/{data}/{model}_{fc_type}_{iteration}.csv",
                                    index_col=0)
 
     # iterate through each time series in hierarchy
-    print(fc_type)
     ts_names = actual_test.index.values
     levels = actual_test['Level'].values
     for ts in range(len(actual_test)):
@@ -49,17 +45,20 @@ def calculate_errors_per_fc(data, fc_type, actual_test, model, iteration):
 def run_errors(data, model, errors_per_fc_type):
     samples = ROLLING_WINDOWS[data]
     for fc_type in FC_TYPE:
-        sample_errors = []
-        for sample in range(1, samples + 1):
-            actual_test = pd.read_csv(f"rolling_window_experiments/{data}/test_{sample}.csv", index_col=1)
-            sample_error = calculate_errors_per_fc(data, fc_type, actual_test, model, sample)
-            sample_errors.append(sample_error)
-        all_samples = pd.concat(sample_errors)
-        # this will give the mean across all samples for a given method
-        mean_error = all_samples.groupby(all_samples.index).mean().reindex(
-            sample_errors[0].index.values)
-        mean_error.to_csv(f"rolling_window_experiments/results/{data}/{model}_{fc_type}.csv")
-        errors_per_fc_type.append(mean_error)
+        if fc_type == 'mintsample' and (data == 'prison' or data == 'wikipedia'):
+            continue
+        else:
+            sample_errors = []
+            for sample in range(1, samples + 1):
+                actual_test = pd.read_csv(f"rolling_window_experiments/{data}/test_{sample}.csv", index_col=1)
+                sample_error = calculate_errors_per_fc(data, fc_type, actual_test, model, sample)
+                sample_errors.append(sample_error)
+            all_samples = pd.concat(sample_errors)
+            # this will give the mean across all samples for a given method
+            mean_error = all_samples.groupby(all_samples.index).mean().reindex(
+                sample_errors[0].index.values)
+            mean_error.to_csv(f"rolling_window_experiments/results/{data}/{model}_{fc_type}.csv")
+            errors_per_fc_type.append(mean_error)
 
 
 if __name__ == '__main__':
