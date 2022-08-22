@@ -22,6 +22,7 @@ def calculate_errors_per_fc(data, fc_type, actual_test, model, iteration):
                                    index_col=0)
 
     # iterate through each time series in hierarchy
+    print(fc_type)
     ts_names = actual_test.index.values
     levels = actual_test['Level'].values
     for ts in range(len(actual_test)):
