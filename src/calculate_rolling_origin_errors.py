@@ -80,13 +80,13 @@ if __name__ == '__main__':
                'case1_lambda_[0.1, 0.9]',
                'case1_lambda_[1, 4]',
                'case1_lambda_[0.01, 5]',
+               'case2_lambda_1',
+               'case2_lambda_[0.01, 0.09]',
+               'case2_lambda_[0.1, 0.9]',
+               'case2_lambda_[1, 4]',
+               'case2_lambda_[0.01, 5]'
                ]
 
-    # 'case2_lambda_1',
-    # 'case2_lambda_[0.01, 0.09]',
-    # 'case2_lambda_[0.1, 0.9]',
-    # 'case2_lambda_[1, 4]',
-    # 'case2_lambda_[0.01, 5]'
     data = datasets[int(sys.argv[1])]
 
     for model in models:
