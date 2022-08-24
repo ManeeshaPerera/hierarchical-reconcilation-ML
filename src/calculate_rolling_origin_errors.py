@@ -91,11 +91,14 @@ if __name__ == '__main__':
 
     for model in models:
         # # one step ahead horizon
-        errors_per_fc_type = []  # 0 index corresponds to base errors
+        errors_per_fc_type = []  # 0 index corresponds to base errors, but for prison and wiki mintsample is not there
         percentages = []
         run_errors(data, model, errors_per_fc_type)
         # get percentage improvement over base forecasts
         for idx_method in range(1, len(errors_per_fc_type)):
+            # if it's prison or wiki we ignore mintsample which is the 4th index
+            if FC_TYPE[idx_method] == 'mintsample' and (data == 'prison' or data == 'wikipedia'):
+                continue
             percentage_improvement = ((errors_per_fc_type[0] - errors_per_fc_type[idx_method]) / errors_per_fc_type[
                 0]) * 100
             percentage_improvement = percentage_improvement.iloc[:, 1:]
