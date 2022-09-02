@@ -371,12 +371,12 @@ class MLReconcile:
             random_state = np.random.default_rng(42)
             print("====> running hyper parameter optimization")
             trials = Trials()
-            max_evals = 50
+            max_evals = 15
             if self.tune_lambda:
                 lambda_val = self.hyper_params['reconciliation_loss_lambda']
                 diff_ = lambda_val[1] - lambda_val[0]
                 if diff_ > 1:
-                    max_evals = 150
+                    max_evals = 25
             self.best_hyper_params = fmin(
                 fn=partial(self.validate_model, data_dic=data_dic),
                 space=self.create_hyper_param_range(data_dic),
