@@ -6,7 +6,7 @@
 #SBATCH --job-name="rolling-errors"
 
 # Partition for the job:
-#SBATCH --partition gpgpu
+#SBATCH --partition deeplearn
 #SBATCH --qos gpgpumse
 
 # Number of GPUs requested per node:
@@ -21,7 +21,6 @@
 #SBATCH --time=06-00:00:0
 
 #Job array
-#SBATCH --array=0,1,2,3
 
 # Send yourself an email when the job:
 #SBATCH --mail-user=pereramg@student.unimelb.edu.au
@@ -33,5 +32,5 @@ module load gcc/8.3.0 cuda/10.1.243 openmpi/3.1.4
 module load python/3.7.4
 
 # The job command(s):
-python calculate_rolling_origin_errors.py ${SLURM_ARRAY_TASK_ID} ''
-python calculate_rolling_origin_errors.py ${SLURM_ARRAY_TASK_ID} True #calculate one window
+python calculate_rolling_origin_errors.py 0 ''
+#python calculate_rolling_origin_errors.py ${SLURM_ARRAY_TASK_ID} True #calculate one window

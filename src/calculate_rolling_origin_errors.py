@@ -46,7 +46,7 @@ def calculate_errors_per_fc(data, fc_type, actual_test, model, iteration, error_
     return errors
 
 
-def run_errors(data, model, errors_per_fc_type, error_name, one_window):
+def run_errors(data, model, errors_per_fc_type, errors_per_fc_type_median, error_name, one_window):
     samples = ROLLING_WINDOWS[data]
     for fc_type in FC_TYPE:
         if fc_type == 'mintsample' and (data == 'prison' or data == 'wikipedia'):
@@ -64,14 +64,21 @@ def run_errors(data, model, errors_per_fc_type, error_name, one_window):
                     sample_error = calculate_errors_per_fc(data, fc_type, actual_test, model, sample, error_name)
                     sample_errors.append(sample_error)
             all_samples = pd.concat(sample_errors)
+            if 'case' in fc_type:
+                all_samples.to_csv(
+                    f"rolling_window_experiments/results/{data}/{model}_{fc_type}_{error_name}_all_samples.csv")
             # this will give the mean across all samples for a given method
             mean_error = all_samples.groupby(all_samples.index).mean().reindex(
+                sample_errors[0].index.values)
+            median_error = all_samples.groupby(all_samples.index).median().reindex(
                 sample_errors[0].index.values)
             filename = f'{model}_{fc_type}_{error_name}'
             if one_window:
                 filename = f'{filename}_single_window'
             mean_error.to_csv(f"rolling_window_experiments/results/{data}/{filename}.csv")
+            median_error.to_csv(f"rolling_window_experiments/results/{data}/{filename}_median.csv")
             errors_per_fc_type.append(mean_error)
+            errors_per_fc_type_median.append(median_error)
 
 
 if __name__ == '__main__':
@@ -120,21 +127,35 @@ if __name__ == '__main__':
         # # one step ahead horizon
         for error_name in ['MSE', 'MAE']:
             errors_per_fc_type = []  # 0 index corresponds to base errors, but for prison and wiki mintsample is not there
+            errors_per_fc_type_median = []
             percentages = []
-            run_errors(data, model, errors_per_fc_type, error_name, calculate_one_window)
+            percentages_median = []
+            run_errors(data, model, errors_per_fc_type, errors_per_fc_type_median, error_name, calculate_one_window)
             # get percentage improvement over base forecasts
             for idx_method in range(1, len(errors_per_fc_type)):
+                # mean
                 percentage_improvement = ((errors_per_fc_type[0] - errors_per_fc_type[idx_method]) / errors_per_fc_type[
                     0]) * 100
                 percentage_improvement = percentage_improvement.iloc[:, 1:]
+
+                #median
+                percentage_improvement_median = ((errors_per_fc_type_median[0] - errors_per_fc_type_median[idx_method]) / errors_per_fc_type_median[
+                    0]) * 100
+                percentage_improvement_median = percentage_improvement_median.iloc[:, 1:]
                 if data == 'prison' or data == 'wikipedia':
                     percentage_improvement.columns = [FC_TYPE_prison_wiki[idx_method]]
+                    percentage_improvement_median.columns = [FC_TYPE_prison_wiki[idx_method]]
                 else:
                     percentage_improvement.columns = [FC_TYPE[idx_method]]
+                    percentage_improvement_median.columns = [FC_TYPE[idx_method]]
                 percentages.append(percentage_improvement)
+                percentages_median.append(percentage_improvement_median)
             percentages = pd.concat(percentages, axis=1)
+            percentages_median = pd.concat(percentages_median, axis=1)
             file_name = f'{model}_{error_name}'
             if calculate_one_window:
                 file_name = f'{file_name}_one_window'
             percentages.sort_values(by='Overall', axis=1, ascending=False).round(2).to_csv(
                 f'rolling_window_experiments/results/{data}/error_percentages/{file_name}.csv')
+            percentages_median.sort_values(by='Overall', axis=1, ascending=False).round(2).to_csv(
+                f'rolling_window_experiments/results/{data}/error_percentages/{file_name}_median.csv')
