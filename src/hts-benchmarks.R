@@ -144,19 +144,19 @@ hts_benchmarks <- function (dataset_name, input_file_path, filename_fc, base_mod
                 col.names = TRUE, sep = ",")
   }
   else if (experiment == 'rolling_window'){
-    write.table(bottom_up, paste0('rolling_window_experiments/hts/', dataset_name, "/", base_model_name, "_bottomup_", fc_iter, '.csv'),
+    write.table(bottom_up, paste0('rolling_window_experiments/hts/', dataset_name, "/", dataset_name, "_new/", base_model_name, "_bottomup_", fc_iter, '.csv'),
                 col.names = TRUE, sep = ",")
-    write.table(ols, paste0('rolling_window_experiments/hts/', dataset_name, "/", base_model_name, "_ols_", fc_iter, '.csv'),
+    write.table(ols, paste0('rolling_window_experiments/hts/', dataset_name,  "/", dataset_name, "_new/", base_model_name, "_ols_", fc_iter, '.csv'),
                 col.names = TRUE, sep = ",")
-    write.table(wls, paste0('rolling_window_experiments/hts/', dataset_name, "/", base_model_name, "_wls_", fc_iter, '.csv'),
+    write.table(wls, paste0('rolling_window_experiments/hts/', dataset_name,  "/", dataset_name, "_new/", base_model_name, "_wls_", fc_iter, '.csv'),
                 col.names = TRUE, sep = ",")
     if (mintsample != FALSE){
-      write.table(mintsample, paste0('rolling_window_experiments/hts/', dataset_name, "/", base_model_name, "_mintsample_", fc_iter, '.csv', sep = ''),
+      write.table(mintsample, paste0('rolling_window_experiments/hts/', dataset_name,  "/", dataset_name, "_new/", base_model_name, "_mintsample_", fc_iter, '.csv', sep = ''),
                   col.names = TRUE, sep = ",")
     }
-    write.table(mintshrink, paste0('rolling_window_experiments/hts/', dataset_name, "/", base_model_name, "_mintshrink_", fc_iter, '.csv'),
+    write.table(mintshrink, paste0('rolling_window_experiments/hts/', dataset_name,  "/", dataset_name, "_new/", base_model_name, "_mintshrink_", fc_iter, '.csv'),
                 col.names = TRUE, sep = ",")
-    write.table(erm, paste0('rolling_window_experiments/hts/', dataset_name, "/", base_model_name, "_erm_", fc_iter, '.csv'),
+    write.table(erm, paste0('rolling_window_experiments/hts/', dataset_name,  "/", dataset_name, "_new/", base_model_name, "_erm_", fc_iter, '.csv'),
                 col.names = TRUE, sep = ",")
   }
 }

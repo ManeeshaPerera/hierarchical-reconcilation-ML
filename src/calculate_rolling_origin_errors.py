@@ -15,7 +15,7 @@ def calculate_errors_per_fc(data, fc_type, actual_test, model, iteration, error_
         df_forecasts = pd.read_csv(f"rolling_window_experiments/{data}/{model}_forecasts_{iteration}.csv",
                                    index_col=1).iloc[:, 1:]
     else:
-        if data == 'prison' and 'case' in fc_type:
+        if data == 'prison':
             df_forecasts = pd.read_csv(
                 f"rolling_window_experiments/hts/{data}/prison_new/{model}_{fc_type}_{iteration}.csv",
                 index_col=0)
