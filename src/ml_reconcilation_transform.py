@@ -134,14 +134,12 @@ class MLReconcile:
         :rtype: float
         """
         bottom_level_ts, start_index_bottom_ts = self.hierarchy.get_bottom_level_ts_info()
-        residuals_start_idx = start_index_bottom_ts + bottom_level_ts
         hierarchy = self.hierarchy.get_hierarchy_indexes()
 
         def loss(data, y_pred):
             rec_loss_list = list()
             all_predictions = y_pred[:, :bottom_level_ts]
-            # CHANGE
-            actual = data[:, start_index_bottom_ts: residuals_start_idx]
+            actual = data[:, start_index_bottom_ts:]
             # calculate the bottom time series loss
             loss_fn = tf.losses.MeanSquaredError()
             prediction_error = loss_fn(actual, all_predictions)
