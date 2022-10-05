@@ -7,6 +7,7 @@ src/results/expanding_window_results/ml_fc
 src/results/expanding_window_results/model_history
 src/results/expanding_window_results/best_params
 src/rolling_window_experiments
+src/rolling_window_experiments_transformed
 example_code/rolling-window-code.R
 
 # Byte-compiled / optimized / DLL files

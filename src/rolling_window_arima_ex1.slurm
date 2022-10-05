@@ -3,7 +3,7 @@
 #SBATCH --account="punim0512"
 
 # The name of the job:
-#SBATCH --job-name="rolling-ml"
+#SBATCH --job-name="rolling-ml-ex1"
 
 # Partition for the job:
 #SBATCH --partition gpgpu
@@ -20,9 +20,6 @@
 # The maximum running time of the job in days-hours:mins:sec
 #SBATCH --time=06-00:00:0
 
-#Job array
-#SBATCH --array=1-24
-
 # Send yourself an email when the job:
 #SBATCH --mail-user=pereramg@student.unimelb.edu.au
 #SBATCH --mail-type=FAIL,END
@@ -35,23 +32,23 @@ module load tensorflow/2.3.1-python-3.7.4
 
 # The job command(s):
 # case 1 lambda 1
-python run_ml_method_rolling_origin.py 0 arima '' '' 0 ${SLURM_ARRAY_TASK_ID}
+python run_ml_method_rolling_origin_transform.py 0 arima '' '' 0 ''
 # case 1 lambda [0.01, 0.09]
-python run_ml_method_rolling_origin.py 0 arima True '' 0 ${SLURM_ARRAY_TASK_ID}
+python run_ml_method_rolling_origin_transform.py 0 arima True '' 0 ''
 # case 1 lambda [0.1, 0.9]
-python run_ml_method_rolling_origin.py 0 arima True '' 1 ${SLURM_ARRAY_TASK_ID}
+python run_ml_method_rolling_origin_transform.py 0 arima True '' 1 ''
 # case 1 lambda [1, 4]
-python run_ml_method_rolling_origin.py 0 arima True '' 2 ${SLURM_ARRAY_TASK_ID}
+python run_ml_method_rolling_origin_transform.py 0 arima True '' 2 ''
 # case 1 lambda [0.01, 5]
-python run_ml_method_rolling_origin.py 0 arima True '' 3 ${SLURM_ARRAY_TASK_ID}
+python run_ml_method_rolling_origin_transform.py 0 arima True '' 3 ''
 
 # case 2 lambda 1
-python run_ml_method_rolling_origin.py 0 arima '' True 0 ${SLURM_ARRAY_TASK_ID}
+python run_ml_method_rolling_origin_transform.py 0 arima '' True 0 ''
 # case 2 lambda [0.01, 0.09]
-python run_ml_method_rolling_origin.py 0 arima True True 0 ${SLURM_ARRAY_TASK_ID}
+python run_ml_method_rolling_origin_transform.py 0 arima True True 0 ''
 # case 2 lambda [0.1, 0.9]
-python run_ml_method_rolling_origin.py 0 arima True True 1 ${SLURM_ARRAY_TASK_ID}
+python run_ml_method_rolling_origin_transform.py 0 arima True True 1 ''
 # case 2 lambda [1, 4]
-python run_ml_method_rolling_origin.py 0 arima True True 2 ${SLURM_ARRAY_TASK_ID}
+python run_ml_method_rolling_origin_transform.py 0 arima True True 2 ''
 # case 2 lambda [0.01, 5]
-python run_ml_method_rolling_origin.py 0 arima True True 3 ${SLURM_ARRAY_TASK_ID}
+python run_ml_method_rolling_origin_transform.py 0 arima True True 3 ''

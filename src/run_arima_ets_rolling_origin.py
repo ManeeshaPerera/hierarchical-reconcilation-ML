@@ -13,11 +13,12 @@ arima_ets = sys.argv[2]
 
 min_train_length = DATA[dataset_name]['min_train_length']
 freq = DATA[dataset_name]['freq']
-# horizon = DATA[dataset_name]['horizon']
 horizon = 1  # for now, we are using a horizon of 1
 
 r_source = robjects.r['source']
-r_source('../src/rolling_origin.R')
+# r_source('../src/rolling_origin.R')
+
+r_source('../src/rolling_origin_transformed.R')
 
 run_rollin_origin = robjects.globalenv['run_rolling_origin']
 
