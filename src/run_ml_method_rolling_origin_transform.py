@@ -1,5 +1,6 @@
 import pandas as pd
-from ml_reconcilation_transform import MLReconcile
+# from ml_reconcilation_transform import MLReconcile
+from ml_reconcilation_transform_2 import MLReconcile
 import sys
 import time
 
@@ -31,6 +32,8 @@ def run_ml_reconciliation(dataset, rolling_iter, ml_method, lambda_range_run, se
                                     hyper_params_tune=hyper_params,
                                     tune_hyper_params=False, tune_lambda=lambada_tune,
                                     saved_model=run_saved_model, saved_models=saved_models)
+
+
     _, forecasts_adjusted_mean, _, best_hyper_params, saved_models = ml_model_case.run_ml_reconciliation()
 
     # only saving the mean across the seeds
@@ -106,14 +109,14 @@ if __name__ == '__main__':
     rolling_window = sys.argv[6]
 
     if rolling_window:
-        dir_name = 'ex2'
+        dir_name = 'ex4'
         rolling_window = int(rolling_window)
         retrain_network(data, rolling_window, ml_method_name, lambda_case, seed_value,
                         seed_runs,
                         number_of_levels,
                         tune_lambda, times, run_saved_model=False)
     else:
-        dir_name = 'ex1'
+        dir_name = 'ex3'
         # we need to only calculate hyper-params after like 10th window
         for rolling_window in range(1, num_rolling_windows + 1):
             if rolling_window % n == 1:
