@@ -30,7 +30,7 @@ def calculate_errors_per_fc(data, fc_type, actual_test, model, iteration, error_
 
     else:
         # benchmarks
-        if experiment_number == 'ex1':
+        if experiment_number == 'ex1' or experiment_number == 'ex3':
             df_forecasts = pd.read_csv(
                             f"rolling_window_experiments/hts/{data}/{model}_{fc_type}_{iteration}.csv",
                             index_col=0)
@@ -109,7 +109,7 @@ def run_errors(data, model, errors_per_fc_type, errors_per_fc_type_median, error
 
 
 if __name__ == '__main__':
-    experiment_number = 'ex2'
+    experiment_number = 'ex4'
     ROLLING_WINDOWS = {'prison': 24,
                        'tourism': 120,
                        'labour': 60,
