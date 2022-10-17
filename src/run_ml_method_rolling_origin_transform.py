@@ -109,14 +109,14 @@ if __name__ == '__main__':
     rolling_window = sys.argv[6]
 
     if rolling_window:
-        dir_name = 'ex4'
+        dir_name = 'ex2'
         rolling_window = int(rolling_window)
         retrain_network(data, rolling_window, ml_method_name, lambda_case, seed_value,
                         seed_runs,
                         number_of_levels,
                         tune_lambda, times, run_saved_model=False)
     else:
-        dir_name = 'ex3'
+        dir_name = 'ex1'
         # we need to only calculate hyper-params after like 10th window
         for rolling_window in range(1, num_rolling_windows + 1):
             if rolling_window % n == 1:

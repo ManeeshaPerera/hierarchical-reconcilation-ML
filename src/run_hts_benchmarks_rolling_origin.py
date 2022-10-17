@@ -12,11 +12,11 @@ ROLLING_WINDOWS = {'prison': 24,
                    'wikipedia': 70}
 
 # For ROLLING WINDOW EVALUATION
-dataset_name = 'prison'
+dataset_name = 'wikipedia'
 windows = ROLLING_WINDOWS[dataset_name]
 n = 10  # refit after 10 samples
 last_iter = 0
-method = 'ets'
+method = 'arima'
 
 
 for iter_window in range(1, windows + 1):
