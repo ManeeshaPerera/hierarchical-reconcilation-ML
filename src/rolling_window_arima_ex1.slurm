@@ -32,23 +32,23 @@ module load tensorflow/2.3.1-python-3.7.4
 
 # The job command(s):
 # case 1 lambda 1
-python run_ml_method_rolling_origin_transform.py 0 arima '' '' 0 ''
+python run_ml_method_rolling_origin_transform.py 2 arima '' '' 0 ''
 # case 1 lambda [0.01, 0.09]
-python run_ml_method_rolling_origin_transform.py 0 arima True '' 0 ''
+python run_ml_method_rolling_origin_transform.py 2 arima True '' 0 ''
 # case 1 lambda [0.1, 0.9]
-python run_ml_method_rolling_origin_transform.py 0 arima True '' 1 ''
+python run_ml_method_rolling_origin_transform.py 2 arima True '' 1 ''
 # case 1 lambda [1, 4]
-python run_ml_method_rolling_origin_transform.py 0 arima True '' 2 ''
+python run_ml_method_rolling_origin_transform.py 2 arima True '' 2 ''
 # case 1 lambda [0.01, 5]
-python run_ml_method_rolling_origin_transform.py 0 arima True '' 3 ''
+python run_ml_method_rolling_origin_transform.py 2 arima True '' 3 ''
 
 # case 2 lambda 1
-python run_ml_method_rolling_origin_transform.py 0 arima '' True 0 ''
+python run_ml_method_rolling_origin_transform.py 2 arima '' True 0 ''
 # case 2 lambda [0.01, 0.09]
-python run_ml_method_rolling_origin_transform.py 0 arima True True 0 ''
+python run_ml_method_rolling_origin_transform.py 2 arima True True 0 ''
 # case 2 lambda [0.1, 0.9]
-python run_ml_method_rolling_origin_transform.py 0 arima True True 1 ''
+python run_ml_method_rolling_origin_transform.py 2 arima True True 1 ''
 # case 2 lambda [1, 4]
-python run_ml_method_rolling_origin_transform.py 0 arima True True 2 ''
+python run_ml_method_rolling_origin_transform.py 2 arima True True 2 ''
 # case 2 lambda [0.01, 5]
-python run_ml_method_rolling_origin_transform.py 0 arima True True 3 ''
+python run_ml_method_rolling_origin_transform.py 2 arima True True 3 ''
