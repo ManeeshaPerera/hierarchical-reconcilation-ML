@@ -19,7 +19,7 @@ class MLReconcile:
                  number_of_levels, seed_runs, hyper_params_tune,
                  best_hyper_params=None, tune_hyper_params=True, random_state=42, split_size=0.2,
                  validate_hf_loss=False, l1_regularizer=False, return_seed_forecast=False, tune_lambda=True,
-                 remove_skip=False, saved_model=False, saved_models=[]):
+                 remove_skip=False, saved_model=False, saved_models=[], model_path = ''):
         """
         Class initialization
         :param seed_value: seed value for tensorflow to achieve reproducibility
@@ -73,6 +73,7 @@ class MLReconcile:
         self.remove_skip = remove_skip
         self.saved_models = saved_models
         self.run_saved_models = saved_model
+        self.model_path = model_path
         self._run_initialization(seed_value, tune_hyper_params, hyper_params_tune, best_hyper_params)
 
     def _transpose_data(self, dataframe):
@@ -355,7 +356,9 @@ class MLReconcile:
                 self.saved_models.append(ml_rec_model)
             else:
                 # retrieve the model we saved in a previous rolling window iteration
-                ml_rec_model = self.saved_models[run]
+                # ml_rec_model = self.saved_models[run] # load model
+
+                ml_rec_model = tf.keras.models.load_model(f'{self.model_path}/SEED_{run}')
 
             # forward propagate the forecasts to get the adjusted forecasts
             adjusted_forecasts = pd.DataFrame(ml_rec_model.predict(x=data_dic['X_test']))

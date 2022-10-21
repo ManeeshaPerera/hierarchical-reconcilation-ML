@@ -5,8 +5,9 @@ import sys
 import time
 import os
 
+
 def run_ml_reconciliation(dataset, rolling_iter, ml_method, lambda_range_run, seed_to_run, seed_array, hf_levels,
-                          lambada_tune, run_saved_model, saved_models=None):
+                          lambada_tune, run_saved_model, saved_models=None, path=''):
     df_actual = pd.read_csv(f"rolling_window_experiments_transformed/{dataset}/actual_{rolling_iter}.csv")
     df_fitted = pd.read_csv(f"rolling_window_experiments_transformed/{dataset}/{model}_fitted_{rolling_iter}.csv")
     df_forecasts = pd.read_csv(f"rolling_window_experiments_transformed/{dataset}/{model}_forecasts_{rolling_iter}.csv")
@@ -27,12 +28,19 @@ def run_ml_reconciliation(dataset, rolling_iter, ml_method, lambda_range_run, se
                                     hyper_params_tune=hyper_params,
                                     tune_hyper_params=True, tune_lambda=lambada_tune)
     else:
-        ml_model_case = MLReconcile(seed_to_run, df_actual, df_fitted, df_forecasts, df_fitted_transform,
-                                    df_fc_transform, hf_levels, seed_array,
-                                    hyper_params_tune=hyper_params,
-                                    tune_hyper_params=False, tune_lambda=lambada_tune,
-                                    saved_model=run_saved_model, saved_models=saved_models)
+        if path != '':
+            ml_model_case = MLReconcile(seed_to_run, df_actual, df_fitted, df_forecasts, df_fitted_transform,
+                                        df_fc_transform, hf_levels, seed_array,
+                                        hyper_params_tune=hyper_params,
+                                        tune_hyper_params=False, tune_lambda=lambada_tune,
+                                        saved_model=run_saved_model, model_path=path)
 
+        else:
+            ml_model_case = MLReconcile(seed_to_run, df_actual, df_fitted, df_forecasts, df_fitted_transform,
+                                        df_fc_transform, hf_levels, seed_array,
+                                        hyper_params_tune=hyper_params,
+                                        tune_hyper_params=False, tune_lambda=lambada_tune,
+                                        saved_model=run_saved_model, saved_models=saved_models)
 
     _, forecasts_adjusted_mean, _, best_hyper_params, saved_models = ml_model_case.run_ml_reconciliation()
 
@@ -55,7 +63,7 @@ def run_ml_reconciliation(dataset, rolling_iter, ml_method, lambda_range_run, se
 
 
 def retrain_network(data, window_num, method_name, lambada_val, seed, seed_runs, levels, tune_lambda,
-                    times_array, run_saved_model=False):
+                    times_array, run_saved_model=False, path=''):
     st = time.time()
     if not run_saved_model:
         models = run_ml_reconciliation(data, window_num, method_name, lambada_val, seed,
@@ -63,10 +71,16 @@ def retrain_network(data, window_num, method_name, lambada_val, seed, seed_runs,
                                        levels,
                                        tune_lambda, run_saved_model)
     else:
-        models = run_ml_reconciliation(data, rolling_window, ml_method_name, lambda_case, seed_value,
-                                       seed_runs,
-                                       number_of_levels,
-                                       tune_lambda, run_saved_model, saved_models=saved_models)
+        if path != '':
+            run_ml_reconciliation(data, rolling_window, ml_method_name, lambda_case, seed_value,
+                                  seed_runs,
+                                  number_of_levels,
+                                  tune_lambda, run_saved_model, path=path)
+        else:
+            models = run_ml_reconciliation(data, rolling_window, ml_method_name, lambda_case, seed_value,
+                                           seed_runs,
+                                           number_of_levels,
+                                           tune_lambda, run_saved_model, saved_models=saved_models)
     et = time.time()
     times_array.append(et - st)
 
@@ -115,14 +129,33 @@ if __name__ == '__main__':
     saved_models = None
     times = []
     rolling_window = sys.argv[6]
+    if len(sys.argv) > 7:
+        predict_only = bool(sys.argv[7])
+        print(predict_only)
+    else:
+        predict_only = False
 
-    if rolling_window:
+    if rolling_window and (predict_only == False):
         dir_name = 'ex2'
         rolling_window = int(rolling_window)
         retrain_network(data, rolling_window, ml_method_name, lambda_case, seed_value,
                         seed_runs,
                         number_of_levels,
                         tune_lambda, times, run_saved_model=False)
+    elif rolling_window and (predict_only == True):
+        dir_name = 'ex3'
+        rolling_window = int(rolling_window)
+        if rolling_window % n != 1:  # if it's one we already have the saved model
+            if rolling_window % n == 0:
+                trained_rolling_window = rolling_window
+            else:
+                trained_rolling_window = (rolling_window // n) + 1
+            path = f'rolling_window_experiments_transformed/models/{data}/{ml_method_name}/{trained_rolling_window}/'
+            retrain_network(data, rolling_window, ml_method_name, lambda_case, seed_value,
+                            seed_runs,
+                            number_of_levels,
+                            tune_lambda, times, run_saved_model=True, path=path)
+
     else:
         dir_name = 'ex3'
         # we need to only calculate hyper-params after like 10th window
