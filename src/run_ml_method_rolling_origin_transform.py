@@ -3,7 +3,7 @@ from ml_reconcilation_transform import MLReconcile
 # from ml_reconcilation_transform_2 import MLReconcile
 import sys
 import time
-
+import os
 
 def run_ml_reconciliation(dataset, rolling_iter, ml_method, lambda_range_run, seed_to_run, seed_array, hf_levels,
                           lambada_tune, run_saved_model, saved_models=None):
@@ -36,6 +36,8 @@ def run_ml_reconciliation(dataset, rolling_iter, ml_method, lambda_range_run, se
 
     _, forecasts_adjusted_mean, _, best_hyper_params, saved_models = ml_model_case.run_ml_reconciliation()
 
+    # save the models here
+
     # only saving the mean across the seeds
     forecasts_adjusted_mean.to_csv(
         f'rolling_window_experiments_transformed/hts/{dataset}/{dir_name}/{model}_{ml_method}_{rolling_iter}.csv')
@@ -43,6 +45,12 @@ def run_ml_reconciliation(dataset, rolling_iter, ml_method, lambda_range_run, se
     if not run_saved_model:
         best_hyper_params.to_csv(
             f'rolling_window_experiments_transformed/hyper_params/{dataset}/{dir_name}/{model}_{ml_method}_{rolling_iter}.csv')
+
+        for model_num in range(len(saved_models)):
+            dir_name_models = f'rolling_window_experiments_transformed/models/{dataset}/{ml_method}/{rolling_iter}/'
+            if not os.path.exists(dir_name_models):
+                os.makedirs(dir_name_models)
+            saved_models[model_num].save(f'{dir_name_models}/SEED_{model_num}')
         return saved_models
 
 
@@ -116,7 +124,7 @@ if __name__ == '__main__':
                         number_of_levels,
                         tune_lambda, times, run_saved_model=False)
     else:
-        dir_name = 'ex1'
+        dir_name = 'ex3'
         # we need to only calculate hyper-params after like 10th window
         for rolling_window in range(1, num_rolling_windows + 1):
             if rolling_window % n == 1:
@@ -124,12 +132,13 @@ if __name__ == '__main__':
                                                seed_runs,
                                                number_of_levels,
                                                tune_lambda, times, run_saved_model=False)
+                # save the models for each iteration
 
-            else:
-                retrain_network(data, rolling_window, ml_method_name, lambda_case, seed_value,
-                                seed_runs,
-                                number_of_levels,
-                                tune_lambda, times, run_saved_model=True)
+            # else:
+            #     retrain_network(data, rolling_window, ml_method_name, lambda_case, seed_value,
+            #                     seed_runs,
+            #                     number_of_levels,
+            #                     tune_lambda, times, run_saved_model=True)
 
     exe_time = pd.DataFrame(times, columns=['program time'])
     exe_time.to_csv(

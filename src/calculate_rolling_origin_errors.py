@@ -24,23 +24,23 @@ def calculate_errors_per_fc(data, fc_type, actual_test, model, iteration, error_
     #                                    index_col=0)
     elif 'case' in fc_type:
         # ML method where the inputs are the transformed matrices
-        # df_forecasts = pd.read_csv(
-        #     f"rolling_window_experiments_transformed/hts/{data}/{experiment_number}/{model}_{fc_type}_{iteration}.csv",
-        #     index_col=0)
         df_forecasts = pd.read_csv(
-            f"rolling_window_experiments/hts/{data}/{data}_new/{model}_{fc_type}_{iteration}.csv",
+            f"rolling_window_experiments_transformed/hts/{data}/{experiment_number}/{model}_{fc_type}_{iteration}.csv",
             index_col=0)
+        # df_forecasts = pd.read_csv(
+        #     f"rolling_window_experiments/hts/{data}/{data}_new/{model}_{fc_type}_{iteration}.csv",
+        #     index_col=0)
 
     else:
         # benchmarks
-        # if experiment_number == 'ex1' or experiment_number == 'ex3':
-        #     df_forecasts = pd.read_csv(
-        #                     f"rolling_window_experiments/hts/{data}/{model}_{fc_type}_{iteration}.csv",
-        #                     index_col=0)
-        # else:
-        df_forecasts = pd.read_csv(
-                f"rolling_window_experiments/hts/{data}/{data}_new/{model}_{fc_type}_{iteration}.csv",
-                index_col=0)
+        if experiment_number == 'ex1' or experiment_number == 'ex3':
+            df_forecasts = pd.read_csv(
+                            f"rolling_window_experiments/hts/{data}/{model}_{fc_type}_{iteration}.csv",
+                            index_col=0)
+        else:
+            df_forecasts = pd.read_csv(
+                    f"rolling_window_experiments/hts/{data}/{data}_new/{model}_{fc_type}_{iteration}.csv",
+                    index_col=0)
 
     # iterate through each time series in hierarchy
     ts_names = actual_test.index.values
@@ -98,8 +98,8 @@ def run_errors(data, model, errors_per_fc_type, errors_per_fc_type_median, error
                 sample_wise_error = pd.concat(sample_errors, axis=1).drop(columns='level')
                 sample_wise_error.columns = [f'sample {i}' for i in range(1, samples + 1)]
                 sample_wise_error.to_csv(
-                    # f"rolling_window_experiments_transformed/results/{data}/{experiment_number}/{model}_{fc_type}_{error_name}_all_samples.csv")
-                    f"rolling_window_experiments/results/{data}/new/{model}_{fc_type}_{error_name}_all_samples.csv")
+                    f"rolling_window_experiments_transformed/results/{data}/{experiment_number}/{model}_{fc_type}_{error_name}_all_samples.csv")
+                    # f"rolling_window_experiments/results/{data}/new/{model}_{fc_type}_{error_name}_all_samples.csv")
             # this will give the mean across all samples for a given method
             mean_error = all_samples.groupby(all_samples.index).mean().reindex(
                 sample_errors[0].index.values)
@@ -109,20 +109,20 @@ def run_errors(data, model, errors_per_fc_type, errors_per_fc_type_median, error
             if one_window:
                 filename = f'{filename}_single_window'
 
-            mean_error.to_csv(
-                f"rolling_window_experiments/results/{data}/new/{filename}.csv")
-            median_error.to_csv(
-                f"rolling_window_experiments/results/{data}/new/{filename}_median.csv")
             # mean_error.to_csv(
-            #     f"rolling_window_experiments_transformed/results/{data}/{experiment_number}/{filename}.csv")
+            #     f"rolling_window_experiments/results/{data}/new/{filename}.csv")
             # median_error.to_csv(
-            #     f"rolling_window_experiments_transformed/results/{data}/{experiment_number}/{filename}_median.csv")
+            #     f"rolling_window_experiments/results/{data}/new/{filename}_median.csv")
+            mean_error.to_csv(
+                f"rolling_window_experiments_transformed/results/{data}/{experiment_number}/{filename}.csv")
+            median_error.to_csv(
+                f"rolling_window_experiments_transformed/results/{data}/{experiment_number}/{filename}_median.csv")
             errors_per_fc_type.append(mean_error)
             errors_per_fc_type_median.append(median_error)
 
 
 if __name__ == '__main__':
-    # experiment_number = 'ex4'
+    experiment_number = 'ex1'
     ROLLING_WINDOWS = {'prison': 24,
                        'tourism': 120,
                        'labour': 60,
@@ -199,12 +199,12 @@ if __name__ == '__main__':
             if calculate_one_window:
                 file_name = f'{file_name}_one_window'
 
-            percentages.sort_values(by='Overall', axis=1, ascending=False).round(2).to_csv(
-                f'rolling_window_experiments/results/{data}/new//error_percentages/{file_name}.csv')
-            percentages_median.sort_values(by='Overall', axis=1, ascending=False).round(2).to_csv(
-                f'rolling_window_experiments/results/{data}/new/error_percentages/{file_name}_median.csv')
-
             # percentages.sort_values(by='Overall', axis=1, ascending=False).round(2).to_csv(
-            #     f'rolling_window_experiments_transformed/results/{data}/{experiment_number}/error_percentages/{file_name}.csv')
+            #     f'rolling_window_experiments/results/{data}/new//error_percentages/{file_name}.csv')
             # percentages_median.sort_values(by='Overall', axis=1, ascending=False).round(2).to_csv(
-            #     f'rolling_window_experiments_transformed/results/{data}/{experiment_number}/error_percentages/{file_name}_median.csv')
+            #     f'rolling_window_experiments/results/{data}/new/error_percentages/{file_name}_median.csv')
+
+            percentages.sort_values(by='Overall', axis=1, ascending=False).round(2).to_csv(
+                f'rolling_window_experiments_transformed/results/{data}/{experiment_number}/error_percentages/{file_name}.csv')
+            percentages_median.sort_values(by='Overall', axis=1, ascending=False).round(2).to_csv(
+                f'rolling_window_experiments_transformed/results/{data}/{experiment_number}/error_percentages/{file_name}_median.csv')
