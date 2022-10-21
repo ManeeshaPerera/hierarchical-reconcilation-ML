@@ -150,7 +150,7 @@ if __name__ == '__main__':
                 trained_rolling_window = rolling_window
             else:
                 trained_rolling_window = (rolling_window // n) + 1
-            path = f'rolling_window_experiments_transformed/models/{data}/{ml_method_name}/{trained_rolling_window}/'
+            path = f'rolling_window_experiments_transformed/models/{data}/{ml_method_name}/{trained_rolling_window}'
             retrain_network(data, rolling_window, ml_method_name, lambda_case, seed_value,
                             seed_runs,
                             number_of_levels,
