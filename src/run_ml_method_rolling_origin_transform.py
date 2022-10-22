@@ -26,7 +26,8 @@ def run_ml_reconciliation(dataset, rolling_iter, ml_method, lambda_range_run, se
         ml_model_case = MLReconcile(seed_to_run, df_actual, df_fitted, df_forecasts, df_fitted_transform,
                                     df_fc_transform, hf_levels, seed_array,
                                     hyper_params_tune=hyper_params,
-                                    tune_hyper_params=True, tune_lambda=lambada_tune)
+                                    tune_hyper_params=True, tune_lambda=lambada_tune,
+                                    model_path=f'rolling_window_experiments_transformed/models_new/{dataset}/{ml_method}/{rolling_iter}')
     else:
         if path != '':
             ml_model_case = MLReconcile(seed_to_run, df_actual, df_fitted, df_forecasts, df_fitted_transform,
@@ -54,11 +55,11 @@ def run_ml_reconciliation(dataset, rolling_iter, ml_method, lambda_range_run, se
         best_hyper_params.to_csv(
             f'rolling_window_experiments_transformed/hyper_params/{dataset}/{dir_name}/{model}_{ml_method}_{rolling_iter}.csv')
 
-        for model_num in range(len(saved_models)):
-            dir_name_models = f'rolling_window_experiments_transformed/models/{dataset}/{ml_method}/{rolling_iter}/'
-            if not os.path.exists(dir_name_models):
-                os.makedirs(dir_name_models)
-            saved_models[model_num].save(f'{dir_name_models}/SEED_{model_num}')
+        # for model_num in range(len(saved_models)):
+        #     dir_name_models = f'rolling_window_experiments_transformed/models/{dataset}/{ml_method}/{rolling_iter}/'
+        #     if not os.path.exists(dir_name_models):
+        #         os.makedirs(dir_name_models)
+        #     saved_models[model_num].save(f'{dir_name_models}/SEED_{model_num}')
         return saved_models
 
 
@@ -147,10 +148,10 @@ if __name__ == '__main__':
         rolling_window = int(rolling_window)
         if rolling_window % n != 1:  # if it's one we already have the saved model
             if rolling_window % n == 0:
-                trained_rolling_window = rolling_window
+                trained_rolling_window = rolling_window // n
             else:
                 trained_rolling_window = (rolling_window // n) + 1
-            path = f'rolling_window_experiments_transformed/models/{data}/{ml_method_name}/{trained_rolling_window}'
+            path = f'rolling_window_experiments_transformed/models_new/{data}/{ml_method_name}/{trained_rolling_window}'
             retrain_network(data, rolling_window, ml_method_name, lambda_case, seed_value,
                             seed_runs,
                             number_of_levels,
@@ -173,6 +174,6 @@ if __name__ == '__main__':
             #                     number_of_levels,
             #                     tune_lambda, times, run_saved_model=True)
 
-    exe_time = pd.DataFrame(times, columns=['program time'])
-    exe_time.to_csv(
-        f'rolling_window_experiments_transformed/hyper_params/{data}/{dir_name}/EXE_{model}_{ml_method_name}.csv')
+    # exe_time = pd.DataFrame(times, columns=['program time'])
+    # exe_time.to_csv(
+    #     f'rolling_window_experiments_transformed/hyper_params/{data}/{dir_name}/EXE_{model}_{ml_method_name}.csv')
