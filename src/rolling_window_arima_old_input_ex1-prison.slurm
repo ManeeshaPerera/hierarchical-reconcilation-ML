@@ -3,7 +3,7 @@
 #SBATCH --account="punim0512"
 
 # The name of the job:
-#SBATCH --job-name="rolling-ml-ex3-predict"
+#SBATCH --job-name="prison-old"
 
 # Partition for the job:
 #SBATCH --partition gpgpu
@@ -21,7 +21,7 @@
 #SBATCH --time=06-00:00:0
 
 #Job array
-#SBATCH --array=1-70
+#SBATCH --array=0,1,2,3
 
 # Send yourself an email when the job:
 #SBATCH --mail-user=pereramg@student.unimelb.edu.au
@@ -34,5 +34,9 @@ module load python/3.7.4
 module load tensorflow/2.3.1-python-3.7.4
 
 # The job command(s):
-# case 1 lambda [0.1, 0.9]
-python run_ml_method_rolling_origin_transform.py 2 arima True '' 1 ${SLURM_ARRAY_TASK_ID} True
+# case 1 lambda [0.01, 0.09], [0.1, 0.9], [1, 4], [0.01, 5]
+python run_ml_method_rolling_origin.py 0 arima True '' ${SLURM_ARRAY_TASK_ID} ''
+
+
+# case 2 lambda [0.01, 0.09], [0.1, 0.9], [1, 4], [0.01, 5]
+python run_ml_method_rolling_origin.py 0 arima True True ${SLURM_ARRAY_TASK_ID} ''
