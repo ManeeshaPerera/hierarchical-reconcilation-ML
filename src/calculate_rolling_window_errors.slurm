@@ -33,4 +33,9 @@ module load python/3.7.4
 
 # The job command(s):
 python calculate_rolling_origin_errors.py 0 ''
+python calculate_rolling_origin_errors.py 0 ex1
+
+python calculate_rolling_origin_errors.py 3 ''
+python calculate_rolling_origin_errors.py 3 ex1
+
 #python calculate_rolling_origin_errors.py ${SLURM_ARRAY_TASK_ID} True #calculate one window
