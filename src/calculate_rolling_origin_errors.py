@@ -34,16 +34,16 @@ def calculate_errors_per_fc(data, fc_type, actual_test, model, iteration, error_
 
     else:
         # benchmarks
-        if experiment_number == 'ex1':
-            # transformed values - training at every 10th iteration
-            df_forecasts = pd.read_csv(
-                f"rolling_window_experiments_transformed/hts/{data}/{experiment_number}/{model}_{fc_type}_{iteration}.csv",
-                index_col=0)
-        else:
+        # if experiment_number == 'ex1':
+        #     # transformed values - training at every 10th iteration
+        #     df_forecasts = pd.read_csv(
+        #         f"rolling_window_experiments_transformed/hts/{data}/{experiment_number}/{model}_{fc_type}_{iteration}.csv",
+        #         index_col=0)
+        # else:
             # df_forecasts = pd.read_csv(
             #     f"rolling_window_experiments/hts/{data}/{data}_new/{model}_{fc_type}_{iteration}.csv",
             #     index_col=0)
-            df_forecasts = pd.read_csv(
+        df_forecasts = pd.read_csv(
                 f"rolling_window_experiments/hts/{data}/{model}_{fc_type}_{iteration}.csv",
                 index_col=0)
 
