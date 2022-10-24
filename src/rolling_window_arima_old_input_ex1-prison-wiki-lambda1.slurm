@@ -3,7 +3,7 @@
 #SBATCH --account="punim0512"
 
 # The name of the job:
-#SBATCH --job-name="prison-wiki-old"
+#SBATCH --job-name="tourism-labour-old"
 
 # Partition for the job:
 #SBATCH --partition gpgpu
@@ -32,13 +32,13 @@ module load tensorflow/2.3.1-python-3.7.4
 
 # The job command(s):
 # case 1 lambda 1
-python run_ml_method_rolling_origin.py 0 arima '' '' 0 ''
+python run_ml_method_rolling_origin.py 1 arima '' '' 0 ''
 
 # case 2 lambda 1
-python run_ml_method_rolling_origin.py 0 arima '' True 0 ''
+python run_ml_method_rolling_origin.py 1 arima '' True 0 ''
 
 # case 1 lambda 1
-python run_ml_method_rolling_origin.py 2 arima '' '' 0 ''
+python run_ml_method_rolling_origin.py 3 arima '' '' 0 ''
 
 # case 2 lambda 1
-python run_ml_method_rolling_origin.py 2 arima '' True 0 ''
+python run_ml_method_rolling_origin.py 3 arima '' True 0 ''

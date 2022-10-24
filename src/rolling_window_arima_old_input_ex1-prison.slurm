@@ -3,7 +3,7 @@
 #SBATCH --account="punim0512"
 
 # The name of the job:
-#SBATCH --job-name="prison-old"
+#SBATCH --job-name="tourism-old"
 
 # Partition for the job:
 #SBATCH --partition gpgpu
@@ -35,8 +35,8 @@ module load tensorflow/2.3.1-python-3.7.4
 
 # The job command(s):
 # case 1 lambda [0.01, 0.09], [0.1, 0.9], [1, 4], [0.01, 5]
-python run_ml_method_rolling_origin.py 0 arima True '' ${SLURM_ARRAY_TASK_ID} ''
+python run_ml_method_rolling_origin.py 1 arima True '' ${SLURM_ARRAY_TASK_ID} ''
 
 
 # case 2 lambda [0.01, 0.09], [0.1, 0.9], [1, 4], [0.01, 5]
-python run_ml_method_rolling_origin.py 0 arima True True ${SLURM_ARRAY_TASK_ID} ''
+python run_ml_method_rolling_origin.py 1 arima True True ${SLURM_ARRAY_TASK_ID} ''
