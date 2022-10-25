@@ -2,6 +2,7 @@ import sys
 
 from sklearn.metrics import mean_squared_error, mean_absolute_error
 import pandas as pd
+import os
 
 
 def calculate_error(err_func, y_true, y_pred, error_list, ts_list, ts_idx, level_list):
@@ -40,12 +41,12 @@ def calculate_errors_per_fc(data, fc_type, actual_test, model, iteration, error_
         #         f"rolling_window_experiments_transformed/hts/{data}/{experiment_number}/{model}_{fc_type}_{iteration}.csv",
         #         index_col=0)
         # else:
-            # df_forecasts = pd.read_csv(
-            #     f"rolling_window_experiments/hts/{data}/{data}_new/{model}_{fc_type}_{iteration}.csv",
-            #     index_col=0)
+        # df_forecasts = pd.read_csv(
+        #     f"rolling_window_experiments/hts/{data}/{data}_new/{model}_{fc_type}_{iteration}.csv",
+        #     index_col=0)
         df_forecasts = pd.read_csv(
-                f"rolling_window_experiments/hts/{data}/{model}_{fc_type}_{iteration}.csv",
-                index_col=0)
+            f"rolling_window_experiments/hts/{data}/{model}_{fc_type}_{iteration}.csv",
+            index_col=0)
 
     # iterate through each time series in hierarchy
     ts_names = actual_test.index.values
@@ -163,9 +164,17 @@ if __name__ == '__main__':
     data = datasets[int(sys.argv[1])]
     experiment_number = sys.argv[2]
 
+    if experiment_number == 'ex1':
+        path_store = f'rolling_window_experiments_transformed/results/{data}/{experiment_number}/error_percentages'
+    else:
+        path_store = f'rolling_window_experiments/results/{data}/error_percentages'
+
+    if not os.path.exists(path_store):
+        os.makedirs(path_store)
+
     for model in models:
         # # one step ahead horizon
-        for error_name in ['MSE', 'MAE']:
+        for error_name in ['MSE']:
             errors_per_fc_type = []  # 0 index corresponds to base errors, but for prison and wiki mintsample is not there
             errors_per_fc_type_median = []
             percentages = []
@@ -195,13 +204,7 @@ if __name__ == '__main__':
             percentages_median = pd.concat(percentages_median, axis=1)
             file_name = f'{model}_{error_name}'
 
-            if experiment_number == 'ex1':
-                percentages.sort_values(by='Overall', axis=1, ascending=False).round(2).to_csv(
-                    f'rolling_window_experiments_transformed/results/{data}/{experiment_number}/error_percentages/{file_name}.csv')
-                percentages_median.sort_values(by='Overall', axis=1, ascending=False).round(2).to_csv(
-                    f'rolling_window_experiments_transformed/results/{data}/{experiment_number}/error_percentages/{file_name}_median.csv')
-            else:
-                percentages.sort_values(by='Overall', axis=1, ascending=False).round(2).to_csv(
-                    f'rolling_window_experiments/results/{data}/error_percentages/{file_name}.csv')
-                percentages_median.sort_values(by='Overall', axis=1, ascending=False).round(2).to_csv(
-                    f'rolling_window_experiments/results/{data}/error_percentages/{file_name}_median.csv')
+            percentages.sort_values(by='Overall', axis=1, ascending=False).round(2).to_csv(
+                f'{path_store}/{file_name}.csv')
+            percentages_median.sort_values(by='Overall', axis=1, ascending=False).round(2).to_csv(
+                f'{path_store}/{file_name}_median.csv')
