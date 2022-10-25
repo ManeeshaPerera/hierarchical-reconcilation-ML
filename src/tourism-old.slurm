@@ -1,4 +1,4 @@
-rolling_window_arima_ex2.slurm#!/bin/bash
+#!/bin/bash
 # The project ID which this job should run under:
 #SBATCH --account="punim0512"
 
