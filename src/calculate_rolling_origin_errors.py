@@ -134,7 +134,7 @@ if __name__ == '__main__':
 
     datasets = ['prison', 'labour', 'tourism', 'wikipedia']
     # models = ['arima', 'ets']
-    models = ['arima']
+    models = ['ets']
     LEVELS = {'tourism': ['Australia', 'States', 'Regions'],
               'prison': ['Australia', 'State', 'Gender', 'Legal', 'Indigenous'],
               'labour': ['Total Employees', 'Main Occupation', 'Employment Status', 'Gender'],
