@@ -12,7 +12,7 @@ ROLLING_WINDOWS = {'prison': 24,
                    'wikipedia': 70}
 
 # For ROLLING WINDOW EVALUATION
-dataset_name = 'tourism'
+dataset_name = 'prison'
 windows = ROLLING_WINDOWS[dataset_name]
 n = 10  # refit after 10 samples
 last_iter = 0

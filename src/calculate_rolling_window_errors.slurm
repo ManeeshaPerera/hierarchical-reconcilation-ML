@@ -33,6 +33,4 @@ module load python/3.7.4
 
 # The job command(s):
 python calculate_rolling_origin_errors.py 0 ex2
-python calculate_rolling_origin_errors.py 1 ex2
-python calculate_rolling_origin_errors.py 2 ex2
 python calculate_rolling_origin_errors.py 3 ex2
