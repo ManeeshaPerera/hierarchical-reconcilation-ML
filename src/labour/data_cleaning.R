@@ -99,5 +99,8 @@ new_data_labour %>%
   arrange(Sex, Employment_status, Main_occupation)  %>%
   autoplot(Count) + theme(legend.position="none")
 
+write.table(new_data_labour, "input_data/labour_plot.csv", col.names = TRUE, row.names = TRUE, sep = ",")
+
+
 ggsave('data/labour_clean.png')
 

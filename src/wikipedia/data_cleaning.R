@@ -43,4 +43,7 @@ new_data %>%
   arrange(access, agent, language, purpose, article) %>%
   autoplot(total_views) + theme(legend.position="none")
 
+write.table(new_data, "input_data/wiki_plot.csv", col.names = TRUE, row.names = TRUE, sep = ",")
+
+
 ggsave('data/wiki_clean.png')

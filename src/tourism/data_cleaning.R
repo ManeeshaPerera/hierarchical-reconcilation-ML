@@ -62,4 +62,6 @@ tourism_out %>%
 new_data_tourism %>% as_tsibble(key = c("State", "Region", "Purpose")) %>%
   arrange(State, Region, Purpose) %>%autoplot(Trips) + theme(legend.position="none")
 
+write.table(new_data_tourism, "input_data/tourism_plot.csv", col.names = TRUE, row.names = TRUE, sep = ",")
+
 ggsave('data/tourism_clean.png')

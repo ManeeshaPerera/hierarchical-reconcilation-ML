@@ -34,5 +34,7 @@ new_data_prison %>%
   arrange(State, Gender, Legal, Indigenous)  %>%
   autoplot(Count) + theme(legend.position="none")
 
+write.table(new_data_prison, "input_data/prison_plot.csv", col.names = TRUE, row.names = TRUE, sep = ",")
+
 ggsave('data/prison_clean.png')
 
