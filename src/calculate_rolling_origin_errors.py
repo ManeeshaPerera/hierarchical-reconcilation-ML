@@ -71,7 +71,7 @@ def calculate_errors_per_fc(data, fc_type, actual_test, model, iteration, error_
     all_errors.columns = ['ts_name', 'error', 'level']
 
     ts_wise_errors = all_errors.iloc[:, 0:2]
-    ts_wise_errors = ts_wise_errors.index('ts_name')
+    ts_wise_errors = ts_wise_errors.set_index('ts_name')
 
     # get level wise error
     errors = all_errors.groupby(by=['level']).mean().reset_index().round(2)
