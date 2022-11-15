@@ -70,6 +70,9 @@ def calculate_errors_per_fc(data, fc_type, actual_test, model, iteration, error_
     all_errors = pd.DataFrame(errors)
     all_errors.columns = ['ts_name', 'error', 'level']
 
+    ts_wise_errors = all_errors.iloc[:, 0:2]
+    ts_wise_errors = ts_wise_errors.index('ts_name')
+
     # get level wise error
     errors = all_errors.groupby(by=['level']).mean().reset_index().round(2)
 
@@ -78,7 +81,7 @@ def calculate_errors_per_fc(data, fc_type, actual_test, model, iteration, error_
     overall_error = pd.DataFrame(all_errors[['error']].mean()).transpose()
     overall_error.index = ['Overall']
     errors = errors.append(overall_error).round(2)
-    return errors
+    return {'errors': errors, 'ts_wise_errors': ts_wise_errors}
 
 
 def run_errors(data, model, errors_per_fc_type, errors_per_fc_type_median, error_name):
@@ -88,19 +91,32 @@ def run_errors(data, model, errors_per_fc_type, errors_per_fc_type_median, error
             continue
         else:
             sample_errors = []
+            ts_wise_sample_error = []
             for sample in range(1, samples + 1):
                 actual_test = pd.read_csv(f"rolling_window_experiments/{data}/test_{sample}.csv",
                                           index_col=1)
-                sample_error = calculate_errors_per_fc(data, fc_type, actual_test, model, sample, error_name)
+                error_dic = calculate_errors_per_fc(data, fc_type, actual_test, model, sample, error_name)
+                sample_error = error_dic['errors']
                 sample_errors.append(sample_error)
+                ts_wise_sample_error.append(error_dic['ts_wise_errors'])
             all_samples = pd.concat(sample_errors)
             if 'case' in fc_type:
                 sample_wise_error = pd.concat(sample_errors, axis=1).drop(columns='level')
                 sample_wise_error.columns = [f'sample {i}' for i in range(1, samples + 1)]
 
+                sample_ts_error = pd.concat(ts_wise_sample_error, axis=1)
+                sample_ts_error.columns = [f'sample {i}' for i in range(1, samples + 1)]
+
                 if experiment_number == 'ex1' or experiment_number == 'ex2':
                     sample_wise_error.to_csv(
                         f"rolling_window_experiments_transformed/results/{data}/{experiment_number}/{model}_{fc_type}_{error_name}_all_samples.csv")
+
+                    ts_wise_errors = f"rolling_window_experiments_transformed/results/{data}/{experiment_number}/ml_errors"
+                    if not os.path.exists(ts_wise_errors):
+                        os.makedirs(path_store)
+                    sample_ts_error.to_csv(
+                        f"{ts_wise_errors}/{model}_{fc_type}_{error_name}.csv")
+
                 else:
                     sample_wise_error.to_csv(
                         f"rolling_window_experiments/results/{data}/{model}_{fc_type}_{error_name}_all_samples.csv")
@@ -134,7 +150,7 @@ if __name__ == '__main__':
 
     datasets = ['prison', 'labour', 'tourism', 'wikipedia']
     # models = ['arima', 'ets']
-    models = ['ets']
+    models = ['arima', 'ets']
     LEVELS = {'tourism': ['Australia', 'States', 'Regions'],
               'prison': ['Australia', 'State', 'Gender', 'Legal', 'Indigenous'],
               'labour': ['Total Employees', 'Main Occupation', 'Employment Status', 'Gender'],
@@ -179,7 +195,7 @@ if __name__ == '__main__':
 
     for model in models:
         # # one step ahead horizon
-        for error_name in ['MSE']:
+        for error_name in ['MAE']:
             errors_per_fc_type = []  # 0 index corresponds to base errors, but for prison and wiki mintsample is not there
             errors_per_fc_type_median = []
             percentages = []

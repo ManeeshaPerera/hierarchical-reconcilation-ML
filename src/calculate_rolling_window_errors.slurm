@@ -21,6 +21,7 @@
 #SBATCH --time=06-00:00:0
 
 #Job array
+#SBATCH --array=0,1,2,3
 
 # Send yourself an email when the job:
 #SBATCH --mail-user=pereramg@student.unimelb.edu.au
@@ -32,5 +33,4 @@ module load gcc/8.3.0 cuda/10.1.243 openmpi/3.1.4
 module load python/3.7.4
 
 # The job command(s):
-python calculate_rolling_origin_errors.py 0 ex2
-python calculate_rolling_origin_errors.py 3 ex2
+python calculate_rolling_origin_errors.py ${SLURM_ARRAY_TASK_ID} ex2
