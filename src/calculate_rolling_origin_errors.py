@@ -113,7 +113,7 @@ def run_errors(data, model, errors_per_fc_type, errors_per_fc_type_median, error
 
                     ts_wise_errors = f"rolling_window_experiments_transformed/results/{data}/{experiment_number}/ml_errors"
                     if not os.path.exists(ts_wise_errors):
-                        os.makedirs(path_store)
+                        os.makedirs(ts_wise_errors)
                     sample_ts_error.to_csv(
                         f"{ts_wise_errors}/{model}_{fc_type}_{error_name}.csv")
 
