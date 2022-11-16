@@ -25,9 +25,14 @@ def calculate_errors_per_fc(data, fc_type, actual_test, model, iteration, error_
         #     index_col=0)
         if experiment_number == 'ex1' or experiment_number == 'ex2':
             # transformed values are here
-            df_forecasts = pd.read_csv(
-                f"rolling_window_experiments/hts/{data}/{experiment_number}/{model}_{fc_type}_{iteration}.csv",
-                index_col=0)
+            if (data == 'prison' or data == 'wikipedia') and model == 'arima':
+                df_forecasts = pd.read_csv(
+                    f"rolling_window_experiments_transformed/hts/{data}/{experiment_number}/{model}_{fc_type}_{iteration}.csv",
+                    index_col=0)
+            else:
+                df_forecasts = pd.read_csv(
+                    f"rolling_window_experiments/hts/{data}/{experiment_number}/{model}_{fc_type}_{iteration}.csv",
+                    index_col=0)
         else:
             df_forecasts = pd.read_csv(
                 f"rolling_window_experiments/hts/{data}/{model}_{fc_type}_{iteration}.csv",
