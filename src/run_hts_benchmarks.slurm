@@ -31,7 +31,7 @@ module load r/4.0.5
 module load python/3.8.6
 
 # The job command(s):
-python run_hts_benchmarks_rolling_origin 'prison' 'deepAR'
-python run_hts_benchmarks_rolling_origin 'tourism' 'deepAR'
-python run_hts_benchmarks_rolling_origin 'labour' 'deepAR'
-python run_hts_benchmarks_rolling_origin 'wikipedia' 'deepAR'
+python run_hts_benchmarks_rolling_origin.py 'prison' 'deepAR'
+python run_hts_benchmarks_rolling_origin.py 'tourism' 'deepAR'
+python run_hts_benchmarks_rolling_origin.py 'labour' 'deepAR'
+python run_hts_benchmarks_rolling_origin.py 'wikipedia' 'deepAR'
