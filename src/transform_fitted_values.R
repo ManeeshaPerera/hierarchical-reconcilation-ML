@@ -28,8 +28,8 @@ run_transform_fitted <- function(dataset_name, base_model_name, fitted_iter) {
     hierarchy_nodes <- list(8, rep(2, 8), rep(2, 16))
   }
 
-  fitted <- read_csv(paste0("rolling_window_experiments/", dataset_name, "/", base_model_name, "_fitted", '_', fitted_iter, '.csv'))[, -(1:2)]
-  forecast <- read_csv(paste0("rolling_window_experiments/", dataset_name, "/", base_model_name, "_forecasts", '_', fitted_iter, '.csv'))[, -(1:2)]
+  fitted <- read_csv(paste0("rolling_window_experiments_transformed/", dataset_name, "/", base_model_name, "_fitted", '_', fitted_iter, '.csv'))[, -(1:2)]
+  forecast <- read_csv(paste0("rolling_window_experiments_transformed/", dataset_name, "/", base_model_name, "_forecasts", '_', fitted_iter, '.csv'))[, -(1:2)]
 
   gmat <- hts:::GmatrixH(hierarchy_nodes)
   s <- hts:::SmatrixM(gmat)
