@@ -7,6 +7,17 @@ import os
 
 def run_ml_reconciliation(dataset, rolling_iter, ml_method, lambda_range_run, seed_to_run, seed_array, hf_levels,
                           lambada_tune, run_saved_model, saved_models=None, path=''):
+
+    def check_actual_and_fitted_len(actual, fitted):
+        # this is for DeepAR and WaveNet implementations
+        if len(actual.columns) > len(fitted.columns):
+            meta_data = actual.iloc[:, 0:2]
+            ts_values = actual.iloc[:, -len(fitted.columns[2:]):]
+            actual_df = pd.concat([meta_data, ts_values], axis=1)
+            return actual_df
+        else:
+            return actual
+
     hyper_params = {'number_of_layers': 5, 'epochs': [10, 200], 'dropout_rate': [0, 0.5], 'max_norm_value': [0, 10],
                     'reconciliation_loss_lambda': lambda_range_run, 'learning_rate': [0.0001, 0.1]}
 
@@ -23,6 +34,8 @@ def run_ml_reconciliation(dataset, rolling_iter, ml_method, lambda_range_run, se
         df_fc_transform = pd.read_csv(
             f"rolling_window_experiments_transformed/{dataset}/{model}_forecasts_transformed_{rolling_iter}.csv")
 
+        df_actual = check_actual_and_fitted_len(df_actual, df_fitted)
+
         ml_model_case = MLReconcile(seed_to_run, df_actual, df_fitted, df_forecasts, df_fitted_transform,
                                     df_fc_transform, hf_levels, seed_array,
                                     hyper_params_tune=hyper_params,
@@ -30,15 +43,14 @@ def run_ml_reconciliation(dataset, rolling_iter, ml_method, lambda_range_run, se
     else:
         df_actual = pd.read_csv(f"rolling_window_experiments_transformed/{dataset}/actual_{prev_window}.csv")
         df_fitted = pd.read_csv(f"rolling_window_experiments_transformed/{dataset}/{model}_fitted_{prev_window}.csv")
-
         df_forecasts = pd.read_csv(
             f"rolling_window_experiments_transformed/{dataset}/{model}_forecasts_{rolling_iter}.csv")
-
         df_fitted_transform = pd.read_csv(
             f"rolling_window_experiments_transformed/{dataset}/{model}_fitted_transformed_{prev_window}.csv")
-
         df_fc_transform = pd.read_csv(
             f"rolling_window_experiments_transformed/{dataset}/{model}_forecasts_transformed_{rolling_iter}.csv")
+
+        df_actual = check_actual_and_fitted_len(df_actual, df_fitted)
 
         ml_model_case = MLReconcile(seed_to_run, df_actual, df_fitted, df_forecasts, df_fitted_transform,
                                     df_fc_transform, hf_levels, seed_array,
