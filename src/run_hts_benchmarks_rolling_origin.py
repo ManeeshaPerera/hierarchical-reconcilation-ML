@@ -13,10 +13,11 @@ ROLLING_WINDOWS = {'prison': 24,
 
 # For ROLLING WINDOW EVALUATION
 dataset_name = 'prison'
-windows = ROLLING_WINDOWS[dataset_name]
+windows = 1
+# windows = ROLLING_WINDOWS[dataset_name]
 n = 10  # refit after 10 samples
 last_iter = 0
-method = 'ets'
+method = 'deepAR'
 
 
 for iter_window in range(1, windows + 1):
