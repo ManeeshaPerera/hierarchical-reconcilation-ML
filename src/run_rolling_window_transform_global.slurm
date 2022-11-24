@@ -31,4 +31,4 @@ module load r/4.0.5
 module load python/3.8.6
 
 # The job command(s):
-python transform_fitted_global_models.py 'deepAR'
+python transform_fitted_global_models.py 'waveNet'
