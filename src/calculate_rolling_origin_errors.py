@@ -200,7 +200,7 @@ if __name__ == '__main__':
 
     for model in models:
         # # one step ahead horizon
-        for error_name in ['MAE']:
+        for error_name in ['MSE', 'MAE']:
             errors_per_fc_type = []  # 0 index corresponds to base errors, but for prison and wiki mintsample is not there
             errors_per_fc_type_median = []
             percentages = []
