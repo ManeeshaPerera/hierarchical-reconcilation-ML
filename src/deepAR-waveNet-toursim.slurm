@@ -3,7 +3,7 @@
 #SBATCH --account="punim0512"
 
 # The name of the job:
-#SBATCH --job-name="deepAR-labour"
+#SBATCH --job-name="deepAR-tourism"
 
 # Partition for the job:
 #SBATCH --partition gpgpu
@@ -21,7 +21,7 @@
 #SBATCH --time=04-00:00:0
 
 #Job array
-#SBATCH --array=1-60
+#SBATCH --array=1-120
 
 # Send yourself an email when the job:
 #SBATCH --mail-user=pereramg@student.unimelb.edu.au
@@ -33,4 +33,5 @@ module load gcc/8.3.0 cuda/10.1.243 openmpi/3.1.4
 module load python/3.8.6
 
 # The job command(s):
-python run_global_models.py 2 0 ${SLURM_ARRAY_TASK_ID}
+#python run_global_models.py 1 0 ${SLURM_ARRAY_TASK_ID}
+python run_global_models.py 1 1 ${SLURM_ARRAY_TASK_ID}
