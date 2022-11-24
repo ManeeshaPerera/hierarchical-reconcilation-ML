@@ -35,23 +35,23 @@ module load tensorflow/2.3.1-python-3.7.4
 
 # The job command(s):
 # case 1 lambda 1
-python run_ml_method_rolling_origin_transform.py 0 deepAR '' '' 0 ${SLURM_ARRAY_TASK_ID}
+python run_ml_method_rolling_origin_transform.py 0 waveNet '' '' 0 ${SLURM_ARRAY_TASK_ID}
 # case 1 lambda [0.01, 0.09]
-python run_ml_method_rolling_origin_transform.py 0 deepAR True '' 0 ${SLURM_ARRAY_TASK_ID}
+python run_ml_method_rolling_origin_transform.py 0 waveNet True '' 0 ${SLURM_ARRAY_TASK_ID}
 # case 1 lambda [0.1, 0.9]
-python run_ml_method_rolling_origin_transform.py 0 deepAR True '' 1 ${SLURM_ARRAY_TASK_ID}
+python run_ml_method_rolling_origin_transform.py 0 waveNet True '' 1 ${SLURM_ARRAY_TASK_ID}
 # case 1 lambda [1, 4]
-python run_ml_method_rolling_origin_transform.py 0 deepAR True '' 2 ${SLURM_ARRAY_TASK_ID}
+python run_ml_method_rolling_origin_transform.py 0 waveNet True '' 2 ${SLURM_ARRAY_TASK_ID}
 # case 1 lambda [0.01, 5]
-python run_ml_method_rolling_origin_transform.py 0 deepAR True '' 3 ${SLURM_ARRAY_TASK_ID}
+python run_ml_method_rolling_origin_transform.py 0 waveNet True '' 3 ${SLURM_ARRAY_TASK_ID}
 
 # case 2 lambda 1
-python run_ml_method_rolling_origin_transform.py 0 deepAR '' True 0 ${SLURM_ARRAY_TASK_ID}
+python run_ml_method_rolling_origin_transform.py 0 waveNet '' True 0 ${SLURM_ARRAY_TASK_ID}
 # case 2 lambda [0.01, 0.09]
-python run_ml_method_rolling_origin_transform.py 0 deepAR True True 0 ${SLURM_ARRAY_TASK_ID}
+python run_ml_method_rolling_origin_transform.py 0 waveNet True True 0 ${SLURM_ARRAY_TASK_ID}
 # case 2 lambda [0.1, 0.9]
-python run_ml_method_rolling_origin_transform.py 0 deepAR True True 1 ${SLURM_ARRAY_TASK_ID}
+python run_ml_method_rolling_origin_transform.py 0 waveNet True True 1 ${SLURM_ARRAY_TASK_ID}
 # case 2 lambda [1, 4]
-python run_ml_method_rolling_origin_transform.py 0 deepAR True True 2 ${SLURM_ARRAY_TASK_ID}
+python run_ml_method_rolling_origin_transform.py 0 waveNet True True 2 ${SLURM_ARRAY_TASK_ID}
 # case 2 lambda [0.01, 5]
-python run_ml_method_rolling_origin_transform.py 0 deepAR True True 3 ${SLURM_ARRAY_TASK_ID}
+python run_ml_method_rolling_origin_transform.py 0 waveNet True True 3 ${SLURM_ARRAY_TASK_ID}
