@@ -21,7 +21,6 @@ This repository contains the code for the paper "NHR-TFNet:Forecasting Hierarchi
 
 #### Current Directory structure
 ```
-|-example_code : initial example code to use as reference
 |-src
     |- data : original datasets
     |- input_data : data files after pre-processing the datasets includes actual and test files
