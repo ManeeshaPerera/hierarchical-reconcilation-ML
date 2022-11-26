@@ -1,7 +1,8 @@
 ### Hierarchical Reconciliation with ML
-```
-How to run the code with rolling window evaluation:
 
+#### Code execution with rolling window evaluation.
+
+```
 1. First run_preprocessing.py - you may need to provide the path for the preprocessing R file relevant to the dataset (e.g. for the prison dataset `'../src/prison/prison_preprocessing.R'`)
 2. Run the base model python files
    1. For ARIMA and ETS run `run_arima_ets_rolling_origin.py` -- during this stage the rolling windows will be created
@@ -16,7 +17,7 @@ How to run the code with rolling window evaluation:
 
 ```
 
-Current Directory structure
+#### Current Directory structure
 ```
 |-example_code : initial example code to use as reference
 |-src
