@@ -1,4 +1,6 @@
-### Hierarchical Reconciliation with ML
+### Hierarchical Reconciliation with Machine Learning
+
+This repository contains the code for the paper "NHR-TFNet:Forecasting Hierarchical Time Series using Non-linear Mappings".
 
 #### Code execution with rolling window evaluation.
 
