@@ -78,13 +78,13 @@ def run_errors(data, model, errors_per_fc_type, error_name):
                 sample_errors_overall.append(sample_error)
             sample_wise_error = pd.concat(sample_errors_overall, axis=1).drop(columns='level')
             sample_wise_error.columns = [f'sample {i}' for i in range(1, samples + 1)]
-            sample_wise_error = sample_wise_error.transpose()[['Overall']].values
-            if fc_type != 'base' or 'case' not in fc_type:
+            sample_wise_error = sample_wise_error.transpose()['Overall'].values.tolist()
+            if fc_type != 'base' and 'case' not in fc_type:
                 errors_per_fc_type[fc_type] = sample_wise_error
             if 'case' in fc_type:
                 ml_errors_per_fc_type[fc_type] = sample_wise_error
-                ml_method_errors.append(sample_wise_error.mean())  # ml method overall mean error
-                ml_mean[fc_type] = sample_wise_error.mean()
+                ml_method_errors.append(np.mean(sample_wise_error))  # ml method overall mean error
+                ml_mean[fc_type] = np.mean(sample_wise_error)
 
 
 if __name__ == '__main__':
