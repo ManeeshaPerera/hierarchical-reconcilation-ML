@@ -152,5 +152,6 @@ if __name__ == '__main__':
                     errors_per_fc_type[key] = ml_errors_per_fc_type[key]
 
             sample_wise_error_df = pd.DataFrame(errors_per_fc_type)
+            print(errors_per_fc_type)
             sample_wise_error_df.to_csv(
                 f'rolling_window_experiments_transformed/results/{data}/{experiment_number}/error_percentages/{model}_sample_wise_errors.csv')
