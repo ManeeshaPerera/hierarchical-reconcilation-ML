@@ -94,7 +94,7 @@ if __name__ == '__main__':
                        'wikipedia': 70}
 
     datasets = ['prison', 'labour', 'tourism', 'wikipedia']
-    models = ['arima', 'ets', 'deepAR'', waveNet']
+    models = ['arima', 'ets', 'deepAR', 'waveNet']
     LEVELS = {'tourism': ['Australia', 'States', 'Regions'],
               'prison': ['Australia', 'State', 'Gender', 'Legal', 'Indigenous'],
               'labour': ['Total Employees', 'Main Occupation', 'Employment Status', 'Gender'],

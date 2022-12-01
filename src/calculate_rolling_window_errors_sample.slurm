@@ -21,7 +21,7 @@
 #SBATCH --time=01-00:00:0
 
 #Job array
-#SBATCH --array=0
+#SBATCH --array=0,1,2,3
 
 # Send yourself an email when the job:
 #SBATCH --mail-user=pereramg@student.unimelb.edu.au
