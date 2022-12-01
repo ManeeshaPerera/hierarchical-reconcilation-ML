@@ -1,10 +1,24 @@
 # install.packages('tsutils')
 library(tsutils)
+library(readr)
 
-x <- matrix( rnorm(50*4,mean=0,sd=1), 50, 4) # Generate some performance statistics
-x[,2] <- x[,2]+1
-x[,3] <- x[,3]+0.7
-x[,4] <- x[,4]+0.5
-colnames(x) <- c("Method A","Method B","Method C - long name","Method D")
-print(x)
-nemenyi(x, plottype ='matrix')
+method_errors <- function (dataset_name, method){
+  sample_wise_errors <- read_csv(paste0("rolling_window_experiments_transformed/results/", dataset_name, "/ex2/error_percentages/", method, "_sample_wise_errors.csv"))
+  sample_wise_errors <- sample_wise_errors[, (2:length(sample_wise_errors))]
+  sample_wise_errors <- as.matrix(sample_wise_errors)
+  if (dataset_name == 'prison' | dataset_name == 'wikipedia'){
+    colnames(sample_wise_errors) <- c('BU', 'OLS', 'WLS', 'MinTShrink', 'ERM', 'NHR-TFNet')
+  }
+  else {
+    colnames(sample_wise_errors) <- c('BU', 'OLS', 'WLS', 'MinTSample', 'MinTShrink', 'ERM', 'NHR-TFNet')
+  }
+  nemenyi(sample_wise_errors, plottype ='matrix')
+  path_matrix <- paste0("paper_figs/", method, "_", dataset_name, "_matrix", ".pdf")
+  quartz.save(path_matrix, type="pdf")
+
+  nemenyi(sample_wise_errors, plottype ='mcb')
+  path_matrix <- paste0("paper_figs/", method, "_", dataset_name, "_mcb", ".pdf")
+  quartz.save(path_matrix, type="pdf")
+}
+
+
