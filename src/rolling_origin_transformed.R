@@ -145,19 +145,19 @@ run_rolling_origin <- function(dataset_name, h, freq, min_train_length, arima_et
     test_df <- cbind(ts_meta_df, test_df)
 
     if (store_train_test == TRUE) {
-    write.table(actual_df, paste('rolling_window_experiments_transformed', dataset_name, paste(paste('actual', itr, sep = '_'), 'csv', sep = '.'), sep = '/'),
+    write.table(actual_df, paste('results', dataset_name, paste(paste('actual', itr, sep = '_'), 'csv', sep = '.'), sep = '/'),
               col.names = TRUE, row.names = FALSE, sep = ",")
-    write.table(test_df, paste('rolling_window_experiments_transformed', dataset_name, paste(paste('test', itr, sep = '_'), 'csv', sep = '.'), sep = '/'),
+    write.table(test_df, paste('results', dataset_name, paste(paste('test', itr, sep = '_'), 'csv', sep = '.'), sep = '/'),
               col.names = TRUE, row.names = FALSE, sep = ",")
     }
-    write.table(fitted_df, paste('rolling_window_experiments_transformed', dataset_name, paste(paste(arima_ets, 'fitted', itr, sep = '_'), 'csv', sep='.'), sep = '/'),
+    write.table(fitted_df, paste('results', dataset_name, paste(paste(arima_ets, 'fitted', itr, sep = '_'), 'csv', sep='.'), sep = '/'),
               col.names = TRUE, row.names = FALSE, sep = ",")
-    write.table(fcasts_df, paste('rolling_window_experiments_transformed', dataset_name, paste(paste(arima_ets, 'forecasts', itr, sep = '_'), 'csv', sep = '.'), sep = '/'),
+    write.table(fcasts_df, paste('results', dataset_name, paste(paste(arima_ets, 'forecasts', itr, sep = '_'), 'csv', sep = '.'), sep = '/'),
               col.names = TRUE, row.names = FALSE, sep = ",")
 
-    write.table(fitted_transform_df, paste('rolling_window_experiments_transformed', dataset_name, paste(paste(arima_ets, 'fitted_transformed', itr, sep = '_'), 'csv', sep = '.'), sep = '/'),
+    write.table(fitted_transform_df, paste('results', dataset_name, paste(paste(arima_ets, 'fitted_transformed', itr, sep = '_'), 'csv', sep = '.'), sep = '/'),
               col.names = TRUE, row.names = FALSE, sep = ",")
-    write.table(fcasts_transform_df, paste('rolling_window_experiments_transformed', dataset_name, paste(paste(arima_ets, 'forecasts_transformed', itr, sep = '_'), 'csv', sep = '.'), sep = '/'),
+    write.table(fcasts_transform_df, paste('results', dataset_name, paste(paste(arima_ets, 'forecasts_transformed', itr, sep = '_'), 'csv', sep = '.'), sep = '/'),
               col.names = TRUE, row.names = FALSE, sep = ",")
 
   }

@@ -23,5 +23,4 @@ run_rollin_origin = robjects.globalenv['run_rolling_origin']
 if arima_ets == 'arima':
     run_rollin_origin(dataset_name, horizon, freq, min_train_length, 'arima', True)
 elif arima_ets == 'ets':
-    run_rollin_origin(dataset_name, horizon, freq, min_train_length, 'ets',
-                      False)  # passing false as we don't want to save the actual/ test rolling windows again for the same dataset
+    run_rollin_origin(dataset_name, horizon, freq, min_train_length, 'ets', False)  # passing false as we don't want to save the actual/ test rolling windows again for the same dataset

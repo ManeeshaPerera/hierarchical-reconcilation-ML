@@ -13,64 +13,21 @@ def calculate_error(err_func, y_true, y_pred, error_list, ts_list, ts_idx, level
 def calculate_errors_per_fc(data, fc_type, actual_test, model, iteration, error_name):
     errors = []
     if fc_type == 'base':
-        df_forecasts = pd.read_csv(f"rolling_window_experiments/{data}/{model}_forecasts_{iteration}.csv",
-                                   index_col=1).iloc[:, 1:]
-    elif 'case' in fc_type:
-        # ML method where the inputs are the transformed matrices
-        # df_forecasts = pd.read_csv(
-        #     f"rolling_window_experiments_transformed/hts/{data}/{experiment_number}/{model}_{fc_type}_{iteration}.csv",
-        #     index_col=0)
-        # df_forecasts = pd.read_csv(
-        #     f"rolling_window_experiments_transformed/hts/{data}/{experiment_number}/{model}_{fc_type}_{iteration}.csv",
-        #     index_col=0)
-        if experiment_number == 'ex1' or experiment_number == 'ex2':
-            # transformed values are here
-            if (data == 'prison' or data == 'wikipedia') and model == 'arima':
-                df_forecasts = pd.read_csv(
-                    f"rolling_window_experiments_transformed/hts/{data}/{experiment_number}/{model}_{fc_type}_{iteration}.csv",
-                    index_col=0)
-            else:
-                df_forecasts = pd.read_csv(
-                    f"rolling_window_experiments/hts/{data}/{experiment_number}/{model}_{fc_type}_{iteration}.csv",
-                    index_col=0)
-        else:
-            df_forecasts = pd.read_csv(
-                f"rolling_window_experiments/hts/{data}/{model}_{fc_type}_{iteration}.csv",
-                index_col=0)
-
+        df_forecasts = pd.read_csv(f"results/{data}/{model}_forecasts_{iteration}.csv", index_col=1).iloc[:, 1:]
     else:
-        # benchmarks
-        # if experiment_number == 'ex1':
-        #     # transformed values - training at every 10th iteration
-        #     df_forecasts = pd.read_csv(
-        #         f"rolling_window_experiments_transformed/hts/{data}/{experiment_number}/{model}_{fc_type}_{iteration}.csv",
-        #         index_col=0)
-        # else:
-        # df_forecasts = pd.read_csv(
-        #     f"rolling_window_experiments/hts/{data}/{data}_new/{model}_{fc_type}_{iteration}.csv",
-        #     index_col=0)
-        if experiment_number == 'ex1':
-            df_forecasts = pd.read_csv(
-                f"rolling_window_experiments/hts/{data}/{model}_{fc_type}_{iteration}.csv",
-                index_col=0)
-        else:
-            df_forecasts = pd.read_csv(
-                f"rolling_window_experiments/hts/{data}/{data}_new/{model}_{fc_type}_{iteration}.csv",
-                index_col=0)
+        df_forecasts = pd.read_csv(f"results/hts/{data}/{model}_{fc_type}_{iteration}.csv", index_col=0)
 
     # iterate through each time series in hierarchy
     ts_names = actual_test.index.values
     levels = actual_test['Level'].values
     for ts in range(len(actual_test)):
         actual_test_ts = actual_test.iloc[ts: ts + 1, 1:].values[0]
-        # fc
+        # forecasts
         ts_fc = df_forecasts.iloc[ts: ts + 1, :].values[0]
         if error_name == 'MSE':
-            calculate_error(mean_squared_error, actual_test_ts, ts_fc, errors, ts_names, ts,
-                            levels)
+            calculate_error(mean_squared_error, actual_test_ts, ts_fc, errors, ts_names, ts, levels)
         else:
-            calculate_error(mean_absolute_error, actual_test_ts, ts_fc, errors, ts_names, ts,
-                            levels)
+            calculate_error(mean_absolute_error, actual_test_ts, ts_fc, errors, ts_names, ts, levels)
 
     all_errors = pd.DataFrame(errors)
     all_errors.columns = ['ts_name', 'error', 'level']
@@ -98,51 +55,19 @@ def run_errors(data, model, errors_per_fc_type, errors_per_fc_type_median, error
             sample_errors = []
             ts_wise_sample_error = []
             for sample in range(1, samples + 1):
-                actual_test = pd.read_csv(f"rolling_window_experiments/{data}/test_{sample}.csv",
-                                          index_col=1)
+                actual_test = pd.read_csv(f"results/{data}/test_{sample}.csv", index_col=1)
                 error_dic = calculate_errors_per_fc(data, fc_type, actual_test, model, sample, error_name)
                 sample_error = error_dic['errors']
                 sample_errors.append(sample_error)
                 ts_wise_sample_error.append(error_dic['ts_wise_errors'])
             all_samples = pd.concat(sample_errors)
-            if 'case' in fc_type:
-                sample_wise_error = pd.concat(sample_errors, axis=1).drop(columns='level')
-                sample_wise_error.columns = [f'sample {i}' for i in range(1, samples + 1)]
-
-                sample_ts_error = pd.concat(ts_wise_sample_error, axis=1)
-                sample_ts_error.columns = [f'sample {i}' for i in range(1, samples + 1)]
-
-                if experiment_number == 'ex1' or experiment_number == 'ex2':
-                    sample_wise_error.to_csv(
-                        f"rolling_window_experiments_transformed/results/{data}/{experiment_number}/{model}_{fc_type}_{error_name}_all_samples.csv")
-
-                    ts_wise_errors = f"rolling_window_experiments_transformed/results/{data}/{experiment_number}/ml_errors"
-                    if not os.path.exists(ts_wise_errors):
-                        os.makedirs(ts_wise_errors)
-                    sample_ts_error.to_csv(
-                        f"{ts_wise_errors}/{model}_{fc_type}_{error_name}.csv")
-
-                else:
-                    sample_wise_error.to_csv(
-                        f"rolling_window_experiments/results/{data}/{model}_{fc_type}_{error_name}_all_samples.csv")
-                    # f"rolling_window_experiments/results/{data}/new/{model}_{fc_type}_{error_name}_all_samples.csv")
             # this will give the mean across all samples for a given method
-            mean_error = all_samples.groupby(all_samples.index).mean().reindex(
-                sample_errors[0].index.values)
-            median_error = all_samples.groupby(all_samples.index).median().reindex(
-                sample_errors[0].index.values)
+            mean_error = all_samples.groupby(all_samples.index).mean().reindex(sample_errors[0].index.values)
+            median_error = all_samples.groupby(all_samples.index).median().reindex(sample_errors[0].index.values)
             filename = f'{model}_{fc_type}_{error_name}'
 
-            if experiment_number == 'ex1' or experiment_number == 'ex2':
-                mean_error.to_csv(
-                    f"rolling_window_experiments_transformed/results/{data}/{experiment_number}/{filename}.csv")
-                median_error.to_csv(
-                    f"rolling_window_experiments_transformed/results/{data}/{experiment_number}/{filename}_median.csv")
-            else:
-                mean_error.to_csv(
-                    f"rolling_window_experiments/results/{data}/{experiment_number}/{filename}.csv")
-                median_error.to_csv(
-                    f"rolling_window_experiments/results/{data}/{experiment_number}/{filename}_median.csv")
+            mean_error.to_csv(f"results/errors/{data}/{experiment_number}/{filename}.csv")
+            median_error.to_csv(f"results/errors/{data}/{experiment_number}/{filename}_median.csv")
             errors_per_fc_type.append(mean_error)
             errors_per_fc_type_median.append(median_error)
 
@@ -189,10 +114,7 @@ if __name__ == '__main__':
     data = datasets[int(sys.argv[1])]
     experiment_number = sys.argv[2]
 
-    if experiment_number == 'ex1' or experiment_number =='ex2':
-        path_store = f'rolling_window_experiments_transformed/results/{data}/{experiment_number}/error_percentages'
-    else:
-        path_store = f'rolling_window_experiments/results/{data}/error_percentages'
+    path_store = f'results/errors/{data}/error_percentages'
 
     if not os.path.exists(path_store):
         os.makedirs(path_store)

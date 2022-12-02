@@ -11,6 +11,7 @@ src/rolling_window_experiments_transformed
 backup/example_code/rolling-window-code.R
 backup/slurm_files
 backup
+src/results
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -6,7 +6,7 @@ import os
 
 
 def run_ml_reconciliation(dataset, rolling_iter, ml_method, lambda_range_run, seed_to_run, seed_array, hf_levels,
-                          lambada_tune, run_saved_model, saved_models=None, path=''):
+                          lambada_tune, run_saved_model, saved_models=None):
 
     def check_actual_and_fitted_len(actual, fitted):
         # this is for DeepAR and WaveNet implementations
@@ -25,14 +25,14 @@ def run_ml_reconciliation(dataset, rolling_iter, ml_method, lambda_range_run, se
     # best_hyper_params parameter should be passed
 
     if not run_saved_model:
-        df_actual = pd.read_csv(f"rolling_window_experiments_transformed/{dataset}/actual_{rolling_iter}.csv")
-        df_fitted = pd.read_csv(f"rolling_window_experiments_transformed/{dataset}/{model}_fitted_{rolling_iter}.csv")
+        df_actual = pd.read_csv(f"results/{dataset}/actual_{rolling_iter}.csv")
+        df_fitted = pd.read_csv(f"results/{dataset}/{model}_fitted_{rolling_iter}.csv")
         df_forecasts = pd.read_csv(
-            f"rolling_window_experiments_transformed/{dataset}/{model}_forecasts_{rolling_iter}.csv")
+            f"results/{dataset}/{model}_forecasts_{rolling_iter}.csv")
         df_fitted_transform = pd.read_csv(
-            f"rolling_window_experiments_transformed/{dataset}/{model}_fitted_transformed_{rolling_iter}.csv")
+            f"results/{dataset}/{model}_fitted_transformed_{rolling_iter}.csv")
         df_fc_transform = pd.read_csv(
-            f"rolling_window_experiments_transformed/{dataset}/{model}_forecasts_transformed_{rolling_iter}.csv")
+            f"results/{dataset}/{model}_forecasts_transformed_{rolling_iter}.csv")
 
         df_actual = check_actual_and_fitted_len(df_actual, df_fitted)
 
@@ -41,14 +41,14 @@ def run_ml_reconciliation(dataset, rolling_iter, ml_method, lambda_range_run, se
                                     hyper_params_tune=hyper_params,
                                     tune_hyper_params=True, tune_lambda=lambada_tune)
     else:
-        df_actual = pd.read_csv(f"rolling_window_experiments_transformed/{dataset}/actual_{prev_window}.csv")
-        df_fitted = pd.read_csv(f"rolling_window_experiments_transformed/{dataset}/{model}_fitted_{prev_window}.csv")
+        df_actual = pd.read_csv(f"results/{dataset}/actual_{prev_window}.csv")
+        df_fitted = pd.read_csv(f"results/{dataset}/{model}_fitted_{prev_window}.csv")
         df_forecasts = pd.read_csv(
-            f"rolling_window_experiments_transformed/{dataset}/{model}_forecasts_{rolling_iter}.csv")
+            f"results/{dataset}/{model}_forecasts_{rolling_iter}.csv")
         df_fitted_transform = pd.read_csv(
-            f"rolling_window_experiments_transformed/{dataset}/{model}_fitted_transformed_{prev_window}.csv")
+            f"results/{dataset}/{model}_fitted_transformed_{prev_window}.csv")
         df_fc_transform = pd.read_csv(
-            f"rolling_window_experiments_transformed/{dataset}/{model}_forecasts_transformed_{rolling_iter}.csv")
+            f"results/{dataset}/{model}_forecasts_transformed_{rolling_iter}.csv")
 
         df_actual = check_actual_and_fitted_len(df_actual, df_fitted)
 
@@ -60,8 +60,8 @@ def run_ml_reconciliation(dataset, rolling_iter, ml_method, lambda_range_run, se
 
     _, forecasts_adjusted_mean, _, best_hyper_params, saved_models = ml_model_case.run_ml_reconciliation()
 
-    forecast_path = f'rolling_window_experiments/hts/{dataset}/{dir_name}'
-    hyper_param_path = f'rolling_window_experiments/hyper_params/{dataset}/{dir_name}'
+    forecast_path = f'results/hts/{dataset}'
+    hyper_param_path = f'results/hyper_params/{dataset}'
 
     if not os.path.exists(forecast_path):
         os.makedirs(forecast_path)
@@ -98,15 +98,10 @@ def retrain_network(data, window_num, method_name, lambada_val, seed, seed_runs,
 
 if __name__ == '__main__':
     DATASET = ['prison', 'tourism', 'wikipedia', 'labour']
-    rolling_windows = {'prison': 24,
-                       'tourism': 120,
-                       'labour': 60,
-                       'wikipedia': 70}
     levels_in_hierarchy = {'prison': 5, 'tourism': 3, 'wikipedia': 6, 'labour': 4}
 
     data = DATASET[int(sys.argv[1])]
     model = sys.argv[2]
-    num_rolling_windows = rolling_windows[data]
 
     number_of_levels = levels_in_hierarchy[data]
     seed_value = 1234
@@ -137,31 +132,11 @@ if __name__ == '__main__':
     times = []
     rolling_window = sys.argv[6]
     prev_window = None
-
-    if rolling_window:
-        dir_name = 'ex2'
-        rolling_window = int(rolling_window)
-        retrain_network(data, rolling_window, ml_method_name, lambda_case, seed_value,
+    rolling_window = int(rolling_window)
+    retrain_network(data, rolling_window, ml_method_name, lambda_case, seed_value,
                         seed_runs,
                         number_of_levels,
                         tune_lambda, times, run_saved_model=False)
-    else:
-        dir_name = 'ex1'
-        # we need to only calculate hyper-params after like 10th window
-        for rolling_window in range(1, num_rolling_windows + 1):
-            if rolling_window % n == 1:
-                prev_window = rolling_window
-                saved_models = retrain_network(data, rolling_window, ml_method_name, lambda_case, seed_value,
-                                               seed_runs,
-                                               number_of_levels,
-                                               tune_lambda, times, run_saved_model=False)
 
-            else:
-                retrain_network(data, rolling_window, ml_method_name, lambda_case, seed_value,
-                                seed_runs,
-                                number_of_levels,
-                                tune_lambda, times, run_saved_model=True)
-
-        exe_time = pd.DataFrame(times, columns=['program time'])
-        exe_time.to_csv(
-            f'rolling_window_experiments_transformed/hyper_params/{data}/{dir_name}/EXE_{model}_{ml_method_name}.csv')
+    exe_time = pd.DataFrame(times, columns=['program time'])
+    exe_time.to_csv(f'results/hyper_params/{data}/EXE_{model}_{ml_method_name}.csv')

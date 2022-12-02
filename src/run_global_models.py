@@ -22,8 +22,8 @@ horizon = DATA[data]['horizon']
 start_date = DATA[data]['start_date']
 levels = levels_in_hierarchy[data]
 
-sample_train = pd.read_csv(f'rolling_window_experiments_transformed/{data}/actual_{sample}.csv')
-sample_test = pd.read_csv(f'rolling_window_experiments_transformed/{data}/test_{sample}.csv')
+sample_train = pd.read_csv(f'results/{data}/actual_{sample}.csv')
+sample_test = pd.read_csv(f'results/{data}/test_{sample}.csv')
 
 cluster_df = pd.read_csv(f'input_data/ts_features/{data}_clusters.csv')
 level_wise_fitted = []
@@ -55,7 +55,7 @@ level_wise_fitted_df['Description'] = pd.Categorical(
 level_wise_fitted_df.sort_values('Description', inplace=True)
 level_wise_fc_df.sort_values('Description', inplace=True)
 
-level_wise_fitted_df.to_csv(f'rolling_window_experiments_transformed/{data}/{model_name}_fitted_{sample}.csv',
+level_wise_fitted_df.to_csv(f'results/{data}/{model_name}_fitted_{sample}.csv',
                             index=False)
-level_wise_fc_df.to_csv(f'rolling_window_experiments_transformed/{data}/{model_name}_forecasts_{sample}.csv',
+level_wise_fc_df.to_csv(f'results/{data}/{model_name}_forecasts_{sample}.csv',
                         index=False)
