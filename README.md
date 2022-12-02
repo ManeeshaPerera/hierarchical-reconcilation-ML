@@ -51,5 +51,7 @@ This repository contains the code for the paper "NHR-TFNet:Forecasting Hierarchi
     |- run_hts_benchmarks_rolling_origin.py - run all benchmark in hts-benchmarks.R
     |- run_ml_method_rolling_origin_transform.py - code starting point for ML reconciliation
     |- run_preprocessing.py - run R preprocessing files for all datasets
+    |- run_statistical_test.py - execution point for the statistical_testing.R
     |- run_ts_features.py - code to extract time series features from datasets
+    |- statistical_testing.R - code for the non-parametric multiple comparison test
     |- transform_fitted_global_models.py - code to transform fitted and forecast values of global models

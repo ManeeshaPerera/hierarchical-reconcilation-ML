@@ -3,7 +3,7 @@ library(tsutils)
 library(readr)
 
 method_errors <- function (dataset_name, method){
-  sample_wise_errors <- read_csv(paste0("rolling_window_experiments_transformed/results/", dataset_name, "/ex2/error_percentages/", method, "_sample_wise_errors.csv"))
+  sample_wise_errors <- read_csv(paste0("results/errors/", dataset_name, "/error_percentages/", method, "_sample_wise_errors.csv"))
   sample_wise_errors <- sample_wise_errors[, (2:length(sample_wise_errors))]
   sample_wise_errors <- as.matrix(sample_wise_errors)
   if (dataset_name == 'prison' | dataset_name == 'wikipedia'){

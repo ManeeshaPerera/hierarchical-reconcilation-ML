@@ -3,6 +3,7 @@ import sys
 from sklearn.metrics import mean_squared_error, mean_absolute_error
 import pandas as pd
 import os
+import numpy as np
 
 
 def calculate_error(err_func, y_true, y_pred, error_list, ts_list, ts_idx, level_list):
@@ -53,14 +54,24 @@ def run_errors(data, model, errors_per_fc_type, errors_per_fc_type_median, error
             continue
         else:
             sample_errors = []
-            ts_wise_sample_error = []
             for sample in range(1, samples + 1):
                 actual_test = pd.read_csv(f"results/{data}/test_{sample}.csv", index_col=1)
                 error_dic = calculate_errors_per_fc(data, fc_type, actual_test, model, sample, error_name)
                 sample_error = error_dic['errors']
                 sample_errors.append(sample_error)
-                ts_wise_sample_error.append(error_dic['ts_wise_errors'])
+
             all_samples = pd.concat(sample_errors)
+
+            sample_wise_error = pd.concat(sample_errors, axis=1).drop(columns='level')
+            sample_wise_error.columns = [f'sample {i}' for i in range(1, samples + 1)]
+            sample_wise_error = sample_wise_error.transpose()['Overall'].values.tolist()
+            if fc_type != 'base' and 'case' not in fc_type:
+                errors_per_fc_type_dic[fc_type] = sample_wise_error
+            if 'case' in fc_type:
+                ml_errors_per_fc_type[fc_type] = sample_wise_error
+                ml_method_errors.append(np.mean(sample_wise_error))  # ml method overall mean error
+                ml_mean[fc_type] = np.mean(sample_wise_error)
+
             # this will give the mean across all samples for a given method
             mean_error = all_samples.groupby(all_samples.index).mean().reindex(sample_errors[0].index.values)
             median_error = all_samples.groupby(all_samples.index).median().reindex(sample_errors[0].index.values)
@@ -121,12 +132,28 @@ if __name__ == '__main__':
 
     for model in models:
         # # one step ahead horizon
-        for error_name in ['MSE', 'MAE']:
+        for error_name in ['MSE']:
             errors_per_fc_type = []  # 0 index corresponds to base errors, but for prison and wiki mintsample is not there
             errors_per_fc_type_median = []
             percentages = []
             percentages_median = []
+
+            errors_per_fc_type_dic = {}
+            ml_errors_per_fc_type = {}
+            ml_method_errors = []
+            ml_mean = {}
+
             run_errors(data, model, errors_per_fc_type, errors_per_fc_type_median, error_name)
+            lowest_error_ml = np.min(ml_method_errors)
+
+            # store sample wise errors for all methods
+            for key, val in ml_mean.items():
+                if val == lowest_error_ml:
+                    errors_per_fc_type_dic[key] = ml_errors_per_fc_type[key]
+
+            sample_wise_error_df = pd.DataFrame(errors_per_fc_type_dic)
+            sample_wise_error_df.to_csv(f'results/errors/{data}/error_percentages/{model}_sample_wise_errors.csv')
+
             # get percentage improvement over base forecasts
             for idx_method in range(1, len(errors_per_fc_type)):
                 # mean
