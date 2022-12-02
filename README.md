@@ -10,12 +10,12 @@ This repository contains the code for the paper "NHR-TFNet:Forecasting Hierarchi
 2. Run the base model python files
    1. For ARIMA and ETS run `run_arima_ets_rolling_origin.py` with two parameters dataset name and method name as input (e.g., python run_arima_ets_rolling_origin.py 'prison' 'arima') -- during this stage the rolling windows will be created 
       - Under rolling_window_experiments_transformed/<data_set> directory the actual, fitted, forecasts, and tranformed fitted and forecasts will be created using the below naming convension
-      `actual_<window_id>.csv` (e.g., `actual_1.csv`) indicate actual values to evaluate the fitted values for given rolling window id
-      `<model_name>_fitted_<window_id>.csv` (e.g., `arima_fitted_1.csv`) are the fitted values for the given rolling window id
-      `<model_name>_fitted_transformed_<window_id>.csv` (e.g., `arima_fitted_transformed_1.csv`) are the transformed fitted values for the given rolling window id
-      `<model_name>_forecasts_<window_id>.csv` (e.g., `arima_forecasts_1.csv`) are the forecasts for the given rolling window id
-      `<model_name>_forecasts_transformed_<window_id>.csv` (e.g., `arima_forecasts_transformed_1.csv`) are the transformed forecasts for the given rolling window id
-      `test_<window_id>.csv` (e.g., `test_1.csv`) are the actual values to evaluate the forecasts for given rolling window id
+        - `actual_<window_id>.csv` (e.g., `actual_1.csv`) indicate actual values to evaluate the fitted values for given rolling window id
+        - `<model_name>_fitted_<window_id>.csv` (e.g., `arima_fitted_1.csv`) are the fitted values for the given rolling window id
+        - `<model_name>_fitted_transformed_<window_id>.csv` (e.g., `arima_fitted_transformed_1.csv`) are the transformed fitted values for the given rolling window id
+        - `<model_name>_forecasts_<window_id>.csv` (e.g., `arima_forecasts_1.csv`) are the forecasts for the given rolling window id
+        - `<model_name>_forecasts_transformed_<window_id>.csv` (e.g., `arima_forecasts_transformed_1.csv`) are the transformed forecasts for the given rolling window id
+        - `test_<window_id>.csv` (e.g., `test_1.csv`) are the actual values to evaluate the forecasts for given rolling window id
    2. For DeepAR and WaveNet - 
       - `run_ts_features.py` to get time series features for each dataset. This will create a csv with time series feature under `input_data/ts_features/<dataset_name>.csv`
       - `cluster_ts.py` to cluster the time series. This will create a csv with clustering information under `input_data/ts_features/<dataset_name>_clusters.csv'` 
