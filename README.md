@@ -4,8 +4,8 @@ This repository contains the code for the paper "NHR-TFNet:Forecasting Hierarchi
 
 #### Code execution with rolling window evaluation.
 
-```
-1. First run_preprocessing.py - you may need to provide the path for the preprocessing R file relevant to the dataset (e.g. for the prison dataset `'../src/prison/prison_preprocessing.R'`). This will preprocess the data and create a hierarchical dataset under the <input data> directory with the naming format <dataset>.csv (e.g., prison.csv).
+
+1. First run_preprocessing.py - you may need to provide the path for the preprocessing R file relevant to the dataset (e.g. for the prison dataset `'../src/prison/prison_preprocessing.R'`). This will preprocess the data and create a hierarchical dataset under the `<input data>` directory with the naming format <dataset>.csv (e.g., prison.csv).
 2. Create a directoy rolling_window_experiments_transformed/<dataset_name> (e.g.,rolling_window_experiments_transformed/prison), 
 2. Run the base model python files
    1. For ARIMA and ETS run `run_arima_ets_rolling_origin.py` with two parameters dataset name and method name as input (e.g., python run_arima_ets_rolling_origin.py 'prison' 'arima') -- during this stage the rolling windows will be created 
@@ -30,7 +30,6 @@ This repository contains the code for the paper "NHR-TFNet:Forecasting Hierarchi
 4. Run the ML reconciliation `run_ml_method_rolling_origin_transform.py` (provide the dataset name, base model name and the number of levels in the dataset hierarchy)
 5. Calculate errors - `calculate_rolling_origin_errors.py` (this will create a file with the calculated errors) 
 
-```
 
 #### Current Directory structure
 ```
