@@ -146,13 +146,4 @@ all_level_ts <- rbind(top, level1, level2, bts)
 all_level_ts <- all_level_ts[, c(1, 2, 5:(ncol(all_level_ts)-10))] # remove 2019
 write.table(all_level_ts, "input_data/labour.csv", col.names = TRUE, row.names = FALSE, sep = ",")
 
-all_level_ts_test <- all_level_ts[, (ncol(all_level_ts) - 11):ncol(all_level_ts)] #2016 Feb to 2018 Nov
-all_level_ts_train <- all_level_ts[, 1: (ncol(all_level_ts) - 12)] #1987 Feb to 2015 Nov
-
-
-meta_info <- all_level_ts_train[, c(1,2)] # get level and description
-final_test <- cbind(meta_info, all_level_ts_test)
-write.table(final_test, "input_data/labour_test.csv", col.names = TRUE, row.names = FALSE, sep = ",")
-write.table(all_level_ts_train, "input_data/labour_actual.csv", col.names = TRUE, row.names = FALSE, sep = ",")
-
 

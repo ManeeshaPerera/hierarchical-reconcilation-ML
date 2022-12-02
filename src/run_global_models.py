@@ -55,11 +55,6 @@ level_wise_fitted_df['Description'] = pd.Categorical(
 level_wise_fitted_df.sort_values('Description', inplace=True)
 level_wise_fc_df.sort_values('Description', inplace=True)
 
-level_wise_fitted_df.to_csv(f'rolling_window_experiments/{data}/{model_name}_fitted_{sample}.csv',
-                            index=False)
-level_wise_fc_df.to_csv(f'rolling_window_experiments/{data}/{model_name}_forecasts_{sample}.csv',
-                        index=False)
-
 level_wise_fitted_df.to_csv(f'rolling_window_experiments_transformed/{data}/{model_name}_fitted_{sample}.csv',
                             index=False)
 level_wise_fc_df.to_csv(f'rolling_window_experiments_transformed/{data}/{model_name}_forecasts_{sample}.csv',

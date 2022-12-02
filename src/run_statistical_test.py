@@ -8,8 +8,6 @@ methods = ['arima', 'ets', 'deepAR', 'waveNet']
 datasets = ['prison', 'labour', 'tourism', 'wikipedia']
 
 
-# for method in methods:
-#     for data in datasets:
-#         get_stat_results(data, method)
-
-get_stat_results('prison', 'waveNet')
+for method in methods:
+    for data in datasets:
+        get_stat_results(data, method)

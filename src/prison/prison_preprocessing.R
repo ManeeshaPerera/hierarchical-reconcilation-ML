@@ -95,12 +95,3 @@ top <- aggts %>%
 
 all_level_ts <- rbind(top, level1, level2, level3, bts)
 write.table(all_level_ts, "input_data/prison.csv", col.names = TRUE, row.names = FALSE, sep = ",")
-
-all_level_ts_test <- all_level_ts[, (ncol(all_level_ts) - 7):ncol(all_level_ts)]
-all_level_ts_train <- all_level_ts[, 1: (ncol(all_level_ts) - 8)]
-
-meta_info <- all_level_ts_train[, c(1,2)]
-
-final_test <- cbind(meta_info, all_level_ts_test)
-write.table(final_test, "input_data/prison_test.csv", col.names = TRUE, row.names = FALSE, sep = ",")
-write.table(all_level_ts_train, "input_data/prison_actual.csv", col.names = TRUE, row.names = FALSE, sep = ",")

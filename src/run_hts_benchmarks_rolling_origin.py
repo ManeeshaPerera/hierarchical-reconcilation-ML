@@ -18,15 +18,4 @@ windows = ROLLING_WINDOWS[dataset_name]
 method = sys.argv[2]  # arima, ets, deepAR or waveNet
 
 for iter_window in range(1, windows + 1):
-    result_r = hts_benchmarks(dataset_name, '', '', method, iter_window, iter_window, 'rolling_window')
-
-## if training at 10th iteration
-# n = 10  # refit after 10 samples
-# last_iter = 0
-# for iter_window in range(1, windows + 1):
-#     if iter_window % n == 1:
-#         print("Recalculating values", iter_window)
-#         result_r = hts_benchmarks(dataset_name, '', '', method, iter_window, iter_window, 'rolling_window')
-#         last_iter = iter_window
-#     else:
-#         result_r = hts_benchmarks(dataset_name, '', '', method, last_iter, iter_window, 'rolling_window')
+    result_r = hts_benchmarks(dataset_name, method, iter_window, iter_window, 'rolling_window')

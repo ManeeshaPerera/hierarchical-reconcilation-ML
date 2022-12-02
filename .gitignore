@@ -9,7 +9,8 @@ src/results/expanding_window_results/best_params
 src/rolling_window_experiments
 src/rolling_window_experiments_transformed
 example_code/rolling-window-code.R
-src/slurm_files
+backup/slurm_files
+backup
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

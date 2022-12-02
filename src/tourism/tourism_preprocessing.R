@@ -88,12 +88,3 @@ top_ts <- tourism %>% as_tibble() %>%
 
 all_level_ts <- rbind(top_ts, second_level_ts, bottom_level_ts)
 write.table(all_level_ts, "input_data/tourism.csv", col.names = TRUE, row.names = FALSE, sep = ",")
-
-all_level_ts_test <- all_level_ts[, (ncol(all_level_ts) - 11):ncol(all_level_ts)]
-all_level_ts_train <- all_level_ts[, 1: (ncol(all_level_ts) - 12)]
-
-
-meta_info <- all_level_ts_train[, c(1,2)] # get level and description
-final_test <- cbind(meta_info, all_level_ts_test)
-write.table(final_test, "input_data/tourism_test.csv", col.names = TRUE, row.names = FALSE, sep = ",")
-write.table(all_level_ts_train, "input_data/tourism_actual.csv", col.names = TRUE, row.names = FALSE, sep = ",")
