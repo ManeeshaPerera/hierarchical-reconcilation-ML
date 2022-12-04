@@ -198,7 +198,7 @@ class MLReconcile:
 
         inputs = keras.Input(shape=self.fitted_transpose.shape[1])
 
-        # only take the UY values for the network to learn -- CHANGE
+        # only take the UY values for the network to learn
         residuals_start_idx = start_index_bottom_ts + bottom_level_ts
         last_output = inputs[:, residuals_start_idx:]
 
@@ -214,7 +214,6 @@ class MLReconcile:
         if self.remove_skip:
             model = keras.Model(inputs=inputs, outputs=model_outputs)
         else:
-            ## CHANGE
             bottom_level_fitted = (inputs[:, start_index_bottom_ts: residuals_start_idx] - tf.constant(
                 self.scaler.min_[start_index_bottom_ts: residuals_start_idx])) / tf.constant(
                 self.scaler.scale_[start_index_bottom_ts: residuals_start_idx])
