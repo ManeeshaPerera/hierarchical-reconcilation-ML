@@ -2,7 +2,7 @@
 
 This repository contains the code for the paper "NHR-TFNet:Forecasting Hierarchical Time Series using Non-linear Mappings".
 
-To only execute the ML reconciliation method please refer to python file `example_ml_reconciliation.py` that shows an example of how to run the code using an example dataset provided in `example_data_files`
+**To only execute the ML reconciliation method please refer to python file `example_ml_reconciliation.py` that shows an example on how to run the code using an example dataset provided in `example_data_files`.**
 
 To execute the full evaluation presented in the paper - please refer to the below steps in "Code execution with rolling window evaluation".
 
