@@ -25,12 +25,16 @@ class MLReconcile:
         Class initialization
         :param seed_value: seed value for tensorflow to achieve reproducibility
         :type seed_value: integer
-        :param actual_data: pre processed actual data
+        :param actual_data: pre-processed actual data
         :type actual_data: pandas dataframe
         :param fitted_data: fitted values from the base model of interest
         :type fitted_data: pandas dataframe
         :param forecasts: forecasts from the base model
         :type forecasts: pandas dataframe
+        :param fitted_transform_matrix: transformed fitted values for non-bottom level time series
+        :type fitted_transform_matrix: pandas dataframe
+        :param fc_transform_matrix: transformed forecasts for non-bottom level time series
+        :type fc_transform_matrix: pandas dataframe
         :param number_of_levels: number of levels in the hierarchy
         :type number_of_levels: integer
         :param seed_runs: different seeds for the model to run
@@ -49,6 +53,11 @@ class MLReconcile:
         :type split_size: float
         :param validate_hf_loss: True if the validation loss calculates the entire hierarchy error. Default is False
         :param l1_regularizer: True if the L1 regularizer needs to added to the loss function. Default is False
+        :param return_seed_forecast: True if forecasts for different seeds need to be returned. Default is Fals
+        :param tune_lambda: True if lambda value need to be tuned as a hyperparameter. Default is True
+        :param remove_skip: True if the Skip connection in the MLP model needs to be removed. Default is False
+        :param saved_model: True if a trained MLP model is passed (i.e., model training will not be carried out). Default is False
+        :param saved_models: A list as the same size as seed_runs parameter. Each element in the list correspond to a saved model. Need to pass this only is saved_model param is True.
         """
         self.hierarchy = None
         self.actual_data = actual_data
