@@ -13,7 +13,7 @@ To execute the full evaluation presented in the paper - please refer to the belo
 2. Create a directory `results/<dataset_name>` (e.g.,results/prison), 
 3. Run the base model python files
    1. For ARIMA and ETS run `run_arima_ets_rolling_origin.py` with two parameters dataset id (0-prison, 1-tourism, 2-wikipedia, 3-labour) and method name as input (e.g., python run_arima_ets_rolling_origin.py 0 'arima') -- during this stage the rolling windows will be created 
-      - Under rolling_window_experiments_transformed/<data_set> directory the actual, fitted, forecasts, and tranformed fitted and forecasts will be created using the below naming convension
+      - Under results/<data_set> directory the actual, fitted, forecasts, and tranformed fitted and forecasts will be created using the below naming convension
         - `actual_<window_id>.csv` (e.g., `actual_1.csv`) indicate actual values to evaluate the fitted values for given rolling window id
         - `<model_name>_fitted_<window_id>.csv` (e.g., `arima_fitted_1.csv`) are the fitted values for the given rolling window id
         - `<model_name>_fitted_transformed_<window_id>.csv` (e.g., `arima_fitted_transformed_1.csv`) are the transformed fitted values for the given rolling window id

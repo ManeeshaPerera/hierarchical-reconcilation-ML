@@ -61,7 +61,7 @@ class DNN:
     def create_dataframe_fc(self, forecast_list):
         fc_data = []
         for i in range(0, len(forecast_list)):
-            fc_values = forecast_list[i].median.tolist()
+            fc_values = forecast_list[i].mean.tolist()
             fc_values.insert(0, self.meta_data[i])
             fc_values.insert(0, self.level_data[i])
             fc_data.append(fc_values)
@@ -106,7 +106,7 @@ class DNN:
             if len(self.fitted_samples[sample][0]) > self.horizon:
                 all_sample_fc = self.predict_sample(self.fitted_samples[sample])
                 for i in range(len(all_sample_fc)):
-                    fc_values = all_sample_fc[i].median.tolist()
+                    fc_values = all_sample_fc[i].mean.tolist()
                     fitted_data[i].extend(fc_values)
         for ts in range(len(fitted_data)):
             fitted_data[ts].insert(0, self.meta_data[ts])
