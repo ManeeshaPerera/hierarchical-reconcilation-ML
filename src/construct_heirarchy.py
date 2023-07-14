@@ -75,3 +75,6 @@ class ConstructHierarchy:
 
     def get_ts_names(self):
         return self.ts_names
+
+    def get_non_bottom_level_ts_count(self):
+        return len(self.ts_names) - self.number_of_bottom_level_ts

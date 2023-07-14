@@ -2,7 +2,6 @@ import numpy as np
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
-import os
 
 import tensorflow as tf
 from tensorflow import keras
@@ -168,11 +167,13 @@ class MLReconcile:
                                      lower_index: (high_index + 1)]  # get predictions for all bottom level nodes
                 lower_node_ts_agg_pred = tf.reduce_sum(lower_node_ts_pred, axis=1,
                                                        keepdims=True)  # calculate the bottom up predictions
-                recon_loss = tf.math.reduce_mean(tf.square(higher_node_ts - lower_node_ts_agg_pred))
+                recon_loss = tf.math.reduce_mean(tf.square(higher_node_ts - lower_node_ts_agg_pred),
+                                                 axis=0)  # calculate mean only across time dimension and presever the nodes
                 rec_loss_list.append(recon_loss)
 
             recon_loss_agg = tf.reduce_sum(rec_loss_list)  # sum all the losses
-            final_loss = prediction_error + reconciliation_loss_lambda * recon_loss_agg
+            final_loss = (prediction_error / bottom_level_ts) + reconciliation_loss_lambda * (
+                    recon_loss_agg / self.hierarchy.get_non_bottom_level_ts_count())
             if self.l1_regularizer:
                 regularizer = tf.keras.regularizers.L1()
                 return regularizer(final_loss)
@@ -298,10 +299,14 @@ class MLReconcile:
                         # concat all bottom up forecasts for top time series
                         bottom_up_predictions = tf.concat([bottom_up_predictions, lower_node_ts_agg_pred], 1)
                 # combine with the bottom level predictions
-                bottom_up_predictions = tf.concat([bottom_up_predictions, y_pred], 1)
-                validation_loss = np.mean(np.sqrt(tf.losses.MSE(y_actual.values, bottom_up_predictions)))
+                bottom_up_predictions = tf.concat([bottom_up_predictions, y_pred],
+                                                  1)  # bottom up predictions is an array T X number of time series
+                validation_loss = np.mean(tf.losses.MSE(y_actual.values,
+                                                        bottom_up_predictions))  # tf.losses will output shape 1XT array and we get the mean of this
+
             else:
-                validation_loss = np.mean(np.sqrt(tf.losses.MSE(y_actual.values[:, bottom_level_index:], y_pred)))
+                validation_loss = np.mean(tf.losses.MSE(y_actual.values[:, bottom_level_index:],
+                                                        y_pred))  # tf.losses will output shape 1XT array and we get the mean of this
             return validation_loss
 
         hyperparams['no_layers'] = hyperparams['layers']['no_layers']
@@ -309,11 +314,14 @@ class MLReconcile:
 
         hierarchical_model = self.build_and_compile_model(hyperparams)
 
+        # bottom_level_ts, start_index_bottom_ts = self.hierarchy.get_bottom_level_ts_info()
         hierarchical_model.fit(
             data_dic['X_train'], data_dic['Y_train'],
             batch_size=hyperparams['batch_size'],
             epochs=hyperparams['epochs'],
-            verbose=1
+            verbose=1,
+            # callbacks=[CustomCallback(self.training_data, bottom_level_ts, start_index_bottom_ts, self.scaler,
+            #                           data_dic['X_train'])]
         )
 
         validation_predictions = hierarchical_model.predict(x=data_dic['X_valid'])
@@ -364,7 +372,7 @@ class MLReconcile:
                 self.saved_models.append(ml_rec_model)
             else:
                 # retrieve the model we saved in a previous rolling window iteration
-                ml_rec_model = self.saved_models[run] # load model
+                ml_rec_model = self.saved_models[run]  # load model
 
             # forward propagate the forecasts to get the adjusted forecasts
             adjusted_forecasts = pd.DataFrame(ml_rec_model.predict(x=data_dic['X_test']))
