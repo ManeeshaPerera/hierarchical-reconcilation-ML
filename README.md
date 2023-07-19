@@ -37,6 +37,7 @@ To execute the full evaluation presented in the paper - please refer to the belo
     - This will store the reconciled forecasts in `results/hts/<dataset_name>` with the naming `<base_method_name>_case<1,2>_lambda_<lambda_range>_<window_id>.csv`
       (e.g., `arima_case2_lambda_[0.01-0.09]_1.csv` will be created by running `python run_ml_method_rolling_origin_transform.py 0 arima True True 0 1`)
 6. Calculate errors - `calculate_rolling_origin_errors.py` (this will create a csv with MSE and MAE improvements under `results/errors/<dataset_name>/error_percentages`) 
+    - `python calculate_rolling_origin_errors.py <dataset_index (0-prison, 1-labour, 2-tourism, 3-wikipedia)> <method_index (0-arima, 1-ets, 2-deepAR, 3-waveNet) '<ml reconciliation approach e.g., case2_lambda_[0.01, 0.09]'`
 
 
 #### Current Directory structure
