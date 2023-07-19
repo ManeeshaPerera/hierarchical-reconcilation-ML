@@ -35,6 +35,8 @@ def calculate_errors_per_fc(data, fc_type, actual_test, model, iteration, error_
 
     ts_wise_errors = all_errors.iloc[:, 0:2]
     ts_wise_errors = ts_wise_errors.set_index('ts_name')
+    
+    all_errors = all_errors.set_index('ts_name')
 
     # get level wise error
     errors = all_errors.groupby(by=['level']).mean().reset_index().round(2)
@@ -43,7 +45,7 @@ def calculate_errors_per_fc(data, fc_type, actual_test, model, iteration, error_
     errors.index = LEVELS[data]
     overall_error = pd.DataFrame(all_errors[['error']].mean()).transpose()
     overall_error.index = ['Overall']
-    errors = errors.append(overall_error).round(2)
+    errors = pd.concat([errors, overall_error]).round(2)
     return {'errors': errors, 'ts_wise_errors': ts_wise_errors}
 
 
@@ -133,6 +135,8 @@ if __name__ == '__main__':
 
         FC_TYPE_prison_wiki = FC_TYPE_prison_wiki[0:6]
         FC_TYPE_prison_wiki.append(ml_method)
+        
+    print(FC_TYPE)
 
     path_store = f'results/errors/{data}/error_percentages'
 
