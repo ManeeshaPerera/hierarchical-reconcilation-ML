@@ -77,8 +77,8 @@ def run_errors(data, model, errors_per_fc_type, errors_per_fc_type_median, error
             median_error = all_samples.groupby(all_samples.index).median().reindex(sample_errors[0].index.values)
             filename = f'{model}_{fc_type}_{error_name}'
 
-            mean_error.to_csv(f"results/errors/{data}/{experiment_number}/{filename}.csv")
-            median_error.to_csv(f"results/errors/{data}/{experiment_number}/{filename}_median.csv")
+            mean_error.to_csv(f"results/errors/{data}/{filename}.csv")
+            median_error.to_csv(f"results/errors/{data}/{filename}_median.csv")
             errors_per_fc_type.append(mean_error)
             errors_per_fc_type_median.append(median_error)
 
@@ -123,62 +123,69 @@ if __name__ == '__main__':
                            ]
 
     data = datasets[int(sys.argv[1])]
-    experiment_number = sys.argv[2]
+    model = models[int(sys.argv[2])]
+    ml_method = sys.argv[3]
+    error_name = 'MSE'
+
+    if ml_method:
+        FC_TYPE = FC_TYPE[0:7]
+        FC_TYPE.append(ml_method)
+
+        FC_TYPE_prison_wiki = FC_TYPE_prison_wiki[0:6]
+        FC_TYPE_prison_wiki.append(ml_method)
 
     path_store = f'results/errors/{data}/error_percentages'
 
     if not os.path.exists(path_store):
         os.makedirs(path_store)
 
-    for model in models:
-        # # one step ahead horizon
-        for error_name in ['MSE']:
-            errors_per_fc_type = []  # 0 index corresponds to base errors, but for prison and wiki mintsample is not there
-            errors_per_fc_type_median = []
-            percentages = []
-            percentages_median = []
+    # # one step ahead horizon
+    errors_per_fc_type = []  # 0 index corresponds to base errors -- for prison and wiki mintsample is not there
+    errors_per_fc_type_median = []
+    percentages = []
+    percentages_median = []
 
-            errors_per_fc_type_dic = {}
-            ml_errors_per_fc_type = {}
-            ml_method_errors = []
-            ml_mean = {}
+    errors_per_fc_type_dic = {}
+    ml_errors_per_fc_type = {}
+    ml_method_errors = []
+    ml_mean = {}
 
-            run_errors(data, model, errors_per_fc_type, errors_per_fc_type_median, error_name)
-            lowest_error_ml = np.min(ml_method_errors)
+    run_errors(data, model, errors_per_fc_type, errors_per_fc_type_median, error_name)
+    lowest_error_ml = np.min(ml_method_errors)
 
-            # store sample wise errors for all methods
-            for key, val in ml_mean.items():
-                if val == lowest_error_ml:
-                    errors_per_fc_type_dic[key] = ml_errors_per_fc_type[key]
+    # store sample wise errors for all methods
+    for key, val in ml_mean.items():
+        if val == lowest_error_ml:
+            errors_per_fc_type_dic[key] = ml_errors_per_fc_type[key]
 
-            sample_wise_error_df = pd.DataFrame(errors_per_fc_type_dic)
-            sample_wise_error_df.to_csv(f'results/errors/{data}/error_percentages/{model}_sample_wise_errors.csv')
+    sample_wise_error_df = pd.DataFrame(errors_per_fc_type_dic)
+    sample_wise_error_df.to_csv(f'results/errors/{data}/error_percentages/{model}_sample_wise_errors.csv')
 
-            # get percentage improvement over base forecasts
-            for idx_method in range(1, len(errors_per_fc_type)):
-                # mean
-                percentage_improvement = ((errors_per_fc_type[0] - errors_per_fc_type[idx_method]) / errors_per_fc_type[
-                    0]) * 100
-                percentage_improvement = percentage_improvement.iloc[:, 1:]
+    # get percentage improvement over base forecasts
+    for idx_method in range(1, len(errors_per_fc_type)):
+        # mean
+        percentage_improvement = ((errors_per_fc_type[0] - errors_per_fc_type[idx_method]) / errors_per_fc_type[
+            0]) * 100
+        percentage_improvement = percentage_improvement.iloc[:, 1:]
 
-                # median
-                percentage_improvement_median = ((errors_per_fc_type_median[0] - errors_per_fc_type_median[
-                    idx_method]) / errors_per_fc_type_median[
-                                                     0]) * 100
-                percentage_improvement_median = percentage_improvement_median.iloc[:, 1:]
-                if data == 'prison' or data == 'wikipedia':
-                    percentage_improvement.columns = [FC_TYPE_prison_wiki[idx_method]]
-                    percentage_improvement_median.columns = [FC_TYPE_prison_wiki[idx_method]]
-                else:
-                    percentage_improvement.columns = [FC_TYPE[idx_method]]
-                    percentage_improvement_median.columns = [FC_TYPE[idx_method]]
-                percentages.append(percentage_improvement)
-                percentages_median.append(percentage_improvement_median)
-            percentages = pd.concat(percentages, axis=1)
-            percentages_median = pd.concat(percentages_median, axis=1)
-            file_name = f'{model}_{error_name}'
+        # median
+        percentage_improvement_median = ((errors_per_fc_type_median[0] - errors_per_fc_type_median[
+            idx_method]) / errors_per_fc_type_median[
+                                             0]) * 100
+        percentage_improvement_median = percentage_improvement_median.iloc[:, 1:]
+        if data == 'prison' or data == 'wikipedia':
+            percentage_improvement.columns = [FC_TYPE_prison_wiki[idx_method]]
+            percentage_improvement_median.columns = [FC_TYPE_prison_wiki[idx_method]]
+        else:
+            percentage_improvement.columns = [FC_TYPE[idx_method]]
+            percentage_improvement_median.columns = [FC_TYPE[idx_method]]
+        percentages.append(percentage_improvement)
+        percentages_median.append(percentage_improvement_median)
+    percentages = pd.concat(percentages, axis=1)
+    percentages_median = pd.concat(percentages_median, axis=1)
+    file_name = f'{model}_{error_name}'
 
-            percentages.sort_values(by='Overall', axis=1, ascending=False).round(2).to_csv(
-                f'{path_store}/{file_name}.csv')
-            percentages_median.sort_values(by='Overall', axis=1, ascending=False).round(2).to_csv(
-                f'{path_store}/{file_name}_median.csv')
+    percentages.sort_values(by='Overall', axis=1, ascending=False).round(2).to_csv(
+        f'{path_store}/{file_name}.csv')
+    percentages_median.sort_values(by='Overall', axis=1, ascending=False).round(2).to_csv(
+        f'{path_store}/{file_name}_median.csv')
