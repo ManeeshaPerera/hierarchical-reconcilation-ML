@@ -172,8 +172,11 @@ class MLReconcile:
                 rec_loss_list.append(recon_loss)
 
             recon_loss_agg = tf.reduce_sum(rec_loss_list)  # sum all the losses
-            final_loss = (prediction_error / bottom_level_ts) + reconciliation_loss_lambda * (
-                    recon_loss_agg / self.hierarchy.get_non_bottom_level_ts_count())
+            if reconciliation_loss_lambda == 1:
+                final_loss = prediction_error + reconciliation_loss_lambda * recon_loss_agg
+            else:
+                final_loss = (prediction_error / bottom_level_ts) + reconciliation_loss_lambda * (
+                        recon_loss_agg / self.hierarchy.get_non_bottom_level_ts_count())
             if self.l1_regularizer:
                 regularizer = tf.keras.regularizers.L1()
                 return regularizer(final_loss)
