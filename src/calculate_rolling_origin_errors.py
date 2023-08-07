@@ -99,29 +99,29 @@ if __name__ == '__main__':
               'wikipedia': ['Total', 'Access', 'Agent', 'Language', 'Purpose', 'Article']}
 
     FC_TYPE = ['base', 'bottomup', 'ols', 'wls', 'mintsample', 'mintshrink', 'erm',
+               'case2_lambda_1',
+               'case2_lambda_[0.01, 0.09]',
+               'case2_lambda_[0.1, 0.9]',
+               'case2_lambda_[1, 4]',
+               'case2_lambda_[0.01, 5]',
                'case1_lambda_1',
                'case1_lambda_[0.01, 0.09]',
                'case1_lambda_[0.1, 0.9]',
                'case1_lambda_[1, 4]',
                'case1_lambda_[0.01, 5]',
-               'case2_lambda_1',
-               'case2_lambda_[0.01, 0.09]',
-               'case2_lambda_[0.1, 0.9]',
-               'case2_lambda_[1, 4]',
-               'case2_lambda_[0.01, 5]'
                ]
 
     FC_TYPE_prison_wiki = ['base', 'bottomup', 'ols', 'wls', 'mintshrink', 'erm',
+                           'case2_lambda_1',
+                           'case2_lambda_[0.01, 0.09]',
+                           'case2_lambda_[0.1, 0.9]',
+                           'case2_lambda_[1, 4]',
+                           'case2_lambda_[0.01, 5]',
                            'case1_lambda_1',
                            'case1_lambda_[0.01, 0.09]',
                            'case1_lambda_[0.1, 0.9]',
                            'case1_lambda_[1, 4]',
                            'case1_lambda_[0.01, 5]',
-                           'case2_lambda_1',
-                           'case2_lambda_[0.01, 0.09]',
-                           'case2_lambda_[0.1, 0.9]',
-                           'case2_lambda_[1, 4]',
-                           'case2_lambda_[0.01, 5]'
                            ]
 
     data = datasets[int(sys.argv[1])]
@@ -130,11 +130,15 @@ if __name__ == '__main__':
     error_name = 'MSE'
 
     if ml_method:
-        FC_TYPE = FC_TYPE[0:7]
-        FC_TYPE.append(ml_method)
+        if ml_method == 'case2':
+            FC_TYPE = FC_TYPE[0:12]
+            FC_TYPE_prison_wiki = FC_TYPE_prison_wiki[0:11]
+        else:
+            FC_TYPE = FC_TYPE[0:7]
+            FC_TYPE.append(ml_method)
 
-        FC_TYPE_prison_wiki = FC_TYPE_prison_wiki[0:6]
-        FC_TYPE_prison_wiki.append(ml_method)
+            FC_TYPE_prison_wiki = FC_TYPE_prison_wiki[0:6]
+            FC_TYPE_prison_wiki.append(ml_method)
         
     print(FC_TYPE)
 
